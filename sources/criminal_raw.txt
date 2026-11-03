@@ -1,3 +1,5 @@
+NOTE (2026-11-04): the 법 제167/168/170/171조 blocks below were captured from the latest version (header 시행 2027.4.28, 법률 제22122호), not the version in force today. The penalty wording used by the handbook is the same in both; re-capture with efYd=20261104 if law-watch reports a change on these articles.
+
 # 형사 벌칙 조문 원문 - law.go.kr 에서 tools.fetch_law.fetch_article 로 기계 수집 (normalized, 손으로 옮기지 않음)
 # capture date: 2026-11-04
 
