@@ -39,6 +39,18 @@ class ValidateTests(unittest.TestCase):
             errs = validate_file(write(t, "a.json", {"records": [rec]}))
             self.assertTrue(any("star" in e for e in errs))
 
+    def test_unverified_star_requires_stats_source(self):
+        rec = {"id": "x", "status": "미확인", "star": True}
+        with tempfile.TemporaryDirectory() as t:
+            errs = validate_file(write(t, "a.json", {"records": [rec]}))
+            self.assertTrue(any("star" in e for e in errs))
+
+    def test_unverified_star_with_stats_source_passes(self):
+        rec = {"id": "x", "status": "미확인", "star": True,
+               "stats": {"source": "https://www.kosha.or.kr/x"}}
+        with tempfile.TemporaryDirectory() as t:
+            self.assertEqual(validate_file(write(t, "a.json", {"records": [rec]})), [])
+
     def test_future_effective_must_be_flagged(self):
         rec = json.loads(json.dumps(GOOD)); rec["source"]["effective"] = "2099-01-01"
         with tempfile.TemporaryDirectory() as t:

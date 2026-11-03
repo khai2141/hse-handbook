@@ -8,6 +8,8 @@ def _date(s):
 
 def _check_record(rec, where):
     errs = []
+    if rec.get("star") and not (rec.get("stats") or {}).get("source"):
+        errs.append(f"{where}: star requires stats.source")
     status = rec.get("status", "확인")
     if status == "미확인":
         for k in NUMERIC:
@@ -16,7 +18,7 @@ def _check_record(rec, where):
         return errs
     src = rec.get("source")
     if not isinstance(src, dict):
-        return [f"{where}: missing source"]
+        return errs + [f"{where}: missing source"]
     for k in REQ:
         if not src.get(k):
             errs.append(f"{where}: source.{k} missing")
@@ -27,8 +29,6 @@ def _check_record(rec, where):
                 errs.append(f"{where}: effective date in the future without future_ack")
         except ValueError:
             errs.append(f"{where}: source.effective is not ISO date")
-    if rec.get("star") and not (rec.get("stats") or {}).get("source"):
-        errs.append(f"{where}: star requires stats.source")
     return errs
 
 def validate_file(path):
