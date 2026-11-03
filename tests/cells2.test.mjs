@@ -212,9 +212,27 @@ test("cellDetail adds a pending section for law articles with upcoming changes",
 });
 
 test("unverified detail with pending note still has no fine", () => {
-  const rec = data.penalties.find((p) => p.status === "미확인") ?? data.penalties[0];
-  const art = articleIdsFromLaw(rec.law ? [].concat(rec.law) : ["법 제175조"])[0] ?? "법175";
-  const versions = { entries: { [art]: { differs: true, latest_effective: "2027-04-28", diff_lines: [] } } };
-  const d = cellDetail("P", rec.id, 0, { ...data, versions });
-  if (d.warn) assert.equal(d.fine, undefined);
+  // deterministic: first worker cell that is q/unverified and whose law maps to an article
+  let hit = null;
+  for (const w of data.workers) {
+    for (let col = 0; col < 5 && !hit; col++) {
+      const base = cellDetail("W", w.id, col, data);
+      const art = articleIdsFromLaw(base.law)[0];
+      if (base.warn && art) hit = { w, col, art };
+    }
+    if (hit) break;
+  }
+  assert.ok(hit, "a q-cell row with a mappable law exists");
+  const versions = { entries: { [hit.art]: { differs: true, latest_effective: "2027-04-28", diff_lines: ["예정: x"] } } };
+  const d = cellDetail("W", hit.w.id, hit.col, { ...data, versions });
+  assert.ok(d.sections.some((s) => s.key === "pending"));
+  assert.ok(d.warn !== undefined);
+  assert.equal(d.fine, undefined);
+});
+
+test("foreign records with a future effective date mark every cell 시행", () => {
+  const today = "2026-11-04";
+  const future = data.foreign.filter((r) => r.source?.effective > today);
+  assert.ok(future.length >= 1);
+  for (const r of future) for (const k of ["c", "pr", "ed"]) assert.ok(r[k].t.includes("시행"), `${r.id}.${k}`);
 });
