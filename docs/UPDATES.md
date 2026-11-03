@@ -14,3 +14,15 @@ Schedule on your own PC (not created automatically):
     schtasks /Create /SC DAILY /TN "HSE-law-check" /TR "py E:\agent skill\handbook\tools\check_updates.py" /ST 07:00
 
 Note: the path contains a space, so if the task fails to start, quote it: `/TR "py \"E:\agent skill\handbook\tools\check_updates.py\""`.
+
+## Upcoming amendments (시행 예정)
+
+`py tools/compare_versions.py` fetches, for each watched article, the version in force today (`efYd` = today)
+and the latest version, and writes `data/versions.json`. Run it after a law amendment is announced and
+before each release (it makes about 72 requests, one per second).
+
+Each entry: `in_force_header`, `latest_header`, `latest_effective` (시행 date of the latest version),
+`differs` (true when the article text differs) and `diff_lines` (up to 6 paragraphs, prefixed `현행:` or `예정:`).
+A different header with the same text means `differs: false` (only the version number changed).
+An entry with `error` could not be fetched and says nothing about changes; the tool exits 3 in that case.
+Cells whose `law` references an article with `differs: true` show a "시행 예정" section in their details.
