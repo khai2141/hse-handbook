@@ -2,6 +2,7 @@ import { clampCount, fineTotal } from "./core.js";
 import { esc, icon } from "./html.js";
 
 const LABELS = {
+  pending: "시행 예정",
   rule: "이 유형에 적용되는 기준 (원문)",
   contents: "교육 내용",
   alloc: "항목별 시간 배분 예시",

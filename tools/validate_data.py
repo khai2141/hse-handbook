@@ -42,7 +42,7 @@ def validate_file(path):
 def validate_dir(d):
     errs = []
     for n in sorted(os.listdir(d)):
-        if n.endswith(".json") and n not in ("nodes.json", "watchlist.json"):
+        if n.endswith(".json") and n not in ("nodes.json", "watchlist.json", "versions.json"):
             errs += validate_file(os.path.join(d, n))
     return errs
 

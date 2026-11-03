@@ -29,6 +29,7 @@ async function load() {
   NAMES.forEach((n, i) => (data[n] = recs[i].records ?? []));
   data.nodes = nodes.nodes ?? {};
   data.meta = meta;
+  data.versions = await fetch("data/versions.json").then((r) => (r.ok ? r.json() : null)).catch(() => null);
   return data;
 }
 

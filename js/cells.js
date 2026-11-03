@@ -1,4 +1,5 @@
 import { parseHours, alloc } from "./core.js";
+import { pendingFor } from "./versions.js";
 import { hcell, taskHours, T_COLS, P_COLS, F_COLS, V_COLS, M_COLS } from "./matrix.js";
 
 function fallback(worker, edu) {
@@ -252,6 +253,18 @@ const find = (arr, id) => (Array.isArray(arr) ? arr.find((x) => x?.id === id) : 
 const EDU_BY_COL = ["e2", "e1", "e3", "e4", "e5"];
 
 export function cellDetail(kind, rowId, col, data) {
+  const out = baseCellDetail(kind, rowId, col, data);
+  const p = pendingFor(out?.law, data?.versions);
+  if (p.articles.length) {
+    out.sections = [...(out.sections ?? []), {
+      key: "pending",
+      items: [`시행 예정 개정이 있습니다 (시행 ${p.effective ?? "일자 미상"})`, ...p.lines.slice(0, 6)],
+    }];
+  }
+  return out;
+}
+
+function baseCellDetail(kind, rowId, col, data) {
   const d = data ?? {};
   const meta = d.meta ?? {};
   let out;

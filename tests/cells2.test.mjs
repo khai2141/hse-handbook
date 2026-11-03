@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { healthCell, foreignCell, taskCell, managerCell, roleCell, penaltyCell, envCell, cellDetail, infoDetail } from "../js/cells.js";
 import { loadData } from "./load.mjs";
+import { articleIdsFromLaw } from "../js/versions.js";
 const data = loadData();
 const WARN = "원문 확인 필요";
 const noNumber = (d) => assert.equal(d.fine?.perPerson, undefined);
@@ -188,4 +189,32 @@ test("foreignCell: no unsourced 취업인정증 or insurance claims in any forei
       assert.ok(!/상해보험|귀국비용보험|보험/.test(s.replace(/귀국비용 보험 또는 신탁/g, "")), `${f.id} ${col}`);
     }
   }
+});
+
+test("cellDetail adds a pending section for law articles with upcoming changes", () => {
+  const w = data.workers.find((x) => x.id === "reg");
+  const base = cellDetail("W", "reg", 0, data);
+  const law = base.law;
+  assert.ok(law.length > 0);
+  const art = articleIdsFromLaw(law)[0];
+  assert.ok(art, "row has a mappable law reference");
+  const versions = { entries: { [art]: { differs: true, latest_effective: "2027-04-28", diff_lines: ["예정: x"] } } };
+  const d = cellDetail("W", "reg", 0, { ...data, versions });
+  const s = d.sections.find((x) => x.key === "pending");
+  assert.ok(s);
+  assert.equal(s.items[0], "시행 예정 개정이 있습니다 (시행 2027-04-28)");
+  assert.equal(s.items[1], "예정: x");
+  assert.equal(d.big, base.big);
+  assert.equal(d.warn, base.warn);
+  const none = cellDetail("W", "reg", 0, { ...data, versions: { entries: { [art]: { differs: false } } } });
+  assert.equal(none.sections.find((x) => x.key === "pending"), undefined);
+  assert.equal(cellDetail("W", "reg", 0, data).sections.find((x) => x.key === "pending"), undefined);
+});
+
+test("unverified detail with pending note still has no fine", () => {
+  const rec = data.penalties.find((p) => p.status === "미확인") ?? data.penalties[0];
+  const art = articleIdsFromLaw(rec.law ? [].concat(rec.law) : ["법 제175조"])[0] ?? "법175";
+  const versions = { entries: { [art]: { differs: true, latest_effective: "2027-04-28", diff_lines: [] } } };
+  const d = cellDetail("P", rec.id, 0, { ...data, versions });
+  if (d.warn) assert.equal(d.fine, undefined);
 });
