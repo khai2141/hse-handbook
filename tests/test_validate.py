@@ -59,5 +59,16 @@ class ValidateTests(unittest.TestCase):
             rec["source"]["future_ack"] = True
             self.assertEqual(validate_file(write(t, "b.json", {"records": [rec]})), [])
 
+class DataDirTests(unittest.TestCase):
+    DATA = os.path.join(os.path.dirname(__file__), "..", "data")
+
+    def test_core_files_exist(self):
+        for n in ("workers.json", "education.json", "penalties.json"):
+            self.assertTrue(os.path.exists(os.path.join(self.DATA, n)), n)
+
+    def test_repo_data_is_valid(self):
+        from tools.validate_data import validate_dir
+        self.assertEqual(validate_dir(self.DATA), [])
+
 if __name__ == "__main__":
     unittest.main()
