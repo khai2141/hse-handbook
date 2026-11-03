@@ -78,3 +78,15 @@ test("renderMatrix emits cell buttons, info buttons for W/H/F/M/R only, and esca
 test("empty result shows the empty message", () => {
   assert.ok(renderMatrix("W", data, "zzzzzz").includes("검색 결과가 없습니다"));
 });
+
+test("미확인 rows in T, M, R, P show 확인/q with no digits", () => {
+  const f = (a) => a.map((x) => ({ ...x, status: "미확인" }));
+  const d = { ...data, tasks: f(data.tasks), roles: f(data.roles), penalties: f(data.penalties) };
+  for (const k of ["T", "M", "R", "P"]) {
+    const rows = buildMatrix(k, d).rows.filter((r) => !r.g);
+    assert.ok(rows.length > 0);
+    for (const r of rows) for (const cl of r.cells) {
+      assert.deepEqual(cl, { t: "확인", k: "q" });
+    }
+  }
+});

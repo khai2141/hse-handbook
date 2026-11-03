@@ -256,6 +256,7 @@ export function cellDetail(kind, rowId, col, data) {
         if (w.tip) out.tip = w.tip;
       }
       out.bigLabel = "이 칸의 시간";
+      if (out.warn) delete out.fine;
       return out;
     }
     case "H": {
@@ -296,7 +297,9 @@ export function cellDetail(kind, rowId, col, data) {
     }
     default:
   }
-  return out ?? neutral("상세 정보");
+  out = out ?? neutral("상세 정보");
+  if (out.warn) delete out.fine;
+  return out;
 }
 
 export function infoDetail(kind, rowId, data) {

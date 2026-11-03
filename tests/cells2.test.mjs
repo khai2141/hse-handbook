@@ -123,3 +123,18 @@ test("infoDetail builds row definitions", () => {
   for (const k of ["H", "F", "M", "R"]) assert.ok(infoDetail(k, data[src[k]][0].id, data).title);
   assert.equal(infoDetail("W", "nope", data).warn, WARN);
 });
+
+test("unverified W cells carry no fine, no calculator and no 만원", async () => {
+  const { detailToHtml } = await import("../js/render.js");
+  for (const [id, col] of [["day", 1], ["f1w", 1], ["for", 0]]) {
+    const d = cellDetail("W", id, col, data);
+    assert.ok(d.warn);
+    assert.equal(d.fine, undefined);
+    const h = detailToHtml(d, { count: 3 });
+    assert.ok(!h.includes('id="n"') && !h.includes("만원"));
+  }
+  for (const k of ["T", "P", "M", "R", "H", "F", "V"]) {
+    const d = cellDetail(k, "nope", 0, data);
+    assert.equal(d.fine, undefined);
+  }
+});

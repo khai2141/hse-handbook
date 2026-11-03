@@ -32,6 +32,8 @@ export function taskHours(id) {
   return id === "39" ? "8시간" : "2시간";
 }
 
+const UNK = (n) => Array.from({ length: n }, () => c("확인", "q"));
+const unk = (r) => r?.status === "미확인";
 const fm = (v) => (typeof v === "number" ? `${v.toLocaleString("ko-KR")}만원` : v);
 
 function groupedWorkers(data, cellsOf) {
@@ -66,7 +68,7 @@ export function buildMatrix(kind, data) {
           n: `${r.id}. ${r.name}`,
           s: "",
           i: "edu_special",
-          cells: [c(taskHours(r.id), "y"), c("16시간", "y"), c("50/100/150만원", "x")],
+          cells: unk(r) ? UNK(3) : [c(taskHours(r.id), "y"), c("16시간", "y"), c("50/100/150만원", "x")],
         })),
       };
     case "M": {
@@ -78,7 +80,7 @@ export function buildMatrix(kind, data) {
           n: r.n,
           s: r.s ?? "",
           i: r.i,
-          cells: (grid[r.id] ?? []).map((t, i) => c(t, t === "—" ? "n" : t === "확인" ? "q" : i === 4 ? "p" : "y")),
+          cells: unk(r) ? UNK(5) : (grid[r.id] ?? []).map((t, i) => c(t, t === "—" ? "n" : t === "확인" ? "q" : i === 4 ? "p" : "y")),
         })),
       };
     }
@@ -90,7 +92,7 @@ export function buildMatrix(kind, data) {
           n: r.n,
           s: r.s ?? "",
           i: r.i,
-          cells: (r.m ?? []).map((k) => c(k === "y" ? "●" : k === "p" ? "○" : k === "q" ? "?" : "·", k)),
+          cells: unk(r) ? UNK((r.m ?? []).length || 9) : (r.m ?? []).map((k) => c(k === "y" ? "●" : k === "p" ? "○" : k === "q" ? "?" : "·", k)),
         })),
       };
     case "P": {
@@ -106,7 +108,7 @@ export function buildMatrix(kind, data) {
             n: p.t,
             s: p.art ?? "",
             i: crim ? "doc_alarm" : "doc_fine",
-            cells: [c(p.k, crim ? "x" : "p"), cell(a[0], crim ? "x" : "y"), cell(a[1], "y"), cell(a[2], "y")],
+            cells: unk(p) ? UNK(4) : [c(p.k, crim ? "x" : "p"), cell(a[0], crim ? "x" : "y"), cell(a[1], "y"), cell(a[2], "y")],
           };
         }),
       };
