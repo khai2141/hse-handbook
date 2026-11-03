@@ -36,13 +36,13 @@ class IconTests(unittest.TestCase):
                     missing.append((os.path.basename(p), name))
         self.assertEqual(missing, [])
 
-    def test_every_bundled_icon_is_valid_png_up_to_512(self):
+    def test_every_bundled_icon_is_valid_png_up_to_256(self):
         bad = []
         files = sorted(glob.glob(os.path.join(ICONS, "*.png")))
         self.assertTrue(files, "no icons found in assets/icons")
         for p in files:
             w = png_width(p)
-            if w is None or not (0 < w <= 512):
+            if w is None or not (0 < w <= 256):
                 bad.append((os.path.basename(p), w))
         self.assertEqual(bad, [])
 
