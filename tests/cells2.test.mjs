@@ -19,6 +19,20 @@ test("healthCell: unverified cell warns, verified shows value", () => {
   assert.equal(u.big, "확인");
 });
 
+test("healthCell: by_hazard adds a hazard section with 1st and 2nd items", () => {
+  const h2 = data.health.find((h) => h.id === "h2");
+  const d = healthCell(data.workers.find((w) => w.id === "reg"), h2, 1);
+  const s = d.sections.find((x) => x.key === "hazard");
+  assert.ok(s);
+  assert.deepEqual(s.table.head, ["유해인자", "제1차 검사항목", "제2차 검사항목"]);
+  assert.equal(s.table.rows.length, h2.by_hazard.length);
+  assert.ok(s.table.rows.length >= 5);
+  const first = h2.by_hazard[0];
+  assert.deepEqual(s.table.rows[0], [first.hazard, first.items_1st.join(" / "), first.items_2nd.join(" / ")]);
+  const plain = healthCell(data.workers.find((w) => w.id === "reg"), data.health[0], 0);
+  assert.equal(plain.sections.find((x) => x.key === "hazard"), undefined);
+});
+
 test("foreignCell: 미확인 visa never shows numbers from the education text", () => {
   const f = data.foreign.find((x) => x.status === "미확인");
   for (const col of [0, 1, 2]) {

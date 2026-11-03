@@ -69,6 +69,16 @@ export function healthCell(worker, rec, col, meta = {}) {
   sections.push({ key: "tg", text: rec.tg });
   sections.push({ key: "cy", text: rec.cy });
   sections.push({ key: "it", items: rec.it ?? [] });
+  if (Array.isArray(rec.by_hazard) && rec.by_hazard.length) {
+    sections.push({
+      key: "hazard",
+      label: "유해인자별 검사항목",
+      table: {
+        head: ["유해인자", "제1차 검사항목", "제2차 검사항목"],
+        rows: rec.by_hazard.map((e) => [e.hazard, e.items_1st.join(" / "), e.items_2nd.join(" / ")]),
+      },
+    });
+  }
   if (rec.cyc && Array.isArray(meta.cycles)) {
     sections.push({ key: "cyc", table: { head: ["대상 유해인자", "첫 검진 시기", "주기"], rows: meta.cycles } });
   }

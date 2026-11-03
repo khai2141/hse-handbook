@@ -127,5 +127,23 @@ class DataShapeTests(unittest.TestCase):
                     self.assertEqual(c["k"], "q")
                     self.assertEqual(c.get("note"), "별표 4에 칸 없음", f"{w['id']} cell {i}")
 
+    def test_health_items_verbatim(self):
+        import re
+        here = os.path.dirname(__file__)
+        with open(os.path.join(here, "..", "sources", "geonganjindan_raw.txt"), encoding="utf-8") as f:
+            raw = re.sub(r"\s+", "", f.read())
+        by_id = {r["id"]: r for r in recs("health.json")}
+        self.assertIn("items_source_note", load("health.json"))
+        for hid in ("h2", "h3"):
+            rec = by_id[hid]
+            self.assertTrue(rec["by_hazard"], hid)
+            self.assertEqual(rec["source"]["effective"], "2026-01-01")
+            for e in rec["by_hazard"]:
+                self.assertIn(re.sub(r"\s+", "", e["hazard"]), raw)
+                self.assertTrue(e["items_1st"] and e["items_2nd"])
+                for s in e["items_1st"] + e["items_2nd"]:
+                    self.assertIn(re.sub(r"\s+", "", s), raw, f"{hid} {e['hazard']}: {s}")
+            self.assertFalse([l for l in rec["it"] if "아직 읽지 못함" in l or "구 기준" in l])
+
 if __name__ == "__main__":
     unittest.main()
