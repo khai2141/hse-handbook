@@ -12,6 +12,12 @@ test("hit matches substring and choseong, never throws on special characters", (
   assert.equal(hit("건강진단", "교육"), false);
   assert.equal(hit("abc", "("), false);
   assert.equal(hit("abc", "[a"), false);
+  assert.equal(hit("abc", "("), false);
+});
+test("hit supports mixed 초성 and syllable queries", () => {
+  assert.equal(hit("건강진단", "건ㄱㅈ"), true);
+  assert.equal(hit("건강진단", "ㄱ강ㅈㄷ"), true);
+  assert.equal(hit("건강진단", "건ㄴㅈ"), false);
 });
 test("hit treats empty or blank query as match-all", () => {
   assert.equal(hit("anything", ""), true);
@@ -29,6 +35,10 @@ test("clampCount keeps a sane positive integer", () => {
   assert.equal(clampCount("abc"), 1);
   assert.equal(clampCount("12.7"), 12);
   assert.equal(clampCount("100000"), 9999);
+  assert.equal(clampCount("1e999"), 9999);
+  assert.equal(clampCount("Infinity"), 9999);
+  assert.equal(clampCount("-Infinity"), 1);
+  assert.equal(clampCount(5), 5);
 });
 test("fineTotal multiplies a clamped count", () => {
   assert.equal(fineTotal(50, "20"), 1000);

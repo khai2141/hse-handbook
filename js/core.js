@@ -7,11 +7,31 @@ export function choseong(s) {
   });
 }
 
+function initialOf(ch) {
+  const k = ch.charCodeAt(0) - 44032;
+  return k >= 0 && k < 11172 ? CHO[Math.floor(k / 588)] : ch;
+}
+
+function charMatches(hc, qc) {
+  if (hc === qc) return true;
+  return CHO.includes(qc) && initialOf(hc) === qc;
+}
+
 export function hit(haystack, query) {
-  const q = String(query ?? "").trim().toLowerCase();
-  if (!q) return true;
-  const h = String(haystack ?? "").toLowerCase();
-  return h.includes(q) || choseong(haystack).toLowerCase().includes(q);
+  const q = Array.from(String(query ?? "").trim().toLowerCase());
+  if (q.length === 0) return true;
+  const h = Array.from(String(haystack ?? "").toLowerCase());
+  for (let start = 0; start + q.length <= h.length; start++) {
+    let ok = true;
+    for (let j = 0; j < q.length; j++) {
+      if (!charMatches(h[start + j], q[j])) {
+        ok = false;
+        break;
+      }
+    }
+    if (ok) return true;
+  }
+  return false;
 }
 
 export function parseHours(text) {
@@ -21,7 +41,7 @@ export function parseHours(text) {
 
 export function clampCount(raw) {
   const n = Math.floor(Number.parseFloat(String(raw ?? "")));
-  if (!Number.isFinite(n) || n < 1) return 1;
+  if (Number.isNaN(n) || n < 1) return 1;
   return Math.min(n, 9999);
 }
 
