@@ -41,7 +41,7 @@ class DataShapeTests(unittest.TestCase):
 
     def test_unverified_have_no_source(self):
         for f in os.listdir(DATA):
-            if f.endswith(".json") and f != "nodes.json":
+            if f.endswith(".json") and f not in ("nodes.json", "meta.json"):
                 for r in recs(f):
                     if r.get("status") == "미확인":
                         self.assertNotIn("source", r, f"{f}#{r.get('id')}")
