@@ -1,0 +1,220 @@
+{
+ "records": [
+  {
+   "id": "15",
+   "name": "건설용 리프트·곤돌라를 이용한 작업",
+   "trades": "tower,steel",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "17",
+   "name": "전압 75볼트 이상 정전 및 활선작업",
+   "trades": "elec",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "18",
+   "name": "콘크리트 파쇄기 파쇄작업 (2m 이상 구축물)",
+   "trades": "demo",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "19",
+   "name": "굴착면 높이 2m 이상 지반 굴착",
+   "trades": "oper",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "20",
+   "name": "흙막이 지보공 보강, 동바리 설치·해체",
+   "trades": "form,oper",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "21",
+   "name": "터널 안 굴착작업",
+   "trades": "oper",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "22",
+   "name": "굴착면 높이 2m 이상 암석 굴착",
+   "trades": "oper",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "23",
+   "name": "높이 2m 이상 물건을 쌓거나 내리는 작업",
+   "trades": "rebar,form,scaf,steel,conc",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "25",
+   "name": "거푸집 동바리의 조립 또는 해체작업",
+   "trades": "form,rebar,conc",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "26",
+   "name": "비계의 조립·해체 또는 변경작업",
+   "trades": "scaf,rebar,form",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "27",
+   "name": "금속제 부재 골조·교량 상부구조 조립·해체 (5m 이상)",
+   "trades": "steel,weld",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "28",
+   "name": "처마 높이 5m 이상 목조건축물 구조 부재 조립",
+   "trades": "form",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "29",
+   "name": "높이 2m 이상 콘크리트 인공구조물 해체·파괴",
+   "trades": "demo",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "30",
+   "name": "타워크레인 설치(상승 포함)·해체",
+   "trades": "tower",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "34",
+   "name": "밀폐공간에서의 작업",
+   "trades": "weld,elec",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "37",
+   "name": "석면해체·제거작업",
+   "trades": "demo",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "38",
+   "name": "가연물이 있는 장소의 화재위험작업",
+   "trades": "weld",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "39",
+   "name": "타워크레인 사용 작업 시 신호업무",
+   "trades": "tower",
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  }
+ ]
+}

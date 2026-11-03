@@ -1,0 +1,84 @@
+{
+ "nodes": {
+  "home": {
+   "t": "HSE 핸드북",
+   "i": "doc_law",
+   "kids": [
+    "edu",
+    "hea",
+    "duty",
+    "pen"
+   ]
+  },
+  "edu": {
+   "t": "안전보건교육",
+   "i": "edu_instructor",
+   "s": "누가, 무엇을, 몇 시간",
+   "kids": [
+    "edu.w",
+    "edu.m"
+   ]
+  },
+  "edu.w": {
+   "t": "근로자 교육",
+   "i": "edu_hire",
+   "s": "근로자 유형 × 교육 종류",
+   "kind": "W",
+   "kids": [
+    "edu.w.f",
+    "edu.w.t"
+   ]
+  },
+  "edu.w.f": {
+   "t": "외국인 근로자",
+   "i": "role_signalman",
+   "s": "체류자격 × 건설업 취업·절차·교육",
+   "kind": "F"
+  },
+  "edu.w.t": {
+   "t": "작업별 특별교육",
+   "i": "edu_special",
+   "s": "건설 관련 18개 작업",
+   "kind": "T"
+  },
+  "edu.m": {
+   "t": "관리자 교육",
+   "i": "edu_manager",
+   "s": "직책 × 교육 종류",
+   "kind": "M"
+  },
+  "hea": {
+   "t": "건강진단·보건",
+   "i": "health_special",
+   "s": "몇 년마다, 어떤 항목",
+   "kids": [
+    "hea.w",
+    "hea.env"
+   ]
+  },
+  "hea.w": {
+   "t": "근로자 건강진단",
+   "i": "health_general",
+   "s": "근로자 유형 × 건강진단 종류",
+   "kind": "H"
+  },
+  "hea.env": {
+   "t": "작업환경측정",
+   "i": "measure_env",
+   "s": "법 제125조 8개 조항",
+   "kind": "V"
+  },
+  "duty": {
+   "t": "직책과 의무",
+   "i": "role_site_manager",
+   "s": "직책 × 업무",
+   "kind": "R"
+  },
+  "pen": {
+   "t": "벌칙·과태료",
+   "i": "doc_fine",
+   "s": "위반 × 1·2·3차",
+   "kind": "P"
+  }
+ }
+}
