@@ -179,3 +179,13 @@ test("taskCell: contents shown when present, placeholder gone; unverified still 
   const none = taskCell({ id: "15", name: "x", status: "확인" }, 0);
   assert.ok(JSON.stringify(none).includes("아직 정리하지 않았습니다"));
 });
+
+test("foreignCell: no unsourced 취업인정증 or insurance claims in any foreign cell", () => {
+  for (const f of data.foreign) {
+    for (const col of [0, 1, 2]) {
+      const s = JSON.stringify(foreignCell(f, col, data.meta.foreign_edu));
+      assert.ok(!s.includes("건설업 취업인정증") && !s.includes("취업인정증"), `${f.id} ${col}`);
+      assert.ok(!/상해보험|귀국비용보험|보험/.test(s.replace(/귀국비용 보험 또는 신탁/g, "")), `${f.id} ${col}`);
+    }
+  }
+});

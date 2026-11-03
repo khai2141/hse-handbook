@@ -110,7 +110,7 @@ export function foreignCell(visa, col, foreignEdu) {
     big: bad ? "확인" : cell.t,
     status: visa.status,
     sections: [{ key: "body", label: cols[col], items: body }],
-    tip: "입장 전에 체류자격(외국인등록증), 취업 허용 여부(건설업 취업인정증), 보험, 안전교육 이수 여부를 한 번에 확인하세요. 모국어 교육자료와 통역을 준비하세요.",
+    tip: "체류자격과 취업 허용 범위는 법무부·고용노동부 자료로 확인하세요.",
   };
   if (visa.src) out.law = [visa.src];
   if (bad) out.warn = WARN;

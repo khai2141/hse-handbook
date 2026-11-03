@@ -166,6 +166,15 @@ class DataShapeTests(unittest.TestCase):
                 self.assertNotIn("source", r, r["id"])
                 for c in (r["c"], r["pr"], r["ed"]):
                     self.assertFalse(re.search(r"\d", c["t"]), f"{r['id']}: {c['t']}")
+        today = "2026-11-04"
+        for r in recs_f:
+            if r.get("source") and r["source"]["effective"] > today:
+                self.assertIs(r["source"].get("future_ack"), True, r["id"])
+            self.assertNotIn("future_ack", r, r["id"])
+        s31 = [r for r in recs_f if r["source"]["effective"] == "2027-01-08"] if all("source" in r for r in recs_f) else [r for r in recs_f if r.get("source", {}).get("effective") == "2027-01-08"]
+        self.assertEqual(len(s31), 1)
+        self.assertIn("제31조의2", s31[0]["n"])
+        self.assertIs(s31[0]["source"]["future_ack"], True)
         meta = load("meta.json")
         self.assertFalse([l for l in meta["foreign_edu"] if "확인하지 못했습니다" in l and "31조의2" in l])
         self.assertTrue(any("제31조의2" in l and "2027" in l for l in meta["foreign_edu"]))
