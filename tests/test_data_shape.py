@@ -145,5 +145,31 @@ class DataShapeTests(unittest.TestCase):
                     self.assertIn(re.sub(r"\s+", "", s), raw, f"{hid} {e['hazard']}: {s}")
             self.assertFalse([l for l in rec["it"] if "아직 읽지 못함" in l or "구 기준" in l])
 
+    def test_foreign_records(self):
+        import re
+        here = os.path.dirname(__file__)
+        with open(os.path.join(here, "..", "sources", "foreign_raw.txt"), encoding="utf-8") as f:
+            raw = re.sub(r"\s+", "", f.read())
+        generic = "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법"
+        recs_f = recs("foreign.json")
+        self.assertTrue(any(r["status"] != "미확인" for r in recs_f))
+        for r in recs_f:
+            if r["status"] in ("확인", "일부 확인"):
+                src = r.get("source") or {}
+                self.assertTrue(src.get("url"), r["id"])
+                self.assertNotEqual(src["url"], generic, r["id"])
+                self.assertTrue(r.get("quotes"), f"{r['id']}: no quotes")
+                for q in r["quotes"]:
+                    self.assertTrue(q["article"] and q["text"], r["id"])
+                    self.assertIn(re.sub(r"\s+", "", q["text"]), raw, f"{r['id']} {q['article']}")
+            else:
+                self.assertNotIn("source", r, r["id"])
+                for c in (r["c"], r["pr"], r["ed"]):
+                    self.assertFalse(re.search(r"\d", c["t"]), f"{r['id']}: {c['t']}")
+        meta = load("meta.json")
+        self.assertFalse([l for l in meta["foreign_edu"] if "확인하지 못했습니다" in l and "31조의2" in l])
+        self.assertTrue(any("제31조의2" in l and "2027" in l for l in meta["foreign_edu"]))
+        self.assertTrue(any("정책 발표(법령 아님)" in l for l in meta["foreign_edu"]))
+
 if __name__ == "__main__":
     unittest.main()

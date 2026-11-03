@@ -42,9 +42,24 @@ test("foreignCell: 미확인 visa never shows numbers from the education text", 
     assert.ok(!JSON.stringify(d.sections).match(/\d+시간|\d억원/));
   }
   const e9 = foreignCell(data.foreign[0], 0, data.meta.foreign_edu);
-  assert.equal(e9.big, "건설업 허용");
-  assert.equal(e9.warn, undefined);
-  assert.equal(foreignCell(data.foreign[0], 2, data.meta.foreign_edu).warn, WARN);
+  assert.equal(e9.big, "확인");
+  assert.equal(e9.warn, WARN);
+  const h2 = foreignCell(data.foreign.find((x) => x.n.startsWith("H-2")), 0, data.meta.foreign_edu);
+  assert.equal(h2.big, "건설업(41~42) 활동범위에 포함");
+  assert.equal(h2.warn, undefined);
+});
+
+test("foreignCell: every 미확인 foreign visa warns in all columns and shows no digits", () => {
+  const list = data.foreign.filter((x) => x.status === "미확인");
+  assert.ok(list.length >= 1);
+  for (const f of list) {
+    for (const col of [0, 1, 2]) {
+      const d = foreignCell(f, col, data.meta.foreign_edu);
+      assert.equal(d.warn, WARN);
+      assert.equal(d.big, "확인");
+      assert.ok(!/\d/.test(JSON.stringify(d.sections)), `${f.id} col ${col}`);
+    }
+  }
 });
 
 test("taskCell: unverified task has warn and no fine; verified has hours and fine", () => {
