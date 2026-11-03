@@ -1,0 +1,282 @@
+{
+ "edu_hire": {
+  "sheet": "edu",
+  "size": [
+   256,
+   224
+  ]
+ },
+ "edu_regular": {
+  "sheet": "edu",
+  "size": [
+   256,
+   224
+  ]
+ },
+ "edu_special": {
+  "sheet": "edu",
+  "size": [
+   256,
+   224
+  ]
+ },
+ "edu_basic": {
+  "sheet": "edu",
+  "size": [
+   256,
+   224
+  ]
+ },
+ "edu_manager": {
+  "sheet": "edu",
+  "size": [
+   256,
+   224
+  ]
+ },
+ "edu_change": {
+  "sheet": "edu",
+  "size": [
+   256,
+   229
+  ]
+ },
+ "edu_signin": {
+  "sheet": "edu",
+  "size": [
+   256,
+   229
+  ]
+ },
+ "edu_tbm": {
+  "sheet": "edu",
+  "size": [
+   256,
+   229
+  ]
+ },
+ "edu_instructor": {
+  "sheet": "edu",
+  "size": [
+   256,
+   229
+  ]
+ },
+ "edu_badge": {
+  "sheet": "edu",
+  "size": [
+   256,
+   229
+  ]
+ },
+ "health_general": {
+  "sheet": "health",
+  "size": [
+   237,
+   256
+  ]
+ },
+ "health_special": {
+  "sheet": "health",
+  "size": [
+   237,
+   256
+  ]
+ },
+ "health_pre": {
+  "sheet": "health",
+  "size": [
+   237,
+   256
+  ]
+ },
+ "measure_env": {
+  "sheet": "health",
+  "size": [
+   237,
+   256
+  ]
+ },
+ "health_hearing": {
+  "sheet": "health",
+  "size": [
+   237,
+   256
+  ]
+ },
+ "health_xray": {
+  "sheet": "health",
+  "size": [
+   253,
+   256
+  ]
+ },
+ "health_blood": {
+  "sheet": "health",
+  "size": [
+   253,
+   256
+  ]
+ },
+ "measure_noise": {
+  "sheet": "health",
+  "size": [
+   253,
+   256
+  ]
+ },
+ "health_heat": {
+  "sheet": "health",
+  "size": [
+   253,
+   256
+  ]
+ },
+ "health_dust": {
+  "sheet": "health",
+  "size": [
+   253,
+   256
+  ]
+ },
+ "role_site_manager": {
+  "sheet": "roles",
+  "size": [
+   256,
+   224
+  ]
+ },
+ "role_safety_manager": {
+  "sheet": "roles",
+  "size": [
+   256,
+   224
+  ]
+ },
+ "role_health_manager": {
+  "sheet": "roles",
+  "size": [
+   256,
+   224
+  ]
+ },
+ "role_supervisor": {
+  "sheet": "roles",
+  "size": [
+   256,
+   224
+  ]
+ },
+ "role_executive": {
+  "sheet": "roles",
+  "size": [
+   256,
+   224
+  ]
+ },
+ "role_coordinator": {
+  "sheet": "roles",
+  "size": [
+   256,
+   228
+  ]
+ },
+ "role_signalman": {
+  "sheet": "roles",
+  "size": [
+   256,
+   228
+  ]
+ },
+ "role_ceo": {
+  "sheet": "roles",
+  "size": [
+   256,
+   228
+  ]
+ },
+ "role_subcontractor": {
+  "sheet": "roles",
+  "size": [
+   256,
+   228
+  ]
+ },
+ "role_physician": {
+  "sheet": "roles",
+  "size": [
+   256,
+   228
+  ]
+ },
+ "doc_fine": {
+  "sheet": "docs",
+  "size": [
+   246,
+   256
+  ]
+ },
+ "doc_law": {
+  "sheet": "docs",
+  "size": [
+   245,
+   256
+  ]
+ },
+ "doc_checklist": {
+  "sheet": "docs",
+  "size": [
+   245,
+   256
+  ]
+ },
+ "doc_report": {
+  "sheet": "docs",
+  "size": [
+   245,
+   256
+  ]
+ },
+ "doc_records": {
+  "sheet": "docs",
+  "size": [
+   246,
+   256
+  ]
+ },
+ "doc_alarm": {
+  "sheet": "docs",
+  "size": [
+   256,
+   250
+  ]
+ },
+ "doc_effective": {
+  "sheet": "docs",
+  "size": [
+   256,
+   251
+  ]
+ },
+ "doc_inspector": {
+  "sheet": "docs",
+  "size": [
+   256,
+   251
+  ]
+ },
+ "doc_contract": {
+  "sheet": "docs",
+  "size": [
+   256,
+   251
+  ]
+ },
+ "doc_chain": {
+  "sheet": "docs",
+  "size": [
+   256,
+   250
+  ]
+ }
+}
