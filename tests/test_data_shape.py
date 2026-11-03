@@ -30,6 +30,24 @@ class DataShapeTests(unittest.TestCase):
             self.assertIsInstance(r["fine"] if r["status"] != "미확인" else [], list)
             self.assertIn(r["unit"], ("1명", "건"))
 
+    def test_criminal_penalties_quoted_verbatim(self):
+        import re
+        col = lambda t: re.sub(r"\s+", " ", t).strip()
+        with open(os.path.join(os.path.dirname(__file__), "..", "sources", "criminal_raw.txt"), encoding="utf-8") as f:
+            raw = col(f.read())
+        by = {r["id"]: r for r in recs("penalties.json")}
+        for i in ("p1", "p2", "p3", "p4", "p5"):
+            r = by[i]
+            qs = r.get("quotes")
+            self.assertTrue(qs, i)
+            for q in qs:
+                self.assertTrue(q["article"], i)
+                self.assertIn(col(q["text"]), raw, i)
+            for a in r["a"]:
+                if a:
+                    fig = re.sub(r"^법인 ", "", col(a))
+                    self.assertTrue(any(fig in re.sub(r"(이하|이상)의 ", r"\1 ", col(q["text"])) for q in qs), (i, a))
+
     def test_nodes(self):
         n = load("nodes.json")["nodes"]
         self.assertIn("home", n); self.assertIn("edu.w", n)

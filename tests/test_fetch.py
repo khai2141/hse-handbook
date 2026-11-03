@@ -68,15 +68,15 @@ class ExtractTests(unittest.TestCase):
 EXPECTED_IDS = (["법%d" % n for n in (15, 16, 17, 18, 19, 22, 29, 31, 32, 62, 64, 68, 125, 129, 130, 131, 132, 164, 167, 175)]
                 + ["령%d" % n for n in (15, 18, 22, 53, 57)]
                 + ["규칙%d" % n for n in (26, 28, 197, 198, 202, 203, 204, 205)]
-                + ["중처%d" % n for n in (2, 4, 6)])
+                + ["중처%d" % n for n in (2, 4, 6, 7)])
 
 
 class WatchlistTests(unittest.TestCase):
-    def test_watchlist_has_36_ids_with_hashes(self):
+    def test_watchlist_has_37_ids_with_hashes(self):
         with open(WATCH, encoding="utf-8") as f:
             w = json.load(f)
         self.assertEqual(sorted(e["id"] for e in w), sorted(EXPECTED_IDS))
-        self.assertEqual(len(w), 36)
+        self.assertEqual(len(w), 37)
         for e in w:
             self.assertRegex(e["hash"], r"^[0-9a-f]{64}$")
 

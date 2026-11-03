@@ -256,6 +256,13 @@
       "latest_effective": "2022-01-27",
       "differs": false,
       "diff_lines": []
+    },
+    "중처7": {
+      "in_force_header": "[시행 2022. 1. 27.] [법률 제17907호, 2021. 1. 26., 제정]",
+      "latest_header": "[시행 2022. 1. 27.] [법률 제17907호, 2021. 1. 26., 제정]",
+      "latest_effective": "2022-01-27",
+      "differs": false,
+      "diff_lines": []
     }
   }
 }
