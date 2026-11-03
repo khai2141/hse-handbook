@@ -35,7 +35,9 @@ class DataShapeTests(unittest.TestCase):
         self.assertIn("home", n); self.assertIn("edu.w", n)
 
     def test_counts(self):
-        self.assertEqual(len(recs("penalties.json")), 20)
+        pens = recs("penalties.json")
+        self.assertEqual([r["id"] for r in pens], ["p%d" % (i + 1) for i in range(len(pens))])
+        self.assertGreaterEqual(len(pens), 32)
         self.assertEqual(len(recs("env.json")), 8)
         self.assertEqual(len(recs("tasks.json")), 18)
 
@@ -69,6 +71,61 @@ class DataShapeTests(unittest.TestCase):
         hrs = e5.get("contents_hours")
         if hrs:
             self.assertEqual(sum(h["hours"] for h in hrs), 4)
+
+    # ---- Task 7B: verbatim checks against captured raw text ----
+    NEW_PEN = {
+        "p21": (r"법\s*제125조제1항\s*및법제175조제4", [20, 50, 100], "1명"),
+        "p22": (r"법\s*제125조제1항\s*및법제175조제5", [100, 300, 500], "건"),
+        "p23": (r"법\s*제125조제4항", [500, 500, 500], "건"),
+        "p24": (r"법\s*제125조제6항", [100, 300, 500], "건"),
+        "p25": (r"법\s*제125조제7항", [100, 300, 500], "건"),
+        "p26": (r"법\s*제129조제1항또는", [10, 20, 30], "1명"),
+        "p27": (r"법\s*제132조제1항", [500, 500, 500], "건"),
+        "p28": (r"법\s*제132조제2항전단", [100, 300, 500], "건"),
+        "p29": (r"법\s*제132조제3항", [300, 300, 300], "건"),
+        "p30": (r"법\s*제54조제2항\(", [3000, 3000, 3000], "건"),
+        "p31": (r"법\s*제62조제1항", [500, 500, 500], "건"),
+        "p32": (r"법\s*제68조제1항", [500, 500, 500], "건"),
+    }
+
+    def test_byeolpyo35_verbatim(self):
+        import re
+        here = os.path.dirname(__file__)
+        with open(os.path.join(here, "..", "sources", "byeolpyo35_raw.txt"), encoding="utf-8") as f:
+            raw = re.sub(r"\s+", " ", f.read())
+        by = {r["id"]: r for r in recs("penalties.json")}
+        for pid, (marker, amts, unit) in self.NEW_PEN.items():
+            self.assertIn(pid, by)
+            r = by[pid]
+            self.assertEqual(r["a"], amts, pid)
+            self.assertEqual(r["fines"], amts, pid)
+            self.assertEqual(r["unit"], unit, pid)
+            self.assertEqual(r["k"], "과태료")
+            self.assertEqual(r["status"], "확인")
+            self.assertEqual(r["max"], max(amts))
+            self.assertTrue(r["art"].startswith("별표 35 · 법 제"), pid)
+            m = re.search(marker, raw)
+            self.assertIsNotNone(m, f"{pid} marker {marker}")
+            fmt = lambda n: f"{n:,}"
+            tri = r"[ ¦]+".join(re.escape(fmt(n)) for n in amts)
+            window = raw[m.start(): m.start() + 450]
+            self.assertRegex(window, r"(?<![\d,])" + tri + r"(?![\d,])", f"{pid} triple {amts}")
+
+    def test_byeolpyo4_hours_verbatim(self):
+        import re
+        here = os.path.dirname(__file__)
+        with open(os.path.join(here, "..", "sources", "byeolpyo4_raw.txt"), encoding="utf-8") as f:
+            raw = re.sub(r"\s+", "", f.read())
+        for w in recs("workers.json"):
+            if "cells" not in w:
+                continue
+            for i, c in enumerate(w["cells"]):
+                if c["k"] == "y":
+                    for h in re.findall(r"\d+시간", c["t"]):
+                        self.assertIn(h, raw, f"{w['id']} cell {i}: {c['t']}")
+                if c["t"] == "확인":
+                    self.assertEqual(c["k"], "q")
+                    self.assertEqual(c.get("note"), "별표 4에 칸 없음", f"{w['id']} cell {i}")
 
 if __name__ == "__main__":
     unittest.main()

@@ -550,6 +550,342 @@
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
    }
+  },
+  {
+   "id": "p21",
+   "t": "작업환경측정 미실시 (측정대상 작업장 근로자 1명당)",
+   "art": "별표 35 · 법 제125조①·②",
+   "k": "과태료",
+   "unit": "1명",
+   "a": [
+    20,
+    50,
+    100
+   ],
+   "max": 100,
+   "law": "법 제175조④6",
+   "who": "사업주",
+   "name": "작업환경측정 미실시 (측정대상 작업장 근로자 1명당)",
+   "fines": [
+    20,
+    50,
+    100
+   ],
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9&bylNo=0035&bylBrNo=00&bylCls=BE",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "p22",
+   "t": "작업환경측정 방법 미준수",
+   "art": "별표 35 · 법 제125조①·②",
+   "k": "과태료",
+   "unit": "건",
+   "a": [
+    100,
+    300,
+    500
+   ],
+   "max": 500,
+   "law": "법 제175조⑤13",
+   "who": "사업주",
+   "name": "작업환경측정 방법 미준수",
+   "fines": [
+    100,
+    300,
+    500
+   ],
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9&bylNo=0035&bylBrNo=00&bylCls=BE",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "p23",
+   "t": "작업환경측정 시 근로자대표 미참석",
+   "art": "별표 35 · 법 제125조④",
+   "k": "과태료",
+   "unit": "건",
+   "a": [
+    500,
+    500,
+    500
+   ],
+   "max": 500,
+   "law": "법 제175조⑤14",
+   "who": "사업주",
+   "name": "작업환경측정 시 근로자대표 미참석",
+   "fines": [
+    500,
+    500,
+    500
+   ],
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9&bylNo=0035&bylBrNo=00&bylCls=BE",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "p24",
+   "t": "작업환경측정 결과 근로자에게 미통지",
+   "art": "별표 35 · 법 제125조⑥",
+   "k": "과태료",
+   "unit": "건",
+   "a": [
+    100,
+    300,
+    500
+   ],
+   "max": 500,
+   "law": "법 제175조⑤15",
+   "who": "사업주",
+   "name": "작업환경측정 결과 근로자에게 미통지",
+   "fines": [
+    100,
+    300,
+    500
+   ],
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9&bylNo=0035&bylBrNo=00&bylCls=BE",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "p25",
+   "t": "작업환경측정 결과 설명회 요구 불응",
+   "art": "별표 35 · 법 제125조⑦",
+   "k": "과태료",
+   "unit": "건",
+   "a": [
+    100,
+    300,
+    500
+   ],
+   "max": 500,
+   "law": "법 제175조⑤1",
+   "who": "사업주",
+   "name": "작업환경측정 결과 설명회 요구 불응",
+   "fines": [
+    100,
+    300,
+    500
+   ],
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9&bylNo=0035&bylBrNo=00&bylCls=BE",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "p26",
+   "t": "건강진단 미실시 (건강진단 대상 근로자 1명당)",
+   "art": "별표 35 · 법 제129조①·제130조①~③",
+   "k": "과태료",
+   "unit": "1명",
+   "a": [
+    10,
+    20,
+    30
+   ],
+   "max": 30,
+   "law": "법 제175조④7",
+   "who": "사업주",
+   "name": "건강진단 미실시 (건강진단 대상 근로자 1명당)",
+   "fines": [
+    10,
+    20,
+    30
+   ],
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9&bylNo=0035&bylBrNo=00&bylCls=BE",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "p27",
+   "t": "건강진단 시 근로자대표 미참석",
+   "art": "별표 35 · 법 제132조①",
+   "k": "과태료",
+   "unit": "건",
+   "a": [
+    500,
+    500,
+    500
+   ],
+   "max": 500,
+   "law": "법 제175조⑤14",
+   "who": "사업주",
+   "name": "건강진단 시 근로자대표 미참석",
+   "fines": [
+    500,
+    500,
+    500
+   ],
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9&bylNo=0035&bylBrNo=00&bylCls=BE",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "p28",
+   "t": "건강진단 결과 설명 요구 불응",
+   "art": "별표 35 · 법 제132조②",
+   "k": "과태료",
+   "unit": "건",
+   "a": [
+    100,
+    300,
+    500
+   ],
+   "max": 500,
+   "law": "법 제175조⑤1",
+   "who": "사업주",
+   "name": "건강진단 결과 설명 요구 불응",
+   "fines": [
+    100,
+    300,
+    500
+   ],
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9&bylNo=0035&bylBrNo=00&bylCls=BE",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "p29",
+   "t": "건강진단 결과를 보호·유지 외 목적으로 사용",
+   "art": "별표 35 · 법 제132조③",
+   "k": "과태료",
+   "unit": "건",
+   "a": [
+    300,
+    300,
+    300
+   ],
+   "max": 300,
+   "law": "법 제175조⑥3",
+   "who": "사업주",
+   "name": "건강진단 결과를 보호·유지 외 목적으로 사용",
+   "fines": [
+    300,
+    300,
+    300
+   ],
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9&bylNo=0035&bylBrNo=00&bylCls=BE",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "p30",
+   "t": "중대재해 발생 보고 위반",
+   "art": "별표 35 · 법 제54조②",
+   "k": "과태료",
+   "unit": "건",
+   "a": [
+    3000,
+    3000,
+    3000
+   ],
+   "max": 3000,
+   "law": "법 제175조②2",
+   "who": "사업주",
+   "name": "중대재해 발생 보고 위반",
+   "fines": [
+    3000,
+    3000,
+    3000
+   ],
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9&bylNo=0035&bylBrNo=00&bylCls=BE",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "p31",
+   "t": "안전보건총괄책임자 미지정",
+   "art": "별표 35 · 법 제62조①",
+   "k": "과태료",
+   "unit": "건",
+   "a": [
+    500,
+    500,
+    500
+   ],
+   "max": 500,
+   "law": "법 제175조⑤1",
+   "who": "사업주",
+   "name": "안전보건총괄책임자 미지정",
+   "fines": [
+    500,
+    500,
+    500
+   ],
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9&bylNo=0035&bylBrNo=00&bylCls=BE",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
+  },
+  {
+   "id": "p32",
+   "t": "안전보건조정자 미선임",
+   "art": "별표 35 · 법 제68조①",
+   "k": "과태료",
+   "unit": "건",
+   "a": [
+    500,
+    500,
+    500
+   ],
+   "max": 500,
+   "law": "법 제175조⑤1",
+   "who": "사업주",
+   "name": "안전보건조정자 미선임",
+   "fines": [
+    500,
+    500,
+    500
+   ],
+   "status": "확인",
+   "source": {
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9&bylNo=0035&bylBrNo=00&bylCls=BE",
+    "published": "2026-07-28",
+    "effective": "2026-08-01",
+    "verified_at": "2026-11-03"
+   }
   }
  ]
 }

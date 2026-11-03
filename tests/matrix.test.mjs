@@ -36,10 +36,10 @@ test("T 18, M 8, R 8 with 9 cells, V 8", () => {
   assert.equal(bodyRows(v).length, 8);
   assert.deepEqual(bodyRows(v)[0].cells.map((c) => c.t), ["보기", "보기"]);
 });
-test("P has 20 rows sorted by max desc with 만원 formatting", () => {
+test("P has one row per penalty record, sorted by max desc with 만원 formatting", () => {
   const m = buildMatrix("P", data);
   const rows = bodyRows(m);
-  assert.equal(rows.length, 20);
+  assert.equal(rows.length, data.penalties.length);
   const max = new Map(data.penalties.map((p) => [p.id, p.max]));
   for (let i = 1; i < rows.length; i++) assert.ok(max.get(rows[i - 1].id) >= max.get(rows[i].id));
   assert.ok(rows.some((r) => r.cells[1].t === "1,000만원"));
