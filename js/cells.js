@@ -134,7 +134,12 @@ export function taskCell(task, col) {
     sections.push({ key: "fine", label, text: "근로자 1명당 50 / 100 / 150만원 (1·2·3차). 법 제175조②1 (상한 3천만원)" });
     fine = { perPerson: [50, 100, 150], unit: "1명" };
   }
-  sections.push({ key: "contents", text: "별표 5의 이 작업 항목에 있으며 아직 정리하지 않았습니다. 공통 내용은 채용 시 교육과 같습니다." });
+  if (Array.isArray(task.contents) && task.contents.length) {
+    sections.push({ key: "contents", label: "교육내용 (별표 5 개별내용)", items: task.contents });
+    sections.push({ key: "common", text: "공통내용은 별표 5 제1호 다목(채용 시 교육 및 작업내용 변경 시 교육)과 같습니다." });
+  } else {
+    sections.push({ key: "contents", text: "별표 5의 이 작업 항목에 있으며 아직 정리하지 않았습니다. 공통 내용은 채용 시 교육과 같습니다." });
+  }
   sections.push({ key: "obligation", text: "관계수급인 근로자의 특별교육은 도급인이 실시 여부를 확인해야 합니다 (법 제64조①4)." });
   const out = {
     title, icon: "edu_special", big, status: task.status, sections,

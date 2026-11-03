@@ -138,3 +138,15 @@ test("unverified W cells carry no fine, no calculator and no 만원", async () =
     assert.equal(d.fine, undefined);
   }
 });
+
+test("taskCell: contents shown when present, placeholder gone; unverified still warns", () => {
+  const t = taskCell({ id: "15", name: "x", status: "확인", contents: ["가 사항", "나 사항"] }, 0);
+  const c = t.sections.find((x) => x.key === "contents");
+  assert.deepEqual(c.items, ["가 사항", "나 사항"]);
+  assert.ok(t.sections.some((x) => x.key === "common"));
+  assert.ok(!JSON.stringify(t).includes("아직 정리하지 않았습니다"));
+  const u = taskCell({ id: "15", name: "x", status: "미확인", contents: ["가 사항"] }, 2);
+  assert.equal(u.warn, WARN);
+  const none = taskCell({ id: "15", name: "x", status: "확인" }, 0);
+  assert.ok(JSON.stringify(none).includes("아직 정리하지 않았습니다"));
+});
