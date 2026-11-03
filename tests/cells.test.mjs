@@ -29,3 +29,28 @@ test("unverified cell warns and never shows an invented number", () => {
 test("title joins worker and education names", () => {
   assert.equal(workerCell(reg, edu, 0).title, "상용·상시 근로자 × 채용 시 교육");
 });
+
+test("worker with status 미확인 never shows its raw cell value", () => {
+  const w = { id: "x", name: "미확인 근로자", status: "미확인", law: [], rule: [],
+    cells: [{ t: "8시간", k: "y" }] };
+  const d = workerCell(w, edu, 0);
+  assert.equal(d.big, "확인");
+  assert.equal(d.warn, "원문 확인 필요");
+  assert.equal(d.sections.some((s) => s.key === "alloc"), false);
+});
+
+test("missing cells or out-of-range column returns fallback without throwing", () => {
+  const noCells = { id: "n", name: "무자료", status: "확인", law: [], rule: [] };
+  const a = workerCell(noCells, edu, 0);
+  assert.equal(a.warn, "원문 확인 필요");
+  assert.equal(a.big, "확인");
+  assert.deepEqual(a.sections, []);
+  assert.equal(a.fine, undefined);
+  assert.equal(a.title, "무자료 × 채용 시 교육");
+
+  const b = workerCell(reg, edu, 5);
+  assert.equal(b.warn, "원문 확인 필요");
+  assert.equal(b.big, "확인");
+  assert.deepEqual(b.sections, []);
+  assert.equal(b.fine, undefined);
+});
