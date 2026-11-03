@@ -42,6 +42,14 @@ class ExtractTests(unittest.TestCase):
             self.assertRegex(t, r"\[시행 [^\]]+\] \[[^\]]+\]", name)
             self.assertRegex(header_line(read(name)), r"^\[시행 .*\]$")
 
+    def test_extract_keeps_unescaped_annotation(self):
+        t = extract_article(read("article_29.html"))
+        self.assertIn("<개정 2020.6.9>", t)
+        self.assertRegex(t, r"\[시행 [^\]]+\] \[[^\]]+\]")
+
+    def test_hash_differs_on_annotation_only_change(self):
+        self.assertNotEqual(text_hash("① 가 <개정 2020.6.9>"), text_hash("① 가 <개정 2021.1.1>"))
+
     def test_extract_has_no_script_or_nav(self):
         for name, _ in self.CASES:
             t = extract_article(read(name))

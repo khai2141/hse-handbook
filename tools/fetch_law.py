@@ -6,8 +6,12 @@ def normalize(html):
     return re.sub(r"\s+", " ", text).strip()
 
 
+def collapse_ws(text):
+    return re.sub(r"\s+", " ", text).strip()
+
+
 def text_hash(text):
-    return hashlib.sha256(normalize(text).encode("utf-8")).hexdigest()
+    return hashlib.sha256(collapse_ws(text).encode("utf-8")).hexdigest()
 
 
 def diff_report(watchlist, current):
@@ -37,7 +41,7 @@ def _blocks(html):
 def header_line(html):
     th, _ = _blocks(html)
     m = re.search(r"<div[^>]*>(.*?)</div>", th, flags=re.S)
-    return normalize(m.group(1)) if m else ""
+    return collapse_ws(htmllib.unescape(re.sub(r"<[^>]+>", " ", m.group(1)))) if m else ""
 
 
 def extract_article(html):
@@ -45,7 +49,8 @@ def extract_article(html):
     th, tb = _blocks(html)
     if not th or not tb:
         return ""
-    return normalize(htmllib.unescape(normalize(th + " " + tb)))
+    stripped = re.sub(r"<[^>]+>", " ", th + " " + tb)
+    return collapse_ws(htmllib.unescape(stripped))
 
 
 def fetch_article(law_name, jo_no, backend="html"):
