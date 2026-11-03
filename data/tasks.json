@@ -6,95 +6,160 @@
    "trades": "tower,steel",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "contents": [
+    "방호장치의 기능 및 사용에 관한 사항",
+    "기계, 기구, 달기체인 및 와이어 등의 점검에 관한 사항",
+    "화물의 권상·권하 작업방법 및 안전작업 지도에 관한 사항",
+    "기계·기구에 특성 및 동작원리에 관한 사항",
+    "신호방법 및 공동작업에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "17",
-   "name": "전압 75볼트 이상 정전 및 활선작업",
+   "name": "전압이 75볼트 이상인 정전 및 활선작업",
    "trades": "elec",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "전압 75볼트 이상 정전 및 활선작업",
+   "contents": [
+    "전기의 위험성 및 전격 방지에 관한 사항",
+    "해당 설비의 보수 및 점검에 관한 사항",
+    "정전작업·활선작업 시의 안전작업방법 및 순서에 관한 사항",
+    "절연용 보호구, 절연용 방호구 및 활선작업용 기구 등의 사용에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "18",
-   "name": "콘크리트 파쇄기 파쇄작업 (2m 이상 구축물)",
+   "name": "콘크리트 파쇄기를 사용하여 하는 파쇄작업(2미터 이상인 구축물의 파쇄작업만 해당한다)",
    "trades": "demo",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "콘크리트 파쇄기 파쇄작업 (2m 이상 구축물)",
+   "contents": [
+    "콘크리트 해체 요령과 방호거리에 관한 사항",
+    "작업안전조치 및 안전기준에 관한 사항",
+    "파쇄기의 조작 및 공통작업 신호에 관한 사항",
+    "보호구 및 방호장비 등에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "19",
-   "name": "굴착면 높이 2m 이상 지반 굴착",
+   "name": "굴착면의 높이가 2미터 이상이 되는 지반 굴착(터널 및 수직갱 외의 갱 굴착은 제외한다)작업",
    "trades": "oper",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "굴착면 높이 2m 이상 지반 굴착",
+   "contents": [
+    "지반의 형태·구조 및 굴착 요령에 관한 사항",
+    "지반의 붕괴재해 예방에 관한 사항",
+    "붕괴 방지용 구조물 설치 및 작업방법에 관한 사항",
+    "보호구의 종류 및 사용에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "20",
-   "name": "흙막이 지보공 보강, 동바리 설치·해체",
+   "name": "흙막이 지보공의 보강 또는 동바리를 설치하거나 해체하는 작업",
    "trades": "form,oper",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "흙막이 지보공 보강, 동바리 설치·해체",
+   "contents": [
+    "작업안전 점검 요령과 방법에 관한 사항",
+    "동바리의 운반·취급 및 설치 시 안전작업에 관한 사항",
+    "해체작업 순서와 안전기준에 관한 사항",
+    "보호구 취급 및 사용에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "21",
-   "name": "터널 안 굴착작업",
+   "name": "터널 안에서의 굴착작업(굴착용 기계를 사용하여 하는굴착작업 중 근로자가 칼날밑에 접근하지 않고 하는 작업은 제외한다) 또는 같은 작업에서의 터널 거푸집 지보공의 조립 또는 콘크리트 작업",
    "trades": "oper",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "터널 안 굴착작업",
+   "contents": [
+    "작업환경의 점검 요령과 방법에 관한 사항",
+    "붕괴 방지용 구조물 설치 및 안전작업 방법에 관한 사항",
+    "재료의 운반 및 취급·설치의 안전기준에 관한 사항",
+    "보호구의 종류 및 사용에 관한 사항",
+    "소화설비의 설치장소 및 사용방법에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "22",
-   "name": "굴착면 높이 2m 이상 암석 굴착",
+   "name": "굴착면의 높이가 2미터 이상이 되는 암석의 굴착작업",
    "trades": "oper",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "굴착면 높이 2m 이상 암석 굴착",
+   "contents": [
+    "폭발물 취급 요령과 대피 요령에 관한 사항",
+    "안전거리 및 안전기준에 관한 사항",
+    "방호물의 설치 및 기준에 관한 사항",
+    "보호구 및 신호방법 등에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "23",
-   "name": "높이 2m 이상 물건을 쌓거나 내리는 작업",
+   "name": "높이가 2미터 이상인 물건을 쌓거나 무너뜨리는 작업(하역기계로만 하는 작업은제외한다)",
    "trades": "rebar,form,scaf,steel,conc",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "높이 2m 이상 물건을 쌓거나 내리는 작업",
+   "contents": [
+    "원부재료의 취급 방법 및 요령에 관한 사항",
+    "물건의 위험성·낙하 및 붕괴재해 예방에 관한 사항",
+    "적재방법 및 전도 방지에 관한 사항",
+    "보호구 착용에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "25",
@@ -102,11 +167,19 @@
    "trades": "form,rebar,conc",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "거푸집 동바리의 조립 또는 해체작업",
+   "contents": [
+    "동바리의 조립방법 및 작업 절차에 관한 사항",
+    "조립재료의 취급방법 및 설치기준에 관한 사항",
+    "조립ㆍ해체 시의 사고 예방에 관한 사항",
+    "보호구 착용 및 점검에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "26",
@@ -114,59 +187,100 @@
    "trades": "scaf,rebar,form",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "contents": [
+    "비계의 조립순서 및 방법에 관한 사항",
+    "비계작업의 재료 취급 및 설치에 관한 사항",
+    "추락재해 방지에 관한 사항",
+    "보호구 착용에 관한 사항",
+    "비계상부 작업 시 최대 적재하중에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "27",
-   "name": "금속제 부재 골조·교량 상부구조 조립·해체 (5m 이상)",
+   "name": "건축물의 골조, 다리의 상부구조 또는 탑의 금속제의 부재로 구성되는 것(5미터 이상인 것만 해당한다)의 조립·해체 또는 변경작업",
    "trades": "steel,weld",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "금속제 부재 골조·교량 상부구조 조립·해체 (5m 이상)",
+   "contents": [
+    "건립 및 버팀대의 설치순서에 관한 사항",
+    "조립ㆍ해체 시의 추락재해 및 위험요인에 관한 사항",
+    "건립용 기계의 조작 및 작업신호 방법에 관한 사항",
+    "안전장비 착용 및 해체순서에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "28",
-   "name": "처마 높이 5m 이상 목조건축물 구조 부재 조립",
+   "name": "처마 높이가 5미터 이상인 목조건축물의 구조 부재의 조립이나 건축물의 지붕 또는 외벽 밑에서의 설치작업",
    "trades": "form",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "처마 높이 5m 이상 목조건축물 구조 부재 조립",
+   "contents": [
+    "붕괴·추락 및 재해 방지에 관한 사항",
+    "부재의 강도·재질 및 특성에 관한 사항",
+    "조립·설치 순서 및 안전작업방법에 관한 사항",
+    "보호구 착용 및 작업 점검에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "29",
-   "name": "높이 2m 이상 콘크리트 인공구조물 해체·파괴",
+   "name": "콘크리트 인공구조물(그 높이가 2미터 이상인 것만 해당한다)의 해체 또는 파괴작업",
    "trades": "demo",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "높이 2m 이상 콘크리트 인공구조물 해체·파괴",
+   "contents": [
+    "콘크리트 해체기계의 점검에 관한 사항",
+    "파괴 시의 안전거리 및 대피 요령에 관한 사항",
+    "작업방법·순서 및 신호 방법 등에 관한 사항",
+    "해체·파괴 시의 작업안전기준 및 보호구에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "30",
-   "name": "타워크레인 설치(상승 포함)·해체",
+   "name": "타워크레인을 설치(상승작업을 포함한다)·해체하는 작업",
    "trades": "tower",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "타워크레인 설치(상승 포함)·해체",
+   "contents": [
+    "붕괴·추락 및 재해 방지에 관한 사항",
+    "설치·해체 순서 및 안전작업방법에 관한 사항",
+    "부재의 구조·재질 및 특성에 관한 사항",
+    "신호방법 및 요령에 관한 사항",
+    "이상 발생 시 응급조치에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "34",
@@ -174,11 +288,19 @@
    "trades": "weld,elec",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "contents": [
+    "산소농도 측정 및 작업환경에 관한 사항",
+    "사고 시의 응급처치 및 비상 시 구출에 관한 사항",
+    "보호구 착용 및 보호 장비 사용에 관한 사항",
+    "작업내용ㆍ안전작업방법 및 절차에 관한 사항",
+    "장비ㆍ설비 및 시설 등의 안전점검에 관한 사항",
+    "그 밖에 안전ㆍ보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "37",
@@ -186,35 +308,60 @@
    "trades": "demo",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "contents": [
+    "석면의 특성과 위험성",
+    "석면해체·제거의 작업방법에 관한 사항",
+    "장비 및 보호구 사용에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "38",
-   "name": "가연물이 있는 장소의 화재위험작업",
+   "name": "가연물이 있는 장소에서 하는 화재위험작업",
    "trades": "weld",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "가연물이 있는 장소의 화재위험작업",
+   "contents": [
+    "작업준비 및 작업절차에 관한 사항",
+    "작업장 내 위험물, 가연물의 사용·보관·설치 현황에 관한 사항",
+    "화재위험작업에 따른 인근 인화성 액체에 대한 방호조치에 관한 사항",
+    "화재위험작업으로 인한 불꽃, 불티 등의 흩날림 방지 조치에관한 사항",
+    "인화성 액체의 증기가 남아 있지 않도록 환기 등의 조치에 관한 사항",
+    "화재감시자의 직무 및 피난교육 등 비상조치에 관한 사항",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   },
   {
    "id": "39",
-   "name": "타워크레인 사용 작업 시 신호업무",
+   "name": "타워크레인을 사용하는 작업시 신호업무를 하는 작업",
    "trades": "tower",
    "status": "확인",
    "source": {
-    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=산업안전보건법",
+    "url": "https://www.law.go.kr/LSW/lsBylInfoPLinkR.do?lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&bylNo=0005&bylBrNo=00&bylCls=BE",
     "published": "2026-07-28",
     "effective": "2026-08-01",
     "verified_at": "2026-11-03"
-   }
+   },
+   "short": "타워크레인 사용 작업 시 신호업무",
+   "contents": [
+    "타워크레인의 기계적 특성 및 방호장치 등에 관한 사항",
+    "화물의 취급 및 안전작업방법에 관한 사항",
+    "신호방법 및 요령에 관한 사항",
+    "인양 물건의 위험성 및 낙하·비래·충돌재해 예방에 관한 사항",
+    "인양물이 적재될 지반의 조건, 인양하중, 풍압 등이 인양물과타워크레인에 미치는 영향",
+    "그 밖에 안전·보건관리에 필요한 사항"
+   ]
   }
  ]
 }

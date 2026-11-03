@@ -50,5 +50,25 @@ class DataShapeTests(unittest.TestCase):
         ids = {r["id"] for r in recs("roles.json")}
         self.assertFalse(ids & {"stf", "cm"})
 
+    def test_byeolpyo5_contents(self):
+        import re
+        norm = lambda x: re.sub(r"\s+", " ", x).strip()
+        with open(os.path.join(os.path.dirname(__file__), "..", "sources", "byeolpyo5_raw.txt"), encoding="utf-8") as f:
+            raw = norm(f.read())
+        tasks = recs("tasks.json")
+        self.assertEqual(len(tasks), 18)
+        for t in tasks:
+            self.assertTrue(isinstance(t.get("contents"), list) and t["contents"], t["id"])
+            for c in t["contents"]:
+                self.assertIn(norm(c), raw, f"task {t['id']}: {c}")
+        e5 = {r["id"]: r for r in recs("education.json")}["e5"]
+        self.assertTrue(e5["contents"])
+        for c in e5["contents"]:
+            self.assertNotIn("읽지 못했습니다", c)
+            self.assertIn(norm(c), raw, f"e5: {c}")
+        hrs = e5.get("contents_hours")
+        if hrs:
+            self.assertEqual(sum(h["hours"] for h in hrs), 4)
+
 if __name__ == "__main__":
     unittest.main()
