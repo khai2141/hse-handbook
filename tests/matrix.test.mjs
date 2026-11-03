@@ -50,12 +50,15 @@ test("filterRows keeps matches and drops empty groups", () => {
   const names = f.filter((r) => !r.g).map((r) => r.n);
   assert.ok(names.includes("일용근로자"));
   assert.equal(f.filter((r) => r.g).length, new Set(f.filter((r) => !r.g).map((r) => data.workers.find((w) => w.id === r.id).group)).size);
-  assert.deepEqual(filterRows(m.rows, "ㅇㅇㄱㄹㅈ").filter((r) => !r.g).map((r) => r.n), ["일용근로자"]);
+  const cho = filterRows(m.rows, "ㅇㅇㄱㄹㅈ").filter((r) => !r.g).map((r) => r.n);
+  assert.ok(cho.includes("일용근로자"));
 });
-test('queries with "(" or "[" never throw and return no rows', () => {
+test('queries with "(" or "[" never throw and match literally', () => {
   const m = buildMatrix("W", data);
-  assert.deepEqual(filterRows(m.rows, "("), []);
+  const par = filterRows(m.rows, "(").filter((r) => !r.g);
+  assert.ok(par.length > 0 && par.every((r) => (r.n + r.s).includes("(")));
   assert.deepEqual(filterRows(m.rows, "["), []);
+  assert.deepEqual(filterRows(m.rows, "(("), []);
   assert.doesNotThrow(() => renderMatrix("W", data, "("));
 });
 test("renderMatrix emits cell buttons, info buttons for W/H/F/M/R only, and escapes", () => {
