@@ -1,6 +1,7 @@
 import { clampCount } from "./core.js";
 import { esc, icon } from "./html.js";
 import { renderMatrix } from "./matrix.js";
+import { renderArticles, articleDetail } from "./articles.js";
 import { cellDetail, infoDetail } from "./cells.js";
 import { detailToHtml, totalText } from "./render.js";
 import { routeFromHash, hashFor, breadcrumbs, kidsOf } from "./tree.js";
@@ -10,6 +11,7 @@ const HINTS = {
   W: "시간은 시행규칙 별표 4 (시행 2026.8.1). 일용·기간제의 정기교육 시간은 표에 칸이 없어 '확인'으로 표시했습니다.",
   P: "과태료는 시행령 별표 35 (단위 만원). 같은 위반으로 최근 5년 내 처분받은 횟수에 따라 1·2·3차 적용. 통계가 없어 ★는 붙이지 않았습니다.",
   F: "E-9·H-2 내용은 검색 결과(2차 출처) 기반입니다. 최신은 고용24, 법무부에서 확인하세요.",
+  A: "조문 원문은 law.go.kr에서 가져온 현행 시행본입니다. 카드를 누르면 요건·점검·원문이 열립니다.",
   H: "특수건강진단 검사항목은 고용노동부 고시에 있으며 아직 읽지 못했습니다.",
 };
 
@@ -30,8 +32,11 @@ async function load() {
   data.nodes = nodes.nodes ?? {};
   data.meta = meta;
   data.versions = await fetch("data/versions.json").then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  data.articles = await fetch("data/articles.json").then((r) => (r.ok ? r.json() : null)).then((j) => j?.records ?? []).catch(() => []);
   return data;
 }
+
+const kindHtml = (n) => (n.kind === "A" ? renderArticles(state.id, state.data, state.q) : renderMatrix(n.kind, state.data, state.q));
 
 /* ---------- screens ---------- */
 function outlineHtml() {
@@ -79,7 +84,7 @@ function mainHtml() {
   if (k.length) {
     h += `<div class="kids" role="group" aria-label="하위 가지">${k.map((x) => `<button type="button" data-go="${esc(x)}">${icon(nodes[x].i, 30)}${esc(nodes[x].t)}</button>`).join("")}</div>`;
   }
-  if (n.kind) h += `<div id="matrix">${renderMatrix(n.kind, state.data, state.q)}</div><p class="hint">${esc(HINTS[n.kind] ?? "")}</p>`;
+  if (n.kind) h += `<div id="matrix">${kindHtml(n)}</div><p class="hint">${esc(HINTS[n.kind] ?? "")}</p>`;
   else if (!k.length) {
     h += '<p class="empty">준비 중 — 아래 내용을 작성할 예정입니다.</p>';
     if (Array.isArray(n.plan)) h += `<ul class="plan">${n.plan.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`;
@@ -98,7 +103,7 @@ function renderPage() {
 function renderMatrixOnly() {
   const n = state.data.nodes[state.id];
   const box = $("matrix");
-  if (n?.kind && box) box.innerHTML = renderMatrix(n.kind, state.data, state.q);
+  if (n?.kind && box) box.innerHTML = kindHtml(n);
 }
 
 function route() {
@@ -171,7 +176,7 @@ function trapTab(e) {
 /* ---------- events ---------- */
 function onClick(e) {
   if (e.target.id === "bg") return closeSheet();
-  const t = e.target.closest("[data-go],[data-cell],[data-info],[data-close],#menu");
+  const t = e.target.closest("[data-go],[data-cell],[data-info],[data-art],[data-close],#menu");
   if (!t) return;
   if (t.id === "menu") {
     const on = $("outline").classList.toggle("on");
@@ -180,6 +185,7 @@ function onClick(e) {
   }
   if (t.dataset.close) return closeSheet();
   if (t.dataset.go) return go(t.dataset.go);
+  if (t.dataset.art) return openSheet(articleDetail(t.dataset.art, state.data), t);
   if (t.dataset.info) {
     const [kind, id] = t.dataset.info.split("|");
     return openSheet(infoDetail(kind, id, state.data), t);

@@ -134,3 +134,16 @@ button.c{min-height:32px}
 @media (prefers-reduced-motion:no-preference){button.c{transition:filter .12s}}
 .plan{margin:8px 0 0;padding-left:20px;color:var(--mut)}
 .plan li{margin:3px 0}
+/* article cards (kind A) */
+.agrp{margin-block:14px}
+.agrp h3{font-size:13px;font-weight:900;color:var(--navy);background:var(--sky-soft);border-radius:8px;padding:5px 10px;margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:8px}
+button.card{display:grid;gap:2px;text-align:left;align-content:start;background:var(--surf);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;min-height:44px;overflow-wrap:anywhere}
+button.card:hover{border-color:var(--navy)}
+button.card b{font-size:12px;color:var(--mut);font-weight:700}
+button.card .ct{font-weight:900;font-size:14.5px}
+button.card .cm{font-size:12.5px;color:var(--mut);font-weight:400}
+button.card .cm.warn{color:var(--q);background:var(--q-bg);border-radius:6px;padding:1px 6px;width:fit-content}
+.orig p{margin:0 0 6px}
+a.ext,button.lnk{display:inline-block;color:var(--navy);font-weight:700;text-decoration:underline;border:0;background:none;padding:6px 0;min-height:32px;text-align:left}
+details.ex>summary{min-height:32px}

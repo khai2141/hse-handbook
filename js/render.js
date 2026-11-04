@@ -31,6 +31,7 @@ const LABELS = {
   resp: "책임 주체",
 };
 
+const LAW_URL = /^https:\/\/www\.law\.go\.kr\//;
 const ALLOC_HINT = "법령은 총 시간만 정합니다. 아래는 총 시간을 항목 수로 나눈 편성 예시일 뿐 법적 기준이 아닙니다.";
 
 const finite = (v) => typeof v === "number" && Number.isFinite(v);
@@ -73,7 +74,15 @@ function sectionHtml(s) {
   if (s.hint) inner += `<div class="hint">${esc(s.hint)}</div>`;
   if (Array.isArray(s.pills) && s.pills.length) inner += pills(s.pills);
   if (s.table) inner += table(s.table);
+  if (Array.isArray(s.lines) && s.lines.length) inner += `<div class="orig">${s.lines.map((x) => `<p>${esc(x)}</p>`).join("")}</div>`;
+  if (s.link && LAW_URL.test(String(s.link.href ?? ""))) {
+    inner += `<a class="ext" href="${esc(s.link.href)}" target="_blank" rel="noopener noreferrer">${esc(s.link.text ?? "원문 보기")}</a>`;
+  }
+  if (s.go && /^[a-z0-9.]+$/.test(String(s.go.id ?? ""))) {
+    inner += `<button type="button" class="lnk" data-go="${esc(s.go.id)}">${esc(s.go.text)}</button>`;
+  }
   if (!inner) return "";
+  if (s.collapse) return `<details class="ex"${s.collapse === "open" ? " open" : ""}><summary>${esc(label)}</summary>${inner}</details>`;
   return box(label, inner);
 }
 

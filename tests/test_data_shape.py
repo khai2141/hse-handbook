@@ -60,7 +60,7 @@ class DataShapeTests(unittest.TestCase):
                 kinds.add(v["kind"])
             if k != "home" and not v.get("kids") and "kind" not in v:
                 self.assertTrue(v.get("plan"), k)
-        self.assertEqual(kinds, set("WFTMHVRP"))
+        self.assertEqual(kinds, set("WFTMHVRPA"))
         self.assertEqual(n["home"]["kids"], ["p", "d", "c", "a", "g"])
 
     def test_counts(self):
