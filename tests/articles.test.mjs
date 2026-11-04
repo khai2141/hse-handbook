@@ -153,3 +153,23 @@ test("management branches (wave 3a) are kind A with their groups and law-prefixe
   }
   assert.equal(articleDetail("l-54", data).sub, "산업안전보건법");
 });
+test("plan/check/fix/base branches (wave 3b) are kind A with their groups and law-prefixed ids", () => {
+  const exp = {
+    "p.rule": [["안전보건관리규정", "이사회 보고"], 5],
+    "p.risk": [["위험성평가 (법)"], 5],
+    "c.insp": [["안전보건진단", "안전검사"], 6],
+    "a.fix": [["안전보건개선계획", "시정조치"], 5],
+    "c.res": [["산업재해 발생건수 공표"], 4],
+    "g.law": [["산업안전보건법 총칙", "중대재해처벌법"], 11],
+    "d.tech.sp": [["특수형태근로종사자"], 4],
+  };
+  for (const [node, [groups, n]] of Object.entries(exp)) {
+    assert.equal(data.nodes[node].kind, "A", node);
+    assert.ok(data.nodes[node].plan.length, node);
+    const list = articlesFor(data, node);
+    assert.equal(list.length, n, node);
+    assert.deepEqual(groupArticles(list).map((x) => x.group), groups, node);
+    for (const r of list) assert.match(r.id, /^(sr|l|d|r|j)-\d+(-\d+)?$/, r.id);
+  }
+  assert.equal(articleDetail("j-4", data).sub, "중대재해 처벌 등에 관한 법률");
+});
