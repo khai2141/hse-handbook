@@ -17,7 +17,19 @@ class ArticleDataTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.recs = load("data", "articles.json")["records"]
-        cls.raw = col(open(os.path.join(ROOT, "sources", "safety_rules_raw.txt"), encoding="utf-8").read())
+        cls.raws = {}
+        for r in cls.recs:
+            name = r.get("raw")
+            if not name:
+                raise AssertionError("%s: raw missing" % r["id"])
+            if name not in cls.raws:
+                path = os.path.join(ROOT, "sources", name)
+                if not os.path.isfile(path):
+                    raise AssertionError("%s: raw file absent: %s" % (r["id"], name))
+                cls.raws[name] = col(open(path, encoding="utf-8").read())
+
+    def rawof(self, r):
+        return self.raws[r["raw"]]
 
     def test_pilot_set_is_exactly_the_twelve(self):
         self.assertEqual(sorted(r["jo"] for r in self.recs), sorted(PILOT))
@@ -39,7 +51,7 @@ class ArticleDataTests(unittest.TestCase):
 
     def test_text_is_verbatim_from_capture(self):
         for r in self.recs:
-            self.assertIn(col(r["text"]), self.raw, r["id"])
+            self.assertIn(col(r["text"]), self.rawof(r), r["id"])
             self.assertTrue(r["text"].startswith(r["jo"] + "(" + r["title"] + ")"), r["id"])
             self.assertNotIn("[시행", r["text"], r["id"])
 
@@ -47,7 +59,7 @@ class ArticleDataTests(unittest.TestCase):
         for r in self.recs:
             s = r["source"]
             self.assertTrue(s["url"].startswith("https://www.law.go.kr/"), r["id"])
-            m = re.search(r"### 산업안전보건기준에 관한 규칙 %s \| url: (\S+) \| captured: \S+ \| header: \[시행 (\d+)\. (\d+)\. (\d+)\.\]" % r["jo"], self.raw)
+            m = re.search(r"### 산업안전보건기준에 관한 규칙 %s \| url: (\S+) \| captured: \S+ \| header: \[시행 (\d+)\. (\d+)\. (\d+)\.\]" % r["jo"], self.rawof(r))
             self.assertTrue(m, r["id"])
             self.assertEqual(s["url"], m.group(1))
             self.assertEqual(s["effective"], "%s-%02d-%02d" % (m.group(2), int(m.group(3)), int(m.group(4))))

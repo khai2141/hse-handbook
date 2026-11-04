@@ -76,7 +76,7 @@ if __name__ == "__main__":
 
 ART = {"id": "sr-1", "law": "L", "jo": "제1조", "title": "t", "branch": "b", "group": "g", "text": "제1조(t) 본문",
        "must": ["가", "나"], "who": "사업주", "check": ["다"], "records": [], "see": [], "penalty_ids": [],
-       "status": "확인",
+       "status": "확인", "raw": "r.txt",
        "source": {"url": "https://www.law.go.kr/x", "published": "2025-12-01", "effective": "2025-12-01", "verified_at": "2026-11-04"}}
 
 
@@ -95,6 +95,11 @@ class ArticleValidateTests(unittest.TestCase):
         self.assertTrue(any("must" in e for e in self.run_one(bad)))
         bad = dict(ART, see="sr-2")
         self.assertTrue(any("see" in e for e in self.run_one(bad)))
+
+    def test_article_requires_raw(self):
+        bad = dict(ART)
+        del bad["raw"]
+        self.assertTrue(any("'raw'" in e for e in self.run_one(bad)))
 
     def test_future_article_needs_ack(self):
         bad = json.loads(json.dumps(ART)); bad["source"]["effective"] = "2999-01-01"

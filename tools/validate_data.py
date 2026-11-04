@@ -31,7 +31,7 @@ def _check_record(rec, where):
             errs.append(f"{where}: source.effective is not ISO date")
     return errs
 
-ART_STR = ("id", "law", "jo", "title", "branch", "group", "text", "who", "status")
+ART_STR = ("id", "law", "jo", "title", "branch", "group", "text", "who", "status", "raw")
 ART_LIST = ("must", "check", "records", "see", "penalty_ids")
 
 

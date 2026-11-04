@@ -28,7 +28,8 @@
     "published": "2025-12-01",
     "effective": "2025-12-01",
     "verified_at": "2026-11-04"
-   }
+   },
+   "raw": "safety_rules_raw.txt"
   },
   {
    "id": "sr-32",
@@ -64,7 +65,8 @@
     "published": "2025-12-01",
     "effective": "2025-12-01",
     "verified_at": "2026-11-04"
-   }
+   },
+   "raw": "safety_rules_raw.txt"
   },
   {
    "id": "sr-35",
@@ -97,7 +99,8 @@
     "published": "2025-12-01",
     "effective": "2025-12-01",
     "verified_at": "2026-11-04"
-   }
+   },
+   "raw": "safety_rules_raw.txt"
   },
   {
    "id": "sr-38",
@@ -137,7 +140,8 @@
     "published": "2025-12-01",
     "effective": "2025-12-01",
     "verified_at": "2026-11-04"
-   }
+   },
+   "raw": "safety_rules_raw.txt"
   },
   {
    "id": "sr-39",
@@ -171,7 +175,8 @@
     "published": "2025-12-01",
     "effective": "2025-12-01",
     "verified_at": "2026-11-04"
-   }
+   },
+   "raw": "safety_rules_raw.txt"
   },
   {
    "id": "sr-13",
@@ -210,7 +215,8 @@
     "published": "2025-12-01",
     "effective": "2025-12-01",
     "verified_at": "2026-11-04"
-   }
+   },
+   "raw": "safety_rules_raw.txt"
   },
   {
    "id": "sr-42",
@@ -249,7 +255,8 @@
     "published": "2025-12-01",
     "effective": "2025-12-01",
     "verified_at": "2026-11-04"
-   }
+   },
+   "raw": "safety_rules_raw.txt"
   },
   {
    "id": "sr-43",
@@ -286,7 +293,8 @@
     "published": "2025-12-01",
     "effective": "2025-12-01",
     "verified_at": "2026-11-04"
-   }
+   },
+   "raw": "safety_rules_raw.txt"
   },
   {
    "id": "sr-44",
@@ -319,7 +327,8 @@
     "published": "2025-12-01",
     "effective": "2025-12-01",
     "verified_at": "2026-11-04"
-   }
+   },
+   "raw": "safety_rules_raw.txt"
   },
   {
    "id": "sr-57",
@@ -358,7 +367,8 @@
     "published": "2025-12-01",
     "effective": "2025-12-01",
     "verified_at": "2026-11-04"
-   }
+   },
+   "raw": "safety_rules_raw.txt"
   },
   {
    "id": "sr-59",
@@ -395,7 +405,8 @@
     "published": "2025-12-01",
     "effective": "2025-12-01",
     "verified_at": "2026-11-04"
-   }
+   },
+   "raw": "safety_rules_raw.txt"
   },
   {
    "id": "sr-68",
@@ -433,7 +444,8 @@
     "published": "2025-12-01",
     "effective": "2025-12-01",
     "verified_at": "2026-11-04"
-   }
+   },
+   "raw": "safety_rules_raw.txt"
   }
  ]
 }
