@@ -1,5 +1,8 @@
 import os, unittest
-from tools.capture_articles import jo_to_no, jo_label, parse_header, format_block, capture, main
+import tempfile
+from unittest import mock
+from tools import capture_articles as ca
+from tools.capture_articles import jo_to_no, jo_label, parse_header, format_block, capture, main, body_of, describe_diff, cross_check
 from tools.fetch_law import extract_article
 
 FIX = os.path.join(os.path.dirname(__file__), "fixtures")
@@ -63,6 +66,59 @@ class CaptureTests(unittest.TestCase):
     def test_failure_raises_and_cli_writes_nothing(self):
         with self.assertRaises(RuntimeError):
             capture(LAW, ["13", "99"], "20261104", fetch=self.stub)
+
+
+H_OLD = " [시행 2025. 12. 1.] [고용노동부령 제454호, 2025. 12. 1., 일부개정] "
+H_NEW = " [시행 2025. 9. 1.] [고용노동부령 제450호, 2025. 9. 1., 일부개정] "
+
+
+def two_version_stub(law, no, ef_yd=None):
+    n = int(no[:4])
+    tail = " 이 경우 성능인증을 받은 것을 사용해야 한다." if (n == 241 and ef_yd is None) else ""
+    return LAW + (H_NEW if ef_yd is None else H_OLD) + "제%d조(제목) 4. 비산방지조치%s 5. 환기" % (n, tail)
+
+
+class CrossCheckTests(unittest.TestCase):
+    def test_body_strips_header(self):
+        self.assertEqual(body_of(LAW + H_OLD + "제13조(가)  본문"), "제13조(가) 본문")
+
+    def test_describe_diff(self):
+        self.assertEqual(describe_diff("a b c", "a b x y c"), "+[x y]")
+        self.assertEqual(describe_diff("a b c", "a c"), "-[b]")
+        self.assertEqual(describe_diff("a b", "a b"), "(identical)")
+
+    def test_cross_check_flags_only_differing(self):
+        res = cross_check(LAW, ["241", "13"], "20261104", fetch=two_version_stub)
+        self.assertEqual([r["label"] for r in res], ["제13조", "제241조"])
+        self.assertFalse(res[0]["differs"])  # header differs, body same -> not flagged
+        self.assertTrue(res[1]["differs"])
+        self.assertIn("성능인증", res[1]["summary"])
+        self.assertIn("efYd=20261104", res[1]["efyd"]["url"])
+        self.assertNotIn("efYd", res[1]["latest"]["url"])
+
+    def _run(self, prefer):
+        d = tempfile.mkdtemp()
+        out, rep = os.path.join(d, "raw.txt"), os.path.join(d, "rep.txt")
+        with mock.patch.object(ca, "_fetch", two_version_stub), mock.patch("sys.stderr") as err:
+            rc = main(["--law", LAW, "--jo", "241", "13", "--out", out, "--date", "20261104",
+                       "--prefer", prefer, "--diff-report", rep, "--delay", "0"])
+        warn = "".join(str(c.args[0]) for c in err.write.call_args_list)
+        return rc, open(out, encoding="utf-8").read(), open(rep, encoding="utf-8").read(), warn
+
+    def test_cli_prefer_latest_writes_in_force_text_and_warns(self):
+        rc, raw, rep, warn = self._run("latest")
+        self.assertEqual(rc, 0)
+        self.assertIn("성능인증", raw)
+        self.assertIn("header: [시행 2025. 9. 1.]", raw)
+        self.assertIn("1 differ", rep)
+        self.assertIn("제241조 |", rep)
+        self.assertIn("WARNING: 제241조", warn)
+        self.assertNotIn("제13조 differs", warn)
+
+    def test_cli_prefer_efyd(self):
+        rc, raw, rep, warn = self._run("efyd")
+        self.assertNotIn("성능인증", raw)
+        self.assertIn("efYd=20261104", raw)
 
 
 if __name__ == "__main__":

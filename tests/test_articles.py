@@ -69,6 +69,15 @@ class ArticleDataTests(unittest.TestCase):
             self.assertEqual(s["effective"], "%s-%02d-%02d" % (m.group(2), int(m.group(3)), int(m.group(4))))
             self.assertEqual(s["verified_at"], "2026-11-04")
 
+    def test_source_note_and_in_force_241(self):
+        for r in self.recs:
+            if "note" in r["source"]:
+                self.assertIsInstance(r["source"]["note"], str, r["id"])
+                self.assertTrue(r["source"]["note"].strip(), r["id"])
+        r241 = [r for r in self.recs if r["id"] == "sr-241"][0]
+        self.assertIn("성능인증을 받은 것을 사용해야 한다", r241["text"])
+        self.assertIn("2026-03-02", r241["source"]["note"])
+
     def test_numbers_with_units_come_from_text(self):
         for r in self.recs:
             text = col(r["text"])
