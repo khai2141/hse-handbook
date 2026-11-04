@@ -1,0 +1,255 @@
+<title>HSE 핸드북 설계안</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#1b2430;--mut:#5d6b7c;--line:#dde3ea;--navy:#14315c;--green:#0b7a4b;--amber:#a15c00;--red:#b3261e;--chip-new:#e6f1ff;--chip-new-fg:#0b4a9c;--chip-ext:#fff1d6;--chip-ext-fg:#8a5200;--chip-have:#e2f5ea;--chip-have-fg:#0b6a40;--soft:#eef2f7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10151c;--card:#18202a;--fg:#e6ebf1;--mut:#9aa8b8;--line:#2b3644;--navy:#7fa6e6;--green:#4cc38a;--amber:#f0b04f;--red:#ff8f87;--chip-new:#13294a;--chip-new-fg:#9cc2ff;--chip-ext:#40300f;--chip-ext-fg:#f5c778;--chip-have:#123524;--chip-have-fg:#7fe0aa;--soft:#1f2935;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10151c;--card:#18202a;--fg:#e6ebf1;--mut:#9aa8b8;--line:#2b3644;--navy:#7fa6e6;--green:#4cc38a;--amber:#f0b04f;--red:#ff8f87;--chip-new:#13294a;--chip-new-fg:#9cc2ff;--chip-ext:#40300f;--chip-ext-fg:#f5c778;--chip-have:#123524;--chip-have-fg:#7fe0aa;--soft:#1f2935;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.65 "Noto Sans KR",system-ui,sans-serif;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:20px 60px}
+main{max-width:980px;margin:0 auto;display:grid;gap:22px}
+h1{font-size:26px;line-height:1.25;margin:0;color:var(--navy);text-wrap:balance}
+h2{font-size:19px;margin:0 0 10px;color:var(--navy)}
+h3{font-size:16px;margin:0}
+p{margin:6px 0}
+.lead{color:var(--mut);margin:6px 0 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;min-width:0}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.mini{background:var(--soft);border-radius:10px;padding:10px 12px;font-size:14px}
+.mini b{display:block;margin-bottom:2px}
+.chip{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:1px 9px;white-space:nowrap}
+.c-new{background:var(--chip-new);color:var(--chip-new-fg)}.c-ext{background:var(--chip-ext);color:var(--chip-ext-fg)}.c-have{background:var(--chip-have);color:var(--chip-have-fg)}
+.grp{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--mut);margin:14px 0 6px}
+details.br{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:8px}
+details.br>summary{cursor:pointer;list-style:none;padding:12px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+details.br>summary::-webkit-details-marker{display:none}
+details.br>summary::before{content:"▸";color:var(--mut);transition:transform .15s}
+details.br[open]>summary::before{transform:rotate(90deg)}
+.num{font-weight:900;color:var(--navy);min-width:1.6em}
+.ko{font-weight:700;font-size:16px}.vi{color:var(--mut);font-size:14px}
+.body{padding:2px 16px 14px;border-top:1px solid var(--line)}
+.why{color:var(--mut);font-size:14px;margin:10px 0}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:7px 8px}
+th{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+td.k{font-weight:700;white-space:nowrap}
+.law{font-size:13px;color:var(--green)}
+.warn{color:var(--amber)}
+.src{font-size:13px;color:var(--mut);margin-top:8px}
+ul{margin:6px 0;padding-left:20px}
+li{margin:2px 0}
+.q{border-left:4px solid var(--amber);padding:6px 12px;background:var(--soft);border-radius:0 8px 8px 0;margin:8px 0}
+.q b{color:var(--amber)}
+@media (max-width:560px){h1{font-size:22px}.card{padding:14px}}
+</style>
+
+<main>
+<header>
+<h1>건설현장 HSE 핸드북 — 설계안 (cây chính)</h1>
+<p class="lead">Bản đề án để anh duyệt <b>trước khi viết nội dung chi tiết</b>. Gốc: luật (산안법 / 중처법 / 건설기술 진흥법) + 13 trang <i>bảng kiểm tra hệ thống</i> trong thư mục <code>safety inspection</code>. Ngày lập: 2026-11-04.</p>
+</header>
+
+<section class="card">
+<h2>1. Ý tưởng một dòng</h2>
+<p>Cuốn sổ tay đi theo <b>vòng đời quản lý ATSK của một công trường</b> (Lập kế hoạch → Thực hiện → Kiểm tra → Cải tiến) chứ không chỉ theo từng điều luật. Người mới mở ra sẽ thấy: <i>"việc của tôi là gì, luật nào, làm hồ sơ gì, sai thì bị phạt bao nhiêu"</i>.</p>
+<div class="grid" style="margin-top:10px">
+<div class="mini"><b>Cây 3 tầng</b>Gốc → 12 nhánh chính (4 nhóm) → nhánh phụ. Bấm một ô trong bảng chỉ mở đúng nội dung ô đó.</div>
+<div class="mini"><b>Mỗi ô có 5 mục cố định</b>Nội dung · Số giờ/chu kỳ · Không làm thì bị gì (phạt/người) · Ai thực hiện/giảng · Hồ sơ chứng minh.</div>
+<div class="mini"><b>Mỗi ô ghi nguồn</b>Điều luật + ngày công bố + ngày có hiệu lực. Chưa xác minh = <b>미확인</b>, không điền số.</div>
+<div class="mini"><b>Hai loại nội dung tách bạch</b><span class="chip c-have">Luật</span> (có điều khoản) và <span class="chip c-ext">Thực hành</span> (rút từ bảng kiểm tra nội bộ, không phải luật — dán nhãn riêng).</div>
+</div>
+</section>
+
+<section>
+<h2 style="margin-top:6px">2. Cây chính đề xuất — 12 nhánh</h2>
+<p class="lead">Bấm từng nhánh để xem nhánh phụ. Nhãn: <span class="chip c-have">Đã có</span> đã làm trong sổ tay hiện tại · <span class="chip c-ext">Mở rộng</span> có rồi, cần bổ sung nhiều · <span class="chip c-new">Mới</span> chưa có.</p>
+<div id="tree"></div>
+</section>
+
+<section class="card">
+<h2>3. Bảng kiểm tra 13 trang → nằm ở nhánh nào</h2>
+<div class="tw"><table>
+<thead><tr><th>Trang</th><th>Nội dung chính của trang</th><th>Đưa vào nhánh</th></tr></thead>
+<tbody id="map"></tbody></table></div>
+<p class="src">Nguồn: <code>E:\Claud Cowork\korea HSE law and practices manual\safety inspection</code> (13 ảnh, mục "점검 체크리스트", hiện trạng 24.02.16 / kiểm tra thực hiện 24.04.19). Tên người, tên công ty trong ảnh <b>không đưa</b> vào sổ tay.</p>
+</section>
+
+<section class="card">
+<h2>4. Phát hiện khi đối chiếu bảng kiểm tra với dữ liệu hiện có</h2>
+<ul>
+<li><b class="warn">Giờ giáo dục nhật dụng (일용) kỳ định kỳ:</b> bảng kiểm tra ghi "매반기 12시간 (일용)" nhưng ô tương ứng trong sổ tay đang là <b>확인</b> (시행규칙 별표 4 không có ô cho loại này). Cần xác định đây là <i>quy chuẩn riêng của công ty</i> hay có căn cứ luật. Đề xuất: ghi thành mục <i>Thực hành</i>, không ghi là luật.</li>
+<li><b class="warn">Giáo dục khi tuyển dụng (채용 시) — công ty đặt 8 giờ</b> (bảng kiểm tra yêu cầu đổi "1시간 등록 → 8시간"), trong khi 별표 4 sổ tay đang ghi 일용 1시간. Cần hiển thị cả hai: <i>mức luật tối thiểu</i> và <i>mức công ty áp dụng</i>.</li>
+<li><b class="warn">Ngưỡng nhân sự (안전관리자 자격 theo giá trị công trình 1.500억, 보건관리자 800억·1.000억, 5천만 원 trở lên thêm 1 người…)</b> trong bảng là cách công ty diễn đạt; sổ tay phải lấy lại từ <b>시행령 별표</b>, không chép từ bảng.</li>
+<li><b>Lỗi thường gặp (미흡) lặp lại nhiều trang</b> → thành mục "Lỗi hay bị chỉ ra": chưa phản ánh <i>재해사례</i> vào bảng đánh giá rủi ro; thiếu chữ ký đại diện người lao động; chưa 심의·의결 mục tiêu/quy chế tại 노사협의체; sửa 규정 xong chưa cập nhật tổ chức/thực tế; thiếu cập nhật 관리규정; mục đích sử dụng 안전관리비 sai (인증품 ngoài KCS…).</li>
+<li><b>Bảng kiểm tra nhắc nhiều thuật ngữ nội bộ</b> (HPMS, DABs, PTW, TBM, 안전지갑). Đề xuất giải thích riêng ở mục thuật ngữ, ghi rõ <i>không phải thuật ngữ luật</i>.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>5. Thứ tự làm &amp; cách đảm bảo chính xác</h2>
+<div class="grid">
+<div class="mini"><b>Giai đoạn A — khung (tuần này)</b>Anh duyệt 12 nhánh + nhánh phụ. Tôi dựng cây + trang giới thiệu từng nhánh (chưa có số liệu).</div>
+<div class="mini"><b>Giai đoạn B — nhánh ưu tiên</b>6 Đánh giá rủi ro · 7 PTW/TBM/점검 · 10 Ứng phó khẩn cấp · 9 Hồ sơ &amp; 관리비. (nhiều nhất trong bảng kiểm tra)</div>
+<div class="mini"><b>Giai đoạn C — mở rộng nhánh đã có</b>3 Chức danh · 4 Giáo dục · 5 Sức khoẻ · 12 Phạt (thêm 5 dòng 별표 35 còn thiếu).</div>
+<div class="mini"><b>Giai đoạn D — chuyên gia soát</b>Mỗi nhánh một vòng: đối chiếu law.go.kr, rồi tôi nhờ người kiểm tra độc lập; chỉ khi anh duyệt mới đăng.</div>
+</div>
+<p class="src">Cách đảm bảo: dữ liệu lấy trực tiếp từ law.go.kr (điều/phụ lục), mỗi ô có <i>source</i>, có test tự động; thay đổi luật được theo dõi hàng ngày (đã có watcher). Điều luật trong bản đề án này đã đối chiếu tên điều trên law.go.kr ngày 2026-11-04; <b>số giờ/phạt chưa đưa vào đề án</b> vì sẽ lấy ở giai đoạn viết nội dung.</p>
+</section>
+
+<section class="card">
+<h2>6. Cần anh quyết định</h2>
+<div class="q"><b>Q1.</b> 12 nhánh này đã đủ chưa? Muốn gộp/tách/bỏ nhánh nào? (Ví dụ nhánh 8 có thể tách thành "Nhà thầu phụ" và "Chủ đầu tư".)</div>
+<div class="q"><b>Q2.</b> Mục <i>Thực hành công ty</i> (HPMS, DABs, PTW, TBM…): để <b>chung</b> trong sổ tay hay làm <b>lớp riêng bật/tắt</b>? Đề xuất lớp riêng, vì không phải luật.</div>
+<div class="q"><b>Q3.</b> Anh nhắc "hồ sơ an toàn sức khỏe sau". Trong thư mục chỉ có 13 ảnh bảng kiểm tra. Nếu còn thư mục/tệp khác (hồ sơ ATSK, mẫu biểu), anh cho đường dẫn để tôi thêm vào.</div>
+<div class="q"><b>Q4.</b> Chuẩn người đọc: <i>quản lý ATSK mới vào nghề tại công trường xây dựng</i> (không phải nhà máy/hoá chất). Nhánh 5 và 12 chỉ lấy phần liên quan xây dựng — đúng ý anh không?</div>
+</section>
+</main>
+
+<script>
+const B = [
+{g:"A · 체계 — Hệ thống quản lý", items:[
+ {n:1,ko:"법령·규정 체계",vi:"Hệ thống pháp luật & quy định",st:"new",
+  why:"Cho người mới thấy toàn cảnh: luật nào quản việc gì, mức nào hiệu lực khi nào.",
+  subs:[
+   ["산안법·시행령·시행규칙·기준규칙·고시","Sơ đồ phân cấp + điều chính cho từng việc","법 제5·6조 (의무) 등"],
+   ["중대재해처벌법","Đối tượng, nghĩa vụ người đứng đầu, hình phạt","중처법 제4·6·7조"],
+   ["건설기술 진흥법 + 건설안전 고시","안전관리계획, 건설공사 안전보건대장 liên quan","확인 필요 (xác minh từng điều)"],
+   ["자치단체 조례","Các điều lệ địa phương cần đưa vào 법규등록부","bảng kiểm tra: 법규등록부 분기별"],
+   ["법규등록부 (Sổ đăng ký pháp quy)","Mẫu + chu kỳ cập nhật theo quý","bảng kiểm tra tr.7"],
+   ["시행 예정 개정","Điều nào sắp đổi, đổi gì, từ ngày nào","đã có watcher + versions.json"]],
+  src:"Bảng kiểm tra tr.7 (법규등록부 quý, 자치단체 조례)"},
+ {n:2,ko:"안전보건 경영체계 (사전계획)",vi:"Hệ thống quản lý: chính sách, mục tiêu, quy chế",st:"new",
+  why:"Phần 'giấy tờ gốc' mà thanh tra/kiểm tra hệ thống hỏi trước tiên.",
+  subs:[
+   ["방침·목표 수립","Cách lập, ai 심의·의결, niêm yết","법 제25·26조 (quy chế & thủ tục); bảng kiểm tra tr.6"],
+   ["안전보건관리규정","Nội dung bắt buộc, sửa đổi → 근로자 đại diện 동의 / 노사협의체 심의","법 제25·26조"],
+   ["경영프로그램","Chỉ tiêu định lượng, theo dõi theo quý","bảng kiểm tra tr.6 (Thực hành)"],
+   ["안전보건경영매뉴얼","Cập nhật theo bản của trụ sở","bảng kiểm tra tr.6 (Thực hành)"],
+   ["연간 교육계획","Gồm giảng viên nhà thầu phụ, 18 loại việc, 특수형태근로종사자, 외국인","bảng kiểm tra tr.7"],
+   ["안전준수평가표 · 내외부 이슈 파악","Tự đánh giá theo quý; quy trình trao đổi thông tin","Thực hành"],
+   ["이사회 보고·승인","Công ty thuộc diện nào phải báo cáo hội đồng quản trị","법 제14조, 시행령 제13조"]],
+  src:"Bảng kiểm tra tr.6, 7"},
+]},
+{g:"B · 사람 — Con người", items:[
+ {n:3,ko:"직책과 의무",vi:"Chức danh & nghĩa vụ",st:"ext",
+  why:"Đã làm một phần. Mở rộng theo bảng kiểm tra: số người bố trí, 14 ngày khai báo, 직무교육, 업무분장표.",
+  subs:[
+   ["안전보건관리책임자","Ai, nghĩa vụ, 직무교육","법 제15조"],
+   ["관리감독자","Chỉ định 100% đội thi công; nghiệp vụ; tách khỏi 작업지휘자","법 제16조, 시행령 제15조"],
+   ["안전관리자","Số người theo quy mô, tư cách, nghiệp vụ, 14 ngày","법 제17조, 시행령 제16~18조 (+별표: 확인)"],
+   ["보건관리자","Điều kiện bố trí, nghiệp vụ, 14 ngày","법 제18조, 시행령 제20·22조"],
+   ["안전보건총괄책임자","Chỉ định trước khi khởi công (thầu phụ ≥ 20억 phải có 안전보건관리책임자 — ghi theo bảng kiểm tra, cần xác minh)","법 제62조, 시행령 제52·53조"],
+   ["안전보건조정자 · 산업보건의","Khi nào phải có","법 제68조, 시행령 제56·57조 · 법 제22조"],
+   ["작업지휘자","Việc nào bắt buộc (máy xúc, hạ cẩu, đào ≥2m...)","산업안전보건기준에 관한 규칙 (xác minh)"],
+   ["업무분장표","Lập, cập nhật 1 tháng, ghi nghiệp vụ theo 시행령 제15조","bảng kiểm tra tr.4–5"],
+   ["선임·신고·직무교육","Hạn 14 ngày, 직무교육 신규/보수","법 제32조"]],
+  src:"Bảng kiểm tra tr.4, 5 (hiện trạng bố trí, lỗi: 업무분장표 ghi sai điều)"},
+ {n:4,ko:"안전보건교육",vi:"Giáo dục ATSK",st:"ext",
+  why:"Đã làm 근로자 / 관리자 / 외국인 / 18 việc đặc biệt. Bổ sung phần hồ sơ & thực hành công ty.",
+  subs:[
+   ["근로자 교육 (채용 시·작업내용 변경·정기·특별)","Bảng loại lao động × loại giáo dục (đã có)","법 제29조, 시행규칙 별표 4"],
+   ["관리자 교육 (직무·관리감독자)","Bảng chức danh × giáo dục (đã có)","법 제32조"],
+   ["건설업 기초안전보건교육","4 giờ; ai, nơi học, chứng nhận","법 제31조"],
+   ["외국인 근로자","Tư cách lưu trú × việc làm × giáo dục (đã có)","법 제31조의2 (2027.1.8 시행)"],
+   ["특수형태근로종사자 교육","Tối thiểu khi mới làm; việc nguy hiểm 16 giờ","시행령 제67·68조 (xác minh giờ)"],
+   ["MSDS·작업별 특별교육","Việc đặc biệt (đã có 18 loại)","별표 5 (đã đối chiếu)"],
+   ["전파교육·TBM교육·현장소장 전파","Chuỗi 1차→2~3차","Thực hành"],
+   ["교육 기록·증빙","Nhật ký, chữ ký, lưu 3 năm; điều kiện 'không được tính TBM'","법 제164조 (xác minh)"]],
+  src:"Bảng kiểm tra tr.7, 8, 9"},
+ {n:5,ko:"건강·보건",vi:"Sức khoẻ & y tế lao động (xây dựng)",st:"ext",
+  why:"Đã có khám sức khoẻ + đo môi trường. Thêm chương trình bảo vệ sức khoẻ và lao động cao tuổi.",
+  subs:[
+   ["건강진단 (일반·특수·배치전·임시)","Chu kỳ, hạng mục, hồ sơ chứng minh (đã có)","법 제129~132조, 시행규칙 별표 23·24"],
+   ["고령근로자 투입기준","Phê duyệt tiếp nhận, giấy ý kiến bác sĩ, kiểm tra thể lực (quy chuẩn công ty, cần đối chiếu luật)","Thực hành (xác minh luật liên quan)"],
+   ["작업환경측정","8 khoản điều 125 (đã có)","법 제125조"],
+   ["보건프로그램","Chương trình bảo tồn thính lực, bảo vệ hô hấp; chương trình không gian kín (dụng cụ thở tối thiểu 2 bộ theo bảng kiểm tra)","bảng kiểm tra tr.12 (Thực hành)"],
+   ["온열·한랭·질식·분진·석면 (xây dựng)","Phần liên quan công trường","기준규칙 (xác minh)"]],
+  src:"Bảng kiểm tra tr.12"},
+]},
+{g:"C · 현장 운영 — Vận hành hiện trường", items:[
+ {n:6,ko:"위험성평가",vi:"Đánh giá rủi ro",st:"new",
+  why:"Chiếm nhiều trang nhất trong bảng kiểm tra (tr.1–3).",
+  subs:[
+   ["실시규정","Lập & sửa quy chế, 근로자대표 서명, đào tạo người đánh giá","법 제36조 (xác minh 고시)"],
+   ["최초평가","Trước khi khởi công; tham gia theo quy mô (<20억 / 20~100억 / ≥100억)","법 제36조 · bảng kiểm tra tr.1"],
+   ["상시평가 — 월별","Họp tháng, 근로자대표 ký, lưu HPMS, phản ánh 재해사례","법 제36조 · bảng kiểm tra tr.2"],
+   ["상시평가 — PTW/주간","Tham gia cuộc họp, đưa việc nguy hiểm trọng điểm","bảng kiểm tra tr.2 (Thực hành)"],
+   ["상시평가 — TBM","Truyền đạt, báo cáo tự đánh giá","bảng kiểm tra tr.3 (Thực hành)"],
+   ["결과 게시·전파","Niêm yết, chữ ký, giáo dục định kỳ","법 제36조 · tr.2"],
+   ["자주 지적되는 미흡","Thiếu ví dụ tai nạn, thiếu chữ ký, sai phương pháp tính","bảng kiểm tra tr.1–2"]],
+  src:"Bảng kiểm tra tr.1–3"},
+ {n:7,ko:"작업허가·TBM·일일점검",vi:"Giấy phép, TBM, kiểm tra hằng ngày",st:"new",
+  why:"Quy trình làm việc mỗi ngày — sổ tay phải có để người mới biết 'sáng nay làm gì'.",
+  subs:[
+   ["작업계획서 · 작업지휘자","Việc nào phải lập (đào ≥2m, hạ cẩu, tháo dỡ, lắp thang máy...)","산업안전보건기준에 관한 규칙 제38조 (xác minh)"],
+   ["작업허가서(PTW)","Phát hành, kiểm tra, phê duyệt, TBM ghi vào","Thực hành · tr.2"],
+   ["TBM (작업 전 대화)","Nội dung, thời lượng, ai chủ trì","Thực hành · tr.3"],
+   ["DABs·일일통합점검","Việc nguy hiểm / việc thường / việc phi cơ giới: ai kiểm","Thực hành · tr.3, 10"],
+   ["작업중지권","Doanh nghiệp / người lao động; ai quyết, khôi phục thế nào","법 제51·52조, 제55조"],
+   ["안전보건점검일지","Cách ghi, hình ảnh, lưu","bảng kiểm tra tr.10"]],
+  src:"Bảng kiểm tra tr.2, 3, 10"},
+ {n:8,ko:"도급·협력사·발주자",vi:"Thầu phụ, nhà cung cấp, chủ đầu tư",st:"new",
+  why:"Công trường xây dựng gần như luôn có thầu phụ — nghĩa vụ của 도급인 là trọng tâm xử phạt.",
+  subs:[
+   ["도급금지·승인","Việc nào cấm thầu, khi nào cần phê duyệt","법 제58·59조, 시행령 제51조"],
+   ["도급인 의무","Điều kiện an toàn, cung cấp thông tin, đôn đốc","법 제63~66조"],
+   ["안전보건총괄책임자·조정자","Chỉ định, nhiệm vụ","법 제62·68조"],
+   ["노사협의체","Đối tượng, thành phần, họp hằng tháng, hồ sơ","법 제75조, 시행령 제63~65조"],
+   ["건설공사발주자 조치","Yêu cầu thay đổi thiết kế, 기본안전보건대장","법 제67조, 시행령 제55·58조"],
+   ["건설재해예방전문지도기관","Ký hợp đồng, chu kỳ chỉ đạo","법 제73·74조, 시행령 제59·60조"],
+   ["협력사 관리","Đánh giá, tuyển chọn, thông báo nghĩa vụ giáo dục","bảng kiểm tra tr.8–9"]],
+  src:"Bảng kiểm tra tr.8, 9 (노사협의체, giáo dục thầu phụ)"},
+ {n:9,ko:"계획서·서류·관리비",vi:"Kế hoạch, hồ sơ, chi phí ATSK",st:"new",
+  why:"Hồ sơ thanh tra thường kiểm đầu tiên. Có cả mẫu & cách lưu.",
+  subs:[
+   ["유해위험방지계획서","Đối tượng, nộp, sửa khi thay đổi, bàn giao khi đổi người phụ trách","법 제42조, 시행령 제42조"],
+   ["건설공사 안전보건대장","Bản cơ bản / thiết kế / thi công; ai lập, kiểm theo quý","법 제67조 + 고시 (xác minh)"],
+   ["건설기술 진흥법 안전관리계획","Khi nào phải lập","건설기술 진흥법 (xác minh)"],
+   ["산업안전보건관리비","Dự toán, sử dụng, 사용내역서, chi ngoài mục đích","법 제72조 + 고용노동부 고시"],
+   ["서류 보존","Loại hồ sơ nào lưu bao lâu","법 제164조"]],
+  src:"Bảng kiểm tra tr.11, 13"},
+ {n:10,ko:"비상·재해 대응",vi:"Khẩn cấp & xử lý tai nạn",st:"new",
+  why:"Quy trình bắt buộc khi có tai nạn nặng; 'sai là bị phạt/truy cứu' ngay.",
+  subs:[
+   ["비상대응매뉴얼","Tổ chức, sơ đồ, 비상 liên lạc, lập theo công trường","Thực hành · tr.9"],
+   ["비상훈련","Mỗi quý ≥1 lần (theo bảng kiểm tra): cháy nổ, tai nạn nặng, thiên tai, ngạt","Thực hành · tr.9 (xác minh luật)"],
+   ["중대재해 발생 시 조치·보고","Báo cáo, dừng việc, bảo toàn hiện trường","법 제54조, 시행규칙 (xác minh)"],
+   ["고용노동부장관 작업중지 · 원인조사","Ai ra lệnh, điều kiện gỡ","법 제55·56조"],
+   ["산업재해 은폐 금지 · 조사표 제출","Hạn 1 tháng, hồ sơ nộp","법 제57조, 시행규칙 제73조 (xác minh)"],
+   ["사고조사프로그램","Đăng ký HPMS trong 1 tháng","bảng kiểm tra tr.10 (Thực hành)"]],
+  src:"Bảng kiểm tra tr.9, 10"},
+]},
+{g:"D · 점검과 책임 — Kiểm tra & trách nhiệm", items:[
+ {n:11,ko:"점검·개선·경영검토",vi:"Kiểm tra, cải tiến, soát xét",st:"new",
+  why:"Kết nối cả hệ thống: kiểm gì, ai, bao lâu, sai thì sửa thế nào.",
+  subs:[
+   ["노사합동점검","Cách làm thực chất, ghi 'không phù hợp' ở tiêu đề báo cáo","bảng kiểm tra tr.10"],
+   ["일일·월간·분기 점검","Chuỗi kiểm tra, tỉ lệ thực hiện","Thực hành"],
+   ["본사·외부 감사 점검표 (13 trang)","Bộ câu hỏi tự kiểm tra hơn 100 mục, có cột 양호/미흡/N/A","bảng kiểm tra 전체"],
+   ["시정조치 관리","Phát hiện → sửa → xác nhận","Thực hành"],
+   ["경영검토보고서","Thành phần ủy ban, nội dung, liên kết mục tiêu năm sau","bảng kiểm tra tr.10"]],
+  src:"Bảng kiểm tra tr.10 và toàn bộ"},
+ {n:12,ko:"중대재해처벌법 · 벌칙·과태료",vi:"Luật tai nạn nghiêm trọng & chế tài",st:"ext",
+  why:"Đã có bảng phạt 별표 35 + hình sự. Bổ sung nghĩa vụ người đứng đầu & ví dụ xử lý.",
+  subs:[
+   ["중대재해처벌법 — 경영책임자 의무","Hệ thống quản lý, báo cáo, nghĩa vụ","중처법 제4조"],
+   ["형사 벌칙 (산안법 제167·168·170·171조)","Phạt tù/tiền, 양벌규정 (đã có)","법 제167~171조"],
+   ["과태료 (시행령 별표 35)","Mức theo lần 1·2·3, theo người (đã có 20+ dòng)","시행령 별표 35"],
+   ["미처리 5 dòng 별표 35","125조⑤, 132조⑤, 133조, 134조, 137조③","시행령 별표 35"],
+   ["행정처분 · 사례","Phạt thực tế, ví dụ phán quyết","법원 판례 (xác minh)"]],
+  src:"Dữ liệu đã có + bảng kiểm tra (không có phần phạt)"},
+]}
+];
+const chip={have:"Đã có",ext:"Mở rộng",new:"Mới"};
+const tree=document.getElementById("tree");
+tree.innerHTML=B.map(g=>`<div class="grp">${g.g}</div>`+g.items.map(b=>`
+<details class="br"><summary><span class="num">${b.n}</span><span class="ko">${b.ko}</span><span class="vi">${b.vi}</span><span class="chip c-${b.st}">${chip[b.st]}</span></summary>
+<div class="body"><p class="why">${b.why}</p>
+<div class="tw"><table><thead><tr><th>Nhánh phụ (đề xuất)</th><th>Bấm vào ô sẽ hiện</th><th>Căn cứ</th></tr></thead><tbody>
+${b.subs.map(s=>`<tr><td class="k">${s[0]}</td><td>${s[1]}</td><td class="law">${s[2]}</td></tr>`).join("")}
+</tbody></table></div>
+<p class="src">Nguồn trong bảng kiểm tra: ${b.src}</p></div></details>`).join("")).join("");
+const M=[[1,"Đánh giá rủi ro: quy chế thực hiện, đánh giá lần đầu, người tham gia theo quy mô","6"],[2,"Đánh giá thường xuyên theo tháng, PTW, họp rủi ro","6, 7"],[3,"DABs, TBM, kiểm tra thống nhất hằng ngày","7"],[4,"Bố trí 안전관리자·보건관리자·안전보건총괄","3"],[5,"관리감독자, 작업지휘자, 업무분장표","3"],[6,"Chính sách, mục tiêu, 경영프로그램, 안전보건관리규정","2"],[7,"법규등록부, 연간 교육계획, 안전준수평가, 이슈 파악","1, 2, 4"],[8,"노사협의체, giáo dục tuyển/thay đổi/định kỳ/đặc biệt","8, 4"],[9,"Giáo dục 5-6 (전파, 특수형태), 비상 대응·훈련","4, 10"],[10,"안전보건점검일지, 노사합동점검, 경영검토, 사고조사","11, 7, 10"],[11,"유해위험방지계획서, 공사안전보건대장","9"],[12,"작업환경측정, 보건프로그램, 건강진단, 고령근로자","5"],[13,"산업안전보건관리비: 집행계획, 사용내역서","9"]];
+document.getElementById("map").innerHTML=M.map(r=>`<tr><td class="k">${r[0]}</td><td>${r[1]}</td><td>Nhánh ${r[2]}</td></tr>`).join("");
+</script>

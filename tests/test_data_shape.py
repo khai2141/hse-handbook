@@ -50,7 +50,18 @@ class DataShapeTests(unittest.TestCase):
 
     def test_nodes(self):
         n = load("nodes.json")["nodes"]
-        self.assertIn("home", n); self.assertIn("edu.w", n)
+        self.assertIn("home", n)
+        kinds = set()
+        for k, v in n.items():
+            for kid in v.get("kids", []):
+                self.assertIn(kid, n, (k, kid))
+                self.assertTrue(kid.startswith(k + ".") or k == "home", (k, kid))
+            if "kind" in v:
+                kinds.add(v["kind"])
+            if k != "home" and not v.get("kids") and "kind" not in v:
+                self.assertTrue(v.get("plan"), k)
+        self.assertEqual(kinds, set("WFTMHVRP"))
+        self.assertEqual(n["home"]["kids"], ["p", "d", "c", "a", "g"])
 
     def test_counts(self):
         pens = recs("penalties.json")

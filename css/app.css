@@ -132,3 +132,5 @@ button.c{min-height:32px}
   .sheet{max-height:88vh}
 }
 @media (prefers-reduced-motion:no-preference){button.c{transition:filter .12s}}
+.plan{margin:8px 0 0;padding-left:20px;color:var(--mut)}
+.plan li{margin:3px 0}

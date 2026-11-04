@@ -66,7 +66,7 @@ function treeHome() {
   return (
     `<div class="tree"><div class="root">${icon("doc_law", 44)}건설안전 HSE 핸드북 <small style="font-weight:400;font-size:12px">줄기</small></div>` +
     `<div class="br">${kidsOf("home", nodes).map((x) => rec(x, 0)).join("")}</div></div>` +
-    '<p class="hint">줄기에서 큰 가지(교육, 건강진단, 직책, 벌칙), 가지 아래 작은 가지로 내려가며, 가지 끝의 표에서 칸을 누르면 그 칸의 내용만 열립니다.</p>'
+    '<p class="hint">줄기는 계획(P)→실행(D)→점검(C)→개선(A)의 순환이고, 기반은 법령과 책임입니다. 가지를 따라 내려가 끝의 표에서 칸을 누르면 그 칸의 내용만 열립니다. 노란 &quot;준비 중&quot; 가지는 작성 예정 목록만 보입니다.</p>'
   );
 }
 
@@ -80,7 +80,10 @@ function mainHtml() {
     h += `<div class="kids" role="group" aria-label="하위 가지">${k.map((x) => `<button type="button" data-go="${esc(x)}">${icon(nodes[x].i, 30)}${esc(nodes[x].t)}</button>`).join("")}</div>`;
   }
   if (n.kind) h += `<div id="matrix">${renderMatrix(n.kind, state.data, state.q)}</div><p class="hint">${esc(HINTS[n.kind] ?? "")}</p>`;
-  else if (!k.length) h += '<p class="empty">준비 중</p>';
+  else if (!k.length) {
+    h += '<p class="empty">준비 중 — 아래 내용을 작성할 예정입니다.</p>';
+    if (Array.isArray(n.plan)) h += `<ul class="plan">${n.plan.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`;
+  }
   return h;
 }
 

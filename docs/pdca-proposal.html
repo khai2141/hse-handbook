@@ -1,0 +1,185 @@
+<title>핸드북 PDCA 구조안</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#1b2430;--mut:#5d6b7c;--line:#dde3ea;--navy:#14315c;--green:#0b7a4b;--amber:#a15c00;--red:#b3261e;--chip-new:#e6f1ff;--chip-new-fg:#0b4a9c;--chip-ext:#fff1d6;--chip-ext-fg:#8a5200;--chip-have:#e2f5ea;--chip-have-fg:#0b6a40;--soft:#eef2f7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10151c;--card:#18202a;--fg:#e6ebf1;--mut:#9aa8b8;--line:#2b3644;--navy:#7fa6e6;--green:#4cc38a;--amber:#f0b04f;--red:#ff8f87;--chip-new:#13294a;--chip-new-fg:#9cc2ff;--chip-ext:#40300f;--chip-ext-fg:#f5c778;--chip-have:#123524;--chip-have-fg:#7fe0aa;--soft:#1f2935;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10151c;--card:#18202a;--fg:#e6ebf1;--mut:#9aa8b8;--line:#2b3644;--navy:#7fa6e6;--green:#4cc38a;--amber:#f0b04f;--red:#ff8f87;--chip-new:#13294a;--chip-new-fg:#9cc2ff;--chip-ext:#40300f;--chip-ext-fg:#f5c778;--chip-have:#123524;--chip-have-fg:#7fe0aa;--soft:#1f2935;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.65 "Noto Sans KR",system-ui,sans-serif;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:20px 60px}
+main{max-width:980px;margin:0 auto;display:grid;gap:22px}
+h1{font-size:26px;line-height:1.25;margin:0;color:var(--navy);text-wrap:balance}
+h2{font-size:19px;margin:0 0 10px;color:var(--navy)}
+h3{font-size:16px;margin:0}
+p{margin:6px 0}
+.lead{color:var(--mut);margin:6px 0 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;min-width:0}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.mini{background:var(--soft);border-radius:10px;padding:10px 12px;font-size:14px}
+.mini b{display:block;margin-bottom:2px}
+.chip{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:1px 9px;white-space:nowrap}
+.c-new{background:var(--chip-new);color:var(--chip-new-fg)}.c-ext{background:var(--chip-ext);color:var(--chip-ext-fg)}.c-have{background:var(--chip-have);color:var(--chip-have-fg)}
+.grp{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--mut);margin:14px 0 6px}
+details.br{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:8px}
+details.br>summary{cursor:pointer;list-style:none;padding:12px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+details.br>summary::-webkit-details-marker{display:none}
+details.br>summary::before{content:"▸";color:var(--mut);transition:transform .15s}
+details.br[open]>summary::before{transform:rotate(90deg)}
+.num{font-weight:900;color:var(--navy);min-width:1.6em}
+.ko{font-weight:700;font-size:16px}.vi{color:var(--mut);font-size:14px}
+.body{padding:2px 16px 14px;border-top:1px solid var(--line)}
+.why{color:var(--mut);font-size:14px;margin:10px 0}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:7px 8px}
+th{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+td.k{font-weight:700;white-space:nowrap}
+.law{font-size:13px;color:var(--green)}
+.warn{color:var(--amber)}
+.src{font-size:13px;color:var(--mut);margin-top:8px}
+ul{margin:6px 0;padding-left:20px}
+li{margin:2px 0}
+.q{border-left:4px solid var(--amber);padding:6px 12px;background:var(--soft);border-radius:0 8px 8px 0;margin:8px 0}
+.q b{color:var(--amber)}
+@media (max-width:560px){h1{font-size:22px}.card{padding:14px}}
+</style>
+
+<style>
+:root{--p:#1c5fb8;--d:#0b7a4b;--c:#a15c00;--a:#7a3fa0;--pbg:#e6f0fd;--dbg:#e2f5ea;--cbg:#fff1d6;--abg:#f1e6f8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--p:#8db8f5;--d:#6fd9a4;--c:#f2bd6a;--a:#cba0ea;--pbg:#14253f;--dbg:#123524;--cbg:#40300f;--abg:#2d1c3a}}
+:root[data-theme="dark"]{--p:#8db8f5;--d:#6fd9a4;--c:#f2bd6a;--a:#cba0ea;--pbg:#14253f;--dbg:#123524;--cbg:#40300f;--abg:#2d1c3a}
+.board{display:grid;gap:10px;grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){.board{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.board{grid-template-columns:1fr}}
+.st{border-radius:12px;padding:12px 13px;border:1px solid var(--line);min-width:0}
+.st h3{display:flex;gap:8px;align-items:baseline;margin-bottom:2px}
+.st h3 .L{font-size:26px;font-weight:900;line-height:1}
+.st .sub{font-size:13px;color:var(--mut);margin-bottom:8px}
+.st ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.st li{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-size:13.5px;line-height:1.45}
+.st li b{display:block;font-size:14px}
+.st li i{font-style:normal;color:var(--mut);font-size:12.5px}
+.sp{background:var(--pbg)}.sp h3 .L{color:var(--p)}
+.sd{background:var(--dbg)}.sd h3 .L{color:var(--d)}
+.sc{background:var(--cbg)}.sc h3 .L{color:var(--c)}
+.sa{background:var(--abg)}.sa h3 .L{color:var(--a)}
+.bar{border-radius:12px;padding:10px 14px;background:var(--soft);border:1px dashed var(--line);font-size:14px}
+.stack{display:grid;gap:10px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px}
+.s3{color:var(--green);font-weight:700}.s2{color:var(--amber);font-weight:700}.s1{color:var(--red);font-weight:700}
+.path{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));counter-reset:s}
+.path div{background:var(--soft);border-radius:10px;padding:9px 11px;font-size:14px}
+.path b{display:block}
+</style>
+<main>
+<header>
+<h1>핸드북 구조안 — PDCA 중심 (kiến trúc rõ ràng hơn)</h1>
+<p class="lead">Anh nhận xét đúng: mục lục của sách PDF chia theo <i>cách soạn luật</i> (편 → 장 → 절), nên người đọc không thấy được toàn cảnh. Dưới đây là chẩn đoán, 5 phương án chia, và phương án tôi đề xuất để gộp <b>20 nhánh</b> đã đề xuất thành <b>16 nhánh</b> có hệ thống. Ngày lập: 2026-11-04.</p>
+</header>
+
+<section class="card">
+<h2>1. Vì sao mục lục PDF khó nắm tổng quát</h2>
+<ul>
+<li><b>Chia theo kỹ thuật soạn luật,</b> không theo việc người làm: một công việc (ví dụ dựng giàn giáo) nằm rải ở 편1 (giàn giáo, ngã cao), 편2 (cẩu, điện), 별표 (kiểm trước giờ làm), 편3 (nắng nóng).</li>
+<li><b>Không có trục "khi nào, ai, làm gì tiếp".</b> Không biết điều này thuộc bước lập kế hoạch, thực hiện hay kiểm tra.</li>
+<li><b>Chỉ nói về kỹ thuật hiện trường,</b> còn phần hệ thống quản lý (mục tiêu, tổ chức, đánh giá rủi ro, kiểm tra, soát xét) nằm ở luật khác và ở bảng kiểm tra hệ thống của anh.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>2. Năm phương án chia</h2>
+<div class="tw"><table>
+<thead><tr><th>Phương án</th><th>Ý tưởng</th><th>Tốt ở</th><th>Yếu ở</th><th>Hợp bảng kiểm tra &amp; luật</th></tr></thead>
+<tbody>
+<tr><td class="k">A. PDCA</td><td>Lập kế hoạch → Thực hiện → Kiểm tra → Cải tiến</td><td>Thấy ngay vòng quản lý; mỗi mục có chỗ đứng; khớp ISO 45001, KOSHA-MS</td><td>Phần kỹ thuật hiện trường dồn hết vào "Thực hiện" nên cần chia nhỏ</td><td class="s3">Rất khớp</td></tr>
+<tr><td class="k">B. Vòng đời dự án</td><td>Trước khởi công → móng/khung → hoàn thiện → bàn giao</td><td>Hợp người quản lý công trường theo tiến độ</td><td>Phần hệ thống (kiểm tra, soát xét) không có chỗ; một điều luật lặp nhiều giai đoạn</td><td class="s2">Vừa</td></tr>
+<tr><td class="k">C. Theo vai trò</td><td>소장 · 안전관리자 · 관리감독자 · lao động · thầu phụ</td><td>Người mới biết ngay việc của mình</td><td>Một điều áp dụng cho nhiều vai trò thì bị lặp; khó thấy toàn hệ thống</td><td class="s2">Vừa</td></tr>
+<tr><td class="k">D. Theo nhịp thời gian</td><td>Hằng ngày · tuần · tháng · quý · nửa năm · năm</td><td>Rất thực dụng, thành "lịch việc"</td><td>Thiếu giải thích "vì sao"; không nhóm được các điều kỹ thuật</td><td class="s2">Vừa</td></tr>
+<tr><td class="k">E. Theo nguy cơ</td><td>Ngã cao, vật rơi, sập đổ, điện, cháy, ngạt, nắng nóng...</td><td>Hợp học an toàn kỹ thuật</td><td>Phần hệ thống, giấy tờ, chế tài không có chỗ</td><td class="s1">Yếu</td></tr>
+</tbody></table></div>
+<div class="q"><b>Đề xuất:</b> dùng <b>PDCA làm xương sống</b> (cây chính), còn vai trò, công việc (공종), nguy cơ và nhịp thời gian là <b>bộ lọc</b> trên cùng kho dữ liệu, không thêm nhánh mới. Như vậy giữ được cả cái nhìn toàn cảnh lẫn tra nhanh.</div>
+<p class="src">Căn cứ để chọn PDCA: (1) bảng kiểm tra anh gửi đã chia <i>사전계획 → 실행운영 → 점검 및 개선 → 경영검토</i>; (2) <b>시행령 제4조 중대재해처벌법</b> (đã tra hôm nay, bản 시행 2025.10.1) yêu cầu hệ thống quản lý theo đúng thứ tự: mục tiêu, tổ chức, ngân sách, rủi ro, ý kiến người lao động, kịch bản khẩn cấp, quản lý thầu, và <i>kiểm tra mỗi nửa năm</i>.</p>
+</section>
+
+<section>
+<h2 style="margin-top:6px">3. Cây đề xuất: 16 nhánh chính theo PDCA</h2>
+<div class="stack">
+<div class="bar"><b>Thanh công cụ (luôn hiện):</b> tìm kiếm · lọc theo <i>vai trò</i> · <i>công việc (공종)</i> · <i>nguy cơ</i> · <i>nhịp thời gian</i> · bảng 별표</div>
+<div class="board">
+<div class="st sp"><h3><span class="L">P</span>계획</h3><div class="sub">Lập kế hoạch</div><ul>
+<li><b>P1 방침·목표·규정</b><i>chính sách, mục tiêu, 안전보건관리규정, 경영프로그램, 법규등록부</i></li>
+<li><b>P2 조직·직책·권한</b><i>안전보건관리책임자, 관리감독자, 안전·보건관리자, 총괄책임자, 업무분장표</i></li>
+<li><b>P3 위험성평가</b><i>실시규정, đánh giá lần đầu, 상시평가</i></li>
+<li><b>P4 계획서·관리비·서류</b><i>유해위험방지계획서, 안전보건대장, 작업계획서(작성), 산업안전보건관리비, 서류 보존</i></li></ul></div>
+<div class="st sd"><h3><span class="L">D</span>실행</h3><div class="sub">Thực hiện</div><ul>
+<li><b>D1 안전보건교육</b><i>근로자, 관리자, 외국인, 특별교육, 기록</i></li>
+<li><b>D2 건강·보건</b><i>건강진단, 작업환경측정, nắng nóng, không gian kín, amiăng, bụi, tiếng ồn</i></li>
+<li><b>D3 일상 작업관리</b><i>작업허가서, TBM, 일일점검, 작업중지권</i></li>
+<li><b>D4 도급·협력사·발주자</b><i>노사협의체, 도급인 의무, 기술지도, 협력사 평가</i></li>
+<li><b>D5 공종별 기술기준</b><i>비계·추락, 양중·건설기계, 화재·용접, 전기, 굴착·거푸집·해체, 별표</i></li>
+<li><b>D6 비상·재해 대응</b><i>비상대응매뉴얼, 훈련, 중대재해 발생 시 조치·보고</i></li></ul></div>
+<div class="st sc"><h3><span class="L">C</span>점검</h3><div class="sub">Kiểm tra</div><ul>
+<li><b>C1 점검·감사</b><i>일일·월간 점검, 노사합동점검, 안전보건점검일지, 본사·외부 감사 점검표, 안전준수평가</i></li>
+<li><b>C2 측정·결과·사고조사</b><i>kết quả đo môi trường và khám sức khoẻ, 사고조사, 산업재해조사표, thống kê</i></li></ul></div>
+<div class="st sa"><h3><span class="L">A</span>개선</h3><div class="sub">Cải tiến</div><ul>
+<li><b>A1 시정·개선</b><i>시정조치, 개선계획서, tái phát phòng ngừa, bài học (재해사례) quay lại P3 và D1</i></li>
+<li><b>A2 경영검토·법 개정 반영</b><i>경영검토보고서, 시행 예정 개정, cập nhật 법규등록부, sửa quy chế</i></li></ul></div>
+</div>
+<div class="bar"><b>Gốc (nền cho cả 4 bước):</b> <b>G1 법령·규정 체계</b> (산안법, 시행령·규칙, 기준규칙, 중처법, 건설기술 진흥법, 조례) · <b>G2 중대재해처벌법·벌칙·과태료</b> (nghĩa vụ người đứng đầu, phạt theo người, hồ sơ chứng minh)</div>
+</div>
+<p class="src">Vòng lặp: kết quả của A (bài học, thay đổi luật) quay lại P (cập nhật quy chế, đánh giá rủi ro) và D (giáo dục). Trang chủ sổ tay sẽ vẽ đúng vòng này.</p>
+</section>
+
+<section class="card">
+<h2>4. 20 nhánh cũ đi đâu</h2>
+<div class="tw"><table>
+<thead><tr><th>Nhánh cũ</th><th>Về</th><th>Ghi chú</th></tr></thead>
+<tbody>
+<tr><td class="k">1 법령·규정 체계</td><td>G1</td><td>Giữ nguyên</td></tr>
+<tr><td class="k">2 경영체계 (사전계획)</td><td>P1</td><td>Tách phần 연간 교육계획 sang D1</td></tr>
+<tr><td class="k">3 직책과 의무</td><td>P2</td><td>Trước đây thuộc "Con người"; đưa vào P vì bố trí tổ chức là bước lập kế hoạch</td></tr>
+<tr><td class="k">4 안전보건교육</td><td>D1</td><td>Giữ nguyên</td></tr>
+<tr><td class="k">5 건강·보건</td><td>D2 và C2</td><td>Thực hiện (khám, đo) ở D2; kết quả theo dõi ở C2</td></tr>
+<tr><td class="k">6 위험성평가</td><td>P3</td><td>Phần họp tháng/TBM thể hiện lại ở D3</td></tr>
+<tr><td class="k">7 작업허가·TBM·일일점검</td><td>D3 và C1</td><td>Phần lập 작업계획서 ở P4</td></tr>
+<tr><td class="k">8 도급·협력사·발주자</td><td>D4</td><td>Tiêu chí chọn thầu phụ nằm ở P1</td></tr>
+<tr><td class="k">9 계획서·서류·관리비</td><td>P4</td><td>Giữ nguyên</td></tr>
+<tr><td class="k">10 비상·재해 대응</td><td>D6 và C2</td><td>Điều tra sau tai nạn ở C2</td></tr>
+<tr><td class="k">11 점검·개선·경영검토</td><td>C1, A1, A2</td><td>Tách làm ba, đúng chỗ của PDCA</td></tr>
+<tr><td class="k">12 중처법·벌칙</td><td>G2</td><td>Giữ nguyên</td></tr>
+<tr><td class="k">E1–E5, E7, E8 (kỹ thuật hiện trường)</td><td>D5</td><td>Trở thành 7 nhánh phụ của D5; giữ thứ tự 편/장 của sách làm "lối tra theo điều"</td></tr>
+<tr><td class="k">E6 보건기준</td><td>D2</td><td>Gộp với sức khoẻ: một chỗ cho cả thủ tục (khám, đo) và tiêu chuẩn kỹ thuật (nắng nóng, kín khí...)</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="card">
+<h2>5. Thử đi một vòng: "dựng giàn giáo"</h2>
+<div class="path">
+<div><b>P3 + P4</b>Đánh giá rủi ro công việc; lập 작업계획서 nếu thuộc diện 제38조.</div>
+<div><b>D1</b>Giáo dục cho thợ (채용 시, 특별교육 nếu có).</div>
+<div><b>D5</b>Điều kỹ thuật: giàn giáo, ngã cao, dây an toàn, lan can; kiểm trước giờ làm (별표 3).</div>
+<div><b>D3</b>TBM và 작업허가서 hôm đó.</div>
+<div><b>C1</b>Ghi nhật ký kiểm tra, 노사합동점검.</div>
+<div><b>A1</b>Có phát hiện thì ra 시정조치 và cập nhật P3.</div>
+</div>
+<p class="src">Ở bất kỳ ô nào cũng có nút "Lọc theo công việc: dựng giàn giáo" để hiện cả 6 bước trên một màn hình.</p>
+</section>
+
+<section class="card">
+<h2>6. Điều chỉnh so với đề án trước</h2>
+<ul>
+<li>20 nhánh → <b>16 nhánh</b> (2 gốc + 4 P + 6 D + 2 C + 2 A), dễ nhớ hơn.</li>
+<li>Nhóm E không còn là nhóm riêng: nằm trong D5 (và D2 với phần sức khoẻ). Bảng tra 별표 vẫn là công cụ chung.</li>
+<li>Các lối tra theo <b>công việc / nguy cơ / vai trò / thời gian</b> trở thành bộ lọc, không tạo thêm nhánh.</li>
+<li>Phần đã làm xong (giáo dục, kiểm tra sức khoẻ, đo môi trường, phạt, 20 loại việc 특별교육) giữ nguyên dữ liệu, chỉ đổi vị trí trong cây.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>7. Cần anh quyết định</h2>
+<div class="q"><b>Q1.</b> Chọn phương án nào? Tôi đề xuất <b>A (PDCA) làm xương sống + bộ lọc C/D/E</b>. Nếu anh muốn thêm phương án khác (ví dụ chia theo giai đoạn công trình) tôi sẽ vẽ riêng.</div>
+<div class="q"><b>Q2.</b> 16 nhánh này đã hợp lý chưa? Chỗ nào anh muốn gộp hoặc tách? (Ví dụ D5 có thể tách thành "Kỹ thuật" và "Máy móc".)</div>
+<div class="q"><b>Q3.</b> "Gốc" (luật và chế tài) để ở cuối như hiện nay, hay đưa lên đầu trang chủ?</div>
+<div class="q"><b>Q4.</b> Sau khi anh chốt, tôi dựng lại cây trong sổ tay (chưa thêm nội dung chi tiết) để anh xem trực tiếp.</div>
+</section>
+</main>

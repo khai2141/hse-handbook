@@ -1,0 +1,226 @@
+<title>안전보건기준 편 설계안</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#1b2430;--mut:#5d6b7c;--line:#dde3ea;--navy:#14315c;--green:#0b7a4b;--amber:#a15c00;--red:#b3261e;--chip-new:#e6f1ff;--chip-new-fg:#0b4a9c;--chip-ext:#fff1d6;--chip-ext-fg:#8a5200;--chip-have:#e2f5ea;--chip-have-fg:#0b6a40;--soft:#eef2f7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10151c;--card:#18202a;--fg:#e6ebf1;--mut:#9aa8b8;--line:#2b3644;--navy:#7fa6e6;--green:#4cc38a;--amber:#f0b04f;--red:#ff8f87;--chip-new:#13294a;--chip-new-fg:#9cc2ff;--chip-ext:#40300f;--chip-ext-fg:#f5c778;--chip-have:#123524;--chip-have-fg:#7fe0aa;--soft:#1f2935;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10151c;--card:#18202a;--fg:#e6ebf1;--mut:#9aa8b8;--line:#2b3644;--navy:#7fa6e6;--green:#4cc38a;--amber:#f0b04f;--red:#ff8f87;--chip-new:#13294a;--chip-new-fg:#9cc2ff;--chip-ext:#40300f;--chip-ext-fg:#f5c778;--chip-have:#123524;--chip-have-fg:#7fe0aa;--soft:#1f2935;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.65 "Noto Sans KR",system-ui,sans-serif;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:20px 60px}
+main{max-width:980px;margin:0 auto;display:grid;gap:22px}
+h1{font-size:26px;line-height:1.25;margin:0;color:var(--navy);text-wrap:balance}
+h2{font-size:19px;margin:0 0 10px;color:var(--navy)}
+h3{font-size:16px;margin:0}
+p{margin:6px 0}
+.lead{color:var(--mut);margin:6px 0 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;min-width:0}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.mini{background:var(--soft);border-radius:10px;padding:10px 12px;font-size:14px}
+.mini b{display:block;margin-bottom:2px}
+.chip{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:1px 9px;white-space:nowrap}
+.c-new{background:var(--chip-new);color:var(--chip-new-fg)}.c-ext{background:var(--chip-ext);color:var(--chip-ext-fg)}.c-have{background:var(--chip-have);color:var(--chip-have-fg)}
+.grp{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--mut);margin:14px 0 6px}
+details.br{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:8px}
+details.br>summary{cursor:pointer;list-style:none;padding:12px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+details.br>summary::-webkit-details-marker{display:none}
+details.br>summary::before{content:"▸";color:var(--mut);transition:transform .15s}
+details.br[open]>summary::before{transform:rotate(90deg)}
+.num{font-weight:900;color:var(--navy);min-width:1.6em}
+.ko{font-weight:700;font-size:16px}.vi{color:var(--mut);font-size:14px}
+.body{padding:2px 16px 14px;border-top:1px solid var(--line)}
+.why{color:var(--mut);font-size:14px;margin:10px 0}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:7px 8px}
+th{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+td.k{font-weight:700;white-space:nowrap}
+.law{font-size:13px;color:var(--green)}
+.warn{color:var(--amber)}
+.src{font-size:13px;color:var(--mut);margin-top:8px}
+ul{margin:6px 0;padding-left:20px}
+li{margin:2px 0}
+.q{border-left:4px solid var(--amber);padding:6px 12px;background:var(--soft);border-radius:0 8px 8px 0;margin:8px 0}
+.q b{color:var(--amber)}
+@media (max-width:560px){h1{font-size:22px}.card{padding:14px}}
+</style>
+
+<main>
+<header>
+<h1>현장 안전·보건기준 편 — 설계안 (cây chính)</h1>
+<p class="lead">Nguồn: sách "만화로 보는 산업안전보건기준에 관한 규칙" (KOSHA, in lần 12, 11/2025, 344 trang). Chỉ lấy phần <b>liên quan xây dựng</b>. Bản đề án để anh duyệt trước khi viết nội dung chi tiết. Ngày lập: 2026-11-04.</p>
+</header>
+
+<section class="card">
+<h2>1. Đã đọc gì, dùng thế nào</h2>
+<div class="grid">
+<div class="mini"><b>Cấu trúc sách</b>4 편 (1 Tổng quy, 2 An toàn, 3 Bảo hộ sức khoẻ, 4 Lao động hình thức đặc biệt) + 별표 1~18. Mỗi trang là nguyên văn điều luật kèm mục <i>연관 콘텐츠</i> (liên kết nội dung liên quan).</div>
+<div class="mini"><b>Phiên bản trong sách</b>Phản ánh <b>고용노동부령 제453호, 시행 2025.10.1</b>. Luật hiện hành trên law.go.kr hôm nay là bản <b>시행 2026.3.2</b> (đã tra), nên sổ tay sẽ lấy nguyên văn từ law.go.kr, <u>sách chỉ dùng làm bản đồ mục lục</u>.</div>
+<div class="mini"><b>Bản quyền</b>Nguyên văn điều luật là công khai. Tranh truyện và lời giải thích của KOSHA là tác phẩm riêng, <b>không sao chép</b>; sổ tay tự viết phần giải thích.</div>
+<div class="mini"><b>Điểm mới 2025 cần nêu rõ</b>Nắng nóng (제558조의4호, 제559조, 제560조, 제562조 sửa toàn văn, 별표 13의2 thang nhiệt độ cảm nhận), vải chống cháy khi hàn (제241조②4호, hiệu lực 2026.3.2), 건물 → 구축물 đối với phá dỡ (별표 4).</div>
+</div>
+</section>
+
+<section class="card">
+<h2>2. Lọc theo mục lục lớn: giữ gì, bỏ gì</h2>
+<p class="lead">Nhãn: <span class="chip c-have">Lõi</span> viết đầy đủ · <span class="chip c-ext">Tham khảo</span> chỉ liệt kê và liên kết · <span class="chip c-new">Bỏ</span> không liên quan xây dựng.</p>
+<div class="tw"><table>
+<thead><tr><th>편 / 장 (trang sách)</th><th>Quyết định</th><th>Lý do</th></tr></thead>
+<tbody>
+<tr><td class="k">1편 총칙 (10–56)</td><td><span class="chip c-have">Lõi</span></td><td>Làm việc hằng ngày: sàn thao tác, lan can, lối đi, bảo hộ, 관리감독자, 작업계획서, ngã cao, giàn giáo.</td></tr>
+<tr><td class="k">2편 1장 기계·기구 (58–110)</td><td><span class="chip c-have">Lõi</span> 양중기·차량계·건설기계<br><span class="chip c-ext">Tham khảo</span> máy công cụ</td><td>Cẩu, xe nâng, xe nâng người, máy đào, đóng cọc là trọng tâm. Máy ép, ly tâm, robot... không có ở công trường.</td></tr>
+<tr><td class="k">2편 2장 cháy nổ (113–143)</td><td><span class="chip c-have">Lõi</span> hàn, lửa, vật liệu nguy hiểm, bình khí<br><span class="chip c-ext">Tham khảo</span> hoá chất, sấy</td><td>Hàn cắt, giám sát cháy, bình gas là việc công trường. Thiết bị hoá học không phải.</td></tr>
+<tr><td class="k">2편 3장 điện (145–159)</td><td><span class="chip c-have">Lõi</span></td><td>Điện tạm, cầu dao rò, dây di động, làm việc gần điện.</td></tr>
+<tr><td class="k">2편 4장 công việc xây dựng (160–182)</td><td><span class="chip c-have">Lõi</span></td><td>Cốp pha, giàn chống, đổ bê tông, đào, hầm, sắt thép, phá dỡ. Đây là phần riêng của xây dựng.</td></tr>
+<tr><td class="k">2편 5장 vật nặng (183–185)</td><td><span class="chip c-have">Lõi</span></td><td>Bốc vác vật nặng, ngắn gọn.</td></tr>
+<tr><td class="k">2편 6장 bốc dỡ (186–190)</td><td><span class="chip c-have">Lõi</span> xếp dỡ vật liệu<br><span class="chip c-new">Bỏ</span> cảng</td><td>Phần xếp chồng vật liệu giữ lại, bốc xếp tàu cảng bỏ.</td></tr>
+<tr><td class="k">2편 7장 chặt cây (191–192)</td><td><span class="chip c-new">Bỏ</span></td><td>Không phải công việc xây dựng thông thường.</td></tr>
+<tr><td class="k">2편 8장 đường ray (193–198)</td><td><span class="chip c-ext">Tham khảo</span></td><td>Chỉ khi thi công đường sắt, hầm, cầu.</td></tr>
+<tr><td class="k">3편 1~2장 hoá chất, amiăng (201–229)</td><td><span class="chip c-have">Lõi</span> dung môi hữu cơ (sơn, chống thấm), amiăng<br><span class="chip c-ext">Tham khảo</span> chất cấm</td><td>Sơn, chống thấm, phá dỡ có amiăng.</td></tr>
+<tr><td class="k">3편 3장 chất cấm, 7장 bức xạ, 8장 mầm bệnh, 11장 văn phòng (230–312)</td><td><span class="chip c-new">Bỏ</span> (bức xạ: <span class="chip c-ext">Tham khảo</span> kiểm tra không phá huỷ)</td><td>Gần như không áp dụng với công trường.</td></tr>
+<tr><td class="k">3편 4장 tiếng ồn, rung (238–241)</td><td><span class="chip c-have">Lõi</span></td><td>Búa phá, máy nén khí, đóng cọc.</td></tr>
+<tr><td class="k">3편 5장 áp suất bất thường (242–254)</td><td><span class="chip c-ext">Tham khảo</span></td><td>Chỉ khi có công tác khí nén, giếng chìm, lặn.</td></tr>
+<tr><td class="k">3편 6장 nhiệt độ, độ ẩm (255–262)</td><td><span class="chip c-have">Lõi (ưu tiên)</span></td><td>Nắng nóng là rủi ro mùa hè, vừa sửa 2025.</td></tr>
+<tr><td class="k">3편 9장 bụi (278–282)</td><td><span class="chip c-have">Lõi</span></td><td>Cắt đá, mài, khoan bê tông.</td></tr>
+<tr><td class="k">3편 10장 không gian kín (283–295)</td><td><span class="chip c-have">Lõi (ưu tiên)</span></td><td>Cống, bể, hố móng, tầng hầm; có nhiều tử vong.</td></tr>
+<tr><td class="k">3편 12장 cơ xương khớp (301–305)</td><td><span class="chip c-have">Lõi</span> vật nặng thủ công</td><td>Phần điều tra yếu tố có hại giữ ở mức ngắn.</td></tr>
+<tr><td class="k">3편 13장 yếu tố khác (306–308)</td><td><span class="chip c-ext">Tham khảo</span></td><td>Chủ yếu stress công việc.</td></tr>
+<tr><td class="k">4편 특수형태근로종사자 (310–312)</td><td><span class="chip c-have">Lõi (ngắn)</span></td><td>Có điều áp dụng riêng cho người điều khiển máy xây dựng; ghi rõ các nhóm điều được áp dụng.</td></tr>
+<tr><td class="k">별표 (320–338)</td><td><span class="chip c-have">Lõi</span> 별표 1 · 2 · 3 · 4 · 5 · 6 · 10 · 16 · 18 + 13의2</td><td>Bảng tra nhanh: nhiệm vụ 관리감독자, hạng mục kiểm trước giờ làm, nội dung 작업계획서, độ dốc mái đào...</td></tr>
+</tbody></table></div>
+<p class="src">Quy tắc có khoảng 670 điều; phần "Lõi" chiếm khoảng 2/3. Số điều chính xác sẽ đếm khi dựng dữ liệu.</p>
+</section>
+
+<section>
+<h2 style="margin-top:6px">3. Kiến trúc đề xuất: 3 cách tra, 1 kho nội dung</h2>
+<div class="card">
+<p>Để người mới <b>dễ dùng</b>, tôi đề xuất cùng một kho "thẻ điều khoản" nhưng có ba lối vào:</p>
+<div class="grid">
+<div class="mini"><b>① Theo cấu trúc quy định</b>Giữ đúng mục lục sách (편 → 장 → 절). Dành cho người đã quen luật hoặc muốn tra số điều. 8 nhánh bên dưới.</div>
+<div class="mini"><b>② Theo công việc (공종)</b>"Hôm nay tôi quản lý <i>dựng giàn giáo</i>": hiện toàn bộ điều liên quan, hạng mục kiểm 별표 3 và 작업계획서 nếu có. 12 công việc: giàn giáo, cốp pha, thép, đổ bê tông, đào, tháp cẩu, xe nâng người, hàn, điện, sơn/chống thấm, phá dỡ/amiăng, không gian kín.</div>
+<div class="mini"><b>③ Theo nguy cơ</b>Ngã cao · Vật rơi · Sập đổ · Kẹp/cuốn · Điện giật · Cháy nổ · Ngạt · Nắng nóng. Mỗi nguy cơ gom các điều ở nhiều chương lại.</div>
+</div>
+<p class="src">Sổ tay hiện đã có 10 icon công việc (cốp pha, thép, giàn giáo, tháp cẩu, hàn, điện, phá dỡ, vận hành máy, bê tông, kết cấu thép), dùng ngay được cho lối vào ②.</p>
+</div>
+
+<div class="grp">Nhóm E · Tiêu chuẩn kỹ thuật hiện trường (thêm vào cây, nằm cạnh 12 nhánh đã đề xuất)</div>
+<div id="tree"></div>
+</section>
+
+<section class="card">
+<h2>4. Mỗi "thẻ điều khoản" gồm</h2>
+<ol>
+<li><b>Nguyên văn</b> từ law.go.kr (điều/khoản/호), kèm ngày hiệu lực và lịch sử sửa gần nhất.</li>
+<li><b>Phải làm gì</b>, viết lại dễ hiểu theo ngôn ngữ công trường.</li>
+<li><b>Ai chịu trách nhiệm</b> (사업주, 관리감독자, 작업지휘자, 근로자).</li>
+<li><b>Kiểm trước giờ làm</b> (liên kết 별표 3 nếu có) và <b>hồ sơ cần có</b> (작업계획서, phiếu kiểm tra...).</li>
+<li><b>Vi phạm bị gì</b>: liên kết sang nhánh 12 (phạt theo người). Không chép số phạt vào từng thẻ để tránh sai lệch.</li>
+<li><b>Điều liên quan</b> và 공종/nguy cơ liên quan.</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>5. Kết nối với 12 nhánh đã đề xuất</h2>
+<ul>
+<li>Nhánh 3 (Chức danh): <i>관리감독자 (제35조 + 별표 2), 작업지휘자 (제39조)</i> trỏ sang E1.</li>
+<li>Nhánh 4 (Giáo dục): các việc cần 특별교육 trỏ sang đúng điều trong E5/E2.</li>
+<li>Nhánh 5 (Sức khoẻ): đo môi trường, khám sức khoẻ trỏ sang E6.</li>
+<li>Nhánh 7 (Giấy phép, TBM): <i>사전조사 + 작업계획서 (제38조 + 별표 4)</i> và <i>작업시작 전 점검 (별표 3)</i> là phần lõi, viết ở E1/E8 và hiển thị lại ở nhánh 7.</li>
+<li>Nhánh 10 (Khẩn cấp): 대피, người giám sát, cứu hộ không gian kín trỏ sang E6.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>6. Thứ tự làm &amp; kiểm tra</h2>
+<div class="grid">
+<div class="mini"><b>Đợt 1 (rủi ro lớn nhất)</b>E1 (ngã cao, giàn giáo, 작업계획서) · E5 (đào, cốp pha) · E2 (cẩu, máy đào) · E6 (nắng nóng, không gian kín).</div>
+<div class="mini"><b>Đợt 2</b>E3 (hàn, cháy) · E4 (điện) · E6 còn lại · E8 (bảng 별표).</div>
+<div class="mini"><b>Đợt 3</b>E7 và phần "Tham khảo"; 12 công việc và 8 nguy cơ để tra nhanh.</div>
+<div class="mini"><b>Kiểm tra</b>Mỗi điều đối chiếu law.go.kr; có test tự động; theo dõi thay đổi hằng ngày (đã có watcher, sẽ thêm các điều của quy tắc này). Chỉ đăng khi anh duyệt.</div>
+</div>
+</section>
+
+<section class="card">
+<h2>7. Cần anh quyết định</h2>
+<div class="q"><b>Q1.</b> Thêm <b>Nhóm E</b> (8 nhánh) vào cây, tổng 12 + 8 = 20 nhánh, hay gộp vào các nhánh cũ?</div>
+<div class="q"><b>Q2.</b> Có làm cả ba lối tra (cấu trúc / công việc / nguy cơ) không? Tôi đề xuất làm đủ ba vì dùng chung một kho dữ liệu.</div>
+<div class="q"><b>Q3.</b> Phần "Tham khảo" (máy công cụ, hoá chất, đường ray...) chỉ liệt kê tên điều và liên kết, không viết đầy đủ, được không?</div>
+<div class="q"><b>Q4.</b> Nguyên văn điều luật trích dài ở mỗi thẻ hay chỉ phần then chốt kèm đường dẫn? Tôi đề xuất trích đủ khoản bắt buộc, có nút "xem toàn điều".</div>
+</section>
+</main>
+
+<script>
+const B=[
+{n:"E1",ko:"공통 안전기준",vi:"Quy định chung (제1편, tr.10–56)",
+ why:"Phần nền dùng mỗi ngày. Chứa các điều thanh tra hay hỏi nhất: ngã cao, giàn giáo, 작업계획서.",
+ subs:[
+ ["작업장 (tr.11–18)","Sàn thao tác, lan can, vật rơi, lối ra vào, chiếu sáng, cấm vào khu nguy hiểm","제3~20조 (trọng tâm: 제9·13·14·15·20조)"],
+ ["통로 (tr.19–23)","Lối đi, đường dẫn tạm, thang, cầu thang","제21~30조 (제23·24조: 가설통로, 사다리)"],
+ ["보호구 (tr.24–26)","Cấp phát, bảo quản, hạn chế dùng chung","제31~34조 (제32조: cấp phát theo việc)"],
+ ["관리감독자·사전조사·작업계획서 (tr.27–30)","Nhiệm vụ theo 별표 2, kiểm trước giờ làm 별표 3, 작업계획서 theo 별표 4, 작업지휘자, tín hiệu, dừng việc khi thời tiết xấu (tháp cẩu: gió tức thời trên 10 m/s thì dừng lắp dựng, trên 15 m/s thì dừng vận hành)","제35~41조 + 별표 2·3·4"],
+ ["추락·붕괴 방지 (tr.31–36)","Ngã cao, lỗ mở, thiết bị gắn dây an toàn, mái, lên xuống, sập đất, an toàn kết cấu, thiết bị đo","제42~53조"],
+ ["비계 (tr.37–47)","Vật liệu, sàn, lắp dỡ, kiểm tra; giàn ống, treo, đỡ, thang di động, hệ thống","제54~70조 + 별표 5"],
+ ["휴게·잔재물 (tr.52–56)","Phòng nghỉ, vệ sinh, rửa, cấp cứu, xử lý phế thải","제79~85조 (xác định mức áp dụng ở công trường khi viết)"]]},
+{n:"E2",ko:"기계·장비",vi:"Máy móc, thiết bị (제2편 1장, tr.58–110)",
+ why:"Máy đào, cẩu, xe nâng người là nguồn tai nạn nặng; nhiều điều thêm từ 2022–2024 (gương, dây an toàn, khoá).",
+ subs:[
+ ["기계 일반 (tr.59–67)","Che chắn, cắt nguồn khi sửa, không dùng sai mục đích","제86~99조"],
+ ["공작·목재·연삭 기계 (tr.68–76)","Máy cắt, cưa tròn, mài; chỉ liệt kê điều liên quan công trường","Tham khảo"],
+ ["양중기 (tr.77–91)","Cẩu tháp (cố định, bão), cẩu di động, thang tải, gondola, thang máy, dây cáp, móc, xích","제132~170조"],
+ ["차량계 하역운반기계 (tr.92–101)","Xe nâng, xe nội bộ, xe nâng người, xe tải","제171~195조 (제186·187조: 고소작업대)"],
+ ["건설기계 (tr.102–110)","Máy xây dựng loại xe, máy đóng cọc, máy đào (cảnh báo va chạm, gương, dây an toàn, khoá, nâng hạ)","제196~221조의5 + 별표 6"]]},
+{n:"E3",ko:"화재·폭발",vi:"Cháy nổ, hàn cắt (제2편 2장, tr.113–143)",
+ why:"Hàn, cắt và khí là nguyên nhân cháy lớn. Có thay đổi về vải chống cháy (hiệu lực 2026.3.2).",
+ subs:[
+ ["위험물 취급 (tr.114–119)","Chất nguy hiểm, khu vực nổ, hàn gas","제225~237조 + 별표 1"],
+ ["화기 관리 (tr.120–122)","Việc dễ cháy, 화재감시자 (người giám sát cháy), thiết bị chữa cháy, biện pháp chống cháy","제238~246조 (trọng tâm: 제241·241조의2)"],
+ ["가스 용접장치 (tr.137–141)","Máy hàn axetylen, bình khí tập trung","제285~295조"],
+ ["Tham khảo","Thiết bị hoá học, thiết bị sấy, chất nóng chảy","제247~284조 (chỉ liệt kê)"]]},
+{n:"E4",ko:"전기",vi:"Điện (제2편 3장, tr.145–159)",
+ why:"Điện tạm và công cụ cầm tay.",
+ subs:[
+ ["전기 기계·기구 (tr.146–152)","Che bộ phận mang điện, tiếp địa, cầu dao rò, đèn tạm","제301~312조"],
+ ["배선·이동전선 (tr.152–154)","Dây tạm, dây di động, ổ cắm","제313~317조"],
+ ["전기작업 (tr.154–158)","Cắt điện, gần đường điện, mang điện, bảo hộ cách điện","제318~324조"],
+ ["정전기·전자파 (tr.158–159)","Tĩnh điện, chống sét","제325~327조"]]},
+{n:"E5",ko:"건설작업",vi:"Công việc xây dựng (제2편 4~6장, 8장, tr.160–198)",
+ why:"Phần chỉ có ở xây dựng. Sắp theo công việc để người mới dễ tra.",
+ subs:[
+ ["거푸집·동바리 (tr.161–167)","Cấu tạo, 조립도, cốp pha liền sàn thao tác, giàn chống, tháo dỡ, đổ bê tông, bơm bê tông","제328~335조"],
+ ["굴착 (tr.168–171)","Điều tra trước, độ dốc mái (별표 10), công trình ngầm, hướng dẫn máy đào, chống vách (흙막이), nổ mìn","제338~348조"],
+ ["터널·교량·잠함·가설도로 (tr.171–181)","Rơi đá, khí, chống đỡ, cốp pha hầm, cầu, giếng chìm","제349~379조"],
+ ["철골 (tr.181–182)","Lắp ráp kết cấu thép, đường lên xuống, dừng việc","제380~383조"],
+ ["해체 (tr.182)","Phá dỡ cấu trúc và 작업지휘자 (từ 2025 dùng chữ 구축물등)","제384조 + 제39조 + 별표 4"],
+ ["중량물·자재 하적 (tr.184–188)","Vật nặng, lăn, xếp chồng, cẩu móc","제385~394조"],
+ ["궤도 작업 (tr.193–198)","Chỉ khi thi công đường sắt","Tham khảo"]]},
+{n:"E6",ko:"보건기준",vi:"Bảo hộ sức khoẻ (제3편, tr.200–308)",
+ why:"Nối với nhánh 5 (khám sức khoẻ, đo môi trường). Ưu tiên nắng nóng và không gian kín.",
+ subs:[
+ ["온도·습도 (tr.255–262)","Nắng nóng (định nghĩa, nghỉ 20 phút mỗi 2 giờ, làm mát), lạnh, ẩm; muối, nước uống","제558~572조 + 별표 13의2 (mới 2025)"],
+ ["밀폐공간 (tr.283–295)","Chương trình, đo ôxy và khí, thông gió, giám sát, cứu hộ, dây an toàn, đào ống gas","제618~645조 + 별표 18"],
+ ["석면 (tr.224–229)","Điều tra, kế hoạch phá dỡ, biển báo, rác thải","제486~497조"],
+ ["분진 (tr.278–282)","Việc có bụi, hút cục bộ, làm ẩm, khẩu trang","제605~617조 + 별표 16"],
+ ["소음·진동 (tr.238–241)","Giảm ồn, bảo vệ thính lực, chương trình bảo tồn thính lực","제512~521조"],
+ ["유기용제 등 (tr.202–213)","Sơn, chống thấm, keo; hút gió, cất trữ, bảo hộ","제420~451조 + 별표 12·13"],
+ ["근골격계·중량물 (tr.301–305)","Điều tra yếu tố, nâng nặng thủ công","제656~666조"],
+ ["Tham khảo","Áp suất bất thường, bức xạ, mầm bệnh","제522~557조, 제573~604조"]]},
+{n:"E7",ko:"특수형태근로종사자",vi:"Lao động hình thức đặc biệt (제4편, tr.310–312)",
+ why:"Người điều khiển máy xây dựng làm hợp đồng ngoài vẫn được bảo vệ theo các điều chỉ định.",
+ subs:[
+ ["건설기계 조종사","Liệt kê các nhóm điều được áp dụng (제3~62, 67~70, 86~99, 132~190, 196~221조의5, 328~393, 405~413, 417~419조)","제672조 ②, 시행령 제67조"],
+ ["Các loại khác","Chỉ nêu tên (không liên quan công trường)","Tham khảo"]]},
+{n:"E8",ko:"별표·점검표",vi:"Bảng tra nhanh (별표 1~18)",
+ why:"Phần dùng nhiều nhất khi làm giấy tờ: nhiệm vụ, kiểm tra trước giờ làm, nội dung kế hoạch.",
+ subs:[
+ ["별표 2","Nhiệm vụ 관리감독자 theo từng việc","제35조 ①"],
+ ["별표 3","Hạng mục kiểm trước giờ làm (cẩu, giàn giáo, xe nâng người, đào...)","제35조 ②"],
+ ["별표 4","Nội dung 사전조사 và 작업계획서 (2025 sửa: 구축물등의 해체)","제38조 ①"],
+ ["별표 5 · 6 · 10","Bước neo giàn ống · loại máy xây dựng · độ dốc mái đào","제59조, 제196조, 제339조"],
+ ["별표 1 · 12 · 16 · 18 · 13의2","Chất nguy hiểm · chất hữu cơ · việc bụi · không gian kín · nhiệt độ cảm nhận","제16·225조, 제420조, 제605조, 제618조, 제559조"]]}
+];
+document.getElementById("tree").innerHTML=B.map(b=>`
+<details class="br"><summary><span class="num">${b.n}</span><span class="ko">${b.ko}</span><span class="vi">${b.vi}</span></summary>
+<div class="body"><p class="why">${b.why}</p>
+<div class="tw"><table><thead><tr><th>Nhánh phụ</th><th>Nội dung khái quát</th><th>Căn cứ (đối chiếu law.go.kr khi viết)</th></tr></thead><tbody>
+${b.subs.map(s=>`<tr><td class="k">${s[0]}</td><td>${s[1]}</td><td class="law">${s[2]}</td></tr>`).join("")}
+</tbody></table></div></div></details>`).join("");
+</script>
