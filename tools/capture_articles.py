@@ -14,6 +14,11 @@ gets a loud WARNING and a line in the diff report.
           falls after that version's own 시행일. Example: 제241조제2항제4호 후단 (제450호, 공포 2025-09-01,
           시행 2026-03-02) is missing from the 제453호/제454호 versions that efYd=20261104 returns.
   efyd    write the efYd text. Use this only for a past --date (latest would then be too new).
+          A WARNING is also printed when the latest version is not yet in force on --date (e.g.
+          산업안전보건법 on 2026-11-04: latest = 법률 제22122호, 시행 2027-04-28). If bodies are identical,
+          capture with --prefer efyd so the header names the version in force.
+--law     any law name law.go.kr knows; LAW_PREFIX gives the card id prefix and raw_name() the raw
+          file name (sources/<prefix>_<node with dots as _>_raw.txt).
 --check-only  compare and report, do not write --out.
 """
 import argparse, datetime, difflib, os, re, sys, time
@@ -24,6 +29,29 @@ from tools.fetch_law import article_url, collapse_ws, fetch_article  # noqa: E40
 HEADER_RE = re.compile(r"\[시행 (\d{4})\. (\d{1,2})\. (\d{1,2})\.\] \[([^\]]+)\]")
 TITLE_RE = re.compile(r"(제(\d+)조(?:의(\d+))?)\(([^)]+)\)")
 PUB_RE = re.compile(r"(\d{4})\. (\d{1,2})\. (\d{1,2})\.")
+
+
+# Card id prefix per law (data/articles.json ids are "<prefix>-<N>[-<M>]").
+LAW_PREFIX = {
+    "산업안전보건기준에 관한 규칙": "sr",
+    "산업안전보건법": "l",
+    "산업안전보건법 시행령": "d",
+    "산업안전보건법 시행규칙": "r",
+    "중대재해 처벌 등에 관한 법률": "j",
+    "중대재해 처벌 등에 관한 법률 시행령": "jd",
+    "건설기술 진흥법": "k",
+}
+
+
+def card_id(law, label):
+    """('산업안전보건법', '제58조') -> 'l-58'; 제241조의2 -> '<p>-241-2'."""
+    m = re.fullmatch(r"제(\d+)조(?:의(\d+))?", label)
+    return "%s-%s%s" % (LAW_PREFIX[law], m.group(1), "-" + m.group(2) if m.group(2) else "")
+
+
+def raw_name(law, node):
+    """Raw capture file name for one law and one node: ('산업안전보건법', 'd.sub') -> 'l_d_sub_raw.txt'."""
+    return "%s_%s_raw.txt" % (LAW_PREFIX[law], node.replace(".", "_"))
 
 
 def jo_to_no(label):
@@ -159,6 +187,9 @@ def main(argv=None):
         if r["differs"]:
             print("!!! WARNING: %s differs between efYd=%s (%s) and latest (%s); writing %s. %s"
                   % (r["label"], a.date, r["efyd"]["header"], r["latest"]["header"], a.prefer, r["summary"]), file=sys.stderr)
+        if parse_header(r["latest"]["text"])["effective"].replace("-", "") > a.date:
+            print("!!! WARNING: %s latest version is not yet in force on %s (%s); consider --prefer efyd"
+                  % (r["label"], a.date, r["latest"]["header"]), file=sys.stderr)
     with open(a.diff_report, "w", encoding="utf-8", newline="\n") as f:
         f.write(diff_report_text(a.law, a.date, results))
     print("%d of %d articles differ; report: %s" % (sum(r["differs"] for r in results), len(results), a.diff_report))

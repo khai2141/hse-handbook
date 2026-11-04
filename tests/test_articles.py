@@ -1,6 +1,8 @@
-import json, os, re, unittest
+import json, os, re, sys, unittest
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
+sys.path.insert(0, ROOT)
+from tools.capture_articles import LAW_PREFIX, card_id, raw_name  # noqa: E402
 col = lambda t: re.sub(r"\s+", " ", t).strip()
 UNIT = re.compile(r"\d+(\.\d+)?\s*(미터|센티미터|밀리미터|킬로그램|도|초|분|시간|m|cm|mm|kg)")
 
@@ -38,7 +40,13 @@ class ArticleDataTests(unittest.TestCase):
         pilot = [r for r in self.recs if r["jo"] in PILOT]
         self.assertEqual({r["raw"] for r in pilot}, {"safety_rules_raw.txt"})
         for r in self.recs:
-            self.assertEqual(r["law"], "산업안전보건기준에 관한 규칙")
+            self.assertIn(r["law"], LAW_PREFIX, r["id"])
+
+    def test_id_prefix_and_raw_name_follow_law(self):
+        for r in self.recs:
+            self.assertEqual(r["id"], card_id(r["law"], r["jo"]), r["id"])
+            if r["raw"] != "safety_rules_raw.txt" and r["law"] != "산업안전보건기준에 관한 규칙":
+                self.assertEqual(r["raw"], raw_name(r["law"], r["branch"]), r["id"])
 
     def test_ids_unique_and_references_resolve(self):
         ids = [r["id"] for r in self.recs]
@@ -63,10 +71,11 @@ class ArticleDataTests(unittest.TestCase):
         for r in self.recs:
             s = r["source"]
             self.assertTrue(s["url"].startswith("https://www.law.go.kr/"), r["id"])
-            m = re.search(r"### 산업안전보건기준에 관한 규칙 %s \| url: (\S+) \| captured: \S+ \| header: \[시행 (\d+)\. (\d+)\. (\d+)\.\]" % r["jo"], self.rawof(r))
+            m = re.search(r"### %s %s \| url: (\S+) \| captured: \S+ \| header: \[시행 (\d+)\. (\d+)\. (\d+)\.\] \[[^\]]*?제\d+호, (\d{4})\. (\d+)\. (\d+)\." % (re.escape(r["law"]), r["jo"]), self.rawof(r))
             self.assertTrue(m, r["id"])
             self.assertEqual(s["url"], m.group(1))
             self.assertEqual(s["effective"], "%s-%02d-%02d" % (m.group(2), int(m.group(3)), int(m.group(4))))
+            self.assertEqual(s["published"], "%s-%02d-%02d" % (m.group(5), int(m.group(6)), int(m.group(7))), r["id"])
             self.assertEqual(s["verified_at"], "2026-11-04")
 
     def test_source_note_and_in_force_241(self):

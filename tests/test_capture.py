@@ -31,6 +31,27 @@ class HeaderTests(unittest.TestCase):
         self.assertEqual(i["title"], "안전난간의 구조 및 설치요건")
         self.assertEqual(i["header"], "[시행 2025. 12. 1.] [고용노동부령 제454호, 2025. 12. 1., 일부개정]")
 
+    def test_parse_each_law_header(self):
+        cases = [
+            ("산업안전보건법 [시행 2026. 6. 1.] [법률 제21374호, 2026. 2. 19., 일부개정] 제58조(유해한 작업의 도급금지) ① 본문", "제58조", "2026-06-01", "2026-02-19"),
+            ("산업안전보건법 시행령 [시행 2026. 8. 1.] [대통령령 제36540호, 2026. 7. 28., 일부개정] 제51조(도급승인 대상 작업) 본문", "제51조", "2026-08-01", "2026-07-28"),
+            ("산업안전보건법 시행규칙 [시행 2026. 8. 1.] [고용노동부령 제477호, 2026. 7. 28., 일부개정] 제67조(중대재해 발생 시 보고) 본문", "제67조", "2026-08-01", "2026-07-28"),
+            ("건설기술 진흥법 [시행 2025. 10. 1.] [법률 제21065호, 2025. 10. 1., 타법개정] 제62조(건설공사의 안전관리) ① 본문", "제62조", "2025-10-01", "2025-10-01"),
+        ]
+        for text, label, eff, pub in cases:
+            i = parse_header(text, label)
+            self.assertEqual((i["effective"], i["published"]), (eff, pub), label)
+
+    def test_card_id_and_raw_name(self):
+        self.assertEqual(ca.card_id("산업안전보건법", "제58조"), "l-58")
+        self.assertEqual(ca.card_id("산업안전보건법 시행령", "제51조"), "d-51")
+        self.assertEqual(ca.card_id("산업안전보건법 시행규칙", "제67조"), "r-67")
+        self.assertEqual(ca.card_id("중대재해 처벌 등에 관한 법률", "제4조"), "j-4")
+        self.assertEqual(ca.card_id("건설기술 진흥법", "제62조"), "k-62")
+        self.assertEqual(ca.card_id(LAW, "제241조의2"), "sr-241-2")
+        self.assertEqual(ca.raw_name("산업안전보건법", "d.sub"), "l_d_sub_raw.txt")
+        self.assertEqual(ca.raw_name(LAW, "d.tech.com"), "sr_d_tech_com_raw.txt")
+
     def test_parse_fixture(self):
         with open(os.path.join(FIX, "article_29.html"), encoding="utf-8") as f:
             i = parse_header(extract_article(f.read()), "제29조")
