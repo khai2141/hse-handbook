@@ -31,8 +31,12 @@ class ArticleDataTests(unittest.TestCase):
     def rawof(self, r):
         return self.raws[r["raw"]]
 
-    def test_pilot_set_is_exactly_the_twelve(self):
-        self.assertEqual(sorted(r["jo"] for r in self.recs), sorted(PILOT))
+    def test_pilot_cards_present_and_law_set(self):
+        jos = [r["jo"] for r in self.recs]
+        for j in PILOT:
+            self.assertIn(j, jos)
+        pilot = [r for r in self.recs if r["jo"] in PILOT]
+        self.assertEqual({r["raw"] for r in pilot}, {"safety_rules_raw.txt"})
         for r in self.recs:
             self.assertEqual(r["law"], "산업안전보건기준에 관한 규칙")
 

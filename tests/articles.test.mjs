@@ -8,8 +8,8 @@ import { loadData } from "./load.mjs";
 const data = loadData();
 const list = () => articlesFor(data, "d.tech.com");
 
-test("data loads 12 pilot cards for d.tech.com and none elsewhere", () => {
-  assert.equal(list().length, 12);
+test("data loads 55 cards for d.tech.com and none elsewhere", () => {
+  assert.equal(list().length, 55);
   assert.equal(articlesFor(data, "d.tech.mach").length, 0);
   assert.equal(articlesFor({}, "d.tech.com").length, 0);
 });
@@ -22,24 +22,24 @@ test("node d.tech.com is kind A and keeps its plan", () => {
 
 test("groupArticles keeps first-appearance order of groups", () => {
   const g = groupArticles(list());
-  assert.deepEqual(g.map((x) => x.group), ["작업장", "보호구", "관리감독자·작업계획서", "추락·붕괴 방지", "비계"]);
-  assert.equal(g.reduce((n, x) => n + x.items.length, 0), 12);
+  assert.deepEqual(g.map((x) => x.group), ["작업장", "통로", "보호구", "관리감독자·작업계획서", "추락·붕괴 방지", "비계", "휴게·잔재물"]);
+  assert.equal(g.reduce((n, x) => n + x.items.length, 0), 55);
 });
 
 test("filter matches jo, title, must and choseong", () => {
   const f = (q) => filterArticles(list(), q).map((r) => r.jo);
-  assert.deepEqual(f("제13조"), ["제13조"]);
+  assert.equal(f("제13조")[0], "제13조");
   assert.ok(f("안전난간").includes("제13조"));
   assert.ok(f("ㅇㅈㄴㄱ").includes("제13조"));
   assert.ok(f("타워크레인").includes("제37조"));
-  assert.equal(f("").length, 12);
+  assert.equal(f("").length, 55);
   assert.equal(f("zzzz없음").length, 0);
 });
 
 test("renderArticles: group headings, one button per card, first must bullet, escaped", () => {
   const h = renderArticles("d.tech.com", data, "");
-  assert.equal((h.match(/class="card"/g) ?? []).length, 12);
-  assert.equal((h.match(/<h3/g) ?? []).length, 5);
+  assert.equal((h.match(/class="card"/g) ?? []).length, 55);
+  assert.equal((h.match(/<h3/g) ?? []).length, 7);
   assert.ok(h.includes('data-art="sr-13"'));
   assert.ok(h.includes(list().find((r) => r.id === "sr-13").must[0].slice(0, 12)));
   assert.ok(h.includes("제13조") && h.includes("안전난간의 구조 및 설치요건"));
