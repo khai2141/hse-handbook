@@ -135,3 +135,21 @@ test("app wires articles and the hint text", () => {
   assert.ok(app.includes("조문 원문은 law.go.kr에서 가져온 현행 시행본입니다. 카드를 누르면 요건·점검·원문이 열립니다."));
   assert.ok(app.includes("data-art"));
 });
+
+test("management branches (wave 3a) are kind A with their groups and law-prefixed ids", () => {
+  const exp = {
+    "d.sub": [["도급 제한·승인", "도급인의 의무", "안전보건총괄책임자·조정자", "발주자의 조치", "건설재해예방전문지도기관", "노사협의체", "산업안전보건위원회"], 32],
+    "d.emg": [["중대재해 발생 시 조치·보고", "작업중지·원인조사", "산업재해 은폐 금지·보고", "경영책임자의 비상대응 의무"], 8],
+    "d.daily": [["안전·보건조치와 작업중지"], 5],
+    "p.doc": [["유해위험방지계획서", "산업안전보건관리비", "안전관리계획 (건설기술 진흥법)", "서류 보존"], 6],
+  };
+  for (const [node, [groups, n]] of Object.entries(exp)) {
+    assert.equal(data.nodes[node].kind, "A", node);
+    assert.ok(data.nodes[node].plan.length, node);
+    const list = articlesFor(data, node);
+    assert.equal(list.length, n, node);
+    assert.deepEqual(groupArticles(list).map((x) => x.group), groups, node);
+    for (const r of list) assert.match(r.id, /^(l|d|r|jd|k)-\d+(-\d+)?$/, r.id);
+  }
+  assert.equal(articleDetail("l-54", data).sub, "산업안전보건법");
+});

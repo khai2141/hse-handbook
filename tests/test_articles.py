@@ -37,7 +37,7 @@ class ArticleDataTests(unittest.TestCase):
         jos = [r["jo"] for r in self.recs]
         for j in PILOT:
             self.assertIn(j, jos)
-        pilot = [r for r in self.recs if r["jo"] in PILOT]
+        pilot = [r for r in self.recs if r["jo"] in PILOT and r["law"] == "산업안전보건기준에 관한 규칙"]
         self.assertEqual({r["raw"] for r in pilot}, {"safety_rules_raw.txt"})
         for r in self.recs:
             self.assertIn(r["law"], LAW_PREFIX, r["id"])

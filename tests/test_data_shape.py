@@ -229,7 +229,8 @@ EXCEPTION_MARKERS = ("다만,", "제외한다", "제외하고", "한정한다", 
 EXCEPTION_CARRIERS = ("다만", "예외", "제외", "한정", "아니하다", "아니한다")
 # G2: `records` may be non-empty only if `text` names a record-type duty.
 # "적어야" covers 제439조 ("특별관리물질 취급 시 적어야 하는 사항"), a pure recording duty.
-RECORD_WORDS = ("기록", "보존", "작성", "게시", "서면", "보관", "제출", "신고", "보고", "적어야")
+# "갖추어 두어야" covers 시행령 제53조제3항 ("…증명할 수 있는 서류를 갖추어 두어야 한다"), a keep-on-file duty.
+RECORD_WORDS = ("기록", "보존", "작성", "게시", "서면", "보관", "제출", "신고", "보고", "적어야", "갖추어 두어야")
 # G4: absolute words a `must` bullet may use only if `text` uses them too.
 ABSOLUTE_WORDS = ("반드시", "항상", "모든")
 
