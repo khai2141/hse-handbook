@@ -53,19 +53,22 @@ def extract_article(html):
     return collapse_ws(htmllib.unescape(stripped))
 
 
-def fetch_article(law_name, jo_no, backend="html", ef_yd=None):
+def article_url(law_name, jo_no, backend="html", ef_yd=None):
     if backend == "api":
         oc = os.environ.get("LAW_OC")
         if not oc:
             raise RuntimeError("LAW_OC is not set")
         q = urllib.parse.urlencode({"OC": oc, "target": "law", "type": "HTML", "LM": law_name, "JO": jo_no})
-        url = "https://www.law.go.kr/DRF/lawService.do?" + q
-    else:
-        params = {"lsClsCd": "L", "mode": "11", "lsNm": law_name, "joNo": jo_no}
-        if ef_yd:
-            params["efYd"] = ef_yd
-        q = urllib.parse.urlencode(params, quote_via=urllib.parse.quote)
-        url = "https://www.law.go.kr/LSW/lsLinkProc.do?" + q
+        return "https://www.law.go.kr/DRF/lawService.do?" + q
+    params = {"lsClsCd": "L", "mode": "11", "lsNm": law_name, "joNo": jo_no}
+    if ef_yd:
+        params["efYd"] = ef_yd
+    q = urllib.parse.urlencode(params, quote_via=urllib.parse.quote)
+    return "https://www.law.go.kr/LSW/lsLinkProc.do?" + q
+
+
+def fetch_article(law_name, jo_no, backend="html", ef_yd=None):
+    url = article_url(law_name, jo_no, backend, ef_yd)
     last = None
     for attempt in range(3):
         try:
