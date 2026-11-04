@@ -209,5 +209,60 @@ class DataShapeTests(unittest.TestCase):
         self.assertTrue(any("제31조의2" in l and "2027" in l for l in meta["foreign_edu"]))
         self.assertTrue(any("정책 발표(법령 아님)" in l for l in meta["foreign_edu"]))
 
+    # ---- Article card fidelity guards (pure checks on data/articles.json) ----
+    def test_article_cards_carry_exceptions(self):
+        bad = [r["id"] for r in recs("articles.json") if g1_fails(r)]
+        self.assertEqual(bad, [], "G1: text has a 단서/제외/한정 but must+check do not carry it")
+
+    def test_article_records_are_required_by_text(self):
+        bad = [r["id"] for r in recs("articles.json") if g2_fails(r)]
+        self.assertEqual(bad, [], "G2: records not backed by text")
+
+    def test_article_must_not_overstate(self):
+        bad = [r["id"] for r in recs("articles.json") if g4_fails(r)]
+        self.assertEqual(bad, [], "G4: 반드시/항상/모든 not in text")
+
+
+# G1: markers in `text` that signal a 단서, exclusion or limitation.
+EXCEPTION_MARKERS = ("다만,", "제외한다", "제외하고", "한정한다", "그러하지 아니하다")
+# G1: at least one of these must appear in the card's must+check so the exception is carried.
+EXCEPTION_CARRIERS = ("다만", "예외", "제외", "한정", "아니하다", "아니한다")
+# G2: `records` may be non-empty only if `text` names a record-type duty.
+# "적어야" covers 제439조 ("특별관리물질 취급 시 적어야 하는 사항"), a pure recording duty.
+RECORD_WORDS = ("기록", "보존", "작성", "게시", "서면", "보관", "제출", "신고", "보고", "적어야")
+# G4: absolute words a `must` bullet may use only if `text` uses them too.
+ABSOLUTE_WORDS = ("반드시", "항상", "모든")
+
+
+def g1_fails(r):
+    if not any(m in r["text"] for m in EXCEPTION_MARKERS):
+        return False
+    joined = " ".join(r["must"] + r["check"]).lower()
+    return not any(c in joined for c in EXCEPTION_CARRIERS)
+
+
+def record_key_noun(entry):
+    import re
+    head = re.match(r"[^\s(]*", entry).group(0)
+    m = re.search(r"[가-힣]{2,}", head)
+    return m.group(0) if m else None
+
+
+def g2_fails(r):
+    if not r["records"]:
+        return False
+    if not any(w in r["text"] for w in RECORD_WORDS):
+        return True
+    for e in r["records"]:
+        k = record_key_noun(e)
+        if not k or k not in r["text"]:
+            return True
+    return False
+
+
+def g4_fails(r):
+    return any(w in m and w not in r["text"] for m in r["must"] for w in ABSOLUTE_WORDS)
+
+
 if __name__ == "__main__":
     unittest.main()
