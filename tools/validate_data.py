@@ -1,4 +1,4 @@
-import json, os, sys, datetime
+import json, os, re, sys, datetime
 
 REQ = ("url", "published", "effective", "verified_at")
 NUMERIC = ("hours", "fine", "fines", "min", "max")
@@ -31,12 +31,42 @@ def _check_record(rec, where):
             errs.append(f"{where}: source.effective is not ISO date")
     return errs
 
+ART_STR = ("id", "law", "jo", "title", "branch", "group", "text", "who", "status")
+ART_LIST = ("must", "check", "records", "see", "penalty_ids")
+
+
+def _check_article(rec, where):
+    errs = []
+    for k in ART_STR:
+        if not isinstance(rec.get(k), str) or (k != "who" and not rec.get(k)):
+            errs.append(f"{where}: article field '{k}' must be a non-empty string")
+    for k in ART_LIST:
+        if not isinstance(rec.get(k), list) or not all(isinstance(x, str) for x in rec.get(k)):
+            errs.append(f"{where}: article field '{k}' must be a list of strings")
+    must = rec.get("must")
+    if isinstance(must, list) and not (2 <= len(must) <= 6) and len(must) != 0:
+        errs.append(f"{where}: must needs 2-6 bullets")
+    if rec.get("status") == "미확인":
+        for k in ("text", "must", "check"):
+            if re.search(r"\d", json.dumps(rec.get(k), ensure_ascii=False)):
+                errs.append(f"{where}: 미확인 article must not show numbers in '{k}'")
+    return errs
+
+
 def validate_file(path):
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
     errs = []
+    is_art = os.path.basename(path) == "articles.json"
+    ids = set()
     for i, rec in enumerate(data.get("records", [])):
-        errs += _check_record(rec, f"{os.path.basename(path)}#{rec.get('id', i)}")
+        where = f"{os.path.basename(path)}#{rec.get('id', i)}"
+        errs += _check_record(rec, where)
+        if is_art:
+            errs += _check_article(rec, where)
+            if rec.get("id") in ids:
+                errs.append(f"{where}: duplicate id")
+            ids.add(rec.get("id"))
     return errs
 
 def validate_dir(d):

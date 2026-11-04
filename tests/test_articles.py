@@ -1,0 +1,74 @@
+import json, os, re, unittest
+
+ROOT = os.path.join(os.path.dirname(__file__), "..")
+col = lambda t: re.sub(r"\s+", " ", t).strip()
+UNIT = re.compile(r"\d+(\.\d+)?\s*(미터|센티미터|밀리미터|킬로그램|도|초|분|시간|m|cm|mm|kg)")
+
+
+def load(*p):
+    with open(os.path.join(ROOT, *p), encoding="utf-8") as f:
+        return json.load(f)
+
+
+PILOT = ["제13조", "제32조", "제35조", "제37조", "제38조", "제39조", "제42조", "제43조", "제44조", "제57조", "제59조", "제68조"]
+
+
+class ArticleDataTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.recs = load("data", "articles.json")["records"]
+        cls.raw = col(open(os.path.join(ROOT, "sources", "safety_rules_raw.txt"), encoding="utf-8").read())
+
+    def test_pilot_set_is_exactly_the_twelve(self):
+        self.assertEqual(sorted(r["jo"] for r in self.recs), sorted(PILOT))
+        for r in self.recs:
+            self.assertEqual(r["law"], "산업안전보건기준에 관한 규칙")
+
+    def test_ids_unique_and_references_resolve(self):
+        ids = [r["id"] for r in self.recs]
+        self.assertEqual(len(ids), len(set(ids)))
+        pen = {p["id"] for p in load("data", "penalties.json")["records"]}
+        nodes = load("data", "nodes.json")["nodes"]
+        for r in self.recs:
+            self.assertIn(r["branch"], nodes, r["id"])
+            for s in r["see"]:
+                self.assertIn(s, ids, r["id"])
+                self.assertNotEqual(s, r["id"])
+            for p in r["penalty_ids"]:
+                self.assertIn(p, pen, r["id"])
+
+    def test_text_is_verbatim_from_capture(self):
+        for r in self.recs:
+            self.assertIn(col(r["text"]), self.raw, r["id"])
+            self.assertTrue(r["text"].startswith(r["jo"] + "(" + r["title"] + ")"), r["id"])
+            self.assertNotIn("[시행", r["text"], r["id"])
+
+    def test_source_matches_capture_header(self):
+        for r in self.recs:
+            s = r["source"]
+            self.assertTrue(s["url"].startswith("https://www.law.go.kr/"), r["id"])
+            m = re.search(r"### 산업안전보건기준에 관한 규칙 %s \| url: (\S+) \| captured: \S+ \| header: \[시행 (\d+)\. (\d+)\. (\d+)\.\]" % r["jo"], self.raw)
+            self.assertTrue(m, r["id"])
+            self.assertEqual(s["url"], m.group(1))
+            self.assertEqual(s["effective"], "%s-%02d-%02d" % (m.group(2), int(m.group(3)), int(m.group(4))))
+            self.assertEqual(s["verified_at"], "2026-11-04")
+
+    def test_numbers_with_units_come_from_text(self):
+        for r in self.recs:
+            text = col(r["text"])
+            for field in ("must", "check"):
+                for item in r[field]:
+                    for m in UNIT.finditer(item):
+                        self.assertIn(col(m.group(0)), text, (r["id"], field, m.group(0)))
+
+    def test_shape(self):
+        for r in self.recs:
+            self.assertEqual(r["status"], "확인")
+            self.assertTrue(2 <= len(r["must"]) <= 6, r["id"])
+            self.assertTrue(r["check"], r["id"])
+            self.assertIsInstance(r["records"], list)
+            self.assertTrue(r["group"])
+
+
+if __name__ == "__main__":
+    unittest.main()

@@ -72,3 +72,36 @@ class DataDirTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+ART = {"id": "sr-1", "law": "L", "jo": "제1조", "title": "t", "branch": "b", "group": "g", "text": "제1조(t) 본문",
+       "must": ["가", "나"], "who": "사업주", "check": ["다"], "records": [], "see": [], "penalty_ids": [],
+       "status": "확인",
+       "source": {"url": "https://www.law.go.kr/x", "published": "2025-12-01", "effective": "2025-12-01", "verified_at": "2026-11-04"}}
+
+
+class ArticleValidateTests(unittest.TestCase):
+    def run_one(self, rec):
+        with tempfile.TemporaryDirectory() as t:
+            return validate_file(write(t, "articles.json", {"records": [rec]}))
+
+    def test_good_article_passes(self):
+        self.assertEqual(self.run_one(ART), [])
+
+    def test_article_required_fields_and_must_size(self):
+        bad = dict(ART); del bad["text"]
+        self.assertTrue(any("text" in e for e in self.run_one(bad)))
+        bad = dict(ART, must=["a"] * 7)
+        self.assertTrue(any("must" in e for e in self.run_one(bad)))
+        bad = dict(ART, see="sr-2")
+        self.assertTrue(any("see" in e for e in self.run_one(bad)))
+
+    def test_future_article_needs_ack(self):
+        bad = json.loads(json.dumps(ART)); bad["source"]["effective"] = "2999-01-01"
+        self.assertTrue(any("future" in e for e in self.run_one(bad)))
+        bad["source"]["future_ack"] = True
+        self.assertEqual(self.run_one(bad), [])
+
+    def test_unverified_article_carries_no_numbers(self):
+        rec = dict(ART, status="미확인", must=["2미터"])
+        self.assertTrue(any("미확인" in e for e in self.run_one(rec)))
