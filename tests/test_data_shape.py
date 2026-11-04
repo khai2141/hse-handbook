@@ -1,4 +1,4 @@
-import json, os, unittest
+import json, os, re, unittest
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
@@ -218,6 +218,12 @@ class DataShapeTests(unittest.TestCase):
         bad = [r["id"] for r in recs("articles.json") if g2_fails(r)]
         self.assertEqual(bad, [], "G2: records not backed by text")
 
+    def test_article_check_carries_each_proviso(self):
+        bad = {r["id"]: miss for r in recs("articles.json") for miss in [g5_missing(r)] if miss and r["id"] not in PROVISO_ALLOWLIST}
+        self.assertEqual(bad, {}, "G5: a 다만-clause key phrase is missing from must+check")
+        ids = {r["id"] for r in recs("articles.json")}
+        self.assertFalse(set(PROVISO_ALLOWLIST) - ids, "G5 allowlist has unknown ids")
+
     def test_article_must_not_overstate(self):
         bad = [r["id"] for r in recs("articles.json") if g4_fails(r)]
         self.assertEqual(bad, [], "G4: 반드시/항상/모든 not in text")
@@ -263,6 +269,43 @@ def g2_fails(r):
 
 def g4_fails(r):
     return any(w in m and w not in r["text"] for m in r["must"] for w in ABSOLUTE_WORDS)
+
+
+
+# G5: each 다만-clause (단서) must leave a trace in must+check, not just a generic "예외" word.
+# Heuristic: for every "다만" in `text`, take the clause up to the end of its sentence ("다."),
+# split it into Hangul runs, strip one trailing particle, and pick the FIRST run that is
+#   - 4 or more Hangul characters long,
+#   - not a stop word (근로자, 사업주, 경우, 그 ... see PROVISO_STOP),
+#   - not a verb/adverb form (ends in one of PROVISO_VERB_ENDINGS, e.g. 하거나, 하여, 한다, 로서).
+# That run is the clause's key noun phrase. It must occur in the card's must+check joined text
+# (whitespace ignored). Cards that cannot satisfy it for a legitimate reason go in
+# PROVISO_ALLOWLIST with a reason.
+PROVISO_STOP = {"근로자", "사업주", "경우", "그", "작업장소", "고용노동부령", "산업안전보건법", "안전하게", "부득이하게"}
+PROVISO_VERB_ENDINGS = ("거나", "하여", "하기", "하지", "하게", "하고", "되어", "하는", "한다", "된다", "로서",
+                        "하면서", "해질", "음에", "시켜야", "해야", "이루어지", "행하여지", "그러하지", "아니하다",
+                        "되거나", "있는", "없는", "없거나", "하였음에", "준수하기", "여야")
+PROVISO_PARTICLE = re.compile(r"(으로|에서|에는|에게|이나|와|과|을|를|이|가|은|는|의|에|로|도|만|인)$")
+PROVISO_ALLOWLIST = {
+}
+
+
+def proviso_keys(text):
+    keys = []
+    for m in re.finditer(r"다만", text):
+        seg = re.split(r"(?<=다)\.", text[m.end():], maxsplit=1)[0]
+        for t in re.findall(r"[가-힣]+", seg):
+            st = PROVISO_PARTICLE.sub("", t)
+            if len(st) < 4 or st in PROVISO_STOP or st.endswith(PROVISO_VERB_ENDINGS):
+                continue
+            keys.append(st)
+            break
+    return keys
+
+
+def g5_missing(r):
+    joined = re.sub(r"\s+", "", " ".join(r["must"] + r["check"]))
+    return [k for k in proviso_keys(r["text"]) if k not in joined]
 
 
 if __name__ == "__main__":
