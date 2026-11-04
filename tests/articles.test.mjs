@@ -10,7 +10,7 @@ const list = () => articlesFor(data, "d.tech.com");
 
 test("data loads 55 cards for d.tech.com and none elsewhere", () => {
   assert.equal(list().length, 55);
-  assert.equal(articlesFor(data, "d.tech.mach").length, 50);
+  assert.equal(articlesFor(data, "d.tech.mach").length, 91);
   assert.equal(articlesFor(data, "d.tech.work").length, 60);
   assert.equal(articlesFor({}, "d.tech.com").length, 0);
 });
@@ -34,12 +34,12 @@ test("node d.tech.work is kind A with 7 groups in order", () => {
   assert.ok(articlesFor(data, "d.tech.work").some((r) => r.id === "sr-331-2" && r.jo === "제331조의2"));
 });
 
-test("node d.tech.mach is kind A with 2 groups in order", () => {
+test("node d.tech.mach is kind A with 6 groups in order", () => {
   assert.equal(data.nodes["d.tech.mach"].kind, "A");
   assert.ok(data.nodes["d.tech.mach"].plan.length);
   const g = groupArticles(articlesFor(data, "d.tech.mach"));
-  assert.deepEqual(g.map((x) => x.group), ["기계 일반", "양중기"]);
-  assert.deepEqual(g.map((x) => x.items.length), [11, 39]);
+  assert.deepEqual(g.map((x) => x.group), ["기계 일반", "양중기", "차량계 하역운반기계", "차량계 건설기계", "항타기·항발기", "굴착기"]);
+  assert.deepEqual(g.map((x) => x.items.length), [11, 39, 15, 11, 11, 4]);
   assert.ok(articlesFor(data, "d.tech.mach").some((r) => r.id === "sr-142" && r.jo === "제142조"));
 });
 
@@ -67,7 +67,8 @@ test("renderArticles: group headings, one button per card, first must bullet, es
 
 test("renderArticles: empty filter result and empty branch", () => {
   assert.ok(renderArticles("d.tech.com", data, "zzzz없음").includes("검색 결과가 없습니다"));
-  assert.ok(renderArticles("d.tech.fire", data, "").includes("준비 중"));
+  const synthetic = { nodes: { "x.empty": { t: "x", kind: "A" } }, articles: [] };
+  assert.ok(renderArticles("x.empty", synthetic, "").includes("준비 중"));
 });
 
 test("unverified card warns and shows no must bullet or numbers", () => {
