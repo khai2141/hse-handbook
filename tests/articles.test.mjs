@@ -75,6 +75,18 @@ test("node d.hea.std.erg is kind A with 4 groups in order and 17 cards", () => {
   assert.ok(list.some((r) => r.id === "sr-674" && r.jo === "제674조"));
 });
 
+test("node d.hea.msds is kind A with 4 groups in order and 25 cards", () => {
+  assert.equal(data.nodes["d.hea.msds"].kind, "A");
+  const list = articlesFor(data, "d.hea.msds");
+  assert.equal(list.length, 25);
+  const g = groupArticles(list);
+  assert.deepEqual(g.map((x) => x.group), ["작성·제출", "제공·게시", "경고표시", "교육·비공개"]);
+  assert.deepEqual(g.map((x) => x.items.length), [8, 7, 2, 8]);
+  assert.ok(list.some((r) => r.id === "l-112-2" && r.jo === "제112조의2"));
+  assert.ok(list.some((r) => r.id === "r-170" && r.jo === "제170조"));
+  assert.ok(list.some((r) => r.id === "d-86" && r.jo === "제86조"));
+});
+
 test("d.tech.fire has 77 cards including sr-227", () => {
   const list = articlesFor(data, "d.tech.fire");
   assert.equal(list.length, 77);
