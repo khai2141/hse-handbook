@@ -26,8 +26,8 @@ test("F rows equal foreign record count", () => {
   assert.equal(bodyRows(m).length, data.foreign.length);
   assert.ok(bodyRows(m).every((r) => r.cells.length === 3));
 });
-test("T 18, M 8, R 8 with 9 cells, V 8", () => {
-  assert.equal(bodyRows(buildMatrix("T", data)).length, 18);
+test("T 39, M 8, R 8 with 9 cells, V 8", () => {
+  assert.equal(bodyRows(buildMatrix("T", data)).length, 39);
   assert.equal(bodyRows(buildMatrix("M", data)).length, 8);
   const r = buildMatrix("R", data);
   assert.equal(bodyRows(r).length, 8);

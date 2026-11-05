@@ -68,7 +68,7 @@ class DataShapeTests(unittest.TestCase):
         self.assertEqual([r["id"] for r in pens], ["p%d" % (i + 1) for i in range(len(pens))])
         self.assertGreaterEqual(len(pens), 32)
         self.assertEqual(len(recs("env.json")), 8)
-        self.assertEqual(len(recs("tasks.json")), 18)
+        self.assertEqual(len(recs("tasks.json")), 39)
 
     def test_unverified_have_no_source(self):
         for f in os.listdir(DATA):
@@ -86,12 +86,24 @@ class DataShapeTests(unittest.TestCase):
         norm = lambda x: re.sub(r"\s+", " ", x).strip()
         with open(os.path.join(os.path.dirname(__file__), "..", "sources", "byeolpyo5_raw.txt"), encoding="utf-8") as f:
             raw = norm(f.read())
+        with open(os.path.join(os.path.dirname(__file__), "..", "sources", "byeolpyo5_mcp_raw.txt"), encoding="utf-8") as f:
+            mcp = norm(f.read())
+        squash = lambda x: re.sub(r"\s+", "", x)
+        raw_sq, mcp_sq = squash(raw), squash(mcp.replace("<br>", " "))
         tasks = recs("tasks.json")
-        self.assertEqual(len(tasks), 18)
+        self.assertEqual(len(tasks), 39)
+        self.assertEqual([t["id"] for t in tasks], [str(i) for i in range(1, 40)])
         for t in tasks:
             self.assertTrue(isinstance(t.get("contents"), list) and t["contents"], t["id"])
+            self.assertIn(squash(t["name"]), mcp_sq, f"task {t['id']} name")
+            row = re.search(r"\| (?:<개별내용><br>)?%s\. (.*?) \| (○ .*?) \|" % t["id"], mcp)
+            self.assertIsNotNone(row, t["id"])
+            self.assertEqual(t["contents"], [re.sub(r"^○ ", "", x) for x in row.group(2).split("<br>")], f"task {t['id']}")
+            viewer = int(t["id"]) >= 15 and re.search(r"(?m)^%s\. " % t["id"], open(os.path.join(os.path.dirname(__file__), "..", "sources", "byeolpyo5_raw.txt"), encoding="utf-8").read())
             for c in t["contents"]:
-                self.assertIn(norm(c), raw, f"task {t['id']}: {c}")
+                self.assertIn(norm(c), mcp, f"task {t['id']}: {c}")
+                if viewer:
+                    self.assertIn(squash(c), raw_sq, f"task {t['id']} (viewer): {c}")
         e5 = {r["id"]: r for r in recs("education.json")}["e5"]
         self.assertTrue(e5["contents"])
         for c in e5["contents"]:
