@@ -113,6 +113,46 @@ class DataShapeTests(unittest.TestCase):
         if hrs:
             self.assertEqual(sum(h["hours"] for h in hrs), 4)
 
+    def test_byeolpyo5_other_contents_verbatim(self):
+        norm = lambda x: re.sub(r"\s+", " ", x).strip()
+        here = os.path.dirname(__file__)
+        with open(os.path.join(here, "..", "sources", "byeolpyo5_mcp_raw.txt"), encoding="utf-8") as f:
+            mcp = f.read()
+        with open(os.path.join(here, "..", "sources", "byeolpyo4_raw.txt"), encoding="utf-8") as f:
+            b4 = re.sub(r"\s+", "", f.read())
+        sec = lambda a, b: mcp.split(a, 1)[1].split(b, 1)[0]
+        bullets = lambda s: [l[2:] for l in s.splitlines() if l.startswith("○ ")]
+        by = {r["id"]: r for r in recs("education.json")}
+        s12 = sec("1의2. 관리감독자 안전보건교육", "2. 건설업 기초안전보건교육")
+        e8 = by["e8"]
+        self.assertEqual(e8["contents"], bullets(s12.split("가. 정기교육", 1)[1].split("나. 채용 시", 1)[0]))
+        self.assertEqual(e8["contents_hire"], bullets(s12.split("나. 채용 시 교육 및 작업내용 변경 시 교육", 1)[1].split("다. 특별교육", 1)[0]))
+        self.assertEqual((len(e8["contents"]), len(e8["contents_hire"])), (13, 13))
+        for c in e8["contents_special"]:
+            self.assertIn(norm(c.split("> ", 1)[1]), norm(s12))
+        for h in re.findall(r"\d+시간", e8["hr"]):
+            self.assertIn(h, b4)
+        e6 = by["e6"]
+        s3 = norm(sec("3. 안전보건관리책임자 등에 대한 교육", "4. 특수형태근로종사자"))
+        self.assertEqual([t["target"][0] for t in e6["contents_by_target"]], list("가나다라마바사"))
+        for t in e6["contents_by_target"]:
+            self.assertIn("<td>%s</td>" % t["target"], s3)
+            for i, c in enumerate(t["new"]):
+                self.assertIn("%d) %s" % (i + 1, c), s3, t["target"])
+            for i, c in enumerate(t["refresher"]):
+                self.assertIn("%d) %s" % (i + 1, c), s3, t["target"])
+        for h in re.findall(r"\d+시간", e6["hr"]):
+            self.assertIn(h, b4)
+        s4 = sec("4. 특수형태근로종사자에 대한 안전보건교육", "5. 검사원")
+        e7 = by["e7"]
+        self.assertEqual(e7["contents"], bullets(s4))
+        self.assertEqual(len(e7["contents"]), 14)
+        self.assertIn(e7["contents_rule"], s4)
+        self.assertIn(e7["contents_special"], s4)
+        e9 = by["e9"]
+        self.assertEqual(e9["contents"], bullets(mcp.split("6. 물질안전보건자료에 관한 교육", 1)[1]))
+        self.assertEqual(len(e9["contents"]), 6)
+
     # ---- Task 7B: verbatim checks against captured raw text ----
     NEW_PEN = {
         "p21": (r"법\s*제125조제1항\s*및법제175조제4", [20, 50, 100], "1명"),
