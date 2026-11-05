@@ -54,7 +54,7 @@ test("filter matches jo, title, must and choseong", () => {
 });
 
 test("renderArticles: group headings, one button per card, first must bullet, escaped", () => {
-  const h = renderArticles("d.tech.com", data, "");
+  const h = renderArticles("d.tech.com", data, "", "cards");
   assert.equal((h.match(/class="card"/g) ?? []).length, 55);
   assert.equal((h.match(/<h3/g) ?? []).length, 7);
   assert.ok(h.includes('data-art="sr-13"'));
@@ -63,6 +63,16 @@ test("renderArticles: group headings, one button per card, first must bullet, es
   const evil = { articles: [{ ...list()[0], id: "x", jo: "<b>", title: "<img src=x onerror=1>", must: ["<script>"], group: "<i>" }], nodes: data.nodes };
   const e = renderArticles("d.tech.com", evil, "");
   assert.ok(!e.includes("<img src=x") && !e.includes("<script>") && !e.includes("<i>"));
+});
+
+test("renderArticles: default is a summary table, one row per article, escaped", () => {
+  const h = renderArticles("d.tech.com", data, "");
+  assert.equal((h.match(/class="srow"/g) ?? []).length, 55);
+  assert.equal((h.match(/class="shead"/g) ?? []).length, 7);
+  assert.ok(h.includes('data-art="sr-13"') && !h.includes('class="card"'));
+  const evil = { articles: [{ ...list()[0], id: "x", jo: "<b>", title: "<img src=x onerror=1>", must: ["<script>"], who: "<u>", group: "<i>" }], nodes: data.nodes };
+  const e = renderArticles("d.tech.com", evil, "");
+  assert.ok(!e.includes("<img src=x") && !e.includes("<script>") && !e.includes("<i>") && !e.includes("<u>"));
 });
 
 test("renderArticles: empty filter result and empty branch", () => {

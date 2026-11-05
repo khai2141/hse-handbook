@@ -38,13 +38,28 @@ function cardHtml(r) {
   return `<button type="button" class="card" data-art="${esc(r.id)}" aria-label="${esc(label)} 상세 열기"><b>${esc(r.jo)}</b><span class="ct">${esc(r.title)}</span>${body}</button>`;
 }
 
-export function renderArticles(branch, data, query = "") {
+function rowHtml(r) {
+  const label = `${r.jo} ${r.title}`;
+  const gist = unverified(r) ? '<span class="warn">원문 미확인</span>' : esc(r.must?.[0] ?? "");
+  const who = unverified(r) || !r.who ? "—" : esc(r.who);
+  return `<button type="button" class="srow" role="row" data-art="${esc(r.id)}" aria-label="${esc(label)} 상세 열기"><b class="sj">${esc(r.jo)}</b><span class="st">${esc(r.title)}</span><span class="sg">${gist}</span><span class="sw">${who}</span></button>`;
+}
+
+const TABLE_HEAD = '<div class="shead" role="row"><span>조문</span><span>제목</span><span>핵심</span><span>누가</span></div>';
+
+// mode "table" (default): summary table, a row opens the detail sheet; mode "cards": the older card grid.
+export function renderArticles(branch, data, query = "", mode = "table") {
   const all = articlesFor(data, branch);
   if (!all.length) return '<p class="empty">준비 중 — 이 가지의 조문 카드는 아직 없습니다.</p>';
   const rows = filterArticles(all, query);
   if (!rows.length) return '<p class="empty">검색 결과가 없습니다.</p>';
+  if (mode === "cards") {
+    return groupArticles(rows)
+      .map((g) => `<section class="agrp"><h3>${esc(g.group)}</h3><div class="cards">${g.items.map(cardHtml).join("")}</div></section>`)
+      .join("");
+  }
   return groupArticles(rows)
-    .map((g) => `<section class="agrp"><h3>${esc(g.group)}</h3><div class="cards">${g.items.map(cardHtml).join("")}</div></section>`)
+    .map((g) => `<section class="agrp"><h3>${esc(g.group)} <small>${g.items.length}</small></h3><div class="stable" role="table" aria-label="${esc(g.group)}">${TABLE_HEAD}${g.items.map(rowHtml).join("")}</div></section>`)
     .join("");
 }
 
