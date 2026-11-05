@@ -14,7 +14,7 @@ FONT = "C:/Windows/Fonts/malgunbd.ttf"
 LABEL = {
     "home": "홈", "p": "계획", "p.rule": "방침", "p.org": "조직", "p.risk": "위험", "p.doc": "서류",
     "d": "실행", "d.edu": "교육", "d.edu.w": "근로", "d.edu.w.f": "외국", "d.edu.w.t": "특별", "d.edu.m": "관리",
-    "d.hea": "보건", "d.hea.w": "검진", "d.hea.env": "환경", "d.hea.std": "기준", "d.daily": "일상", "d.sub": "도급",
+    "d.hea": "보건", "d.hea.w": "검진", "d.hea.env": "환경", "d.hea.std": "기준", "d.hea.std.chem": "화학", "d.hea.std.phys": "물리", "d.hea.std.air": "분진", "d.hea.std.erg": "근골", "d.hea.msds": "자료", "d.daily": "일상", "d.sub": "도급",
     "d.tech": "공종", "d.tech.com": "공통", "d.tech.mach": "기계", "d.tech.fire": "화재", "d.tech.elec": "전기",
     "d.tech.work": "작업", "d.tech.sp": "특수", "d.tech.tbl": "별표", "d.emg": "비상",
     "c": "점검", "c.insp": "감사", "c.res": "결과", "a": "개선", "a.fix": "시정", "a.rev": "검토",
@@ -68,7 +68,7 @@ def main():
         name = "n_" + nid.replace(".", "_")
         tile(nid, LABEL[nid]).save(os.path.join(OUT, name + ".png"), optimize=True)
         nodes[nid]["i"] = name
-    json.dump(doc, open(NODES, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    json.dump(doc, open(NODES, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     print("icons", len(nodes))
 
 
