@@ -35,6 +35,12 @@ ART_STR = ("id", "law", "jo", "title", "branch", "group", "text", "who", "status
 ART_LIST = ("must", "check", "records", "see", "penalty_ids")
 
 
+def single_sentence(text):
+    """True if an article text is one operative sentence: no 항 marker and at most one sentence end."""
+    t = re.sub(r"<[^>]*>|\[제목개정[^\]]*\]", "", text or "")
+    return "①" not in t and len(re.findall(r"다\.(?:\s|$)", t)) <= 1
+
+
 def _check_article(rec, where):
     errs = []
     for k in ART_STR:
@@ -44,8 +50,10 @@ def _check_article(rec, where):
         if not isinstance(rec.get(k), list) or not all(isinstance(x, str) for x in rec.get(k)):
             errs.append(f"{where}: article field '{k}' must be a list of strings")
     must = rec.get("must")
-    if isinstance(must, list) and not (2 <= len(must) <= 6) and len(must) != 0:
-        errs.append(f"{where}: must needs 2-6 bullets")
+    if isinstance(must, list) and len(must) != 0:
+        lo = 1 if single_sentence(rec.get("text")) else 2
+        if not (lo <= len(must) <= 6):
+            errs.append(f"{where}: must needs {lo}-6 bullets")
     if rec.get("status") == "미확인":
         for k in ("text", "must", "check"):
             if re.search(r"\d", json.dumps(rec.get(k), ensure_ascii=False)):

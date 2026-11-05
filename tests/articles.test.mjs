@@ -10,7 +10,7 @@ const list = () => articlesFor(data, "d.tech.com");
 
 test("data loads 87 cards for d.tech.com and none elsewhere", () => {
   assert.equal(list().length, 87);
-  assert.equal(articlesFor(data, "d.tech.mach").length, 91);
+  assert.equal(articlesFor(data, "d.tech.mach").length, 139);
   assert.equal(articlesFor(data, "d.tech.work").length, 60);
   assert.equal(articlesFor({}, "d.tech.com").length, 0);
 });
@@ -34,12 +34,12 @@ test("node d.tech.work is kind A with 7 groups in order", () => {
   assert.ok(articlesFor(data, "d.tech.work").some((r) => r.id === "sr-331-2" && r.jo === "제331조의2"));
 });
 
-test("node d.tech.mach is kind A with 6 groups in order", () => {
+test("node d.tech.mach is kind A with 15 groups in order", () => {
   assert.equal(data.nodes["d.tech.mach"].kind, "A");
   assert.ok(data.nodes["d.tech.mach"].plan.length);
   const g = groupArticles(articlesFor(data, "d.tech.mach"));
-  assert.deepEqual(g.map((x) => x.group), ["기계 일반", "양중기", "차량계 하역운반기계", "차량계 건설기계", "항타기·항발기", "굴착기"]);
-  assert.deepEqual(g.map((x) => x.items.length), [11, 39, 15, 11, 11, 4]);
+  assert.deepEqual(g.map((x) => x.group), ["기계 일반", "공작기계", "프레스·전단기", "목재가공용 기계", "원심기·분쇄기·고속회전체", "보일러·압력용기", "그 밖의 기계·기구", "양중기", "차량계 하역운반기계", "화물자동차", "컨베이어", "차량계 건설기계", "항타기·항발기", "굴착기", "산업용 로봇"]);
+  assert.deepEqual(g.map((x) => x.items.length), [14, 3, 2, 6, 5, 5, 11, 39, 17, 3, 5, 11, 11, 4, 3]);
   assert.ok(articlesFor(data, "d.tech.mach").some((r) => r.id === "sr-142" && r.jo === "제142조"));
 });
 

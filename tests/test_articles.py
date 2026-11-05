@@ -3,6 +3,7 @@ import json, os, re, sys, unittest
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 sys.path.insert(0, ROOT)
 from tools.capture_articles import LAW_PREFIX, card_id, raw_name  # noqa: E402
+from tools.validate_data import single_sentence  # noqa: E402
 col = lambda t: re.sub(r"\s+", " ", t).strip()
 UNIT = re.compile(r"\d+(\.\d+)?\s*(미터|센티미터|밀리미터|킬로그램|도|초|분|시간|m|cm|mm|kg)")
 
@@ -98,7 +99,8 @@ class ArticleDataTests(unittest.TestCase):
     def test_shape(self):
         for r in self.recs:
             self.assertEqual(r["status"], "확인")
-            self.assertTrue(2 <= len(r["must"]) <= 6, r["id"])
+            lo = 1 if single_sentence(r["text"]) else 2  # a one-sentence article gets one honest bullet
+            self.assertTrue(lo <= len(r["must"]) <= 6, r["id"])
             self.assertTrue(r["check"], r["id"])
             self.assertIsInstance(r["records"], list)
             self.assertTrue(r["group"])
