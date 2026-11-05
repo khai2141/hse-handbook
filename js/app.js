@@ -2,6 +2,7 @@ import { clampCount } from "./core.js";
 import { esc, icon, bookUrl } from "./html.js";
 import { renderMatrix } from "./matrix.js";
 import { renderArticles, articleDetail } from "./articles.js";
+import { homeTopHtml, resultsHtml } from "./home.js";
 import { cellDetail, infoDetail } from "./cells.js";
 import { detailToHtml, totalText } from "./render.js";
 import { routeFromHash, hashFor, breadcrumbs, kidsOf } from "./tree.js";
@@ -16,7 +17,7 @@ const HINTS = {
 };
 
 const $ = (id) => document.getElementById(id);
-const state = { data: null, id: "home", q: "", count: 10 };
+const state = { data: null, id: "home", q: "", hq: "", count: 10 };
 let opener = null;
 let savedY = 0;
 let current = null;
@@ -91,7 +92,7 @@ function treeHome() {
 function mainHtml() {
   const nodes = state.data.nodes;
   const n = nodes[state.id];
-  if (state.id === "home") return treeHome();
+  if (state.id === "home") return homeTopHtml(state.data, state.hq) + treeHome();
   let h = `<h2 class="pt">${icon(n.i, 40)}${esc(n.t)}</h2>${n.s ? `<p class="sub">${esc(n.s)}</p>` : ""}`;
   const k = kidsOf(state.id, nodes);
   if (k.length) {
@@ -110,6 +111,7 @@ function renderPage() {
   $("crumbs").innerHTML = crumbsHtml();
   $("outline").innerHTML = outlineHtml();
   $("main").innerHTML = mainHtml();
+  $("q").hidden = state.id === "home";
   document.title = state.id === "home" ? "건설안전 HSE 핸드북" : `${n.t} · 건설안전 HSE 핸드북`;
 }
 
@@ -189,7 +191,7 @@ function trapTab(e) {
 /* ---------- events ---------- */
 function onClick(e) {
   if (e.target.id === "bg") return closeSheet();
-  const t = e.target.closest("[data-go],[data-cell],[data-info],[data-art],[data-close],#menu");
+  const t = e.target.closest("[data-go],[data-cell],[data-info],[data-art],[data-close],[data-chip],#menu");
   if (!t) return;
   if (t.id === "menu") {
     const on = $("outline").classList.toggle("on");
@@ -197,6 +199,7 @@ function onClick(e) {
     return;
   }
   if (t.dataset.close) return closeSheet();
+  if (t.dataset.chip) return setHomeQuery(t.dataset.chip);
   if (t.dataset.go) return go(t.dataset.go);
   if (t.dataset.art) return openSheet(articleDetail(t.dataset.art, state.data), t);
   if (t.dataset.info) {
@@ -217,8 +220,17 @@ function onKey(e) {
   } else if (e.key === "Tab") trapTab(e);
 }
 
+function setHomeQuery(v) {
+  state.hq = v;
+  const i = $("hq");
+  if (i) i.value = v;
+  const r = $("hres");
+  if (r) r.innerHTML = resultsHtml(state.data, v);
+}
+
 function onInput(e) {
   const t = e.target;
+  if (t.id === "hq") return setHomeQuery(t.value.trim());
   if (t.id === "q") {
     state.q = t.value.trim();
     renderMatrixOnly();

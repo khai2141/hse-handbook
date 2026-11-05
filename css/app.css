@@ -167,3 +167,26 @@ button.srow:hover,button.srow:focus-visible{background:var(--sky-soft)}
 .figs figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px;display:grid;gap:4px}
 .figs img{width:100%;height:auto;border-radius:6px;display:block}
 .figs figcaption{font-size:11px;color:var(--mut)}
+
+/* home: search + shortcuts */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hhero{background:var(--surf);border:1.5px solid var(--line);border-radius:18px;padding:18px;display:grid;gap:10px}
+.hhero h2{font-size:22px;font-weight:900;text-wrap:balance}
+.hsearch input{width:100%;font-size:17px;padding:13px 16px;border-radius:14px;border:2px solid var(--navy);background:var(--bg);color:var(--fg)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1.5px solid var(--line);background:var(--sky-soft);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700;min-height:32px}
+.chip:hover{border-color:var(--navy)}
+.hlist{display:grid;gap:6px;margin-top:4px}
+.hres{display:grid;grid-template-columns:70px minmax(0,1fr);gap:1px 10px;text-align:left;background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:8px 12px;min-height:44px;overflow-wrap:anywhere}
+.hres:hover{border-color:var(--navy)}
+.hres .hj{grid-row:span 3;font-size:12.5px;font-weight:700;color:var(--mut)}
+.hres .ht{font-weight:900;font-size:14.5px}
+.hres .hg{font-size:12.5px;color:var(--mut);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.hres .hw{font-size:11.5px;color:var(--mut);opacity:.85}
+.hsec{margin-top:18px;display:grid;gap:8px}
+.hsec h3{font-size:14px;font-weight:900;color:var(--navy)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:8px}
+.tile{display:flex;align-items:center;gap:10px;text-align:left;background:var(--surf);border:1.5px solid var(--line);border-radius:14px;padding:8px 12px 8px 8px;font-weight:700;min-height:52px}
+.tile:hover{border-color:var(--navy)}
+.tile img{width:40px;height:40px;border-radius:10px;flex:0 0 auto}
+@media(max-width:640px){.hhero{padding:14px}.hhero h2{font-size:19px}.hres{grid-template-columns:1fr}.hres .hj{grid-row:auto}}
