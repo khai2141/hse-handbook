@@ -1,2 +1,2 @@
-capture diff report: 산업안전보건기준에 관한 규칙, efYd=20261104 vs latest (no efYd)
-checked 44 articles, 0 differ
+capture diff report: 산업안전보건기준에 관한 규칙, efYd=20261105 vs latest (no efYd)
+checked 32 articles, 0 differ
