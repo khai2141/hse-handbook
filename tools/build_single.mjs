@@ -1,6 +1,6 @@
 // Bundle the handbook into one offline HTML file (dist/handbook.html).
 import { build } from "esbuild";
-import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from "node:fs";
 
 const names = readdirSync("data").filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5));
 const data = Object.fromEntries(names.map((n) => [n, JSON.parse(readFileSync(`data/${n}.json`, "utf8"))]));
@@ -9,13 +9,18 @@ const icons = Object.fromEntries(
     .map((f) => [f.slice(0, -4), "data:image/png;base64," + readFileSync(`assets/icons/${f}`).toString("base64")]),
 );
 
+const book = existsSync("assets/book")
+  ? Object.fromEntries(readdirSync("assets/book").filter((f) => f.endsWith(".webp")).map((f) => [f, "data:image/webp;base64," + readFileSync(`assets/book/${f}`).toString("base64")]))
+  : {};
+
 const out = await build({ entryPoints: ["js/app.js"], bundle: true, format: "iife", minify: true, write: false });
 let js = out.outputFiles[0].text;
 const before = js;
 js = js.replace(/assets\/icons\/\$\{(\w+)\}\.png/g, "${window.__ICONS[$1]}");
 if (js === before) throw new Error("icon path pattern not found in bundle");
+js = js.replace(/assets\/book\/\$\{(\w+)\}/g, "${window.__BOOK[$1]}");
 
-const prelude = `window.__DATA=${JSON.stringify(data)};window.__ICONS=${JSON.stringify(icons)};
+const prelude = `window.__DATA=${JSON.stringify(data)};window.__ICONS=${JSON.stringify(icons)};window.__BOOK=${JSON.stringify(book)};
 const _f=window.fetch;window.fetch=(u,o)=>{const k=String(u).replace("data/","").replace(".json","");
 if(String(u).indexOf("data/")===0&&window.__DATA[k]!==undefined)return Promise.resolve(new Response(JSON.stringify(window.__DATA[k]),{status:200}));
 return _f?_f(u,o):Promise.reject(new Error("offline"));};`;

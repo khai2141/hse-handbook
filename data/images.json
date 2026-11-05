@@ -1,0 +1,9708 @@
+{
+ "meta": {
+  "book": "만화로 보는 산업안전보건기준에 관한 규칙",
+  "note": "삽화는 책에서 가져온 설명용 그림입니다. 조문 위치는 쪽 배치로 추정했습니다."
+ },
+ "records": [
+  {
+   "id": "sr-3#1",
+   "article": "sr-3",
+   "jo": "제3조",
+   "file": "sr-3_1.webp",
+   "w": 380,
+   "h": 317,
+   "page": 12,
+   "how": "box"
+  },
+  {
+   "id": "sr-3#2",
+   "article": "sr-3",
+   "jo": "제3조",
+   "file": "sr-3_2.webp",
+   "w": 380,
+   "h": 247,
+   "page": 12,
+   "how": "box"
+  },
+  {
+   "id": "sr-4#1",
+   "article": "sr-4",
+   "jo": "제4조",
+   "file": "sr-4_1.webp",
+   "w": 380,
+   "h": 232,
+   "page": 12,
+   "how": "box"
+  },
+  {
+   "id": "sr-4-2#1",
+   "article": "sr-4-2",
+   "jo": "제4조의2",
+   "file": "sr-4-2_1.webp",
+   "w": 380,
+   "h": 232,
+   "page": 12,
+   "how": "box"
+  },
+  {
+   "id": "sr-5#1",
+   "article": "sr-5",
+   "jo": "제5조",
+   "file": "sr-5_1.webp",
+   "w": 380,
+   "h": 250,
+   "page": 12,
+   "how": "box"
+  },
+  {
+   "id": "sr-5#2",
+   "article": "sr-5",
+   "jo": "제5조",
+   "file": "sr-5_2.webp",
+   "w": 380,
+   "h": 253,
+   "page": 12,
+   "how": "box"
+  },
+  {
+   "id": "sr-6#1",
+   "article": "sr-6",
+   "jo": "제6조",
+   "file": "sr-6_1.webp",
+   "w": 380,
+   "h": 330,
+   "page": 13,
+   "how": "box"
+  },
+  {
+   "id": "sr-6#2",
+   "article": "sr-6",
+   "jo": "제6조",
+   "file": "sr-6_2.webp",
+   "w": 380,
+   "h": 292,
+   "page": 13,
+   "how": "box"
+  },
+  {
+   "id": "sr-7#1",
+   "article": "sr-7",
+   "jo": "제7조",
+   "file": "sr-7_1.webp",
+   "w": 380,
+   "h": 319,
+   "page": 13,
+   "how": "box"
+  },
+  {
+   "id": "sr-8#1",
+   "article": "sr-8",
+   "jo": "제8조",
+   "file": "sr-8_1.webp",
+   "w": 380,
+   "h": 170,
+   "page": 13,
+   "how": "box"
+  },
+  {
+   "id": "sr-10#1",
+   "article": "sr-10",
+   "jo": "제10조",
+   "file": "sr-10_1.webp",
+   "w": 380,
+   "h": 349,
+   "page": 14,
+   "how": "box"
+  },
+  {
+   "id": "sr-10#2",
+   "article": "sr-10",
+   "jo": "제10조",
+   "file": "sr-10_2.webp",
+   "w": 380,
+   "h": 250,
+   "page": 14,
+   "how": "box"
+  },
+  {
+   "id": "sr-11#1",
+   "article": "sr-11",
+   "jo": "제11조",
+   "file": "sr-11_1.webp",
+   "w": 380,
+   "h": 311,
+   "page": 14,
+   "how": "box"
+  },
+  {
+   "id": "sr-11#2",
+   "article": "sr-11",
+   "jo": "제11조",
+   "file": "sr-11_2.webp",
+   "w": 380,
+   "h": 226,
+   "page": 14,
+   "how": "box"
+  },
+  {
+   "id": "sr-11#3",
+   "article": "sr-11",
+   "jo": "제11조",
+   "file": "sr-11_3.webp",
+   "w": 380,
+   "h": 299,
+   "page": 14,
+   "how": "box"
+  },
+  {
+   "id": "sr-11#4",
+   "article": "sr-11",
+   "jo": "제11조",
+   "file": "sr-11_4.webp",
+   "w": 380,
+   "h": 179,
+   "page": 14,
+   "how": "box"
+  },
+  {
+   "id": "sr-9#1",
+   "article": "sr-9",
+   "jo": "제9조",
+   "file": "sr-9_1.webp",
+   "w": 380,
+   "h": 298,
+   "page": 14,
+   "how": "box"
+  },
+  {
+   "id": "sr-12#1",
+   "article": "sr-12",
+   "jo": "제12조",
+   "file": "sr-12_1.webp",
+   "w": 380,
+   "h": 352,
+   "page": 15,
+   "how": "box"
+  },
+  {
+   "id": "sr-12#2",
+   "article": "sr-12",
+   "jo": "제12조",
+   "file": "sr-12_2.webp",
+   "w": 380,
+   "h": 301,
+   "page": 15,
+   "how": "box"
+  },
+  {
+   "id": "sr-12#3",
+   "article": "sr-12",
+   "jo": "제12조",
+   "file": "sr-12_3.webp",
+   "w": 380,
+   "h": 272,
+   "page": 15,
+   "how": "box"
+  },
+  {
+   "id": "sr-13#1",
+   "article": "sr-13",
+   "jo": "제13조",
+   "file": "sr-13_1.webp",
+   "w": 380,
+   "h": 352,
+   "page": 15,
+   "how": "box"
+  },
+  {
+   "id": "sr-14#1",
+   "article": "sr-14",
+   "jo": "제14조",
+   "file": "sr-14_1.webp",
+   "w": 380,
+   "h": 442,
+   "page": 16,
+   "how": "box"
+  },
+  {
+   "id": "sr-14#2",
+   "article": "sr-14",
+   "jo": "제14조",
+   "file": "sr-14_2.webp",
+   "w": 380,
+   "h": 299,
+   "page": 16,
+   "how": "box"
+  },
+  {
+   "id": "sr-15#1",
+   "article": "sr-15",
+   "jo": "제15조",
+   "file": "sr-15_1.webp",
+   "w": 380,
+   "h": 318,
+   "page": 16,
+   "how": "box"
+  },
+  {
+   "id": "sr-16#1",
+   "article": "sr-16",
+   "jo": "제16조",
+   "file": "sr-16_1.webp",
+   "w": 380,
+   "h": 392,
+   "page": 16,
+   "how": "box"
+  },
+  {
+   "id": "sr-17#1",
+   "article": "sr-17",
+   "jo": "제17조",
+   "file": "sr-17_1.webp",
+   "w": 380,
+   "h": 208,
+   "page": 17,
+   "how": "box"
+  },
+  {
+   "id": "sr-17#2",
+   "article": "sr-17",
+   "jo": "제17조",
+   "file": "sr-17_2.webp",
+   "w": 380,
+   "h": 227,
+   "page": 17,
+   "how": "box"
+  },
+  {
+   "id": "sr-17#3",
+   "article": "sr-17",
+   "jo": "제17조",
+   "file": "sr-17_3.webp",
+   "w": 380,
+   "h": 293,
+   "page": 17,
+   "how": "box"
+  },
+  {
+   "id": "sr-18#1",
+   "article": "sr-18",
+   "jo": "제18조",
+   "file": "sr-18_1.webp",
+   "w": 380,
+   "h": 258,
+   "page": 17,
+   "how": "box"
+  },
+  {
+   "id": "sr-19#1",
+   "article": "sr-19",
+   "jo": "제19조",
+   "file": "sr-19_1.webp",
+   "w": 380,
+   "h": 250,
+   "page": 17,
+   "how": "box"
+  },
+  {
+   "id": "sr-21#1",
+   "article": "sr-21",
+   "jo": "제21조",
+   "file": "sr-21_1.webp",
+   "w": 380,
+   "h": 291,
+   "page": 20,
+   "how": "box"
+  },
+  {
+   "id": "sr-22#1",
+   "article": "sr-22",
+   "jo": "제22조",
+   "file": "sr-22_1.webp",
+   "w": 380,
+   "h": 229,
+   "page": 20,
+   "how": "box"
+  },
+  {
+   "id": "sr-23#1",
+   "article": "sr-23",
+   "jo": "제23조",
+   "file": "sr-23_1.webp",
+   "w": 380,
+   "h": 231,
+   "page": 20,
+   "how": "box"
+  },
+  {
+   "id": "sr-23#2",
+   "article": "sr-23",
+   "jo": "제23조",
+   "file": "sr-23_2.webp",
+   "w": 380,
+   "h": 259,
+   "page": 20,
+   "how": "box"
+  },
+  {
+   "id": "sr-23#3",
+   "article": "sr-23",
+   "jo": "제23조",
+   "file": "sr-23_3.webp",
+   "w": 380,
+   "h": 244,
+   "page": 20,
+   "how": "box"
+  },
+  {
+   "id": "sr-24#1",
+   "article": "sr-24",
+   "jo": "제24조",
+   "file": "sr-24_1.webp",
+   "w": 380,
+   "h": 347,
+   "page": 21,
+   "how": "box"
+  },
+  {
+   "id": "sr-24#2",
+   "article": "sr-24",
+   "jo": "제24조",
+   "file": "sr-24_2.webp",
+   "w": 380,
+   "h": 356,
+   "page": 21,
+   "how": "box"
+  },
+  {
+   "id": "sr-24#3",
+   "article": "sr-24",
+   "jo": "제24조",
+   "file": "sr-24_3.webp",
+   "w": 380,
+   "h": 297,
+   "page": 21,
+   "how": "box"
+  },
+  {
+   "id": "sr-24#4",
+   "article": "sr-24",
+   "jo": "제24조",
+   "file": "sr-24_4.webp",
+   "w": 380,
+   "h": 198,
+   "page": 21,
+   "how": "box"
+  },
+  {
+   "id": "sr-24#5",
+   "article": "sr-24",
+   "jo": "제24조",
+   "file": "sr-24_5.webp",
+   "w": 380,
+   "h": 260,
+   "page": 21,
+   "how": "box"
+  },
+  {
+   "id": "sr-24#6",
+   "article": "sr-24",
+   "jo": "제24조",
+   "file": "sr-24_6.webp",
+   "w": 380,
+   "h": 268,
+   "page": 21,
+   "how": "box"
+  },
+  {
+   "id": "sr-24#7",
+   "article": "sr-24",
+   "jo": "제24조",
+   "file": "sr-24_7.webp",
+   "w": 380,
+   "h": 277,
+   "page": 21,
+   "how": "box"
+  },
+  {
+   "id": "sr-24#8",
+   "article": "sr-24",
+   "jo": "제24조",
+   "file": "sr-24_8.webp",
+   "w": 351,
+   "h": 520,
+   "page": 21,
+   "how": "box"
+  },
+  {
+   "id": "sr-24#9",
+   "article": "sr-24",
+   "jo": "제24조",
+   "file": "sr-24_9.webp",
+   "w": 380,
+   "h": 331,
+   "page": 21,
+   "how": "box"
+  },
+  {
+   "id": "sr-25#1",
+   "article": "sr-25",
+   "jo": "제25조",
+   "file": "sr-25_1.webp",
+   "w": 380,
+   "h": 370,
+   "page": 22,
+   "how": "box"
+  },
+  {
+   "id": "sr-26#1",
+   "article": "sr-26",
+   "jo": "제26조",
+   "file": "sr-26_1.webp",
+   "w": 380,
+   "h": 303,
+   "page": 22,
+   "how": "box"
+  },
+  {
+   "id": "sr-26#2",
+   "article": "sr-26",
+   "jo": "제26조",
+   "file": "sr-26_2.webp",
+   "w": 380,
+   "h": 271,
+   "page": 22,
+   "how": "box"
+  },
+  {
+   "id": "sr-27#1",
+   "article": "sr-27",
+   "jo": "제27조",
+   "file": "sr-27_1.webp",
+   "w": 380,
+   "h": 277,
+   "page": 22,
+   "how": "box"
+  },
+  {
+   "id": "sr-27#2",
+   "article": "sr-27",
+   "jo": "제27조",
+   "file": "sr-27_2.webp",
+   "w": 380,
+   "h": 227,
+   "page": 22,
+   "how": "box"
+  },
+  {
+   "id": "sr-28#1",
+   "article": "sr-28",
+   "jo": "제28조",
+   "file": "sr-28_1.webp",
+   "w": 380,
+   "h": 242,
+   "page": 23,
+   "how": "box"
+  },
+  {
+   "id": "sr-29#1",
+   "article": "sr-29",
+   "jo": "제29조",
+   "file": "sr-29_1.webp",
+   "w": 380,
+   "h": 254,
+   "page": 23,
+   "how": "box"
+  },
+  {
+   "id": "sr-30#1",
+   "article": "sr-30",
+   "jo": "제30조",
+   "file": "sr-30_1.webp",
+   "w": 380,
+   "h": 256,
+   "page": 23,
+   "how": "box"
+  },
+  {
+   "id": "sr-31#1",
+   "article": "sr-31",
+   "jo": "제31조",
+   "file": "sr-31_1.webp",
+   "w": 380,
+   "h": 220,
+   "page": 25,
+   "how": "box"
+  },
+  {
+   "id": "sr-32#1",
+   "article": "sr-32",
+   "jo": "제32조",
+   "file": "sr-32_1.webp",
+   "w": 380,
+   "h": 277,
+   "page": 25,
+   "how": "box"
+  },
+  {
+   "id": "sr-32#2",
+   "article": "sr-32",
+   "jo": "제32조",
+   "file": "sr-32_2.webp",
+   "w": 380,
+   "h": 212,
+   "page": 25,
+   "how": "box"
+  },
+  {
+   "id": "sr-32#3",
+   "article": "sr-32",
+   "jo": "제32조",
+   "file": "sr-32_3.webp",
+   "w": 380,
+   "h": 312,
+   "page": 25,
+   "how": "box"
+  },
+  {
+   "id": "sr-32#4",
+   "article": "sr-32",
+   "jo": "제32조",
+   "file": "sr-32_4.webp",
+   "w": 380,
+   "h": 248,
+   "page": 25,
+   "how": "box"
+  },
+  {
+   "id": "sr-33#1",
+   "article": "sr-33",
+   "jo": "제33조",
+   "file": "sr-33_1.webp",
+   "w": 380,
+   "h": 250,
+   "page": 26,
+   "how": "box"
+  },
+  {
+   "id": "sr-33#2",
+   "article": "sr-33",
+   "jo": "제33조",
+   "file": "sr-33_2.webp",
+   "w": 380,
+   "h": 311,
+   "page": 26,
+   "how": "box"
+  },
+  {
+   "id": "sr-34#1",
+   "article": "sr-34",
+   "jo": "제34조",
+   "file": "sr-34_1.webp",
+   "w": 380,
+   "h": 253,
+   "page": 26,
+   "how": "box"
+  },
+  {
+   "id": "sr-35#1",
+   "article": "sr-35",
+   "jo": "제35조",
+   "file": "sr-35_1.webp",
+   "w": 380,
+   "h": 269,
+   "page": 28,
+   "how": "box"
+  },
+  {
+   "id": "sr-36#1",
+   "article": "sr-36",
+   "jo": "제36조",
+   "file": "sr-36_1.webp",
+   "w": 380,
+   "h": 299,
+   "page": 28,
+   "how": "box"
+  },
+  {
+   "id": "sr-37#1",
+   "article": "sr-37",
+   "jo": "제37조",
+   "file": "sr-37_1.webp",
+   "w": 380,
+   "h": 279,
+   "page": 28,
+   "how": "box"
+  },
+  {
+   "id": "sr-39#1",
+   "article": "sr-39",
+   "jo": "제39조",
+   "file": "sr-39_1.webp",
+   "w": 380,
+   "h": 221,
+   "page": 29,
+   "how": "box"
+  },
+  {
+   "id": "sr-40#1",
+   "article": "sr-40",
+   "jo": "제40조",
+   "file": "sr-40_1.webp",
+   "w": 380,
+   "h": 262,
+   "page": 29,
+   "how": "box"
+  },
+  {
+   "id": "sr-41#1",
+   "article": "sr-41",
+   "jo": "제41조",
+   "file": "sr-41_1.webp",
+   "w": 380,
+   "h": 331,
+   "page": 30,
+   "how": "box"
+  },
+  {
+   "id": "sr-41#2",
+   "article": "sr-41",
+   "jo": "제41조",
+   "file": "sr-41_2.webp",
+   "w": 380,
+   "h": 184,
+   "page": 30,
+   "how": "box"
+  },
+  {
+   "id": "sr-41#3",
+   "article": "sr-41",
+   "jo": "제41조",
+   "file": "sr-41_3.webp",
+   "w": 380,
+   "h": 311,
+   "page": 30,
+   "how": "box"
+  },
+  {
+   "id": "sr-42#1",
+   "article": "sr-42",
+   "jo": "제42조",
+   "file": "sr-42_1.webp",
+   "w": 373,
+   "h": 421,
+   "page": 32,
+   "how": "box"
+  },
+  {
+   "id": "sr-42#2",
+   "article": "sr-42",
+   "jo": "제42조",
+   "file": "sr-42_2.webp",
+   "w": 380,
+   "h": 361,
+   "page": 32,
+   "how": "box"
+  },
+  {
+   "id": "sr-42#3",
+   "article": "sr-42",
+   "jo": "제42조",
+   "file": "sr-42_3.webp",
+   "w": 380,
+   "h": 296,
+   "page": 32,
+   "how": "box"
+  },
+  {
+   "id": "sr-42#4",
+   "article": "sr-42",
+   "jo": "제42조",
+   "file": "sr-42_4.webp",
+   "w": 380,
+   "h": 272,
+   "page": 32,
+   "how": "box"
+  },
+  {
+   "id": "sr-42#5",
+   "article": "sr-42",
+   "jo": "제42조",
+   "file": "sr-42_5.webp",
+   "w": 380,
+   "h": 336,
+   "page": 32,
+   "how": "box"
+  },
+  {
+   "id": "sr-42#6",
+   "article": "sr-42",
+   "jo": "제42조",
+   "file": "sr-42_6.webp",
+   "w": 355,
+   "h": 399,
+   "page": 32,
+   "how": "box"
+  },
+  {
+   "id": "sr-43#1",
+   "article": "sr-43",
+   "jo": "제43조",
+   "file": "sr-43_1.webp",
+   "w": 380,
+   "h": 220,
+   "page": 33,
+   "how": "box"
+  },
+  {
+   "id": "sr-44#1",
+   "article": "sr-44",
+   "jo": "제44조",
+   "file": "sr-44_1.webp",
+   "w": 380,
+   "h": 199,
+   "page": 33,
+   "how": "box"
+  },
+  {
+   "id": "sr-45#1",
+   "article": "sr-45",
+   "jo": "제45조",
+   "file": "sr-45_1.webp",
+   "w": 380,
+   "h": 200,
+   "page": 33,
+   "how": "box"
+  },
+  {
+   "id": "sr-47#1",
+   "article": "sr-47",
+   "jo": "제47조",
+   "file": "sr-47_1.webp",
+   "w": 380,
+   "h": 190,
+   "page": 34,
+   "how": "box"
+  },
+  {
+   "id": "sr-48#1",
+   "article": "sr-48",
+   "jo": "제48조",
+   "file": "sr-48_1.webp",
+   "w": 380,
+   "h": 167,
+   "page": 34,
+   "how": "box"
+  },
+  {
+   "id": "sr-49#1",
+   "article": "sr-49",
+   "jo": "제49조",
+   "file": "sr-49_1.webp",
+   "w": 380,
+   "h": 250,
+   "page": 34,
+   "how": "box"
+  },
+  {
+   "id": "sr-50#1",
+   "article": "sr-50",
+   "jo": "제50조",
+   "file": "sr-50_1.webp",
+   "w": 380,
+   "h": 303,
+   "page": 35,
+   "how": "box"
+  },
+  {
+   "id": "sr-50#2",
+   "article": "sr-50",
+   "jo": "제50조",
+   "file": "sr-50_2.webp",
+   "w": 380,
+   "h": 344,
+   "page": 35,
+   "how": "box"
+  },
+  {
+   "id": "sr-51#1",
+   "article": "sr-51",
+   "jo": "제51조",
+   "file": "sr-51_1.webp",
+   "w": 380,
+   "h": 305,
+   "page": 35,
+   "how": "box"
+  },
+  {
+   "id": "sr-53#1",
+   "article": "sr-53",
+   "jo": "제53조",
+   "file": "sr-53_1.webp",
+   "w": 380,
+   "h": 210,
+   "page": 36,
+   "how": "box"
+  },
+  {
+   "id": "sr-54#1",
+   "article": "sr-54",
+   "jo": "제54조",
+   "file": "sr-54_1.webp",
+   "w": 380,
+   "h": 284,
+   "page": 38,
+   "how": "box"
+  },
+  {
+   "id": "sr-55#1",
+   "article": "sr-55",
+   "jo": "제55조",
+   "file": "sr-55_1.webp",
+   "w": 380,
+   "h": 309,
+   "page": 38,
+   "how": "box"
+  },
+  {
+   "id": "sr-56#1",
+   "article": "sr-56",
+   "jo": "제56조",
+   "file": "sr-56_1.webp",
+   "w": 380,
+   "h": 275,
+   "page": 38,
+   "how": "box"
+  },
+  {
+   "id": "sr-56#2",
+   "article": "sr-56",
+   "jo": "제56조",
+   "file": "sr-56_2.webp",
+   "w": 380,
+   "h": 255,
+   "page": 38,
+   "how": "box"
+  },
+  {
+   "id": "sr-56#3",
+   "article": "sr-56",
+   "jo": "제56조",
+   "file": "sr-56_3.webp",
+   "w": 380,
+   "h": 269,
+   "page": 38,
+   "how": "box"
+  },
+  {
+   "id": "sr-57#1",
+   "article": "sr-57",
+   "jo": "제57조",
+   "file": "sr-57_1.webp",
+   "w": 380,
+   "h": 354,
+   "page": 39,
+   "how": "box"
+  },
+  {
+   "id": "sr-57#2",
+   "article": "sr-57",
+   "jo": "제57조",
+   "file": "sr-57_2.webp",
+   "w": 380,
+   "h": 299,
+   "page": 39,
+   "how": "box"
+  },
+  {
+   "id": "sr-58#1",
+   "article": "sr-58",
+   "jo": "제58조",
+   "file": "sr-58_1.webp",
+   "w": 380,
+   "h": 268,
+   "page": 41,
+   "how": "box"
+  },
+  {
+   "id": "sr-58#2",
+   "article": "sr-58",
+   "jo": "제58조",
+   "file": "sr-58_2.webp",
+   "w": 380,
+   "h": 256,
+   "page": 41,
+   "how": "box"
+  },
+  {
+   "id": "sr-58#3",
+   "article": "sr-58",
+   "jo": "제58조",
+   "file": "sr-58_3.webp",
+   "w": 380,
+   "h": 191,
+   "page": 41,
+   "how": "box"
+  },
+  {
+   "id": "sr-58#4",
+   "article": "sr-58",
+   "jo": "제58조",
+   "file": "sr-58_4.webp",
+   "w": 380,
+   "h": 264,
+   "page": 41,
+   "how": "box"
+  },
+  {
+   "id": "sr-58#5",
+   "article": "sr-58",
+   "jo": "제58조",
+   "file": "sr-58_5.webp",
+   "w": 380,
+   "h": 395,
+   "page": 41,
+   "how": "box"
+  },
+  {
+   "id": "sr-59#1",
+   "article": "sr-59",
+   "jo": "제59조",
+   "file": "sr-59_1.webp",
+   "w": 380,
+   "h": 254,
+   "page": 41,
+   "how": "box"
+  },
+  {
+   "id": "sr-59#2",
+   "article": "sr-59",
+   "jo": "제59조",
+   "file": "sr-59_2.webp",
+   "w": 380,
+   "h": 266,
+   "page": 41,
+   "how": "box"
+  },
+  {
+   "id": "sr-60#1",
+   "article": "sr-60",
+   "jo": "제60조",
+   "file": "sr-60_1.webp",
+   "w": 380,
+   "h": 228,
+   "page": 42,
+   "how": "box"
+  },
+  {
+   "id": "sr-60#2",
+   "article": "sr-60",
+   "jo": "제60조",
+   "file": "sr-60_2.webp",
+   "w": 380,
+   "h": 228,
+   "page": 42,
+   "how": "box"
+  },
+  {
+   "id": "sr-60#3",
+   "article": "sr-60",
+   "jo": "제60조",
+   "file": "sr-60_3.webp",
+   "w": 296,
+   "h": 447,
+   "page": 42,
+   "how": "box"
+  },
+  {
+   "id": "sr-61#1",
+   "article": "sr-61",
+   "jo": "제61조",
+   "file": "sr-61_1.webp",
+   "w": 380,
+   "h": 192,
+   "page": 42,
+   "how": "above"
+  },
+  {
+   "id": "sr-62#1",
+   "article": "sr-62",
+   "jo": "제62조",
+   "file": "sr-62_1.webp",
+   "w": 380,
+   "h": 239,
+   "page": 43,
+   "how": "box"
+  },
+  {
+   "id": "sr-63#1",
+   "article": "sr-63",
+   "jo": "제63조",
+   "file": "sr-63_1.webp",
+   "w": 380,
+   "h": 384,
+   "page": 43,
+   "how": "box"
+  },
+  {
+   "id": "sr-63#2",
+   "article": "sr-63",
+   "jo": "제63조",
+   "file": "sr-63_2.webp",
+   "w": 380,
+   "h": 135,
+   "page": 43,
+   "how": "box"
+  },
+  {
+   "id": "sr-63#3",
+   "article": "sr-63",
+   "jo": "제63조",
+   "file": "sr-63_3.webp",
+   "w": 380,
+   "h": 143,
+   "page": 43,
+   "how": "box"
+  },
+  {
+   "id": "sr-63#4",
+   "article": "sr-63",
+   "jo": "제63조",
+   "file": "sr-63_4.webp",
+   "w": 380,
+   "h": 296,
+   "page": 43,
+   "how": "box"
+  },
+  {
+   "id": "sr-65#1",
+   "article": "sr-65",
+   "jo": "제65조",
+   "file": "sr-65_1.webp",
+   "w": 380,
+   "h": 242,
+   "page": 45,
+   "how": "box"
+  },
+  {
+   "id": "sr-66#1",
+   "article": "sr-66",
+   "jo": "제66조",
+   "file": "sr-66_1.webp",
+   "w": 380,
+   "h": 314,
+   "page": 45,
+   "how": "box"
+  },
+  {
+   "id": "sr-66-2#1",
+   "article": "sr-66-2",
+   "jo": "제66조의2",
+   "file": "sr-66-2_1.webp",
+   "w": 380,
+   "h": 630,
+   "page": 45,
+   "how": "box"
+  },
+  {
+   "id": "sr-68#1",
+   "article": "sr-68",
+   "jo": "제68조",
+   "file": "sr-68_1.webp",
+   "w": 380,
+   "h": 290,
+   "page": 46,
+   "how": "box"
+  },
+  {
+   "id": "sr-68#2",
+   "article": "sr-68",
+   "jo": "제68조",
+   "file": "sr-68_2.webp",
+   "w": 380,
+   "h": 213,
+   "page": 46,
+   "how": "box"
+  },
+  {
+   "id": "sr-68#3",
+   "article": "sr-68",
+   "jo": "제68조",
+   "file": "sr-68_3.webp",
+   "w": 380,
+   "h": 274,
+   "page": 46,
+   "how": "box"
+  },
+  {
+   "id": "sr-68#4",
+   "article": "sr-68",
+   "jo": "제68조",
+   "file": "sr-68_4.webp",
+   "w": 380,
+   "h": 264,
+   "page": 46,
+   "how": "box"
+  },
+  {
+   "id": "sr-68#5",
+   "article": "sr-68",
+   "jo": "제68조",
+   "file": "sr-68_5.webp",
+   "w": 380,
+   "h": 270,
+   "page": 46,
+   "how": "box"
+  },
+  {
+   "id": "sr-70#1",
+   "article": "sr-70",
+   "jo": "제70조",
+   "file": "sr-70_1.webp",
+   "w": 380,
+   "h": 514,
+   "page": 47,
+   "how": "box"
+  },
+  {
+   "id": "sr-70#2",
+   "article": "sr-70",
+   "jo": "제70조",
+   "file": "sr-70_2.webp",
+   "w": 380,
+   "h": 292,
+   "page": 47,
+   "how": "box"
+  },
+  {
+   "id": "sr-70#3",
+   "article": "sr-70",
+   "jo": "제70조",
+   "file": "sr-70_3.webp",
+   "w": 380,
+   "h": 251,
+   "page": 47,
+   "how": "box"
+  },
+  {
+   "id": "sr-70#4",
+   "article": "sr-70",
+   "jo": "제70조",
+   "file": "sr-70_4.webp",
+   "w": 380,
+   "h": 286,
+   "page": 47,
+   "how": "box"
+  },
+  {
+   "id": "sr-70#5",
+   "article": "sr-70",
+   "jo": "제70조",
+   "file": "sr-70_5.webp",
+   "w": 362,
+   "h": 320,
+   "page": 47,
+   "how": "box"
+  },
+  {
+   "id": "sr-72#1",
+   "article": "sr-72",
+   "jo": "제72조",
+   "file": "sr-72_1.webp",
+   "w": 380,
+   "h": 365,
+   "page": 49,
+   "how": "box"
+  },
+  {
+   "id": "sr-72#2",
+   "article": "sr-72",
+   "jo": "제72조",
+   "file": "sr-72_2.webp",
+   "w": 380,
+   "h": 319,
+   "page": 49,
+   "how": "box"
+  },
+  {
+   "id": "sr-72#3",
+   "article": "sr-72",
+   "jo": "제72조",
+   "file": "sr-72_3.webp",
+   "w": 380,
+   "h": 292,
+   "page": 49,
+   "how": "box"
+  },
+  {
+   "id": "sr-72#4",
+   "article": "sr-72",
+   "jo": "제72조",
+   "file": "sr-72_4.webp",
+   "w": 380,
+   "h": 321,
+   "page": 49,
+   "how": "box"
+  },
+  {
+   "id": "sr-73#1",
+   "article": "sr-73",
+   "jo": "제73조",
+   "file": "sr-73_1.webp",
+   "w": 380,
+   "h": 275,
+   "page": 50,
+   "how": "box"
+  },
+  {
+   "id": "sr-73#2",
+   "article": "sr-73",
+   "jo": "제73조",
+   "file": "sr-73_2.webp",
+   "w": 380,
+   "h": 306,
+   "page": 50,
+   "how": "box"
+  },
+  {
+   "id": "sr-73#3",
+   "article": "sr-73",
+   "jo": "제73조",
+   "file": "sr-73_3.webp",
+   "w": 380,
+   "h": 264,
+   "page": 50,
+   "how": "box"
+  },
+  {
+   "id": "sr-73#4",
+   "article": "sr-73",
+   "jo": "제73조",
+   "file": "sr-73_4.webp",
+   "w": 380,
+   "h": 263,
+   "page": 50,
+   "how": "box"
+  },
+  {
+   "id": "sr-74#1",
+   "article": "sr-74",
+   "jo": "제74조",
+   "file": "sr-74_1.webp",
+   "w": 380,
+   "h": 297,
+   "page": 50,
+   "how": "box"
+  },
+  {
+   "id": "sr-74#2",
+   "article": "sr-74",
+   "jo": "제74조",
+   "file": "sr-74_2.webp",
+   "w": 302,
+   "h": 292,
+   "page": 50,
+   "how": "box"
+  },
+  {
+   "id": "sr-75#1",
+   "article": "sr-75",
+   "jo": "제75조",
+   "file": "sr-75_1.webp",
+   "w": 380,
+   "h": 328,
+   "page": 51,
+   "how": "box"
+  },
+  {
+   "id": "sr-76#1",
+   "article": "sr-76",
+   "jo": "제76조",
+   "file": "sr-76_1.webp",
+   "w": 380,
+   "h": 398,
+   "page": 51,
+   "how": "box"
+  },
+  {
+   "id": "sr-77#1",
+   "article": "sr-77",
+   "jo": "제77조",
+   "file": "sr-77_1.webp",
+   "w": 380,
+   "h": 293,
+   "page": 51,
+   "how": "box"
+  },
+  {
+   "id": "sr-78#1",
+   "article": "sr-78",
+   "jo": "제78조",
+   "file": "sr-78_1.webp",
+   "w": 380,
+   "h": 317,
+   "page": 51,
+   "how": "box"
+  },
+  {
+   "id": "sr-78#2",
+   "article": "sr-78",
+   "jo": "제78조",
+   "file": "sr-78_2.webp",
+   "w": 380,
+   "h": 321,
+   "page": 51,
+   "how": "box"
+  },
+  {
+   "id": "sr-79#1",
+   "article": "sr-79",
+   "jo": "제79조",
+   "file": "sr-79_1.webp",
+   "w": 380,
+   "h": 260,
+   "page": 53,
+   "how": "box"
+  },
+  {
+   "id": "sr-79-2#1",
+   "article": "sr-79-2",
+   "jo": "제79조의2",
+   "file": "sr-79-2_1.webp",
+   "w": 380,
+   "h": 270,
+   "page": 53,
+   "how": "column"
+  },
+  {
+   "id": "sr-79-2#2",
+   "article": "sr-79-2",
+   "jo": "제79조의2",
+   "file": "sr-79-2_2.webp",
+   "w": 380,
+   "h": 237,
+   "page": 53,
+   "how": "box"
+  },
+  {
+   "id": "sr-81#1",
+   "article": "sr-81",
+   "jo": "제81조",
+   "file": "sr-81_1.webp",
+   "w": 380,
+   "h": 287,
+   "page": 53,
+   "how": "box"
+  },
+  {
+   "id": "sr-81#2",
+   "article": "sr-81",
+   "jo": "제81조",
+   "file": "sr-81_2.webp",
+   "w": 380,
+   "h": 286,
+   "page": 53,
+   "how": "box"
+  },
+  {
+   "id": "sr-82#1",
+   "article": "sr-82",
+   "jo": "제82조",
+   "file": "sr-82_1.webp",
+   "w": 380,
+   "h": 228,
+   "page": 53,
+   "how": "box"
+  },
+  {
+   "id": "sr-83#1",
+   "article": "sr-83",
+   "jo": "제83조",
+   "file": "sr-83_1.webp",
+   "w": 380,
+   "h": 392,
+   "page": 55,
+   "how": "box"
+  },
+  {
+   "id": "sr-84#1",
+   "article": "sr-84",
+   "jo": "제84조",
+   "file": "sr-84_1.webp",
+   "w": 380,
+   "h": 283,
+   "page": 55,
+   "how": "box"
+  },
+  {
+   "id": "sr-84#2",
+   "article": "sr-84",
+   "jo": "제84조",
+   "file": "sr-84_2.webp",
+   "w": 380,
+   "h": 367,
+   "page": 55,
+   "how": "box"
+  },
+  {
+   "id": "sr-84#3",
+   "article": "sr-84",
+   "jo": "제84조",
+   "file": "sr-84_3.webp",
+   "w": 380,
+   "h": 470,
+   "page": 55,
+   "how": "box"
+  },
+  {
+   "id": "sr-85#1",
+   "article": "sr-85",
+   "jo": "제85조",
+   "file": "sr-85_1.webp",
+   "w": 380,
+   "h": 366,
+   "page": 55,
+   "how": "box"
+  },
+  {
+   "id": "sr-85#2",
+   "article": "sr-85",
+   "jo": "제85조",
+   "file": "sr-85_2.webp",
+   "w": 380,
+   "h": 289,
+   "page": 55,
+   "how": "box"
+  },
+  {
+   "id": "sr-85#3",
+   "article": "sr-85",
+   "jo": "제85조",
+   "file": "sr-85_3.webp",
+   "w": 380,
+   "h": 317,
+   "page": 55,
+   "how": "box"
+  },
+  {
+   "id": "sr-86#1",
+   "article": "sr-86",
+   "jo": "제86조",
+   "file": "sr-86_1.webp",
+   "w": 380,
+   "h": 330,
+   "page": 59,
+   "how": "box"
+  },
+  {
+   "id": "sr-86#2",
+   "article": "sr-86",
+   "jo": "제86조",
+   "file": "sr-86_2.webp",
+   "w": 380,
+   "h": 201,
+   "page": 59,
+   "how": "box"
+  },
+  {
+   "id": "sr-86#3",
+   "article": "sr-86",
+   "jo": "제86조",
+   "file": "sr-86_3.webp",
+   "w": 380,
+   "h": 254,
+   "page": 59,
+   "how": "box"
+  },
+  {
+   "id": "sr-86#4",
+   "article": "sr-86",
+   "jo": "제86조",
+   "file": "sr-86_4.webp",
+   "w": 380,
+   "h": 372,
+   "page": 59,
+   "how": "box"
+  },
+  {
+   "id": "sr-86#5",
+   "article": "sr-86",
+   "jo": "제86조",
+   "file": "sr-86_5.webp",
+   "w": 380,
+   "h": 201,
+   "page": 59,
+   "how": "box"
+  },
+  {
+   "id": "sr-87#1",
+   "article": "sr-87",
+   "jo": "제87조",
+   "file": "sr-87_1.webp",
+   "w": 380,
+   "h": 311,
+   "page": 61,
+   "how": "box"
+  },
+  {
+   "id": "sr-87#2",
+   "article": "sr-87",
+   "jo": "제87조",
+   "file": "sr-87_2.webp",
+   "w": 380,
+   "h": 295,
+   "page": 61,
+   "how": "box"
+  },
+  {
+   "id": "sr-87#3",
+   "article": "sr-87",
+   "jo": "제87조",
+   "file": "sr-87_3.webp",
+   "w": 380,
+   "h": 250,
+   "page": 61,
+   "how": "box"
+  },
+  {
+   "id": "sr-87#4",
+   "article": "sr-87",
+   "jo": "제87조",
+   "file": "sr-87_4.webp",
+   "w": 380,
+   "h": 260,
+   "page": 61,
+   "how": "box"
+  },
+  {
+   "id": "sr-87#5",
+   "article": "sr-87",
+   "jo": "제87조",
+   "file": "sr-87_5.webp",
+   "w": 380,
+   "h": 252,
+   "page": 61,
+   "how": "box"
+  },
+  {
+   "id": "sr-87#6",
+   "article": "sr-87",
+   "jo": "제87조",
+   "file": "sr-87_6.webp",
+   "w": 380,
+   "h": 242,
+   "page": 61,
+   "how": "box"
+  },
+  {
+   "id": "sr-88#1",
+   "article": "sr-88",
+   "jo": "제88조",
+   "file": "sr-88_1.webp",
+   "w": 380,
+   "h": 298,
+   "page": 63,
+   "how": "box"
+  },
+  {
+   "id": "sr-88#2",
+   "article": "sr-88",
+   "jo": "제88조",
+   "file": "sr-88_2.webp",
+   "w": 380,
+   "h": 253,
+   "page": 63,
+   "how": "box"
+  },
+  {
+   "id": "sr-89#1",
+   "article": "sr-89",
+   "jo": "제89조",
+   "file": "sr-89_1.webp",
+   "w": 380,
+   "h": 257,
+   "page": 63,
+   "how": "box"
+  },
+  {
+   "id": "sr-89#2",
+   "article": "sr-89",
+   "jo": "제89조",
+   "file": "sr-89_2.webp",
+   "w": 380,
+   "h": 276,
+   "page": 63,
+   "how": "box"
+  },
+  {
+   "id": "sr-91#1",
+   "article": "sr-91",
+   "jo": "제91조",
+   "file": "sr-91_1.webp",
+   "w": 380,
+   "h": 275,
+   "page": 64,
+   "how": "box"
+  },
+  {
+   "id": "sr-92#1",
+   "article": "sr-92",
+   "jo": "제92조",
+   "file": "sr-92_1.webp",
+   "w": 380,
+   "h": 277,
+   "page": 64,
+   "how": "box"
+  },
+  {
+   "id": "sr-92#2",
+   "article": "sr-92",
+   "jo": "제92조",
+   "file": "sr-92_2.webp",
+   "w": 380,
+   "h": 294,
+   "page": 64,
+   "how": "box"
+  },
+  {
+   "id": "sr-93#1",
+   "article": "sr-93",
+   "jo": "제93조",
+   "file": "sr-93_1.webp",
+   "w": 380,
+   "h": 277,
+   "page": 65,
+   "how": "box"
+  },
+  {
+   "id": "sr-94#1",
+   "article": "sr-94",
+   "jo": "제94조",
+   "file": "sr-94_1.webp",
+   "w": 380,
+   "h": 235,
+   "page": 65,
+   "how": "box"
+  },
+  {
+   "id": "sr-95#1",
+   "article": "sr-95",
+   "jo": "제95조",
+   "file": "sr-95_1.webp",
+   "w": 380,
+   "h": 248,
+   "page": 65,
+   "how": "box"
+  },
+  {
+   "id": "sr-96#1",
+   "article": "sr-96",
+   "jo": "제96조",
+   "file": "sr-96_1.webp",
+   "w": 380,
+   "h": 301,
+   "page": 65,
+   "how": "box"
+  },
+  {
+   "id": "sr-96#2",
+   "article": "sr-96",
+   "jo": "제96조",
+   "file": "sr-96_2.webp",
+   "w": 380,
+   "h": 526,
+   "page": 65,
+   "how": "box"
+  },
+  {
+   "id": "sr-97#1",
+   "article": "sr-97",
+   "jo": "제97조",
+   "file": "sr-97_1.webp",
+   "w": 380,
+   "h": 255,
+   "page": 67,
+   "how": "box"
+  },
+  {
+   "id": "sr-98#1",
+   "article": "sr-98",
+   "jo": "제98조",
+   "file": "sr-98_1.webp",
+   "w": 380,
+   "h": 204,
+   "page": 67,
+   "how": "box"
+  },
+  {
+   "id": "sr-98#2",
+   "article": "sr-98",
+   "jo": "제98조",
+   "file": "sr-98_2.webp",
+   "w": 380,
+   "h": 211,
+   "page": 67,
+   "how": "box"
+  },
+  {
+   "id": "sr-98#3",
+   "article": "sr-98",
+   "jo": "제98조",
+   "file": "sr-98_3.webp",
+   "w": 380,
+   "h": 259,
+   "page": 67,
+   "how": "box"
+  },
+  {
+   "id": "sr-99#1",
+   "article": "sr-99",
+   "jo": "제99조",
+   "file": "sr-99_1.webp",
+   "w": 380,
+   "h": 225,
+   "page": 67,
+   "how": "box"
+  },
+  {
+   "id": "sr-100#1",
+   "article": "sr-100",
+   "jo": "제100조",
+   "file": "sr-100_1.webp",
+   "w": 380,
+   "h": 293,
+   "page": 68,
+   "how": "box"
+  },
+  {
+   "id": "sr-101#1",
+   "article": "sr-101",
+   "jo": "제101조",
+   "file": "sr-101_1.webp",
+   "w": 380,
+   "h": 300,
+   "page": 68,
+   "how": "box"
+  },
+  {
+   "id": "sr-102#1",
+   "article": "sr-102",
+   "jo": "제102조",
+   "file": "sr-102_1.webp",
+   "w": 380,
+   "h": 226,
+   "page": 68,
+   "how": "box"
+  },
+  {
+   "id": "sr-103#1",
+   "article": "sr-103",
+   "jo": "제103조",
+   "file": "sr-103_1.webp",
+   "w": 380,
+   "h": 651,
+   "page": 69,
+   "how": "box"
+  },
+  {
+   "id": "sr-104#1",
+   "article": "sr-104",
+   "jo": "제104조",
+   "file": "sr-104_1.webp",
+   "w": 380,
+   "h": 241,
+   "page": 69,
+   "how": "box"
+  },
+  {
+   "id": "sr-105#1",
+   "article": "sr-105",
+   "jo": "제105조",
+   "file": "sr-105_1.webp",
+   "w": 380,
+   "h": 273,
+   "page": 70,
+   "how": "box"
+  },
+  {
+   "id": "sr-106#1",
+   "article": "sr-106",
+   "jo": "제106조",
+   "file": "sr-106_1.webp",
+   "w": 380,
+   "h": 235,
+   "page": 70,
+   "how": "box"
+  },
+  {
+   "id": "sr-107#1",
+   "article": "sr-107",
+   "jo": "제107조",
+   "file": "sr-107_1.webp",
+   "w": 380,
+   "h": 312,
+   "page": 70,
+   "how": "box"
+  },
+  {
+   "id": "sr-109#1",
+   "article": "sr-109",
+   "jo": "제109조",
+   "file": "sr-109_1.webp",
+   "w": 380,
+   "h": 306,
+   "page": 70,
+   "how": "box"
+  },
+  {
+   "id": "sr-110#1",
+   "article": "sr-110",
+   "jo": "제110조",
+   "file": "sr-110_1.webp",
+   "w": 380,
+   "h": 317,
+   "page": 71,
+   "how": "box"
+  },
+  {
+   "id": "sr-111#1",
+   "article": "sr-111",
+   "jo": "제111조",
+   "file": "sr-111_1.webp",
+   "w": 380,
+   "h": 544,
+   "page": 71,
+   "how": "box"
+  },
+  {
+   "id": "sr-112#1",
+   "article": "sr-112",
+   "jo": "제112조",
+   "file": "sr-112_1.webp",
+   "w": 380,
+   "h": 273,
+   "page": 71,
+   "how": "above"
+  },
+  {
+   "id": "sr-113#1",
+   "article": "sr-113",
+   "jo": "제113조",
+   "file": "sr-113_1.webp",
+   "w": 380,
+   "h": 214,
+   "page": 71,
+   "how": "box"
+  },
+  {
+   "id": "sr-114#1",
+   "article": "sr-114",
+   "jo": "제114조",
+   "file": "sr-114_1.webp",
+   "w": 380,
+   "h": 298,
+   "page": 72,
+   "how": "box"
+  },
+  {
+   "id": "sr-115#1",
+   "article": "sr-115",
+   "jo": "제115조",
+   "file": "sr-115_1.webp",
+   "w": 380,
+   "h": 314,
+   "page": 72,
+   "how": "above"
+  },
+  {
+   "id": "sr-116#1",
+   "article": "sr-116",
+   "jo": "제116조",
+   "file": "sr-116_1.webp",
+   "w": 380,
+   "h": 264,
+   "page": 72,
+   "how": "box"
+  },
+  {
+   "id": "sr-117#1",
+   "article": "sr-117",
+   "jo": "제117조",
+   "file": "sr-117_1.webp",
+   "w": 380,
+   "h": 275,
+   "page": 73,
+   "how": "box"
+  },
+  {
+   "id": "sr-118#1",
+   "article": "sr-118",
+   "jo": "제118조",
+   "file": "sr-118_1.webp",
+   "w": 380,
+   "h": 239,
+   "page": 73,
+   "how": "box"
+  },
+  {
+   "id": "sr-119#1",
+   "article": "sr-119",
+   "jo": "제119조",
+   "file": "sr-119_1.webp",
+   "w": 380,
+   "h": 263,
+   "page": 73,
+   "how": "box"
+  },
+  {
+   "id": "sr-120#1",
+   "article": "sr-120",
+   "jo": "제120조",
+   "file": "sr-120_1.webp",
+   "w": 380,
+   "h": 360,
+   "page": 73,
+   "how": "box"
+  },
+  {
+   "id": "sr-121#1",
+   "article": "sr-121",
+   "jo": "제121조",
+   "file": "sr-121_1.webp",
+   "w": 380,
+   "h": 279,
+   "page": 73,
+   "how": "box"
+  },
+  {
+   "id": "sr-122#1",
+   "article": "sr-122",
+   "jo": "제122조",
+   "file": "sr-122_1.webp",
+   "w": 380,
+   "h": 250,
+   "page": 74,
+   "how": "box"
+  },
+  {
+   "id": "sr-122#2",
+   "article": "sr-122",
+   "jo": "제122조",
+   "file": "sr-122_2.webp",
+   "w": 380,
+   "h": 286,
+   "page": 74,
+   "how": "box"
+  },
+  {
+   "id": "sr-122#3",
+   "article": "sr-122",
+   "jo": "제122조",
+   "file": "sr-122_3.webp",
+   "w": 380,
+   "h": 289,
+   "page": 74,
+   "how": "box"
+  },
+  {
+   "id": "sr-123#1",
+   "article": "sr-123",
+   "jo": "제123조",
+   "file": "sr-123_1.webp",
+   "w": 380,
+   "h": 504,
+   "page": 74,
+   "how": "box"
+  },
+  {
+   "id": "sr-124#1",
+   "article": "sr-124",
+   "jo": "제124조",
+   "file": "sr-124_1.webp",
+   "w": 380,
+   "h": 255,
+   "page": 75,
+   "how": "box"
+  },
+  {
+   "id": "sr-125#1",
+   "article": "sr-125",
+   "jo": "제125조",
+   "file": "sr-125_1.webp",
+   "w": 380,
+   "h": 325,
+   "page": 75,
+   "how": "box"
+  },
+  {
+   "id": "sr-126#1",
+   "article": "sr-126",
+   "jo": "제126조",
+   "file": "sr-126_1.webp",
+   "w": 380,
+   "h": 350,
+   "page": 75,
+   "how": "box"
+  },
+  {
+   "id": "sr-127#1",
+   "article": "sr-127",
+   "jo": "제127조",
+   "file": "sr-127_1.webp",
+   "w": 380,
+   "h": 408,
+   "page": 75,
+   "how": "box"
+  },
+  {
+   "id": "sr-128#1",
+   "article": "sr-128",
+   "jo": "제128조",
+   "file": "sr-128_1.webp",
+   "w": 380,
+   "h": 318,
+   "page": 75,
+   "how": "box"
+  },
+  {
+   "id": "sr-129#1",
+   "article": "sr-129",
+   "jo": "제129조",
+   "file": "sr-129_1.webp",
+   "w": 380,
+   "h": 261,
+   "page": 76,
+   "how": "box"
+  },
+  {
+   "id": "sr-130#1",
+   "article": "sr-130",
+   "jo": "제130조",
+   "file": "sr-130_1.webp",
+   "w": 380,
+   "h": 321,
+   "page": 76,
+   "how": "box"
+  },
+  {
+   "id": "sr-131#1",
+   "article": "sr-131",
+   "jo": "제131조",
+   "file": "sr-131_1.webp",
+   "w": 380,
+   "h": 190,
+   "page": 77,
+   "how": "box"
+  },
+  {
+   "id": "sr-132#1",
+   "article": "sr-132",
+   "jo": "제132조",
+   "file": "sr-132_1.webp",
+   "w": 380,
+   "h": 326,
+   "page": 77,
+   "how": "box"
+  },
+  {
+   "id": "sr-132#2",
+   "article": "sr-132",
+   "jo": "제132조",
+   "file": "sr-132_2.webp",
+   "w": 380,
+   "h": 316,
+   "page": 77,
+   "how": "box"
+  },
+  {
+   "id": "sr-133#1",
+   "article": "sr-133",
+   "jo": "제133조",
+   "file": "sr-133_1.webp",
+   "w": 364,
+   "h": 387,
+   "page": 78,
+   "how": "above"
+  },
+  {
+   "id": "sr-134#1",
+   "article": "sr-134",
+   "jo": "제134조",
+   "file": "sr-134_1.webp",
+   "w": 380,
+   "h": 273,
+   "page": 78,
+   "how": "box"
+  },
+  {
+   "id": "sr-135#1",
+   "article": "sr-135",
+   "jo": "제135조",
+   "file": "sr-135_1.webp",
+   "w": 380,
+   "h": 323,
+   "page": 79,
+   "how": "box"
+  },
+  {
+   "id": "sr-136#1",
+   "article": "sr-136",
+   "jo": "제136조",
+   "file": "sr-136_1.webp",
+   "w": 380,
+   "h": 277,
+   "page": 79,
+   "how": "box"
+  },
+  {
+   "id": "sr-137#1",
+   "article": "sr-137",
+   "jo": "제137조",
+   "file": "sr-137_1.webp",
+   "w": 380,
+   "h": 261,
+   "page": 80,
+   "how": "box"
+  },
+  {
+   "id": "sr-138#1",
+   "article": "sr-138",
+   "jo": "제138조",
+   "file": "sr-138_1.webp",
+   "w": 380,
+   "h": 249,
+   "page": 80,
+   "how": "box"
+  },
+  {
+   "id": "sr-139#1",
+   "article": "sr-139",
+   "jo": "제139조",
+   "file": "sr-139_1.webp",
+   "w": 380,
+   "h": 295,
+   "page": 80,
+   "how": "box"
+  },
+  {
+   "id": "sr-140#1",
+   "article": "sr-140",
+   "jo": "제140조",
+   "file": "sr-140_1.webp",
+   "w": 380,
+   "h": 270,
+   "page": 80,
+   "how": "box"
+  },
+  {
+   "id": "sr-141#1",
+   "article": "sr-141",
+   "jo": "제141조",
+   "file": "sr-141_1.webp",
+   "w": 380,
+   "h": 367,
+   "page": 81,
+   "how": "box"
+  },
+  {
+   "id": "sr-141#2",
+   "article": "sr-141",
+   "jo": "제141조",
+   "file": "sr-141_2.webp",
+   "w": 380,
+   "h": 349,
+   "page": 81,
+   "how": "box"
+  },
+  {
+   "id": "sr-141#3",
+   "article": "sr-141",
+   "jo": "제141조",
+   "file": "sr-141_3.webp",
+   "w": 380,
+   "h": 299,
+   "page": 81,
+   "how": "box"
+  },
+  {
+   "id": "sr-141#4",
+   "article": "sr-141",
+   "jo": "제141조",
+   "file": "sr-141_4.webp",
+   "w": 380,
+   "h": 319,
+   "page": 81,
+   "how": "box"
+  },
+  {
+   "id": "sr-141#5",
+   "article": "sr-141",
+   "jo": "제141조",
+   "file": "sr-141_5.webp",
+   "w": 380,
+   "h": 473,
+   "page": 81,
+   "how": "box"
+  },
+  {
+   "id": "sr-141#6",
+   "article": "sr-141",
+   "jo": "제141조",
+   "file": "sr-141_6.webp",
+   "w": 380,
+   "h": 391,
+   "page": 81,
+   "how": "box"
+  },
+  {
+   "id": "sr-141#7",
+   "article": "sr-141",
+   "jo": "제141조",
+   "file": "sr-141_7.webp",
+   "w": 380,
+   "h": 384,
+   "page": 81,
+   "how": "box"
+  },
+  {
+   "id": "sr-141#8",
+   "article": "sr-141",
+   "jo": "제141조",
+   "file": "sr-141_8.webp",
+   "w": 380,
+   "h": 276,
+   "page": 81,
+   "how": "box"
+  },
+  {
+   "id": "sr-142#1",
+   "article": "sr-142",
+   "jo": "제142조",
+   "file": "sr-142_1.webp",
+   "w": 380,
+   "h": 347,
+   "page": 82,
+   "how": "box"
+  },
+  {
+   "id": "sr-142#2",
+   "article": "sr-142",
+   "jo": "제142조",
+   "file": "sr-142_2.webp",
+   "w": 380,
+   "h": 413,
+   "page": 82,
+   "how": "box"
+  },
+  {
+   "id": "sr-143#1",
+   "article": "sr-143",
+   "jo": "제143조",
+   "file": "sr-143_1.webp",
+   "w": 380,
+   "h": 215,
+   "page": 82,
+   "how": "box"
+  },
+  {
+   "id": "sr-144#1",
+   "article": "sr-144",
+   "jo": "제144조",
+   "file": "sr-144_1.webp",
+   "w": 380,
+   "h": 247,
+   "page": 83,
+   "how": "box"
+  },
+  {
+   "id": "sr-144#2",
+   "article": "sr-144",
+   "jo": "제144조",
+   "file": "sr-144_2.webp",
+   "w": 380,
+   "h": 244,
+   "page": 83,
+   "how": "box"
+  },
+  {
+   "id": "sr-146#1",
+   "article": "sr-146",
+   "jo": "제146조",
+   "file": "sr-146_1.webp",
+   "w": 380,
+   "h": 263,
+   "page": 83,
+   "how": "box"
+  },
+  {
+   "id": "sr-147#1",
+   "article": "sr-147",
+   "jo": "제147조",
+   "file": "sr-147_1.webp",
+   "w": 380,
+   "h": 368,
+   "page": 84,
+   "how": "box"
+  },
+  {
+   "id": "sr-148#1",
+   "article": "sr-148",
+   "jo": "제148조",
+   "file": "sr-148_1.webp",
+   "w": 380,
+   "h": 262,
+   "page": 84,
+   "how": "box"
+  },
+  {
+   "id": "sr-149#1",
+   "article": "sr-149",
+   "jo": "제149조",
+   "file": "sr-149_1.webp",
+   "w": 380,
+   "h": 320,
+   "page": 84,
+   "how": "box"
+  },
+  {
+   "id": "sr-150#1",
+   "article": "sr-150",
+   "jo": "제150조",
+   "file": "sr-150_1.webp",
+   "w": 380,
+   "h": 230,
+   "page": 84,
+   "how": "box"
+  },
+  {
+   "id": "sr-151#1",
+   "article": "sr-151",
+   "jo": "제151조",
+   "file": "sr-151_1.webp",
+   "w": 380,
+   "h": 584,
+   "page": 85,
+   "how": "box"
+  },
+  {
+   "id": "sr-152#1",
+   "article": "sr-152",
+   "jo": "제152조",
+   "file": "sr-152_1.webp",
+   "w": 380,
+   "h": 276,
+   "page": 85,
+   "how": "box"
+  },
+  {
+   "id": "sr-153#1",
+   "article": "sr-153",
+   "jo": "제153조",
+   "file": "sr-153_1.webp",
+   "w": 380,
+   "h": 221,
+   "page": 85,
+   "how": "box"
+  },
+  {
+   "id": "sr-153#2",
+   "article": "sr-153",
+   "jo": "제153조",
+   "file": "sr-153_2.webp",
+   "w": 380,
+   "h": 257,
+   "page": 85,
+   "how": "box"
+  },
+  {
+   "id": "sr-154#1",
+   "article": "sr-154",
+   "jo": "제154조",
+   "file": "sr-154_1.webp",
+   "w": 380,
+   "h": 271,
+   "page": 86,
+   "how": "box"
+  },
+  {
+   "id": "sr-155#1",
+   "article": "sr-155",
+   "jo": "제155조",
+   "file": "sr-155_1.webp",
+   "w": 380,
+   "h": 265,
+   "page": 86,
+   "how": "box"
+  },
+  {
+   "id": "sr-156#1",
+   "article": "sr-156",
+   "jo": "제156조",
+   "file": "sr-156_1.webp",
+   "w": 380,
+   "h": 336,
+   "page": 86,
+   "how": "box"
+  },
+  {
+   "id": "sr-156#2",
+   "article": "sr-156",
+   "jo": "제156조",
+   "file": "sr-156_2.webp",
+   "w": 380,
+   "h": 341,
+   "page": 86,
+   "how": "box"
+  },
+  {
+   "id": "sr-156#3",
+   "article": "sr-156",
+   "jo": "제156조",
+   "file": "sr-156_3.webp",
+   "w": 380,
+   "h": 262,
+   "page": 86,
+   "how": "box"
+  },
+  {
+   "id": "sr-160#1",
+   "article": "sr-160",
+   "jo": "제160조",
+   "file": "sr-160_1.webp",
+   "w": 380,
+   "h": 270,
+   "page": 88,
+   "how": "box"
+  },
+  {
+   "id": "sr-161#1",
+   "article": "sr-161",
+   "jo": "제161조",
+   "file": "sr-161_1.webp",
+   "w": 380,
+   "h": 243,
+   "page": 88,
+   "how": "box"
+  },
+  {
+   "id": "sr-162#1",
+   "article": "sr-162",
+   "jo": "제162조",
+   "file": "sr-162_1.webp",
+   "w": 380,
+   "h": 302,
+   "page": 88,
+   "how": "box"
+  },
+  {
+   "id": "sr-162#2",
+   "article": "sr-162",
+   "jo": "제162조",
+   "file": "sr-162_2.webp",
+   "w": 380,
+   "h": 291,
+   "page": 88,
+   "how": "box"
+  },
+  {
+   "id": "sr-162#3",
+   "article": "sr-162",
+   "jo": "제162조",
+   "file": "sr-162_3.webp",
+   "w": 380,
+   "h": 313,
+   "page": 88,
+   "how": "box"
+  },
+  {
+   "id": "sr-163#1",
+   "article": "sr-163",
+   "jo": "제163조",
+   "file": "sr-163_1.webp",
+   "w": 380,
+   "h": 161,
+   "page": 89,
+   "how": "box"
+  },
+  {
+   "id": "sr-164#1",
+   "article": "sr-164",
+   "jo": "제164조",
+   "file": "sr-164_1.webp",
+   "w": 380,
+   "h": 222,
+   "page": 90,
+   "how": "box"
+  },
+  {
+   "id": "sr-165#1",
+   "article": "sr-165",
+   "jo": "제165조",
+   "file": "sr-165_1.webp",
+   "w": 380,
+   "h": 297,
+   "page": 90,
+   "how": "box"
+  },
+  {
+   "id": "sr-166#1",
+   "article": "sr-166",
+   "jo": "제166조",
+   "file": "sr-166_1.webp",
+   "w": 380,
+   "h": 144,
+   "page": 90,
+   "how": "box"
+  },
+  {
+   "id": "sr-167#1",
+   "article": "sr-167",
+   "jo": "제167조",
+   "file": "sr-167_1.webp",
+   "w": 380,
+   "h": 134,
+   "page": 90,
+   "how": "box"
+  },
+  {
+   "id": "sr-168#1",
+   "article": "sr-168",
+   "jo": "제168조",
+   "file": "sr-168_1.webp",
+   "w": 380,
+   "h": 247,
+   "page": 91,
+   "how": "box"
+  },
+  {
+   "id": "sr-169#1",
+   "article": "sr-169",
+   "jo": "제169조",
+   "file": "sr-169_1.webp",
+   "w": 380,
+   "h": 324,
+   "page": 91,
+   "how": "box"
+  },
+  {
+   "id": "sr-170#1",
+   "article": "sr-170",
+   "jo": "제170조",
+   "file": "sr-170_1.webp",
+   "w": 380,
+   "h": 265,
+   "page": 91,
+   "how": "box"
+  },
+  {
+   "id": "sr-171#1",
+   "article": "sr-171",
+   "jo": "제171조",
+   "file": "sr-171_1.webp",
+   "w": 380,
+   "h": 231,
+   "page": 92,
+   "how": "box"
+  },
+  {
+   "id": "sr-172#1",
+   "article": "sr-172",
+   "jo": "제172조",
+   "file": "sr-172_1.webp",
+   "w": 380,
+   "h": 267,
+   "page": 92,
+   "how": "box"
+  },
+  {
+   "id": "sr-173#1",
+   "article": "sr-173",
+   "jo": "제173조",
+   "file": "sr-173_1.webp",
+   "w": 380,
+   "h": 263,
+   "page": 93,
+   "how": "box"
+  },
+  {
+   "id": "sr-173#2",
+   "article": "sr-173",
+   "jo": "제173조",
+   "file": "sr-173_2.webp",
+   "w": 380,
+   "h": 233,
+   "page": 93,
+   "how": "box"
+  },
+  {
+   "id": "sr-173#3",
+   "article": "sr-173",
+   "jo": "제173조",
+   "file": "sr-173_3.webp",
+   "w": 380,
+   "h": 310,
+   "page": 93,
+   "how": "box"
+  },
+  {
+   "id": "sr-174#1",
+   "article": "sr-174",
+   "jo": "제174조",
+   "file": "sr-174_1.webp",
+   "w": 380,
+   "h": 266,
+   "page": 93,
+   "how": "box"
+  },
+  {
+   "id": "sr-174#2",
+   "article": "sr-174",
+   "jo": "제174조",
+   "file": "sr-174_2.webp",
+   "w": 380,
+   "h": 327,
+   "page": 93,
+   "how": "box"
+  },
+  {
+   "id": "sr-175#1",
+   "article": "sr-175",
+   "jo": "제175조",
+   "file": "sr-175_1.webp",
+   "w": 380,
+   "h": 248,
+   "page": 94,
+   "how": "box"
+  },
+  {
+   "id": "sr-176#1",
+   "article": "sr-176",
+   "jo": "제176조",
+   "file": "sr-176_1.webp",
+   "w": 380,
+   "h": 188,
+   "page": 94,
+   "how": "box"
+  },
+  {
+   "id": "sr-176#2",
+   "article": "sr-176",
+   "jo": "제176조",
+   "file": "sr-176_2.webp",
+   "w": 380,
+   "h": 270,
+   "page": 94,
+   "how": "box"
+  },
+  {
+   "id": "sr-177#1",
+   "article": "sr-177",
+   "jo": "제177조",
+   "file": "sr-177_1.webp",
+   "w": 380,
+   "h": 217,
+   "page": 95,
+   "how": "box"
+  },
+  {
+   "id": "sr-177#2",
+   "article": "sr-177",
+   "jo": "제177조",
+   "file": "sr-177_2.webp",
+   "w": 380,
+   "h": 268,
+   "page": 95,
+   "how": "box"
+  },
+  {
+   "id": "sr-177#3",
+   "article": "sr-177",
+   "jo": "제177조",
+   "file": "sr-177_3.webp",
+   "w": 380,
+   "h": 278,
+   "page": 95,
+   "how": "box"
+  },
+  {
+   "id": "sr-177#4",
+   "article": "sr-177",
+   "jo": "제177조",
+   "file": "sr-177_4.webp",
+   "w": 380,
+   "h": 267,
+   "page": 95,
+   "how": "box"
+  },
+  {
+   "id": "sr-179#1",
+   "article": "sr-179",
+   "jo": "제179조",
+   "file": "sr-179_1.webp",
+   "w": 380,
+   "h": 453,
+   "page": 95,
+   "how": "box"
+  },
+  {
+   "id": "sr-180#1",
+   "article": "sr-180",
+   "jo": "제180조",
+   "file": "sr-180_1.webp",
+   "w": 380,
+   "h": 449,
+   "page": 96,
+   "how": "box"
+  },
+  {
+   "id": "sr-180#2",
+   "article": "sr-180",
+   "jo": "제180조",
+   "file": "sr-180_2.webp",
+   "w": 380,
+   "h": 420,
+   "page": 96,
+   "how": "box"
+  },
+  {
+   "id": "sr-180#3",
+   "article": "sr-180",
+   "jo": "제180조",
+   "file": "sr-180_3.webp",
+   "w": 380,
+   "h": 405,
+   "page": 96,
+   "how": "box"
+  },
+  {
+   "id": "sr-181#1",
+   "article": "sr-181",
+   "jo": "제181조",
+   "file": "sr-181_1.webp",
+   "w": 380,
+   "h": 306,
+   "page": 96,
+   "how": "box"
+  },
+  {
+   "id": "sr-182#1",
+   "article": "sr-182",
+   "jo": "제182조",
+   "file": "sr-182_1.webp",
+   "w": 380,
+   "h": 258,
+   "page": 96,
+   "how": "box"
+  },
+  {
+   "id": "sr-183#1",
+   "article": "sr-183",
+   "jo": "제183조",
+   "file": "sr-183_1.webp",
+   "w": 380,
+   "h": 292,
+   "page": 97,
+   "how": "box"
+  },
+  {
+   "id": "sr-184#1",
+   "article": "sr-184",
+   "jo": "제184조",
+   "file": "sr-184_1.webp",
+   "w": 380,
+   "h": 299,
+   "page": 97,
+   "how": "box"
+  },
+  {
+   "id": "sr-184#2",
+   "article": "sr-184",
+   "jo": "제184조",
+   "file": "sr-184_2.webp",
+   "w": 380,
+   "h": 299,
+   "page": 97,
+   "how": "box"
+  },
+  {
+   "id": "sr-184#3",
+   "article": "sr-184",
+   "jo": "제184조",
+   "file": "sr-184_3.webp",
+   "w": 380,
+   "h": 235,
+   "page": 97,
+   "how": "box"
+  },
+  {
+   "id": "sr-185#1",
+   "article": "sr-185",
+   "jo": "제185조",
+   "file": "sr-185_1.webp",
+   "w": 380,
+   "h": 299,
+   "page": 98,
+   "how": "box"
+  },
+  {
+   "id": "sr-186#1",
+   "article": "sr-186",
+   "jo": "제186조",
+   "file": "sr-186_1.webp",
+   "w": 380,
+   "h": 400,
+   "page": 98,
+   "how": "box"
+  },
+  {
+   "id": "sr-187#1",
+   "article": "sr-187",
+   "jo": "제187조",
+   "file": "sr-187_1.webp",
+   "w": 380,
+   "h": 202,
+   "page": 99,
+   "how": "box"
+  },
+  {
+   "id": "sr-188#1",
+   "article": "sr-188",
+   "jo": "제188조",
+   "file": "sr-188_1.webp",
+   "w": 380,
+   "h": 263,
+   "page": 99,
+   "how": "box"
+  },
+  {
+   "id": "sr-189#1",
+   "article": "sr-189",
+   "jo": "제189조",
+   "file": "sr-189_1.webp",
+   "w": 380,
+   "h": 201,
+   "page": 100,
+   "how": "box"
+  },
+  {
+   "id": "sr-189#2",
+   "article": "sr-189",
+   "jo": "제189조",
+   "file": "sr-189_2.webp",
+   "w": 380,
+   "h": 239,
+   "page": 100,
+   "how": "box"
+  },
+  {
+   "id": "sr-189#3",
+   "article": "sr-189",
+   "jo": "제189조",
+   "file": "sr-189_3.webp",
+   "w": 380,
+   "h": 266,
+   "page": 100,
+   "how": "box"
+  },
+  {
+   "id": "sr-189#4",
+   "article": "sr-189",
+   "jo": "제189조",
+   "file": "sr-189_4.webp",
+   "w": 380,
+   "h": 210,
+   "page": 100,
+   "how": "box"
+  },
+  {
+   "id": "sr-190#1",
+   "article": "sr-190",
+   "jo": "제190조",
+   "file": "sr-190_1.webp",
+   "w": 380,
+   "h": 241,
+   "page": 100,
+   "how": "box"
+  },
+  {
+   "id": "sr-191#1",
+   "article": "sr-191",
+   "jo": "제191조",
+   "file": "sr-191_1.webp",
+   "w": 380,
+   "h": 258,
+   "page": 100,
+   "how": "box"
+  },
+  {
+   "id": "sr-192#1",
+   "article": "sr-192",
+   "jo": "제192조",
+   "file": "sr-192_1.webp",
+   "w": 380,
+   "h": 271,
+   "page": 101,
+   "how": "box"
+  },
+  {
+   "id": "sr-193#1",
+   "article": "sr-193",
+   "jo": "제193조",
+   "file": "sr-193_1.webp",
+   "w": 380,
+   "h": 223,
+   "page": 101,
+   "how": "box"
+  },
+  {
+   "id": "sr-194#1",
+   "article": "sr-194",
+   "jo": "제194조",
+   "file": "sr-194_1.webp",
+   "w": 380,
+   "h": 260,
+   "page": 101,
+   "how": "box"
+  },
+  {
+   "id": "sr-195#1",
+   "article": "sr-195",
+   "jo": "제195조",
+   "file": "sr-195_1.webp",
+   "w": 380,
+   "h": 270,
+   "page": 101,
+   "how": "box"
+  },
+  {
+   "id": "sr-196#1",
+   "article": "sr-196",
+   "jo": "제196조",
+   "file": "sr-196_1.webp",
+   "w": 380,
+   "h": 227,
+   "page": 102,
+   "how": "box"
+  },
+  {
+   "id": "sr-197#1",
+   "article": "sr-197",
+   "jo": "제197조",
+   "file": "sr-197_1.webp",
+   "w": 380,
+   "h": 224,
+   "page": 102,
+   "how": "box"
+  },
+  {
+   "id": "sr-198#1",
+   "article": "sr-198",
+   "jo": "제198조",
+   "file": "sr-198_1.webp",
+   "w": 380,
+   "h": 195,
+   "page": 102,
+   "how": "box"
+  },
+  {
+   "id": "sr-199#1",
+   "article": "sr-199",
+   "jo": "제199조",
+   "file": "sr-199_1.webp",
+   "w": 380,
+   "h": 214,
+   "page": 102,
+   "how": "column"
+  },
+  {
+   "id": "sr-199#2",
+   "article": "sr-199",
+   "jo": "제199조",
+   "file": "sr-199_2.webp",
+   "w": 380,
+   "h": 235,
+   "page": 102,
+   "how": "box"
+  },
+  {
+   "id": "sr-201#1",
+   "article": "sr-201",
+   "jo": "제201조",
+   "file": "sr-201_1.webp",
+   "w": 380,
+   "h": 230,
+   "page": 103,
+   "how": "box"
+  },
+  {
+   "id": "sr-201#2",
+   "article": "sr-201",
+   "jo": "제201조",
+   "file": "sr-201_2.webp",
+   "w": 380,
+   "h": 226,
+   "page": 103,
+   "how": "box"
+  },
+  {
+   "id": "sr-201#3",
+   "article": "sr-201",
+   "jo": "제201조",
+   "file": "sr-201_3.webp",
+   "w": 380,
+   "h": 277,
+   "page": 103,
+   "how": "box"
+  },
+  {
+   "id": "sr-202#1",
+   "article": "sr-202",
+   "jo": "제202조",
+   "file": "sr-202_1.webp",
+   "w": 380,
+   "h": 262,
+   "page": 103,
+   "how": "box"
+  },
+  {
+   "id": "sr-203#1",
+   "article": "sr-203",
+   "jo": "제203조",
+   "file": "sr-203_1.webp",
+   "w": 380,
+   "h": 239,
+   "page": 103,
+   "how": "box"
+  },
+  {
+   "id": "sr-204#1",
+   "article": "sr-204",
+   "jo": "제204조",
+   "file": "sr-204_1.webp",
+   "w": 380,
+   "h": 211,
+   "page": 103,
+   "how": "box"
+  },
+  {
+   "id": "sr-205#1",
+   "article": "sr-205",
+   "jo": "제205조",
+   "file": "sr-205_1.webp",
+   "w": 380,
+   "h": 237,
+   "page": 104,
+   "how": "box"
+  },
+  {
+   "id": "sr-206#1",
+   "article": "sr-206",
+   "jo": "제206조",
+   "file": "sr-206_1.webp",
+   "w": 380,
+   "h": 171,
+   "page": 104,
+   "how": "box"
+  },
+  {
+   "id": "sr-207#1",
+   "article": "sr-207",
+   "jo": "제207조",
+   "file": "sr-207_1.webp",
+   "w": 380,
+   "h": 211,
+   "page": 104,
+   "how": "box"
+  },
+  {
+   "id": "sr-207#2",
+   "article": "sr-207",
+   "jo": "제207조",
+   "file": "sr-207_2.webp",
+   "w": 380,
+   "h": 212,
+   "page": 104,
+   "how": "box"
+  },
+  {
+   "id": "sr-207#3",
+   "article": "sr-207",
+   "jo": "제207조",
+   "file": "sr-207_3.webp",
+   "w": 380,
+   "h": 196,
+   "page": 104,
+   "how": "box"
+  },
+  {
+   "id": "sr-207#4",
+   "article": "sr-207",
+   "jo": "제207조",
+   "file": "sr-207_4.webp",
+   "w": 380,
+   "h": 272,
+   "page": 104,
+   "how": "box"
+  },
+  {
+   "id": "sr-209#1",
+   "article": "sr-209",
+   "jo": "제209조",
+   "file": "sr-209_1.webp",
+   "w": 380,
+   "h": 302,
+   "page": 105,
+   "how": "box"
+  },
+  {
+   "id": "sr-209#2",
+   "article": "sr-209",
+   "jo": "제209조",
+   "file": "sr-209_2.webp",
+   "w": 380,
+   "h": 235,
+   "page": 105,
+   "how": "box"
+  },
+  {
+   "id": "sr-210#1",
+   "article": "sr-210",
+   "jo": "제210조",
+   "file": "sr-210_1.webp",
+   "w": 380,
+   "h": 298,
+   "page": 105,
+   "how": "box"
+  },
+  {
+   "id": "sr-211#1",
+   "article": "sr-211",
+   "jo": "제211조",
+   "file": "sr-211_1.webp",
+   "w": 368,
+   "h": 455,
+   "page": 106,
+   "how": "box"
+  },
+  {
+   "id": "sr-212#1",
+   "article": "sr-212",
+   "jo": "제212조",
+   "file": "sr-212_1.webp",
+   "w": 380,
+   "h": 280,
+   "page": 106,
+   "how": "box"
+  },
+  {
+   "id": "sr-212#2",
+   "article": "sr-212",
+   "jo": "제212조",
+   "file": "sr-212_2.webp",
+   "w": 380,
+   "h": 326,
+   "page": 106,
+   "how": "box"
+  },
+  {
+   "id": "sr-212#3",
+   "article": "sr-212",
+   "jo": "제212조",
+   "file": "sr-212_3.webp",
+   "w": 380,
+   "h": 422,
+   "page": 106,
+   "how": "box"
+  },
+  {
+   "id": "sr-213#1",
+   "article": "sr-213",
+   "jo": "제213조",
+   "file": "sr-213_1.webp",
+   "w": 380,
+   "h": 407,
+   "page": 107,
+   "how": "box"
+  },
+  {
+   "id": "sr-216#1",
+   "article": "sr-216",
+   "jo": "제216조",
+   "file": "sr-216_1.webp",
+   "w": 380,
+   "h": 268,
+   "page": 107,
+   "how": "box"
+  },
+  {
+   "id": "sr-216#2",
+   "article": "sr-216",
+   "jo": "제216조",
+   "file": "sr-216_2.webp",
+   "w": 380,
+   "h": 458,
+   "page": 107,
+   "how": "box"
+  },
+  {
+   "id": "sr-217#1",
+   "article": "sr-217",
+   "jo": "제217조",
+   "file": "sr-217_1.webp",
+   "w": 380,
+   "h": 258,
+   "page": 108,
+   "how": "box"
+  },
+  {
+   "id": "sr-217#2",
+   "article": "sr-217",
+   "jo": "제217조",
+   "file": "sr-217_2.webp",
+   "w": 380,
+   "h": 230,
+   "page": 108,
+   "how": "box"
+  },
+  {
+   "id": "sr-217#3",
+   "article": "sr-217",
+   "jo": "제217조",
+   "file": "sr-217_3.webp",
+   "w": 380,
+   "h": 292,
+   "page": 108,
+   "how": "box"
+  },
+  {
+   "id": "sr-217#4",
+   "article": "sr-217",
+   "jo": "제217조",
+   "file": "sr-217_4.webp",
+   "w": 380,
+   "h": 241,
+   "page": 108,
+   "how": "box"
+  },
+  {
+   "id": "sr-221#1",
+   "article": "sr-221",
+   "jo": "제221조",
+   "file": "sr-221_1.webp",
+   "w": 380,
+   "h": 241,
+   "page": 109,
+   "how": "box"
+  },
+  {
+   "id": "sr-221-2#1",
+   "article": "sr-221-2",
+   "jo": "제221조의2",
+   "file": "sr-221-2_1.webp",
+   "w": 380,
+   "h": 228,
+   "page": 109,
+   "how": "box"
+  },
+  {
+   "id": "sr-221-3#1",
+   "article": "sr-221-3",
+   "jo": "제221조의3",
+   "file": "sr-221-3_1.webp",
+   "w": 380,
+   "h": 459,
+   "page": 109,
+   "how": "box"
+  },
+  {
+   "id": "sr-221-4#1",
+   "article": "sr-221-4",
+   "jo": "제221조의4",
+   "file": "sr-221-4_1.webp",
+   "w": 228,
+   "h": 379,
+   "page": 110,
+   "how": "box"
+  },
+  {
+   "id": "sr-221-4#2",
+   "article": "sr-221-4",
+   "jo": "제221조의4",
+   "file": "sr-221-4_2.webp",
+   "w": 319,
+   "h": 222,
+   "page": 110,
+   "how": "box"
+  },
+  {
+   "id": "sr-221-5#1",
+   "article": "sr-221-5",
+   "jo": "제221조의5",
+   "file": "sr-221-5_1.webp",
+   "w": 380,
+   "h": 269,
+   "page": 110,
+   "how": "box"
+  },
+  {
+   "id": "sr-222#1",
+   "article": "sr-222",
+   "jo": "제222조",
+   "file": "sr-222_1.webp",
+   "w": 380,
+   "h": 275,
+   "page": 111,
+   "how": "box"
+  },
+  {
+   "id": "sr-222#2",
+   "article": "sr-222",
+   "jo": "제222조",
+   "file": "sr-222_2.webp",
+   "w": 380,
+   "h": 288,
+   "page": 111,
+   "how": "box"
+  },
+  {
+   "id": "sr-222#3",
+   "article": "sr-222",
+   "jo": "제222조",
+   "file": "sr-222_3.webp",
+   "w": 380,
+   "h": 196,
+   "page": 111,
+   "how": "box"
+  },
+  {
+   "id": "sr-223#1",
+   "article": "sr-223",
+   "jo": "제223조",
+   "file": "sr-223_1.webp",
+   "w": 380,
+   "h": 243,
+   "page": 112,
+   "how": "box"
+  },
+  {
+   "id": "sr-224#1",
+   "article": "sr-224",
+   "jo": "제224조",
+   "file": "sr-224_1.webp",
+   "w": 380,
+   "h": 298,
+   "page": 112,
+   "how": "box"
+  },
+  {
+   "id": "sr-225#1",
+   "article": "sr-225",
+   "jo": "제225조",
+   "file": "sr-225_1.webp",
+   "w": 380,
+   "h": 191,
+   "page": 114,
+   "how": "box"
+  },
+  {
+   "id": "sr-225#2",
+   "article": "sr-225",
+   "jo": "제225조",
+   "file": "sr-225_2.webp",
+   "w": 380,
+   "h": 439,
+   "page": 114,
+   "how": "box"
+  },
+  {
+   "id": "sr-225#3",
+   "article": "sr-225",
+   "jo": "제225조",
+   "file": "sr-225_3.webp",
+   "w": 380,
+   "h": 301,
+   "page": 114,
+   "how": "box"
+  },
+  {
+   "id": "sr-225#4",
+   "article": "sr-225",
+   "jo": "제225조",
+   "file": "sr-225_4.webp",
+   "w": 380,
+   "h": 305,
+   "page": 114,
+   "how": "box"
+  },
+  {
+   "id": "sr-225#5",
+   "article": "sr-225",
+   "jo": "제225조",
+   "file": "sr-225_5.webp",
+   "w": 380,
+   "h": 223,
+   "page": 114,
+   "how": "box"
+  },
+  {
+   "id": "sr-225#6",
+   "article": "sr-225",
+   "jo": "제225조",
+   "file": "sr-225_6.webp",
+   "w": 380,
+   "h": 231,
+   "page": 114,
+   "how": "box"
+  },
+  {
+   "id": "sr-225#7",
+   "article": "sr-225",
+   "jo": "제225조",
+   "file": "sr-225_7.webp",
+   "w": 380,
+   "h": 350,
+   "page": 114,
+   "how": "box"
+  },
+  {
+   "id": "sr-226#1",
+   "article": "sr-226",
+   "jo": "제226조",
+   "file": "sr-226_1.webp",
+   "w": 380,
+   "h": 238,
+   "page": 115,
+   "how": "box"
+  },
+  {
+   "id": "sr-226#2",
+   "article": "sr-226",
+   "jo": "제226조",
+   "file": "sr-226_2.webp",
+   "w": 380,
+   "h": 170,
+   "page": 115,
+   "how": "above"
+  },
+  {
+   "id": "sr-228#1",
+   "article": "sr-228",
+   "jo": "제228조",
+   "file": "sr-228_1.webp",
+   "w": 380,
+   "h": 186,
+   "page": 115,
+   "how": "box"
+  },
+  {
+   "id": "sr-231#1",
+   "article": "sr-231",
+   "jo": "제231조",
+   "file": "sr-231_1.webp",
+   "w": 380,
+   "h": 232,
+   "page": 116,
+   "how": "box"
+  },
+  {
+   "id": "sr-231#2",
+   "article": "sr-231",
+   "jo": "제231조",
+   "file": "sr-231_2.webp",
+   "w": 380,
+   "h": 226,
+   "page": 116,
+   "how": "box"
+  },
+  {
+   "id": "sr-231#3",
+   "article": "sr-231",
+   "jo": "제231조",
+   "file": "sr-231_3.webp",
+   "w": 380,
+   "h": 217,
+   "page": 116,
+   "how": "box"
+  },
+  {
+   "id": "sr-232#1",
+   "article": "sr-232",
+   "jo": "제232조",
+   "file": "sr-232_1.webp",
+   "w": 380,
+   "h": 263,
+   "page": 117,
+   "how": "box"
+  },
+  {
+   "id": "sr-233#1",
+   "article": "sr-233",
+   "jo": "제233조",
+   "file": "sr-233_1.webp",
+   "w": 380,
+   "h": 190,
+   "page": 117,
+   "how": "box"
+  },
+  {
+   "id": "sr-233#2",
+   "article": "sr-233",
+   "jo": "제233조",
+   "file": "sr-233_2.webp",
+   "w": 380,
+   "h": 206,
+   "page": 117,
+   "how": "box"
+  },
+  {
+   "id": "sr-233#3",
+   "article": "sr-233",
+   "jo": "제233조",
+   "file": "sr-233_3.webp",
+   "w": 380,
+   "h": 192,
+   "page": 117,
+   "how": "box"
+  },
+  {
+   "id": "sr-233#4",
+   "article": "sr-233",
+   "jo": "제233조",
+   "file": "sr-233_4.webp",
+   "w": 380,
+   "h": 231,
+   "page": 117,
+   "how": "box"
+  },
+  {
+   "id": "sr-234#1",
+   "article": "sr-234",
+   "jo": "제234조",
+   "file": "sr-234_1.webp",
+   "w": 380,
+   "h": 379,
+   "page": 118,
+   "how": "box"
+  },
+  {
+   "id": "sr-234#2",
+   "article": "sr-234",
+   "jo": "제234조",
+   "file": "sr-234_2.webp",
+   "w": 380,
+   "h": 179,
+   "page": 118,
+   "how": "box"
+  },
+  {
+   "id": "sr-234#3",
+   "article": "sr-234",
+   "jo": "제234조",
+   "file": "sr-234_3.webp",
+   "w": 380,
+   "h": 202,
+   "page": 118,
+   "how": "box"
+  },
+  {
+   "id": "sr-234#4",
+   "article": "sr-234",
+   "jo": "제234조",
+   "file": "sr-234_4.webp",
+   "w": 380,
+   "h": 269,
+   "page": 118,
+   "how": "box"
+  },
+  {
+   "id": "sr-234#5",
+   "article": "sr-234",
+   "jo": "제234조",
+   "file": "sr-234_5.webp",
+   "w": 380,
+   "h": 238,
+   "page": 118,
+   "how": "box"
+  },
+  {
+   "id": "sr-234#6",
+   "article": "sr-234",
+   "jo": "제234조",
+   "file": "sr-234_6.webp",
+   "w": 380,
+   "h": 254,
+   "page": 118,
+   "how": "box"
+  },
+  {
+   "id": "sr-234#7",
+   "article": "sr-234",
+   "jo": "제234조",
+   "file": "sr-234_7.webp",
+   "w": 380,
+   "h": 281,
+   "page": 118,
+   "how": "box"
+  },
+  {
+   "id": "sr-235#1",
+   "article": "sr-235",
+   "jo": "제235조",
+   "file": "sr-235_1.webp",
+   "w": 380,
+   "h": 191,
+   "page": 119,
+   "how": "column"
+  },
+  {
+   "id": "sr-237#1",
+   "article": "sr-237",
+   "jo": "제237조",
+   "file": "sr-237_1.webp",
+   "w": 380,
+   "h": 206,
+   "page": 119,
+   "how": "column"
+  },
+  {
+   "id": "sr-238#1",
+   "article": "sr-238",
+   "jo": "제238조",
+   "file": "sr-238_1.webp",
+   "w": 269,
+   "h": 271,
+   "page": 120,
+   "how": "above"
+  },
+  {
+   "id": "sr-239#1",
+   "article": "sr-239",
+   "jo": "제239조",
+   "file": "sr-239_1.webp",
+   "w": 380,
+   "h": 202,
+   "page": 120,
+   "how": "column"
+  },
+  {
+   "id": "sr-240#1",
+   "article": "sr-240",
+   "jo": "제240조",
+   "file": "sr-240_1.webp",
+   "w": 380,
+   "h": 219,
+   "page": 120,
+   "how": "box"
+  },
+  {
+   "id": "sr-241#1",
+   "article": "sr-241",
+   "jo": "제241조",
+   "file": "sr-241_1.webp",
+   "w": 380,
+   "h": 258,
+   "page": 120,
+   "how": "box"
+  },
+  {
+   "id": "sr-241#2",
+   "article": "sr-241",
+   "jo": "제241조",
+   "file": "sr-241_2.webp",
+   "w": 380,
+   "h": 361,
+   "page": 120,
+   "how": "box"
+  },
+  {
+   "id": "sr-241#3",
+   "article": "sr-241",
+   "jo": "제241조",
+   "file": "sr-241_3.webp",
+   "w": 380,
+   "h": 217,
+   "page": 120,
+   "how": "box"
+  },
+  {
+   "id": "sr-241-2#1",
+   "article": "sr-241-2",
+   "jo": "제241조의2",
+   "file": "sr-241-2_1.webp",
+   "w": 380,
+   "h": 361,
+   "page": 121,
+   "how": "box"
+  },
+  {
+   "id": "sr-243#1",
+   "article": "sr-243",
+   "jo": "제243조",
+   "file": "sr-243_1.webp",
+   "w": 380,
+   "h": 113,
+   "page": 122,
+   "how": "box"
+  },
+  {
+   "id": "sr-244#1",
+   "article": "sr-244",
+   "jo": "제244조",
+   "file": "sr-244_1.webp",
+   "w": 380,
+   "h": 209,
+   "page": 122,
+   "how": "box"
+  },
+  {
+   "id": "sr-245#1",
+   "article": "sr-245",
+   "jo": "제245조",
+   "file": "sr-245_1.webp",
+   "w": 380,
+   "h": 249,
+   "page": 122,
+   "how": "box"
+  },
+  {
+   "id": "sr-245#2",
+   "article": "sr-245",
+   "jo": "제245조",
+   "file": "sr-245_2.webp",
+   "w": 380,
+   "h": 273,
+   "page": 122,
+   "how": "box"
+  },
+  {
+   "id": "sr-246#1",
+   "article": "sr-246",
+   "jo": "제246조",
+   "file": "sr-246_1.webp",
+   "w": 380,
+   "h": 253,
+   "page": 122,
+   "how": "box"
+  },
+  {
+   "id": "sr-247#1",
+   "article": "sr-247",
+   "jo": "제247조",
+   "file": "sr-247_1.webp",
+   "w": 380,
+   "h": 279,
+   "page": 123,
+   "how": "box"
+  },
+  {
+   "id": "sr-248#1",
+   "article": "sr-248",
+   "jo": "제248조",
+   "file": "sr-248_1.webp",
+   "w": 380,
+   "h": 156,
+   "page": 123,
+   "how": "box"
+  },
+  {
+   "id": "sr-249#1",
+   "article": "sr-249",
+   "jo": "제249조",
+   "file": "sr-249_1.webp",
+   "w": 380,
+   "h": 122,
+   "page": 123,
+   "how": "box"
+  },
+  {
+   "id": "sr-250#1",
+   "article": "sr-250",
+   "jo": "제250조",
+   "file": "sr-250_1.webp",
+   "w": 380,
+   "h": 243,
+   "page": 123,
+   "how": "box"
+  },
+  {
+   "id": "sr-251#1",
+   "article": "sr-251",
+   "jo": "제251조",
+   "file": "sr-251_1.webp",
+   "w": 380,
+   "h": 336,
+   "page": 124,
+   "how": "box"
+  },
+  {
+   "id": "sr-252#1",
+   "article": "sr-252",
+   "jo": "제252조",
+   "file": "sr-252_1.webp",
+   "w": 380,
+   "h": 227,
+   "page": 124,
+   "how": "box"
+  },
+  {
+   "id": "sr-253#1",
+   "article": "sr-253",
+   "jo": "제253조",
+   "file": "sr-253_1.webp",
+   "w": 380,
+   "h": 230,
+   "page": 124,
+   "how": "box"
+  },
+  {
+   "id": "sr-254#1",
+   "article": "sr-254",
+   "jo": "제254조",
+   "file": "sr-254_1.webp",
+   "w": 380,
+   "h": 191,
+   "page": 124,
+   "how": "box"
+  },
+  {
+   "id": "sr-255#1",
+   "article": "sr-255",
+   "jo": "제255조",
+   "file": "sr-255_1.webp",
+   "w": 380,
+   "h": 221,
+   "page": 125,
+   "how": "box"
+  },
+  {
+   "id": "sr-256#1",
+   "article": "sr-256",
+   "jo": "제256조",
+   "file": "sr-256_1.webp",
+   "w": 380,
+   "h": 181,
+   "page": 125,
+   "how": "box"
+  },
+  {
+   "id": "sr-257#1",
+   "article": "sr-257",
+   "jo": "제257조",
+   "file": "sr-257_1.webp",
+   "w": 380,
+   "h": 264,
+   "page": 125,
+   "how": "box"
+  },
+  {
+   "id": "sr-258#1",
+   "article": "sr-258",
+   "jo": "제258조",
+   "file": "sr-258_1.webp",
+   "w": 380,
+   "h": 300,
+   "page": 125,
+   "how": "box"
+  },
+  {
+   "id": "sr-259#1",
+   "article": "sr-259",
+   "jo": "제259조",
+   "file": "sr-259_1.webp",
+   "w": 380,
+   "h": 299,
+   "page": 126,
+   "how": "box"
+  },
+  {
+   "id": "sr-260#1",
+   "article": "sr-260",
+   "jo": "제260조",
+   "file": "sr-260_1.webp",
+   "w": 380,
+   "h": 214,
+   "page": 126,
+   "how": "box"
+  },
+  {
+   "id": "sr-261#1",
+   "article": "sr-261",
+   "jo": "제261조",
+   "file": "sr-261_1.webp",
+   "w": 380,
+   "h": 267,
+   "page": 126,
+   "how": "box"
+  },
+  {
+   "id": "sr-261#2",
+   "article": "sr-261",
+   "jo": "제261조",
+   "file": "sr-261_2.webp",
+   "w": 380,
+   "h": 398,
+   "page": 126,
+   "how": "box"
+  },
+  {
+   "id": "sr-261#3",
+   "article": "sr-261",
+   "jo": "제261조",
+   "file": "sr-261_3.webp",
+   "w": 359,
+   "h": 351,
+   "page": 126,
+   "how": "box"
+  },
+  {
+   "id": "sr-261#4",
+   "article": "sr-261",
+   "jo": "제261조",
+   "file": "sr-261_4.webp",
+   "w": 380,
+   "h": 367,
+   "page": 126,
+   "how": "box"
+  },
+  {
+   "id": "sr-262#1",
+   "article": "sr-262",
+   "jo": "제262조",
+   "file": "sr-262_1.webp",
+   "w": 380,
+   "h": 254,
+   "page": 127,
+   "how": "box"
+  },
+  {
+   "id": "sr-262#2",
+   "article": "sr-262",
+   "jo": "제262조",
+   "file": "sr-262_2.webp",
+   "w": 380,
+   "h": 236,
+   "page": 127,
+   "how": "box"
+  },
+  {
+   "id": "sr-262#3",
+   "article": "sr-262",
+   "jo": "제262조",
+   "file": "sr-262_3.webp",
+   "w": 380,
+   "h": 248,
+   "page": 127,
+   "how": "box"
+  },
+  {
+   "id": "sr-263#1",
+   "article": "sr-263",
+   "jo": "제263조",
+   "file": "sr-263_1.webp",
+   "w": 380,
+   "h": 211,
+   "page": 128,
+   "how": "box"
+  },
+  {
+   "id": "sr-264#1",
+   "article": "sr-264",
+   "jo": "제264조",
+   "file": "sr-264_1.webp",
+   "w": 380,
+   "h": 242,
+   "page": 128,
+   "how": "column"
+  },
+  {
+   "id": "sr-264#2",
+   "article": "sr-264",
+   "jo": "제264조",
+   "file": "sr-264_2.webp",
+   "w": 380,
+   "h": 185,
+   "page": 128,
+   "how": "box"
+  },
+  {
+   "id": "sr-266#1",
+   "article": "sr-266",
+   "jo": "제266조",
+   "file": "sr-266_1.webp",
+   "w": 380,
+   "h": 357,
+   "page": 128,
+   "how": "box"
+  },
+  {
+   "id": "sr-266#2",
+   "article": "sr-266",
+   "jo": "제266조",
+   "file": "sr-266_2.webp",
+   "w": 380,
+   "h": 315,
+   "page": 128,
+   "how": "box"
+  },
+  {
+   "id": "sr-266#3",
+   "article": "sr-266",
+   "jo": "제266조",
+   "file": "sr-266_3.webp",
+   "w": 380,
+   "h": 241,
+   "page": 128,
+   "how": "box"
+  },
+  {
+   "id": "sr-266#4",
+   "article": "sr-266",
+   "jo": "제266조",
+   "file": "sr-266_4.webp",
+   "w": 380,
+   "h": 221,
+   "page": 128,
+   "how": "box"
+  },
+  {
+   "id": "sr-266#5",
+   "article": "sr-266",
+   "jo": "제266조",
+   "file": "sr-266_5.webp",
+   "w": 380,
+   "h": 248,
+   "page": 128,
+   "how": "box"
+  },
+  {
+   "id": "sr-267#1",
+   "article": "sr-267",
+   "jo": "제267조",
+   "file": "sr-267_1.webp",
+   "w": 380,
+   "h": 274,
+   "page": 129,
+   "how": "box"
+  },
+  {
+   "id": "sr-267#2",
+   "article": "sr-267",
+   "jo": "제267조",
+   "file": "sr-267_2.webp",
+   "w": 380,
+   "h": 243,
+   "page": 129,
+   "how": "box"
+  },
+  {
+   "id": "sr-267#3",
+   "article": "sr-267",
+   "jo": "제267조",
+   "file": "sr-267_3.webp",
+   "w": 380,
+   "h": 291,
+   "page": 129,
+   "how": "box"
+  },
+  {
+   "id": "sr-268#1",
+   "article": "sr-268",
+   "jo": "제268조",
+   "file": "sr-268_1.webp",
+   "w": 380,
+   "h": 238,
+   "page": 130,
+   "how": "box"
+  },
+  {
+   "id": "sr-268#2",
+   "article": "sr-268",
+   "jo": "제268조",
+   "file": "sr-268_2.webp",
+   "w": 380,
+   "h": 286,
+   "page": 130,
+   "how": "box"
+  },
+  {
+   "id": "sr-269#1",
+   "article": "sr-269",
+   "jo": "제269조",
+   "file": "sr-269_1.webp",
+   "w": 380,
+   "h": 241,
+   "page": 130,
+   "how": "box"
+  },
+  {
+   "id": "sr-270#1",
+   "article": "sr-270",
+   "jo": "제270조",
+   "file": "sr-270_1.webp",
+   "w": 380,
+   "h": 255,
+   "page": 130,
+   "how": "box"
+  },
+  {
+   "id": "sr-271#1",
+   "article": "sr-271",
+   "jo": "제271조",
+   "file": "sr-271_1.webp",
+   "w": 380,
+   "h": 168,
+   "page": 131,
+   "how": "box"
+  },
+  {
+   "id": "sr-272#1",
+   "article": "sr-272",
+   "jo": "제272조",
+   "file": "sr-272_1.webp",
+   "w": 380,
+   "h": 195,
+   "page": 131,
+   "how": "box"
+  },
+  {
+   "id": "sr-273#1",
+   "article": "sr-273",
+   "jo": "제273조",
+   "file": "sr-273_1.webp",
+   "w": 380,
+   "h": 303,
+   "page": 131,
+   "how": "box"
+  },
+  {
+   "id": "sr-274#1",
+   "article": "sr-274",
+   "jo": "제274조",
+   "file": "sr-274_1.webp",
+   "w": 380,
+   "h": 222,
+   "page": 132,
+   "how": "box"
+  },
+  {
+   "id": "sr-275#1",
+   "article": "sr-275",
+   "jo": "제275조",
+   "file": "sr-275_1.webp",
+   "w": 380,
+   "h": 186,
+   "page": 132,
+   "how": "box"
+  },
+  {
+   "id": "sr-276#1",
+   "article": "sr-276",
+   "jo": "제276조",
+   "file": "sr-276_1.webp",
+   "w": 380,
+   "h": 254,
+   "page": 132,
+   "how": "box"
+  },
+  {
+   "id": "sr-278#1",
+   "article": "sr-278",
+   "jo": "제278조",
+   "file": "sr-278_1.webp",
+   "w": 380,
+   "h": 278,
+   "page": 133,
+   "how": "box"
+  },
+  {
+   "id": "sr-278#2",
+   "article": "sr-278",
+   "jo": "제278조",
+   "file": "sr-278_2.webp",
+   "w": 380,
+   "h": 258,
+   "page": 133,
+   "how": "box"
+  },
+  {
+   "id": "sr-279#1",
+   "article": "sr-279",
+   "jo": "제279조",
+   "file": "sr-279_1.webp",
+   "w": 380,
+   "h": 357,
+   "page": 133,
+   "how": "box"
+  },
+  {
+   "id": "sr-279#2",
+   "article": "sr-279",
+   "jo": "제279조",
+   "file": "sr-279_2.webp",
+   "w": 380,
+   "h": 287,
+   "page": 133,
+   "how": "box"
+  },
+  {
+   "id": "sr-280#1",
+   "article": "sr-280",
+   "jo": "제280조",
+   "file": "sr-280_1.webp",
+   "w": 380,
+   "h": 267,
+   "page": 134,
+   "how": "box"
+  },
+  {
+   "id": "sr-280#2",
+   "article": "sr-280",
+   "jo": "제280조",
+   "file": "sr-280_2.webp",
+   "w": 380,
+   "h": 304,
+   "page": 134,
+   "how": "box"
+  },
+  {
+   "id": "sr-280#3",
+   "article": "sr-280",
+   "jo": "제280조",
+   "file": "sr-280_3.webp",
+   "w": 380,
+   "h": 294,
+   "page": 134,
+   "how": "box"
+  },
+  {
+   "id": "sr-281#1",
+   "article": "sr-281",
+   "jo": "제281조",
+   "file": "sr-281_1.webp",
+   "w": 380,
+   "h": 159,
+   "page": 134,
+   "how": "box"
+  },
+  {
+   "id": "sr-282#1",
+   "article": "sr-282",
+   "jo": "제282조",
+   "file": "sr-282_1.webp",
+   "w": 380,
+   "h": 152,
+   "page": 136,
+   "how": "box"
+  },
+  {
+   "id": "sr-283#1",
+   "article": "sr-283",
+   "jo": "제283조",
+   "file": "sr-283_1.webp",
+   "w": 380,
+   "h": 198,
+   "page": 136,
+   "how": "box"
+  },
+  {
+   "id": "sr-283#2",
+   "article": "sr-283",
+   "jo": "제283조",
+   "file": "sr-283_2.webp",
+   "w": 380,
+   "h": 345,
+   "page": 136,
+   "how": "box"
+  },
+  {
+   "id": "sr-283#3",
+   "article": "sr-283",
+   "jo": "제283조",
+   "file": "sr-283_3.webp",
+   "w": 380,
+   "h": 324,
+   "page": 136,
+   "how": "box"
+  },
+  {
+   "id": "sr-283#4",
+   "article": "sr-283",
+   "jo": "제283조",
+   "file": "sr-283_4.webp",
+   "w": 380,
+   "h": 143,
+   "page": 136,
+   "how": "box"
+  },
+  {
+   "id": "sr-283#5",
+   "article": "sr-283",
+   "jo": "제283조",
+   "file": "sr-283_5.webp",
+   "w": 380,
+   "h": 209,
+   "page": 136,
+   "how": "box"
+  },
+  {
+   "id": "sr-284#1",
+   "article": "sr-284",
+   "jo": "제284조",
+   "file": "sr-284_1.webp",
+   "w": 380,
+   "h": 214,
+   "page": 137,
+   "how": "box"
+  },
+  {
+   "id": "sr-285#1",
+   "article": "sr-285",
+   "jo": "제285조",
+   "file": "sr-285_1.webp",
+   "w": 380,
+   "h": 200,
+   "page": 137,
+   "how": "box"
+  },
+  {
+   "id": "sr-286#1",
+   "article": "sr-286",
+   "jo": "제286조",
+   "file": "sr-286_1.webp",
+   "w": 380,
+   "h": 274,
+   "page": 137,
+   "how": "box"
+  },
+  {
+   "id": "sr-286#2",
+   "article": "sr-286",
+   "jo": "제286조",
+   "file": "sr-286_2.webp",
+   "w": 380,
+   "h": 412,
+   "page": 137,
+   "how": "box"
+  },
+  {
+   "id": "sr-287#1",
+   "article": "sr-287",
+   "jo": "제287조",
+   "file": "sr-287_1.webp",
+   "w": 380,
+   "h": 227,
+   "page": 138,
+   "how": "box"
+  },
+  {
+   "id": "sr-287#2",
+   "article": "sr-287",
+   "jo": "제287조",
+   "file": "sr-287_2.webp",
+   "w": 380,
+   "h": 253,
+   "page": 138,
+   "how": "box"
+  },
+  {
+   "id": "sr-287#3",
+   "article": "sr-287",
+   "jo": "제287조",
+   "file": "sr-287_3.webp",
+   "w": 380,
+   "h": 231,
+   "page": 138,
+   "how": "box"
+  },
+  {
+   "id": "sr-287#4",
+   "article": "sr-287",
+   "jo": "제287조",
+   "file": "sr-287_4.webp",
+   "w": 380,
+   "h": 211,
+   "page": 138,
+   "how": "box"
+  },
+  {
+   "id": "sr-287#5",
+   "article": "sr-287",
+   "jo": "제287조",
+   "file": "sr-287_5.webp",
+   "w": 380,
+   "h": 316,
+   "page": 138,
+   "how": "box"
+  },
+  {
+   "id": "sr-288#1",
+   "article": "sr-288",
+   "jo": "제288조",
+   "file": "sr-288_1.webp",
+   "w": 380,
+   "h": 235,
+   "page": 138,
+   "how": "box"
+  },
+  {
+   "id": "sr-289#1",
+   "article": "sr-289",
+   "jo": "제289조",
+   "file": "sr-289_1.webp",
+   "w": 380,
+   "h": 232,
+   "page": 138,
+   "how": "box"
+  },
+  {
+   "id": "sr-289#2",
+   "article": "sr-289",
+   "jo": "제289조",
+   "file": "sr-289_2.webp",
+   "w": 380,
+   "h": 265,
+   "page": 138,
+   "how": "box"
+  },
+  {
+   "id": "sr-290#1",
+   "article": "sr-290",
+   "jo": "제290조",
+   "file": "sr-290_1.webp",
+   "w": 380,
+   "h": 317,
+   "page": 139,
+   "how": "box"
+  },
+  {
+   "id": "sr-290#2",
+   "article": "sr-290",
+   "jo": "제290조",
+   "file": "sr-290_2.webp",
+   "w": 379,
+   "h": 367,
+   "page": 139,
+   "how": "box"
+  },
+  {
+   "id": "sr-290#3",
+   "article": "sr-290",
+   "jo": "제290조",
+   "file": "sr-290_3.webp",
+   "w": 380,
+   "h": 259,
+   "page": 139,
+   "how": "box"
+  },
+  {
+   "id": "sr-290#4",
+   "article": "sr-290",
+   "jo": "제290조",
+   "file": "sr-290_4.webp",
+   "w": 380,
+   "h": 246,
+   "page": 139,
+   "how": "box"
+  },
+  {
+   "id": "sr-290#5",
+   "article": "sr-290",
+   "jo": "제290조",
+   "file": "sr-290_5.webp",
+   "w": 380,
+   "h": 419,
+   "page": 139,
+   "how": "box"
+  },
+  {
+   "id": "sr-290#6",
+   "article": "sr-290",
+   "jo": "제290조",
+   "file": "sr-290_6.webp",
+   "w": 380,
+   "h": 419,
+   "page": 139,
+   "how": "box"
+  },
+  {
+   "id": "sr-291#1",
+   "article": "sr-291",
+   "jo": "제291조",
+   "file": "sr-291_1.webp",
+   "w": 380,
+   "h": 325,
+   "page": 139,
+   "how": "box"
+  },
+  {
+   "id": "sr-292#1",
+   "article": "sr-292",
+   "jo": "제292조",
+   "file": "sr-292_1.webp",
+   "w": 380,
+   "h": 308,
+   "page": 140,
+   "how": "box"
+  },
+  {
+   "id": "sr-292#2",
+   "article": "sr-292",
+   "jo": "제292조",
+   "file": "sr-292_2.webp",
+   "w": 380,
+   "h": 316,
+   "page": 140,
+   "how": "box"
+  },
+  {
+   "id": "sr-292#3",
+   "article": "sr-292",
+   "jo": "제292조",
+   "file": "sr-292_3.webp",
+   "w": 380,
+   "h": 297,
+   "page": 140,
+   "how": "box"
+  },
+  {
+   "id": "sr-293#1",
+   "article": "sr-293",
+   "jo": "제293조",
+   "file": "sr-293_1.webp",
+   "w": 380,
+   "h": 239,
+   "page": 140,
+   "how": "box"
+  },
+  {
+   "id": "sr-294#1",
+   "article": "sr-294",
+   "jo": "제294조",
+   "file": "sr-294_1.webp",
+   "w": 380,
+   "h": 195,
+   "page": 140,
+   "how": "box"
+  },
+  {
+   "id": "sr-295#1",
+   "article": "sr-295",
+   "jo": "제295조",
+   "file": "sr-295_1.webp",
+   "w": 380,
+   "h": 241,
+   "page": 141,
+   "how": "box"
+  },
+  {
+   "id": "sr-295#2",
+   "article": "sr-295",
+   "jo": "제295조",
+   "file": "sr-295_2.webp",
+   "w": 380,
+   "h": 379,
+   "page": 141,
+   "how": "box"
+  },
+  {
+   "id": "sr-295#3",
+   "article": "sr-295",
+   "jo": "제295조",
+   "file": "sr-295_3.webp",
+   "w": 380,
+   "h": 325,
+   "page": 141,
+   "how": "box"
+  },
+  {
+   "id": "sr-295#4",
+   "article": "sr-295",
+   "jo": "제295조",
+   "file": "sr-295_4.webp",
+   "w": 380,
+   "h": 273,
+   "page": 141,
+   "how": "box"
+  },
+  {
+   "id": "sr-295#5",
+   "article": "sr-295",
+   "jo": "제295조",
+   "file": "sr-295_5.webp",
+   "w": 380,
+   "h": 281,
+   "page": 141,
+   "how": "box"
+  },
+  {
+   "id": "sr-295#6",
+   "article": "sr-295",
+   "jo": "제295조",
+   "file": "sr-295_6.webp",
+   "w": 380,
+   "h": 208,
+   "page": 141,
+   "how": "box"
+  },
+  {
+   "id": "sr-295#7",
+   "article": "sr-295",
+   "jo": "제295조",
+   "file": "sr-295_7.webp",
+   "w": 380,
+   "h": 354,
+   "page": 141,
+   "how": "box"
+  },
+  {
+   "id": "sr-295#8",
+   "article": "sr-295",
+   "jo": "제295조",
+   "file": "sr-295_8.webp",
+   "w": 380,
+   "h": 219,
+   "page": 141,
+   "how": "box"
+  },
+  {
+   "id": "sr-295#9",
+   "article": "sr-295",
+   "jo": "제295조",
+   "file": "sr-295_9.webp",
+   "w": 380,
+   "h": 232,
+   "page": 141,
+   "how": "box"
+  },
+  {
+   "id": "sr-296#1",
+   "article": "sr-296",
+   "jo": "제296조",
+   "file": "sr-296_1.webp",
+   "w": 380,
+   "h": 266,
+   "page": 142,
+   "how": "box"
+  },
+  {
+   "id": "sr-297#1",
+   "article": "sr-297",
+   "jo": "제297조",
+   "file": "sr-297_1.webp",
+   "w": 380,
+   "h": 222,
+   "page": 142,
+   "how": "box"
+  },
+  {
+   "id": "sr-298#1",
+   "article": "sr-298",
+   "jo": "제298조",
+   "file": "sr-298_1.webp",
+   "w": 380,
+   "h": 276,
+   "page": 143,
+   "how": "box"
+  },
+  {
+   "id": "sr-299#1",
+   "article": "sr-299",
+   "jo": "제299조",
+   "file": "sr-299_1.webp",
+   "w": 380,
+   "h": 170,
+   "page": 143,
+   "how": "box"
+  },
+  {
+   "id": "sr-299#2",
+   "article": "sr-299",
+   "jo": "제299조",
+   "file": "sr-299_2.webp",
+   "w": 380,
+   "h": 328,
+   "page": 143,
+   "how": "box"
+  },
+  {
+   "id": "sr-300#1",
+   "article": "sr-300",
+   "jo": "제300조",
+   "file": "sr-300_1.webp",
+   "w": 380,
+   "h": 258,
+   "page": 144,
+   "how": "box"
+  },
+  {
+   "id": "sr-301#1",
+   "article": "sr-301",
+   "jo": "제301조",
+   "file": "sr-301_1.webp",
+   "w": 380,
+   "h": 293,
+   "page": 146,
+   "how": "box"
+  },
+  {
+   "id": "sr-301#2",
+   "article": "sr-301",
+   "jo": "제301조",
+   "file": "sr-301_2.webp",
+   "w": 380,
+   "h": 312,
+   "page": 146,
+   "how": "box"
+  },
+  {
+   "id": "sr-301#3",
+   "article": "sr-301",
+   "jo": "제301조",
+   "file": "sr-301_3.webp",
+   "w": 380,
+   "h": 370,
+   "page": 146,
+   "how": "box"
+  },
+  {
+   "id": "sr-301#4",
+   "article": "sr-301",
+   "jo": "제301조",
+   "file": "sr-301_4.webp",
+   "w": 251,
+   "h": 262,
+   "page": 146,
+   "how": "box"
+  },
+  {
+   "id": "sr-301#5",
+   "article": "sr-301",
+   "jo": "제301조",
+   "file": "sr-301_5.webp",
+   "w": 380,
+   "h": 253,
+   "page": 146,
+   "how": "box"
+  },
+  {
+   "id": "sr-302#1",
+   "article": "sr-302",
+   "jo": "제302조",
+   "file": "sr-302_1.webp",
+   "w": 380,
+   "h": 368,
+   "page": 147,
+   "how": "box"
+  },
+  {
+   "id": "sr-302#2",
+   "article": "sr-302",
+   "jo": "제302조",
+   "file": "sr-302_2.webp",
+   "w": 380,
+   "h": 401,
+   "page": 147,
+   "how": "box"
+  },
+  {
+   "id": "sr-302#3",
+   "article": "sr-302",
+   "jo": "제302조",
+   "file": "sr-302_3.webp",
+   "w": 380,
+   "h": 265,
+   "page": 147,
+   "how": "box"
+  },
+  {
+   "id": "sr-302#4",
+   "article": "sr-302",
+   "jo": "제302조",
+   "file": "sr-302_4.webp",
+   "w": 380,
+   "h": 266,
+   "page": 147,
+   "how": "box"
+  },
+  {
+   "id": "sr-303#1",
+   "article": "sr-303",
+   "jo": "제303조",
+   "file": "sr-303_1.webp",
+   "w": 380,
+   "h": 260,
+   "page": 148,
+   "how": "box"
+  },
+  {
+   "id": "sr-303#2",
+   "article": "sr-303",
+   "jo": "제303조",
+   "file": "sr-303_2.webp",
+   "w": 380,
+   "h": 256,
+   "page": 148,
+   "how": "box"
+  },
+  {
+   "id": "sr-304#1",
+   "article": "sr-304",
+   "jo": "제304조",
+   "file": "sr-304_1.webp",
+   "w": 380,
+   "h": 226,
+   "page": 149,
+   "how": "box"
+  },
+  {
+   "id": "sr-304#2",
+   "article": "sr-304",
+   "jo": "제304조",
+   "file": "sr-304_2.webp",
+   "w": 380,
+   "h": 452,
+   "page": 149,
+   "how": "box"
+  },
+  {
+   "id": "sr-304#3",
+   "article": "sr-304",
+   "jo": "제304조",
+   "file": "sr-304_3.webp",
+   "w": 380,
+   "h": 262,
+   "page": 149,
+   "how": "box"
+  },
+  {
+   "id": "sr-304#4",
+   "article": "sr-304",
+   "jo": "제304조",
+   "file": "sr-304_4.webp",
+   "w": 380,
+   "h": 350,
+   "page": 149,
+   "how": "box"
+  },
+  {
+   "id": "sr-305#1",
+   "article": "sr-305",
+   "jo": "제305조",
+   "file": "sr-305_1.webp",
+   "w": 380,
+   "h": 158,
+   "page": 150,
+   "how": "box"
+  },
+  {
+   "id": "sr-306#1",
+   "article": "sr-306",
+   "jo": "제306조",
+   "file": "sr-306_1.webp",
+   "w": 380,
+   "h": 189,
+   "page": 150,
+   "how": "box"
+  },
+  {
+   "id": "sr-307#1",
+   "article": "sr-307",
+   "jo": "제307조",
+   "file": "sr-307_1.webp",
+   "w": 380,
+   "h": 373,
+   "page": 150,
+   "how": "box"
+  },
+  {
+   "id": "sr-308#1",
+   "article": "sr-308",
+   "jo": "제308조",
+   "file": "sr-308_1.webp",
+   "w": 380,
+   "h": 244,
+   "page": 151,
+   "how": "box"
+  },
+  {
+   "id": "sr-308#2",
+   "article": "sr-308",
+   "jo": "제308조",
+   "file": "sr-308_2.webp",
+   "w": 380,
+   "h": 220,
+   "page": 151,
+   "how": "box"
+  },
+  {
+   "id": "sr-309#1",
+   "article": "sr-309",
+   "jo": "제309조",
+   "file": "sr-309_1.webp",
+   "w": 380,
+   "h": 198,
+   "page": 151,
+   "how": "box"
+  },
+  {
+   "id": "sr-310#1",
+   "article": "sr-310",
+   "jo": "제310조",
+   "file": "sr-310_1.webp",
+   "w": 380,
+   "h": 371,
+   "page": 151,
+   "how": "box"
+  },
+  {
+   "id": "sr-310#2",
+   "article": "sr-310",
+   "jo": "제310조",
+   "file": "sr-310_2.webp",
+   "w": 380,
+   "h": 304,
+   "page": 151,
+   "how": "box"
+  },
+  {
+   "id": "sr-311#1",
+   "article": "sr-311",
+   "jo": "제311조",
+   "file": "sr-311_1.webp",
+   "w": 380,
+   "h": 281,
+   "page": 152,
+   "how": "box"
+  },
+  {
+   "id": "sr-312#1",
+   "article": "sr-312",
+   "jo": "제312조",
+   "file": "sr-312_1.webp",
+   "w": 380,
+   "h": 194,
+   "page": 152,
+   "how": "box"
+  },
+  {
+   "id": "sr-313#1",
+   "article": "sr-313",
+   "jo": "제313조",
+   "file": "sr-313_1.webp",
+   "w": 380,
+   "h": 265,
+   "page": 152,
+   "how": "box"
+  },
+  {
+   "id": "sr-314#1",
+   "article": "sr-314",
+   "jo": "제314조",
+   "file": "sr-314_1.webp",
+   "w": 380,
+   "h": 175,
+   "page": 153,
+   "how": "box"
+  },
+  {
+   "id": "sr-315#1",
+   "article": "sr-315",
+   "jo": "제315조",
+   "file": "sr-315_1.webp",
+   "w": 380,
+   "h": 370,
+   "page": 153,
+   "how": "column"
+  },
+  {
+   "id": "sr-315#2",
+   "article": "sr-315",
+   "jo": "제315조",
+   "file": "sr-315_2.webp",
+   "w": 380,
+   "h": 202,
+   "page": 153,
+   "how": "box"
+  },
+  {
+   "id": "sr-316#1",
+   "article": "sr-316",
+   "jo": "제316조",
+   "file": "sr-316_1.webp",
+   "w": 380,
+   "h": 317,
+   "page": 153,
+   "how": "box"
+  },
+  {
+   "id": "sr-316#2",
+   "article": "sr-316",
+   "jo": "제316조",
+   "file": "sr-316_2.webp",
+   "w": 380,
+   "h": 238,
+   "page": 153,
+   "how": "box"
+  },
+  {
+   "id": "sr-316#3",
+   "article": "sr-316",
+   "jo": "제316조",
+   "file": "sr-316_3.webp",
+   "w": 380,
+   "h": 429,
+   "page": 153,
+   "how": "box"
+  },
+  {
+   "id": "sr-316#4",
+   "article": "sr-316",
+   "jo": "제316조",
+   "file": "sr-316_4.webp",
+   "w": 380,
+   "h": 227,
+   "page": 153,
+   "how": "box"
+  },
+  {
+   "id": "sr-319#1",
+   "article": "sr-319",
+   "jo": "제319조",
+   "file": "sr-319_1.webp",
+   "w": 380,
+   "h": 351,
+   "page": 154,
+   "how": "box"
+  },
+  {
+   "id": "sr-321#1",
+   "article": "sr-321",
+   "jo": "제321조",
+   "file": "sr-321_1.webp",
+   "w": 380,
+   "h": 322,
+   "page": 155,
+   "how": "above"
+  },
+  {
+   "id": "sr-322#1",
+   "article": "sr-322",
+   "jo": "제322조",
+   "file": "sr-322_1.webp",
+   "w": 380,
+   "h": 277,
+   "page": 157,
+   "how": "box"
+  },
+  {
+   "id": "sr-323#1",
+   "article": "sr-323",
+   "jo": "제323조",
+   "file": "sr-323_1.webp",
+   "w": 380,
+   "h": 313,
+   "page": 157,
+   "how": "box"
+  },
+  {
+   "id": "sr-325#1",
+   "article": "sr-325",
+   "jo": "제325조",
+   "file": "sr-325_1.webp",
+   "w": 380,
+   "h": 267,
+   "page": 158,
+   "how": "box"
+  },
+  {
+   "id": "sr-325#2",
+   "article": "sr-325",
+   "jo": "제325조",
+   "file": "sr-325_2.webp",
+   "w": 380,
+   "h": 298,
+   "page": 158,
+   "how": "box"
+  },
+  {
+   "id": "sr-325#3",
+   "article": "sr-325",
+   "jo": "제325조",
+   "file": "sr-325_3.webp",
+   "w": 380,
+   "h": 180,
+   "page": 158,
+   "how": "box"
+  },
+  {
+   "id": "sr-325#4",
+   "article": "sr-325",
+   "jo": "제325조",
+   "file": "sr-325_4.webp",
+   "w": 380,
+   "h": 233,
+   "page": 158,
+   "how": "box"
+  },
+  {
+   "id": "sr-325#5",
+   "article": "sr-325",
+   "jo": "제325조",
+   "file": "sr-325_5.webp",
+   "w": 380,
+   "h": 211,
+   "page": 158,
+   "how": "box"
+  },
+  {
+   "id": "sr-325#6",
+   "article": "sr-325",
+   "jo": "제325조",
+   "file": "sr-325_6.webp",
+   "w": 380,
+   "h": 299,
+   "page": 158,
+   "how": "box"
+  },
+  {
+   "id": "sr-325#7",
+   "article": "sr-325",
+   "jo": "제325조",
+   "file": "sr-325_7.webp",
+   "w": 380,
+   "h": 298,
+   "page": 158,
+   "how": "box"
+  },
+  {
+   "id": "sr-327#1",
+   "article": "sr-327",
+   "jo": "제327조",
+   "file": "sr-327_1.webp",
+   "w": 380,
+   "h": 244,
+   "page": 159,
+   "how": "box"
+  },
+  {
+   "id": "sr-328#1",
+   "article": "sr-328",
+   "jo": "제328조",
+   "file": "sr-328_1.webp",
+   "w": 380,
+   "h": 301,
+   "page": 161,
+   "how": "box"
+  },
+  {
+   "id": "sr-329#1",
+   "article": "sr-329",
+   "jo": "제329조",
+   "file": "sr-329_1.webp",
+   "w": 380,
+   "h": 470,
+   "page": 161,
+   "how": "box"
+  },
+  {
+   "id": "sr-330#1",
+   "article": "sr-330",
+   "jo": "제330조",
+   "file": "sr-330_1.webp",
+   "w": 380,
+   "h": 546,
+   "page": 161,
+   "how": "box"
+  },
+  {
+   "id": "sr-331#1",
+   "article": "sr-331",
+   "jo": "제331조",
+   "file": "sr-331_1.webp",
+   "w": 380,
+   "h": 263,
+   "page": 161,
+   "how": "box"
+  },
+  {
+   "id": "sr-331-3#1",
+   "article": "sr-331-3",
+   "jo": "제331조의3",
+   "file": "sr-331-3_1.webp",
+   "w": 380,
+   "h": 350,
+   "page": 162,
+   "how": "box"
+  },
+  {
+   "id": "sr-331-3#2",
+   "article": "sr-331-3",
+   "jo": "제331조의3",
+   "file": "sr-331-3_2.webp",
+   "w": 380,
+   "h": 252,
+   "page": 162,
+   "how": "box"
+  },
+  {
+   "id": "sr-331-3#3",
+   "article": "sr-331-3",
+   "jo": "제331조의3",
+   "file": "sr-331-3_3.webp",
+   "w": 380,
+   "h": 336,
+   "page": 162,
+   "how": "box"
+  },
+  {
+   "id": "sr-331-3#4",
+   "article": "sr-331-3",
+   "jo": "제331조의3",
+   "file": "sr-331-3_4.webp",
+   "w": 380,
+   "h": 419,
+   "page": 162,
+   "how": "box"
+  },
+  {
+   "id": "sr-331-3#5",
+   "article": "sr-331-3",
+   "jo": "제331조의3",
+   "file": "sr-331-3_5.webp",
+   "w": 380,
+   "h": 249,
+   "page": 162,
+   "how": "box"
+  },
+  {
+   "id": "sr-332#1",
+   "article": "sr-332",
+   "jo": "제332조",
+   "file": "sr-332_1.webp",
+   "w": 380,
+   "h": 269,
+   "page": 163,
+   "how": "box"
+  },
+  {
+   "id": "sr-332#2",
+   "article": "sr-332",
+   "jo": "제332조",
+   "file": "sr-332_2.webp",
+   "w": 380,
+   "h": 333,
+   "page": 163,
+   "how": "box"
+  },
+  {
+   "id": "sr-332-2#1",
+   "article": "sr-332-2",
+   "jo": "제332조의2",
+   "file": "sr-332-2_1.webp",
+   "w": 380,
+   "h": 208,
+   "page": 164,
+   "how": "box"
+  },
+  {
+   "id": "sr-332-2#2",
+   "article": "sr-332-2",
+   "jo": "제332조의2",
+   "file": "sr-332-2_2.webp",
+   "w": 380,
+   "h": 185,
+   "page": 164,
+   "how": "box"
+  },
+  {
+   "id": "sr-334#1",
+   "article": "sr-334",
+   "jo": "제334조",
+   "file": "sr-334_1.webp",
+   "w": 380,
+   "h": 290,
+   "page": 166,
+   "how": "box"
+  },
+  {
+   "id": "sr-334#2",
+   "article": "sr-334",
+   "jo": "제334조",
+   "file": "sr-334_2.webp",
+   "w": 380,
+   "h": 223,
+   "page": 166,
+   "how": "box"
+  },
+  {
+   "id": "sr-334#3",
+   "article": "sr-334",
+   "jo": "제334조",
+   "file": "sr-334_3.webp",
+   "w": 380,
+   "h": 212,
+   "page": 166,
+   "how": "box"
+  },
+  {
+   "id": "sr-335#1",
+   "article": "sr-335",
+   "jo": "제335조",
+   "file": "sr-335_1.webp",
+   "w": 380,
+   "h": 229,
+   "page": 167,
+   "how": "box"
+  },
+  {
+   "id": "sr-335#2",
+   "article": "sr-335",
+   "jo": "제335조",
+   "file": "sr-335_2.webp",
+   "w": 380,
+   "h": 267,
+   "page": 167,
+   "how": "box"
+  },
+  {
+   "id": "sr-335#3",
+   "article": "sr-335",
+   "jo": "제335조",
+   "file": "sr-335_3.webp",
+   "w": 380,
+   "h": 308,
+   "page": 167,
+   "how": "box"
+  },
+  {
+   "id": "sr-335#4",
+   "article": "sr-335",
+   "jo": "제335조",
+   "file": "sr-335_4.webp",
+   "w": 380,
+   "h": 238,
+   "page": 167,
+   "how": "box"
+  },
+  {
+   "id": "sr-338#1",
+   "article": "sr-338",
+   "jo": "제338조",
+   "file": "sr-338_1.webp",
+   "w": 380,
+   "h": 228,
+   "page": 168,
+   "how": "box"
+  },
+  {
+   "id": "sr-339#1",
+   "article": "sr-339",
+   "jo": "제339조",
+   "file": "sr-339_1.webp",
+   "w": 380,
+   "h": 239,
+   "page": 168,
+   "how": "box"
+  },
+  {
+   "id": "sr-339#2",
+   "article": "sr-339",
+   "jo": "제339조",
+   "file": "sr-339_2.webp",
+   "w": 380,
+   "h": 387,
+   "page": 168,
+   "how": "box"
+  },
+  {
+   "id": "sr-340#1",
+   "article": "sr-340",
+   "jo": "제340조",
+   "file": "sr-340_1.webp",
+   "w": 380,
+   "h": 244,
+   "page": 168,
+   "how": "box"
+  },
+  {
+   "id": "sr-341#1",
+   "article": "sr-341",
+   "jo": "제341조",
+   "file": "sr-341_1.webp",
+   "w": 380,
+   "h": 209,
+   "page": 169,
+   "how": "box"
+  },
+  {
+   "id": "sr-342#1",
+   "article": "sr-342",
+   "jo": "제342조",
+   "file": "sr-342_1.webp",
+   "w": 380,
+   "h": 225,
+   "page": 169,
+   "how": "box"
+  },
+  {
+   "id": "sr-344#1",
+   "article": "sr-344",
+   "jo": "제344조",
+   "file": "sr-344_1.webp",
+   "w": 380,
+   "h": 331,
+   "page": 169,
+   "how": "box"
+  },
+  {
+   "id": "sr-345#1",
+   "article": "sr-345",
+   "jo": "제345조",
+   "file": "sr-345_1.webp",
+   "w": 380,
+   "h": 234,
+   "page": 169,
+   "how": "box"
+  },
+  {
+   "id": "sr-346#1",
+   "article": "sr-346",
+   "jo": "제346조",
+   "file": "sr-346_1.webp",
+   "w": 380,
+   "h": 175,
+   "page": 170,
+   "how": "box"
+  },
+  {
+   "id": "sr-347#1",
+   "article": "sr-347",
+   "jo": "제347조",
+   "file": "sr-347_1.webp",
+   "w": 380,
+   "h": 232,
+   "page": 170,
+   "how": "box"
+  },
+  {
+   "id": "sr-347#2",
+   "article": "sr-347",
+   "jo": "제347조",
+   "file": "sr-347_2.webp",
+   "w": 380,
+   "h": 282,
+   "page": 170,
+   "how": "box"
+  },
+  {
+   "id": "sr-347#3",
+   "article": "sr-347",
+   "jo": "제347조",
+   "file": "sr-347_3.webp",
+   "w": 380,
+   "h": 365,
+   "page": 170,
+   "how": "box"
+  },
+  {
+   "id": "sr-347#4",
+   "article": "sr-347",
+   "jo": "제347조",
+   "file": "sr-347_4.webp",
+   "w": 380,
+   "h": 281,
+   "page": 170,
+   "how": "box"
+  },
+  {
+   "id": "sr-348#1",
+   "article": "sr-348",
+   "jo": "제348조",
+   "file": "sr-348_1.webp",
+   "w": 380,
+   "h": 234,
+   "page": 170,
+   "how": "box"
+  },
+  {
+   "id": "sr-349#1",
+   "article": "sr-349",
+   "jo": "제349조",
+   "file": "sr-349_1.webp",
+   "w": 380,
+   "h": 320,
+   "page": 171,
+   "how": "box"
+  },
+  {
+   "id": "sr-349#2",
+   "article": "sr-349",
+   "jo": "제349조",
+   "file": "sr-349_2.webp",
+   "w": 380,
+   "h": 186,
+   "page": 171,
+   "how": "box"
+  },
+  {
+   "id": "sr-350#1",
+   "article": "sr-350",
+   "jo": "제350조",
+   "file": "sr-350_1.webp",
+   "w": 380,
+   "h": 213,
+   "page": 172,
+   "how": "box"
+  },
+  {
+   "id": "sr-350#2",
+   "article": "sr-350",
+   "jo": "제350조",
+   "file": "sr-350_2.webp",
+   "w": 380,
+   "h": 352,
+   "page": 172,
+   "how": "box"
+  },
+  {
+   "id": "sr-351#1",
+   "article": "sr-351",
+   "jo": "제351조",
+   "file": "sr-351_1.webp",
+   "w": 380,
+   "h": 217,
+   "page": 172,
+   "how": "box"
+  },
+  {
+   "id": "sr-355#1",
+   "article": "sr-355",
+   "jo": "제355조",
+   "file": "sr-355_1.webp",
+   "w": 380,
+   "h": 285,
+   "page": 173,
+   "how": "box"
+  },
+  {
+   "id": "sr-356#1",
+   "article": "sr-356",
+   "jo": "제356조",
+   "file": "sr-356_1.webp",
+   "w": 380,
+   "h": 370,
+   "page": 173,
+   "how": "box"
+  },
+  {
+   "id": "sr-357#1",
+   "article": "sr-357",
+   "jo": "제357조",
+   "file": "sr-357_1.webp",
+   "w": 380,
+   "h": 343,
+   "page": 174,
+   "how": "box"
+  },
+  {
+   "id": "sr-358#1",
+   "article": "sr-358",
+   "jo": "제358조",
+   "file": "sr-358_1.webp",
+   "w": 380,
+   "h": 303,
+   "page": 174,
+   "how": "box"
+  },
+  {
+   "id": "sr-359#1",
+   "article": "sr-359",
+   "jo": "제359조",
+   "file": "sr-359_1.webp",
+   "w": 380,
+   "h": 252,
+   "page": 174,
+   "how": "box"
+  },
+  {
+   "id": "sr-360#1",
+   "article": "sr-360",
+   "jo": "제360조",
+   "file": "sr-360_1.webp",
+   "w": 380,
+   "h": 211,
+   "page": 174,
+   "how": "box"
+  },
+  {
+   "id": "sr-361#1",
+   "article": "sr-361",
+   "jo": "제361조",
+   "file": "sr-361_1.webp",
+   "w": 380,
+   "h": 280,
+   "page": 175,
+   "how": "box"
+  },
+  {
+   "id": "sr-362#1",
+   "article": "sr-362",
+   "jo": "제362조",
+   "file": "sr-362_1.webp",
+   "w": 380,
+   "h": 235,
+   "page": 175,
+   "how": "box"
+  },
+  {
+   "id": "sr-363#1",
+   "article": "sr-363",
+   "jo": "제363조",
+   "file": "sr-363_1.webp",
+   "w": 380,
+   "h": 405,
+   "page": 175,
+   "how": "box"
+  },
+  {
+   "id": "sr-364#1",
+   "article": "sr-364",
+   "jo": "제364조",
+   "file": "sr-364_1.webp",
+   "w": 380,
+   "h": 360,
+   "page": 175,
+   "how": "box"
+  },
+  {
+   "id": "sr-365#1",
+   "article": "sr-365",
+   "jo": "제365조",
+   "file": "sr-365_1.webp",
+   "w": 380,
+   "h": 309,
+   "page": 176,
+   "how": "box"
+  },
+  {
+   "id": "sr-366#1",
+   "article": "sr-366",
+   "jo": "제366조",
+   "file": "sr-366_1.webp",
+   "w": 380,
+   "h": 219,
+   "page": 176,
+   "how": "box"
+  },
+  {
+   "id": "sr-367#1",
+   "article": "sr-367",
+   "jo": "제367조",
+   "file": "sr-367_1.webp",
+   "w": 380,
+   "h": 345,
+   "page": 177,
+   "how": "box"
+  },
+  {
+   "id": "sr-368#1",
+   "article": "sr-368",
+   "jo": "제368조",
+   "file": "sr-368_1.webp",
+   "w": 380,
+   "h": 275,
+   "page": 177,
+   "how": "box"
+  },
+  {
+   "id": "sr-369#1",
+   "article": "sr-369",
+   "jo": "제369조",
+   "file": "sr-369_1.webp",
+   "w": 380,
+   "h": 309,
+   "page": 177,
+   "how": "box"
+  },
+  {
+   "id": "sr-369#2",
+   "article": "sr-369",
+   "jo": "제369조",
+   "file": "sr-369_2.webp",
+   "w": 380,
+   "h": 270,
+   "page": 177,
+   "how": "box"
+  },
+  {
+   "id": "sr-369#3",
+   "article": "sr-369",
+   "jo": "제369조",
+   "file": "sr-369_3.webp",
+   "w": 380,
+   "h": 223,
+   "page": 177,
+   "how": "box"
+  },
+  {
+   "id": "sr-370#1",
+   "article": "sr-370",
+   "jo": "제370조",
+   "file": "sr-370_1.webp",
+   "w": 380,
+   "h": 214,
+   "page": 178,
+   "how": "box"
+  },
+  {
+   "id": "sr-370#2",
+   "article": "sr-370",
+   "jo": "제370조",
+   "file": "sr-370_2.webp",
+   "w": 380,
+   "h": 247,
+   "page": 178,
+   "how": "box"
+  },
+  {
+   "id": "sr-371#1",
+   "article": "sr-371",
+   "jo": "제371조",
+   "file": "sr-371_1.webp",
+   "w": 380,
+   "h": 225,
+   "page": 178,
+   "how": "box"
+  },
+  {
+   "id": "sr-372#1",
+   "article": "sr-372",
+   "jo": "제372조",
+   "file": "sr-372_1.webp",
+   "w": 380,
+   "h": 220,
+   "page": 178,
+   "how": "box"
+  },
+  {
+   "id": "sr-373#1",
+   "article": "sr-373",
+   "jo": "제373조",
+   "file": "sr-373_1.webp",
+   "w": 380,
+   "h": 202,
+   "page": 178,
+   "how": "box"
+  },
+  {
+   "id": "sr-374#1",
+   "article": "sr-374",
+   "jo": "제374조",
+   "file": "sr-374_1.webp",
+   "w": 380,
+   "h": 404,
+   "page": 179,
+   "how": "box"
+  },
+  {
+   "id": "sr-375#1",
+   "article": "sr-375",
+   "jo": "제375조",
+   "file": "sr-375_1.webp",
+   "w": 380,
+   "h": 352,
+   "page": 179,
+   "how": "box"
+  },
+  {
+   "id": "sr-376#1",
+   "article": "sr-376",
+   "jo": "제376조",
+   "file": "sr-376_1.webp",
+   "w": 380,
+   "h": 410,
+   "page": 179,
+   "how": "box"
+  },
+  {
+   "id": "sr-377#1",
+   "article": "sr-377",
+   "jo": "제377조",
+   "file": "sr-377_1.webp",
+   "w": 380,
+   "h": 577,
+   "page": 180,
+   "how": "box"
+  },
+  {
+   "id": "sr-378#1",
+   "article": "sr-378",
+   "jo": "제378조",
+   "file": "sr-378_1.webp",
+   "w": 380,
+   "h": 358,
+   "page": 180,
+   "how": "box"
+  },
+  {
+   "id": "sr-379#1",
+   "article": "sr-379",
+   "jo": "제379조",
+   "file": "sr-379_1.webp",
+   "w": 380,
+   "h": 282,
+   "page": 181,
+   "how": "box"
+  },
+  {
+   "id": "sr-380#1",
+   "article": "sr-380",
+   "jo": "제380조",
+   "file": "sr-380_1.webp",
+   "w": 380,
+   "h": 230,
+   "page": 181,
+   "how": "box"
+  },
+  {
+   "id": "sr-381#1",
+   "article": "sr-381",
+   "jo": "제381조",
+   "file": "sr-381_1.webp",
+   "w": 380,
+   "h": 221,
+   "page": 181,
+   "how": "box"
+  },
+  {
+   "id": "sr-382#1",
+   "article": "sr-382",
+   "jo": "제382조",
+   "file": "sr-382_1.webp",
+   "w": 380,
+   "h": 195,
+   "page": 182,
+   "how": "box"
+  },
+  {
+   "id": "sr-383#1",
+   "article": "sr-383",
+   "jo": "제383조",
+   "file": "sr-383_1.webp",
+   "w": 380,
+   "h": 238,
+   "page": 182,
+   "how": "box"
+  },
+  {
+   "id": "sr-385#1",
+   "article": "sr-385",
+   "jo": "제385조",
+   "file": "sr-385_1.webp",
+   "w": 380,
+   "h": 245,
+   "page": 184,
+   "how": "box"
+  },
+  {
+   "id": "sr-386#1",
+   "article": "sr-386",
+   "jo": "제386조",
+   "file": "sr-386_1.webp",
+   "w": 380,
+   "h": 255,
+   "page": 184,
+   "how": "box"
+  },
+  {
+   "id": "sr-386#2",
+   "article": "sr-386",
+   "jo": "제386조",
+   "file": "sr-386_2.webp",
+   "w": 380,
+   "h": 237,
+   "page": 184,
+   "how": "box"
+  },
+  {
+   "id": "sr-387#1",
+   "article": "sr-387",
+   "jo": "제387조",
+   "file": "sr-387_1.webp",
+   "w": 380,
+   "h": 136,
+   "page": 186,
+   "how": "box"
+  },
+  {
+   "id": "sr-388#1",
+   "article": "sr-388",
+   "jo": "제388조",
+   "file": "sr-388_1.webp",
+   "w": 380,
+   "h": 333,
+   "page": 186,
+   "how": "box"
+  },
+  {
+   "id": "sr-389#1",
+   "article": "sr-389",
+   "jo": "제389조",
+   "file": "sr-389_1.webp",
+   "w": 380,
+   "h": 266,
+   "page": 186,
+   "how": "box"
+  },
+  {
+   "id": "sr-390#1",
+   "article": "sr-390",
+   "jo": "제390조",
+   "file": "sr-390_1.webp",
+   "w": 380,
+   "h": 226,
+   "page": 186,
+   "how": "box"
+  },
+  {
+   "id": "sr-391#1",
+   "article": "sr-391",
+   "jo": "제391조",
+   "file": "sr-391_1.webp",
+   "w": 380,
+   "h": 353,
+   "page": 187,
+   "how": "box"
+  },
+  {
+   "id": "sr-392#1",
+   "article": "sr-392",
+   "jo": "제392조",
+   "file": "sr-392_1.webp",
+   "w": 380,
+   "h": 210,
+   "page": 187,
+   "how": "box"
+  },
+  {
+   "id": "sr-392#2",
+   "article": "sr-392",
+   "jo": "제392조",
+   "file": "sr-392_2.webp",
+   "w": 380,
+   "h": 372,
+   "page": 187,
+   "how": "box"
+  },
+  {
+   "id": "sr-393#1",
+   "article": "sr-393",
+   "jo": "제393조",
+   "file": "sr-393_1.webp",
+   "w": 380,
+   "h": 209,
+   "page": 187,
+   "how": "box"
+  },
+  {
+   "id": "sr-394#1",
+   "article": "sr-394",
+   "jo": "제394조",
+   "file": "sr-394_1.webp",
+   "w": 380,
+   "h": 317,
+   "page": 188,
+   "how": "box"
+  },
+  {
+   "id": "sr-395#1",
+   "article": "sr-395",
+   "jo": "제395조",
+   "file": "sr-395_1.webp",
+   "w": 380,
+   "h": 303,
+   "page": 188,
+   "how": "box"
+  },
+  {
+   "id": "sr-396#1",
+   "article": "sr-396",
+   "jo": "제396조",
+   "file": "sr-396_1.webp",
+   "w": 380,
+   "h": 265,
+   "page": 188,
+   "how": "box"
+  },
+  {
+   "id": "sr-396#2",
+   "article": "sr-396",
+   "jo": "제396조",
+   "file": "sr-396_2.webp",
+   "w": 380,
+   "h": 326,
+   "page": 188,
+   "how": "box"
+  },
+  {
+   "id": "sr-397#1",
+   "article": "sr-397",
+   "jo": "제397조",
+   "file": "sr-397_1.webp",
+   "w": 380,
+   "h": 407,
+   "page": 189,
+   "how": "box"
+  },
+  {
+   "id": "sr-398#1",
+   "article": "sr-398",
+   "jo": "제398조",
+   "file": "sr-398_1.webp",
+   "w": 380,
+   "h": 234,
+   "page": 189,
+   "how": "box"
+  },
+  {
+   "id": "sr-399#1",
+   "article": "sr-399",
+   "jo": "제399조",
+   "file": "sr-399_1.webp",
+   "w": 380,
+   "h": 177,
+   "page": 189,
+   "how": "box"
+  },
+  {
+   "id": "sr-400#1",
+   "article": "sr-400",
+   "jo": "제400조",
+   "file": "sr-400_1.webp",
+   "w": 380,
+   "h": 225,
+   "page": 190,
+   "how": "box"
+  },
+  {
+   "id": "sr-401#1",
+   "article": "sr-401",
+   "jo": "제401조",
+   "file": "sr-401_1.webp",
+   "w": 380,
+   "h": 171,
+   "page": 190,
+   "how": "box"
+  },
+  {
+   "id": "sr-402#1",
+   "article": "sr-402",
+   "jo": "제402조",
+   "file": "sr-402_1.webp",
+   "w": 380,
+   "h": 196,
+   "page": 190,
+   "how": "box"
+  },
+  {
+   "id": "sr-403#1",
+   "article": "sr-403",
+   "jo": "제403조",
+   "file": "sr-403_1.webp",
+   "w": 287,
+   "h": 342,
+   "page": 190,
+   "how": "column"
+  },
+  {
+   "id": "sr-403#2",
+   "article": "sr-403",
+   "jo": "제403조",
+   "file": "sr-403_2.webp",
+   "w": 380,
+   "h": 253,
+   "page": 190,
+   "how": "box"
+  },
+  {
+   "id": "sr-405#1",
+   "article": "sr-405",
+   "jo": "제405조",
+   "file": "sr-405_1.webp",
+   "w": 380,
+   "h": 314,
+   "page": 192,
+   "how": "box"
+  },
+  {
+   "id": "sr-405#2",
+   "article": "sr-405",
+   "jo": "제405조",
+   "file": "sr-405_2.webp",
+   "w": 380,
+   "h": 269,
+   "page": 192,
+   "how": "box"
+  },
+  {
+   "id": "sr-406#1",
+   "article": "sr-406",
+   "jo": "제406조",
+   "file": "sr-406_1.webp",
+   "w": 380,
+   "h": 187,
+   "page": 192,
+   "how": "box"
+  },
+  {
+   "id": "sr-407#1",
+   "article": "sr-407",
+   "jo": "제407조",
+   "file": "sr-407_1.webp",
+   "w": 380,
+   "h": 240,
+   "page": 194,
+   "how": "box"
+  },
+  {
+   "id": "sr-408#1",
+   "article": "sr-408",
+   "jo": "제408조",
+   "file": "sr-408_1.webp",
+   "w": 380,
+   "h": 191,
+   "page": 194,
+   "how": "box"
+  },
+  {
+   "id": "sr-409#1",
+   "article": "sr-409",
+   "jo": "제409조",
+   "file": "sr-409_1.webp",
+   "w": 380,
+   "h": 348,
+   "page": 194,
+   "how": "box"
+  },
+  {
+   "id": "sr-409#2",
+   "article": "sr-409",
+   "jo": "제409조",
+   "file": "sr-409_2.webp",
+   "w": 380,
+   "h": 481,
+   "page": 194,
+   "how": "box"
+  },
+  {
+   "id": "sr-410#1",
+   "article": "sr-410",
+   "jo": "제410조",
+   "file": "sr-410_1.webp",
+   "w": 380,
+   "h": 396,
+   "page": 195,
+   "how": "box"
+  },
+  {
+   "id": "sr-410#2",
+   "article": "sr-410",
+   "jo": "제410조",
+   "file": "sr-410_2.webp",
+   "w": 380,
+   "h": 360,
+   "page": 195,
+   "how": "box"
+  },
+  {
+   "id": "sr-411#1",
+   "article": "sr-411",
+   "jo": "제411조",
+   "file": "sr-411_1.webp",
+   "w": 380,
+   "h": 272,
+   "page": 196,
+   "how": "box"
+  },
+  {
+   "id": "sr-412#1",
+   "article": "sr-412",
+   "jo": "제412조",
+   "file": "sr-412_1.webp",
+   "w": 380,
+   "h": 248,
+   "page": 196,
+   "how": "box"
+  },
+  {
+   "id": "sr-414#1",
+   "article": "sr-414",
+   "jo": "제414조",
+   "file": "sr-414_1.webp",
+   "w": 380,
+   "h": 213,
+   "page": 196,
+   "how": "box"
+  },
+  {
+   "id": "sr-415#1",
+   "article": "sr-415",
+   "jo": "제415조",
+   "file": "sr-415_1.webp",
+   "w": 380,
+   "h": 229,
+   "page": 197,
+   "how": "box"
+  },
+  {
+   "id": "sr-415#2",
+   "article": "sr-415",
+   "jo": "제415조",
+   "file": "sr-415_2.webp",
+   "w": 380,
+   "h": 209,
+   "page": 197,
+   "how": "box"
+  },
+  {
+   "id": "sr-417#1",
+   "article": "sr-417",
+   "jo": "제417조",
+   "file": "sr-417_1.webp",
+   "w": 380,
+   "h": 309,
+   "page": 198,
+   "how": "box"
+  },
+  {
+   "id": "sr-418#1",
+   "article": "sr-418",
+   "jo": "제418조",
+   "file": "sr-418_1.webp",
+   "w": 380,
+   "h": 332,
+   "page": 198,
+   "how": "box"
+  },
+  {
+   "id": "sr-419#1",
+   "article": "sr-419",
+   "jo": "제419조",
+   "file": "sr-419_1.webp",
+   "w": 380,
+   "h": 338,
+   "page": 198,
+   "how": "box"
+  },
+  {
+   "id": "sr-420#1",
+   "article": "sr-420",
+   "jo": "제420조",
+   "file": "sr-420_1.webp",
+   "w": 380,
+   "h": 257,
+   "page": 202,
+   "how": "box"
+  },
+  {
+   "id": "sr-420#2",
+   "article": "sr-420",
+   "jo": "제420조",
+   "file": "sr-420_2.webp",
+   "w": 380,
+   "h": 253,
+   "page": 202,
+   "how": "box"
+  },
+  {
+   "id": "sr-420#3",
+   "article": "sr-420",
+   "jo": "제420조",
+   "file": "sr-420_3.webp",
+   "w": 380,
+   "h": 297,
+   "page": 202,
+   "how": "box"
+  },
+  {
+   "id": "sr-420#4",
+   "article": "sr-420",
+   "jo": "제420조",
+   "file": "sr-420_4.webp",
+   "w": 380,
+   "h": 202,
+   "page": 202,
+   "how": "box"
+  },
+  {
+   "id": "sr-420#5",
+   "article": "sr-420",
+   "jo": "제420조",
+   "file": "sr-420_5.webp",
+   "w": 380,
+   "h": 167,
+   "page": 202,
+   "how": "box"
+  },
+  {
+   "id": "sr-422#1",
+   "article": "sr-422",
+   "jo": "제422조",
+   "file": "sr-422_1.webp",
+   "w": 380,
+   "h": 313,
+   "page": 203,
+   "how": "box"
+  },
+  {
+   "id": "sr-423#1",
+   "article": "sr-423",
+   "jo": "제423조",
+   "file": "sr-423_1.webp",
+   "w": 380,
+   "h": 185,
+   "page": 203,
+   "how": "box"
+  },
+  {
+   "id": "sr-424#1",
+   "article": "sr-424",
+   "jo": "제424조",
+   "file": "sr-424_1.webp",
+   "w": 380,
+   "h": 305,
+   "page": 204,
+   "how": "box"
+  },
+  {
+   "id": "sr-424#2",
+   "article": "sr-424",
+   "jo": "제424조",
+   "file": "sr-424_2.webp",
+   "w": 380,
+   "h": 388,
+   "page": 204,
+   "how": "box"
+  },
+  {
+   "id": "sr-425#1",
+   "article": "sr-425",
+   "jo": "제425조",
+   "file": "sr-425_1.webp",
+   "w": 380,
+   "h": 238,
+   "page": 204,
+   "how": "box"
+  },
+  {
+   "id": "sr-425#2",
+   "article": "sr-425",
+   "jo": "제425조",
+   "file": "sr-425_2.webp",
+   "w": 380,
+   "h": 290,
+   "page": 204,
+   "how": "box"
+  },
+  {
+   "id": "sr-426#1",
+   "article": "sr-426",
+   "jo": "제426조",
+   "file": "sr-426_1.webp",
+   "w": 380,
+   "h": 285,
+   "page": 204,
+   "how": "box"
+  },
+  {
+   "id": "sr-427#1",
+   "article": "sr-427",
+   "jo": "제427조",
+   "file": "sr-427_1.webp",
+   "w": 380,
+   "h": 259,
+   "page": 205,
+   "how": "box"
+  },
+  {
+   "id": "sr-428#1",
+   "article": "sr-428",
+   "jo": "제428조",
+   "file": "sr-428_1.webp",
+   "w": 380,
+   "h": 281,
+   "page": 205,
+   "how": "box"
+  },
+  {
+   "id": "sr-429#1",
+   "article": "sr-429",
+   "jo": "제429조",
+   "file": "sr-429_1.webp",
+   "w": 380,
+   "h": 269,
+   "page": 205,
+   "how": "box"
+  },
+  {
+   "id": "sr-431#1",
+   "article": "sr-431",
+   "jo": "제431조",
+   "file": "sr-431_1.webp",
+   "w": 380,
+   "h": 471,
+   "page": 206,
+   "how": "box"
+  },
+  {
+   "id": "sr-432#1",
+   "article": "sr-432",
+   "jo": "제432조",
+   "file": "sr-432_1.webp",
+   "w": 380,
+   "h": 298,
+   "page": 206,
+   "how": "box"
+  },
+  {
+   "id": "sr-433#1",
+   "article": "sr-433",
+   "jo": "제433조",
+   "file": "sr-433_1.webp",
+   "w": 380,
+   "h": 284,
+   "page": 206,
+   "how": "box"
+  },
+  {
+   "id": "sr-434#1",
+   "article": "sr-434",
+   "jo": "제434조",
+   "file": "sr-434_1.webp",
+   "w": 380,
+   "h": 272,
+   "page": 207,
+   "how": "box"
+  },
+  {
+   "id": "sr-435#1",
+   "article": "sr-435",
+   "jo": "제435조",
+   "file": "sr-435_1.webp",
+   "w": 380,
+   "h": 325,
+   "page": 207,
+   "how": "box"
+  },
+  {
+   "id": "sr-436#1",
+   "article": "sr-436",
+   "jo": "제436조",
+   "file": "sr-436_1.webp",
+   "w": 380,
+   "h": 328,
+   "page": 207,
+   "how": "box"
+  },
+  {
+   "id": "sr-437#1",
+   "article": "sr-437",
+   "jo": "제437조",
+   "file": "sr-437_1.webp",
+   "w": 380,
+   "h": 509,
+   "page": 208,
+   "how": "box"
+  },
+  {
+   "id": "sr-437#2",
+   "article": "sr-437",
+   "jo": "제437조",
+   "file": "sr-437_2.webp",
+   "w": 380,
+   "h": 328,
+   "page": 208,
+   "how": "box"
+  },
+  {
+   "id": "sr-437#3",
+   "article": "sr-437",
+   "jo": "제437조",
+   "file": "sr-437_3.webp",
+   "w": 380,
+   "h": 254,
+   "page": 208,
+   "how": "box"
+  },
+  {
+   "id": "sr-438#1",
+   "article": "sr-438",
+   "jo": "제438조",
+   "file": "sr-438_1.webp",
+   "w": 380,
+   "h": 328,
+   "page": 209,
+   "how": "box"
+  },
+  {
+   "id": "sr-439#1",
+   "article": "sr-439",
+   "jo": "제439조",
+   "file": "sr-439_1.webp",
+   "w": 380,
+   "h": 352,
+   "page": 209,
+   "how": "box"
+  },
+  {
+   "id": "sr-440#1",
+   "article": "sr-440",
+   "jo": "제440조",
+   "file": "sr-440_1.webp",
+   "w": 380,
+   "h": 271,
+   "page": 210,
+   "how": "box"
+  },
+  {
+   "id": "sr-441#1",
+   "article": "sr-441",
+   "jo": "제441조",
+   "file": "sr-441_1.webp",
+   "w": 380,
+   "h": 311,
+   "page": 210,
+   "how": "box"
+  },
+  {
+   "id": "sr-442#1",
+   "article": "sr-442",
+   "jo": "제442조",
+   "file": "sr-442_1.webp",
+   "w": 380,
+   "h": 247,
+   "page": 210,
+   "how": "box"
+  },
+  {
+   "id": "sr-443#1",
+   "article": "sr-443",
+   "jo": "제443조",
+   "file": "sr-443_1.webp",
+   "w": 380,
+   "h": 284,
+   "page": 211,
+   "how": "box"
+  },
+  {
+   "id": "sr-445#1",
+   "article": "sr-445",
+   "jo": "제445조",
+   "file": "sr-445_1.webp",
+   "w": 380,
+   "h": 266,
+   "page": 211,
+   "how": "box"
+  },
+  {
+   "id": "sr-446#1",
+   "article": "sr-446",
+   "jo": "제446조",
+   "file": "sr-446_1.webp",
+   "w": 380,
+   "h": 305,
+   "page": 211,
+   "how": "box"
+  },
+  {
+   "id": "sr-447#1",
+   "article": "sr-447",
+   "jo": "제447조",
+   "file": "sr-447_1.webp",
+   "w": 380,
+   "h": 248,
+   "page": 212,
+   "how": "box"
+  },
+  {
+   "id": "sr-448#1",
+   "article": "sr-448",
+   "jo": "제448조",
+   "file": "sr-448_1.webp",
+   "w": 380,
+   "h": 223,
+   "page": 212,
+   "how": "box"
+  },
+  {
+   "id": "sr-449#1",
+   "article": "sr-449",
+   "jo": "제449조",
+   "file": "sr-449_1.webp",
+   "w": 380,
+   "h": 251,
+   "page": 212,
+   "how": "box"
+  },
+  {
+   "id": "sr-451#1",
+   "article": "sr-451",
+   "jo": "제451조",
+   "file": "sr-451_1.webp",
+   "w": 380,
+   "h": 220,
+   "page": 213,
+   "how": "box"
+  },
+  {
+   "id": "sr-451#2",
+   "article": "sr-451",
+   "jo": "제451조",
+   "file": "sr-451_2.webp",
+   "w": 380,
+   "h": 395,
+   "page": 213,
+   "how": "box"
+  },
+  {
+   "id": "sr-452#1",
+   "article": "sr-452",
+   "jo": "제452조",
+   "file": "sr-452_1.webp",
+   "w": 380,
+   "h": 231,
+   "page": 215,
+   "how": "box"
+  },
+  {
+   "id": "sr-453#1",
+   "article": "sr-453",
+   "jo": "제453조",
+   "file": "sr-453_1.webp",
+   "w": 380,
+   "h": 213,
+   "page": 215,
+   "how": "box"
+  },
+  {
+   "id": "sr-453#2",
+   "article": "sr-453",
+   "jo": "제453조",
+   "file": "sr-453_2.webp",
+   "w": 380,
+   "h": 375,
+   "page": 215,
+   "how": "box"
+  },
+  {
+   "id": "sr-454#1",
+   "article": "sr-454",
+   "jo": "제454조",
+   "file": "sr-454_1.webp",
+   "w": 380,
+   "h": 476,
+   "page": 216,
+   "how": "box"
+  },
+  {
+   "id": "sr-455#1",
+   "article": "sr-455",
+   "jo": "제455조",
+   "file": "sr-455_1.webp",
+   "w": 380,
+   "h": 261,
+   "page": 216,
+   "how": "box"
+  },
+  {
+   "id": "sr-457#1",
+   "article": "sr-457",
+   "jo": "제457조",
+   "file": "sr-457_1.webp",
+   "w": 380,
+   "h": 242,
+   "page": 217,
+   "how": "box"
+  },
+  {
+   "id": "sr-457#2",
+   "article": "sr-457",
+   "jo": "제457조",
+   "file": "sr-457_2.webp",
+   "w": 380,
+   "h": 273,
+   "page": 217,
+   "how": "box"
+  },
+  {
+   "id": "sr-458#1",
+   "article": "sr-458",
+   "jo": "제458조",
+   "file": "sr-458_1.webp",
+   "w": 380,
+   "h": 294,
+   "page": 217,
+   "how": "box"
+  },
+  {
+   "id": "sr-459#1",
+   "article": "sr-459",
+   "jo": "제459조",
+   "file": "sr-459_1.webp",
+   "w": 380,
+   "h": 356,
+   "page": 218,
+   "how": "box"
+  },
+  {
+   "id": "sr-460#1",
+   "article": "sr-460",
+   "jo": "제460조",
+   "file": "sr-460_1.webp",
+   "w": 380,
+   "h": 301,
+   "page": 218,
+   "how": "box"
+  },
+  {
+   "id": "sr-461#1",
+   "article": "sr-461",
+   "jo": "제461조",
+   "file": "sr-461_1.webp",
+   "w": 380,
+   "h": 257,
+   "page": 218,
+   "how": "box"
+  },
+  {
+   "id": "sr-461#2",
+   "article": "sr-461",
+   "jo": "제461조",
+   "file": "sr-461_2.webp",
+   "w": 380,
+   "h": 252,
+   "page": 218,
+   "how": "box"
+  },
+  {
+   "id": "sr-461#3",
+   "article": "sr-461",
+   "jo": "제461조",
+   "file": "sr-461_3.webp",
+   "w": 380,
+   "h": 302,
+   "page": 218,
+   "how": "box"
+  },
+  {
+   "id": "sr-461#4",
+   "article": "sr-461",
+   "jo": "제461조",
+   "file": "sr-461_4.webp",
+   "w": 380,
+   "h": 265,
+   "page": 218,
+   "how": "box"
+  },
+  {
+   "id": "sr-462#1",
+   "article": "sr-462",
+   "jo": "제462조",
+   "file": "sr-462_1.webp",
+   "w": 380,
+   "h": 385,
+   "page": 219,
+   "how": "box"
+  },
+  {
+   "id": "sr-462#2",
+   "article": "sr-462",
+   "jo": "제462조",
+   "file": "sr-462_2.webp",
+   "w": 380,
+   "h": 315,
+   "page": 219,
+   "how": "box"
+  },
+  {
+   "id": "sr-462#3",
+   "article": "sr-462",
+   "jo": "제462조",
+   "file": "sr-462_3.webp",
+   "w": 380,
+   "h": 262,
+   "page": 219,
+   "how": "box"
+  },
+  {
+   "id": "sr-463#1",
+   "article": "sr-463",
+   "jo": "제463조",
+   "file": "sr-463_1.webp",
+   "w": 380,
+   "h": 211,
+   "page": 219,
+   "how": "box"
+  },
+  {
+   "id": "sr-464#1",
+   "article": "sr-464",
+   "jo": "제464조",
+   "file": "sr-464_1.webp",
+   "w": 380,
+   "h": 195,
+   "page": 219,
+   "how": "box"
+  },
+  {
+   "id": "sr-465#1",
+   "article": "sr-465",
+   "jo": "제465조",
+   "file": "sr-465_1.webp",
+   "w": 380,
+   "h": 319,
+   "page": 220,
+   "how": "box"
+  },
+  {
+   "id": "sr-466#1",
+   "article": "sr-466",
+   "jo": "제466조",
+   "file": "sr-466_1.webp",
+   "w": 380,
+   "h": 286,
+   "page": 220,
+   "how": "box"
+  },
+  {
+   "id": "sr-467#1",
+   "article": "sr-467",
+   "jo": "제467조",
+   "file": "sr-467_1.webp",
+   "w": 358,
+   "h": 283,
+   "page": 220,
+   "how": "box"
+  },
+  {
+   "id": "sr-467#2",
+   "article": "sr-467",
+   "jo": "제467조",
+   "file": "sr-467_2.webp",
+   "w": 310,
+   "h": 315,
+   "page": 220,
+   "how": "box"
+  },
+  {
+   "id": "sr-467#3",
+   "article": "sr-467",
+   "jo": "제467조",
+   "file": "sr-467_3.webp",
+   "w": 380,
+   "h": 277,
+   "page": 220,
+   "how": "box"
+  },
+  {
+   "id": "sr-468#1",
+   "article": "sr-468",
+   "jo": "제468조",
+   "file": "sr-468_1.webp",
+   "w": 380,
+   "h": 282,
+   "page": 221,
+   "how": "box"
+  },
+  {
+   "id": "sr-469#1",
+   "article": "sr-469",
+   "jo": "제469조",
+   "file": "sr-469_1.webp",
+   "w": 380,
+   "h": 233,
+   "page": 221,
+   "how": "box"
+  },
+  {
+   "id": "sr-469#2",
+   "article": "sr-469",
+   "jo": "제469조",
+   "file": "sr-469_2.webp",
+   "w": 380,
+   "h": 267,
+   "page": 221,
+   "how": "box"
+  },
+  {
+   "id": "sr-470#1",
+   "article": "sr-470",
+   "jo": "제470조",
+   "file": "sr-470_1.webp",
+   "w": 380,
+   "h": 284,
+   "page": 221,
+   "how": "box"
+  },
+  {
+   "id": "sr-471#1",
+   "article": "sr-471",
+   "jo": "제471조",
+   "file": "sr-471_1.webp",
+   "w": 380,
+   "h": 257,
+   "page": 222,
+   "how": "box"
+  },
+  {
+   "id": "sr-471#2",
+   "article": "sr-471",
+   "jo": "제471조",
+   "file": "sr-471_2.webp",
+   "w": 380,
+   "h": 285,
+   "page": 222,
+   "how": "box"
+  },
+  {
+   "id": "sr-471#3",
+   "article": "sr-471",
+   "jo": "제471조",
+   "file": "sr-471_3.webp",
+   "w": 380,
+   "h": 320,
+   "page": 222,
+   "how": "box"
+  },
+  {
+   "id": "sr-472#1",
+   "article": "sr-472",
+   "jo": "제472조",
+   "file": "sr-472_1.webp",
+   "w": 380,
+   "h": 234,
+   "page": 223,
+   "how": "box"
+  },
+  {
+   "id": "sr-473#1",
+   "article": "sr-473",
+   "jo": "제473조",
+   "file": "sr-473_1.webp",
+   "w": 380,
+   "h": 288,
+   "page": 223,
+   "how": "box"
+  },
+  {
+   "id": "sr-474#1",
+   "article": "sr-474",
+   "jo": "제474조",
+   "file": "sr-474_1.webp",
+   "w": 380,
+   "h": 298,
+   "page": 223,
+   "how": "box"
+  },
+  {
+   "id": "sr-475#1",
+   "article": "sr-475",
+   "jo": "제475조",
+   "file": "sr-475_1.webp",
+   "w": 380,
+   "h": 242,
+   "page": 223,
+   "how": "box"
+  },
+  {
+   "id": "sr-476#1",
+   "article": "sr-476",
+   "jo": "제476조",
+   "file": "sr-476_1.webp",
+   "w": 380,
+   "h": 252,
+   "page": 224,
+   "how": "box"
+  },
+  {
+   "id": "sr-486#1",
+   "article": "sr-486",
+   "jo": "제486조",
+   "file": "sr-486_1.webp",
+   "w": 380,
+   "h": 218,
+   "page": 224,
+   "how": "box"
+  },
+  {
+   "id": "sr-487#1",
+   "article": "sr-487",
+   "jo": "제487조",
+   "file": "sr-487_1.webp",
+   "w": 380,
+   "h": 324,
+   "page": 224,
+   "how": "box"
+  },
+  {
+   "id": "sr-488#1",
+   "article": "sr-488",
+   "jo": "제488조",
+   "file": "sr-488_1.webp",
+   "w": 380,
+   "h": 284,
+   "page": 225,
+   "how": "box"
+  },
+  {
+   "id": "sr-489#1",
+   "article": "sr-489",
+   "jo": "제489조",
+   "file": "sr-489_1.webp",
+   "w": 380,
+   "h": 255,
+   "page": 225,
+   "how": "box"
+  },
+  {
+   "id": "sr-489#2",
+   "article": "sr-489",
+   "jo": "제489조",
+   "file": "sr-489_2.webp",
+   "w": 380,
+   "h": 254,
+   "page": 225,
+   "how": "box"
+  },
+  {
+   "id": "sr-490#1",
+   "article": "sr-490",
+   "jo": "제490조",
+   "file": "sr-490_1.webp",
+   "w": 380,
+   "h": 399,
+   "page": 226,
+   "how": "box"
+  },
+  {
+   "id": "sr-491#1",
+   "article": "sr-491",
+   "jo": "제491조",
+   "file": "sr-491_1.webp",
+   "w": 380,
+   "h": 331,
+   "page": 226,
+   "how": "box"
+  },
+  {
+   "id": "sr-491#2",
+   "article": "sr-491",
+   "jo": "제491조",
+   "file": "sr-491_2.webp",
+   "w": 380,
+   "h": 426,
+   "page": 226,
+   "how": "box"
+  },
+  {
+   "id": "sr-492#1",
+   "article": "sr-492",
+   "jo": "제492조",
+   "file": "sr-492_1.webp",
+   "w": 380,
+   "h": 356,
+   "page": 227,
+   "how": "box"
+  },
+  {
+   "id": "sr-493#1",
+   "article": "sr-493",
+   "jo": "제493조",
+   "file": "sr-493_1.webp",
+   "w": 380,
+   "h": 334,
+   "page": 227,
+   "how": "box"
+  },
+  {
+   "id": "sr-494#1",
+   "article": "sr-494",
+   "jo": "제494조",
+   "file": "sr-494_1.webp",
+   "w": 380,
+   "h": 426,
+   "page": 227,
+   "how": "box"
+  },
+  {
+   "id": "sr-494#2",
+   "article": "sr-494",
+   "jo": "제494조",
+   "file": "sr-494_2.webp",
+   "w": 380,
+   "h": 259,
+   "page": 227,
+   "how": "box"
+  },
+  {
+   "id": "sr-494#3",
+   "article": "sr-494",
+   "jo": "제494조",
+   "file": "sr-494_3.webp",
+   "w": 380,
+   "h": 192,
+   "page": 227,
+   "how": "box"
+  },
+  {
+   "id": "sr-495#1",
+   "article": "sr-495",
+   "jo": "제495조",
+   "file": "sr-495_1.webp",
+   "w": 380,
+   "h": 273,
+   "page": 228,
+   "how": "box"
+  },
+  {
+   "id": "sr-495#2",
+   "article": "sr-495",
+   "jo": "제495조",
+   "file": "sr-495_2.webp",
+   "w": 380,
+   "h": 317,
+   "page": 228,
+   "how": "box"
+  },
+  {
+   "id": "sr-495#3",
+   "article": "sr-495",
+   "jo": "제495조",
+   "file": "sr-495_3.webp",
+   "w": 380,
+   "h": 351,
+   "page": 228,
+   "how": "box"
+  },
+  {
+   "id": "sr-495#4",
+   "article": "sr-495",
+   "jo": "제495조",
+   "file": "sr-495_4.webp",
+   "w": 380,
+   "h": 205,
+   "page": 228,
+   "how": "box"
+  },
+  {
+   "id": "sr-496#1",
+   "article": "sr-496",
+   "jo": "제496조",
+   "file": "sr-496_1.webp",
+   "w": 380,
+   "h": 283,
+   "page": 229,
+   "how": "box"
+  },
+  {
+   "id": "sr-497#1",
+   "article": "sr-497",
+   "jo": "제497조",
+   "file": "sr-497_1.webp",
+   "w": 380,
+   "h": 261,
+   "page": 229,
+   "how": "box"
+  },
+  {
+   "id": "sr-497-2#1",
+   "article": "sr-497-2",
+   "jo": "제497조의2",
+   "file": "sr-497-2_1.webp",
+   "w": 380,
+   "h": 354,
+   "page": 229,
+   "how": "box"
+  },
+  {
+   "id": "sr-498#1",
+   "article": "sr-498",
+   "jo": "제498조",
+   "file": "sr-498_1.webp",
+   "w": 380,
+   "h": 349,
+   "page": 231,
+   "how": "box"
+  },
+  {
+   "id": "sr-498#2",
+   "article": "sr-498",
+   "jo": "제498조",
+   "file": "sr-498_2.webp",
+   "w": 380,
+   "h": 295,
+   "page": 231,
+   "how": "box"
+  },
+  {
+   "id": "sr-498#3",
+   "article": "sr-498",
+   "jo": "제498조",
+   "file": "sr-498_3.webp",
+   "w": 380,
+   "h": 402,
+   "page": 231,
+   "how": "box"
+  },
+  {
+   "id": "sr-499#1",
+   "article": "sr-499",
+   "jo": "제499조",
+   "file": "sr-499_1.webp",
+   "w": 380,
+   "h": 497,
+   "page": 231,
+   "how": "box"
+  },
+  {
+   "id": "sr-499#2",
+   "article": "sr-499",
+   "jo": "제499조",
+   "file": "sr-499_2.webp",
+   "w": 380,
+   "h": 212,
+   "page": 231,
+   "how": "box"
+  },
+  {
+   "id": "sr-500#1",
+   "article": "sr-500",
+   "jo": "제500조",
+   "file": "sr-500_1.webp",
+   "w": 380,
+   "h": 298,
+   "page": 232,
+   "how": "box"
+  },
+  {
+   "id": "sr-501#1",
+   "article": "sr-501",
+   "jo": "제501조",
+   "file": "sr-501_1.webp",
+   "w": 380,
+   "h": 201,
+   "page": 233,
+   "how": "box"
+  },
+  {
+   "id": "sr-502#1",
+   "article": "sr-502",
+   "jo": "제502조",
+   "file": "sr-502_1.webp",
+   "w": 380,
+   "h": 509,
+   "page": 233,
+   "how": "box"
+  },
+  {
+   "id": "sr-502#2",
+   "article": "sr-502",
+   "jo": "제502조",
+   "file": "sr-502_2.webp",
+   "w": 380,
+   "h": 357,
+   "page": 233,
+   "how": "box"
+  },
+  {
+   "id": "sr-502#3",
+   "article": "sr-502",
+   "jo": "제502조",
+   "file": "sr-502_3.webp",
+   "w": 380,
+   "h": 330,
+   "page": 233,
+   "how": "box"
+  },
+  {
+   "id": "sr-502#4",
+   "article": "sr-502",
+   "jo": "제502조",
+   "file": "sr-502_4.webp",
+   "w": 380,
+   "h": 251,
+   "page": 233,
+   "how": "box"
+  },
+  {
+   "id": "sr-502#5",
+   "article": "sr-502",
+   "jo": "제502조",
+   "file": "sr-502_5.webp",
+   "w": 369,
+   "h": 314,
+   "page": 233,
+   "how": "box"
+  },
+  {
+   "id": "sr-503#1",
+   "article": "sr-503",
+   "jo": "제503조",
+   "file": "sr-503_1.webp",
+   "w": 380,
+   "h": 539,
+   "page": 234,
+   "how": "box"
+  },
+  {
+   "id": "sr-503#2",
+   "article": "sr-503",
+   "jo": "제503조",
+   "file": "sr-503_2.webp",
+   "w": 380,
+   "h": 288,
+   "page": 234,
+   "how": "box"
+  },
+  {
+   "id": "sr-503#3",
+   "article": "sr-503",
+   "jo": "제503조",
+   "file": "sr-503_3.webp",
+   "w": 380,
+   "h": 304,
+   "page": 234,
+   "how": "box"
+  },
+  {
+   "id": "sr-503#4",
+   "article": "sr-503",
+   "jo": "제503조",
+   "file": "sr-503_4.webp",
+   "w": 380,
+   "h": 291,
+   "page": 234,
+   "how": "box"
+  },
+  {
+   "id": "sr-503#5",
+   "article": "sr-503",
+   "jo": "제503조",
+   "file": "sr-503_5.webp",
+   "w": 380,
+   "h": 353,
+   "page": 234,
+   "how": "box"
+  },
+  {
+   "id": "sr-504#1",
+   "article": "sr-504",
+   "jo": "제504조",
+   "file": "sr-504_1.webp",
+   "w": 380,
+   "h": 339,
+   "page": 235,
+   "how": "box"
+  },
+  {
+   "id": "sr-504#2",
+   "article": "sr-504",
+   "jo": "제504조",
+   "file": "sr-504_2.webp",
+   "w": 380,
+   "h": 290,
+   "page": 235,
+   "how": "box"
+  },
+  {
+   "id": "sr-504#3",
+   "article": "sr-504",
+   "jo": "제504조",
+   "file": "sr-504_3.webp",
+   "w": 380,
+   "h": 398,
+   "page": 235,
+   "how": "box"
+  },
+  {
+   "id": "sr-504#4",
+   "article": "sr-504",
+   "jo": "제504조",
+   "file": "sr-504_4.webp",
+   "w": 380,
+   "h": 310,
+   "page": 235,
+   "how": "box"
+  },
+  {
+   "id": "sr-505#1",
+   "article": "sr-505",
+   "jo": "제505조",
+   "file": "sr-505_1.webp",
+   "w": 380,
+   "h": 279,
+   "page": 235,
+   "how": "box"
+  },
+  {
+   "id": "sr-505#2",
+   "article": "sr-505",
+   "jo": "제505조",
+   "file": "sr-505_2.webp",
+   "w": 380,
+   "h": 381,
+   "page": 235,
+   "how": "box"
+  },
+  {
+   "id": "sr-506#1",
+   "article": "sr-506",
+   "jo": "제506조",
+   "file": "sr-506_1.webp",
+   "w": 380,
+   "h": 206,
+   "page": 236,
+   "how": "box"
+  },
+  {
+   "id": "sr-507#1",
+   "article": "sr-507",
+   "jo": "제507조",
+   "file": "sr-507_1.webp",
+   "w": 380,
+   "h": 316,
+   "page": 236,
+   "how": "box"
+  },
+  {
+   "id": "sr-508#1",
+   "article": "sr-508",
+   "jo": "제508조",
+   "file": "sr-508_1.webp",
+   "w": 380,
+   "h": 268,
+   "page": 236,
+   "how": "box"
+  },
+  {
+   "id": "sr-509#1",
+   "article": "sr-509",
+   "jo": "제509조",
+   "file": "sr-509_1.webp",
+   "w": 380,
+   "h": 287,
+   "page": 236,
+   "how": "box"
+  },
+  {
+   "id": "sr-510#1",
+   "article": "sr-510",
+   "jo": "제510조",
+   "file": "sr-510_1.webp",
+   "w": 380,
+   "h": 264,
+   "page": 237,
+   "how": "box"
+  },
+  {
+   "id": "sr-510#2",
+   "article": "sr-510",
+   "jo": "제510조",
+   "file": "sr-510_2.webp",
+   "w": 380,
+   "h": 416,
+   "page": 237,
+   "how": "box"
+  },
+  {
+   "id": "sr-511#1",
+   "article": "sr-511",
+   "jo": "제511조",
+   "file": "sr-511_1.webp",
+   "w": 380,
+   "h": 299,
+   "page": 237,
+   "how": "box"
+  },
+  {
+   "id": "sr-512#1",
+   "article": "sr-512",
+   "jo": "제512조",
+   "file": "sr-512_1.webp",
+   "w": 380,
+   "h": 217,
+   "page": 239,
+   "how": "box"
+  },
+  {
+   "id": "sr-512#2",
+   "article": "sr-512",
+   "jo": "제512조",
+   "file": "sr-512_2.webp",
+   "w": 380,
+   "h": 590,
+   "page": 239,
+   "how": "box"
+  },
+  {
+   "id": "sr-512#3",
+   "article": "sr-512",
+   "jo": "제512조",
+   "file": "sr-512_3.webp",
+   "w": 380,
+   "h": 204,
+   "page": 239,
+   "how": "box"
+  },
+  {
+   "id": "sr-513#1",
+   "article": "sr-513",
+   "jo": "제513조",
+   "file": "sr-513_1.webp",
+   "w": 380,
+   "h": 196,
+   "page": 240,
+   "how": "box"
+  },
+  {
+   "id": "sr-514#1",
+   "article": "sr-514",
+   "jo": "제514조",
+   "file": "sr-514_1.webp",
+   "w": 380,
+   "h": 318,
+   "page": 240,
+   "how": "box"
+  },
+  {
+   "id": "sr-515#1",
+   "article": "sr-515",
+   "jo": "제515조",
+   "file": "sr-515_1.webp",
+   "w": 380,
+   "h": 212,
+   "page": 240,
+   "how": "box"
+  },
+  {
+   "id": "sr-516#1",
+   "article": "sr-516",
+   "jo": "제516조",
+   "file": "sr-516_1.webp",
+   "w": 380,
+   "h": 197,
+   "page": 240,
+   "how": "box"
+  },
+  {
+   "id": "sr-517#1",
+   "article": "sr-517",
+   "jo": "제517조",
+   "file": "sr-517_1.webp",
+   "w": 380,
+   "h": 274,
+   "page": 241,
+   "how": "box"
+  },
+  {
+   "id": "sr-518#1",
+   "article": "sr-518",
+   "jo": "제518조",
+   "file": "sr-518_1.webp",
+   "w": 380,
+   "h": 310,
+   "page": 241,
+   "how": "box"
+  },
+  {
+   "id": "sr-519#1",
+   "article": "sr-519",
+   "jo": "제519조",
+   "file": "sr-519_1.webp",
+   "w": 380,
+   "h": 267,
+   "page": 241,
+   "how": "box"
+  },
+  {
+   "id": "sr-521#1",
+   "article": "sr-521",
+   "jo": "제521조",
+   "file": "sr-521_1.webp",
+   "w": 380,
+   "h": 312,
+   "page": 241,
+   "how": "above"
+  },
+  {
+   "id": "sr-522#1",
+   "article": "sr-522",
+   "jo": "제522조",
+   "file": "sr-522_1.webp",
+   "w": 380,
+   "h": 289,
+   "page": 243,
+   "how": "box"
+  },
+  {
+   "id": "sr-523#1",
+   "article": "sr-523",
+   "jo": "제523조",
+   "file": "sr-523_1.webp",
+   "w": 380,
+   "h": 291,
+   "page": 243,
+   "how": "box"
+  },
+  {
+   "id": "sr-524#1",
+   "article": "sr-524",
+   "jo": "제524조",
+   "file": "sr-524_1.webp",
+   "w": 380,
+   "h": 492,
+   "page": 243,
+   "how": "box"
+  },
+  {
+   "id": "sr-525#1",
+   "article": "sr-525",
+   "jo": "제525조",
+   "file": "sr-525_1.webp",
+   "w": 380,
+   "h": 270,
+   "page": 244,
+   "how": "box"
+  },
+  {
+   "id": "sr-526#1",
+   "article": "sr-526",
+   "jo": "제526조",
+   "file": "sr-526_1.webp",
+   "w": 380,
+   "h": 262,
+   "page": 244,
+   "how": "box"
+  },
+  {
+   "id": "sr-527#1",
+   "article": "sr-527",
+   "jo": "제527조",
+   "file": "sr-527_1.webp",
+   "w": 380,
+   "h": 284,
+   "page": 244,
+   "how": "box"
+  },
+  {
+   "id": "sr-528#1",
+   "article": "sr-528",
+   "jo": "제528조",
+   "file": "sr-528_1.webp",
+   "w": 380,
+   "h": 294,
+   "page": 245,
+   "how": "box"
+  },
+  {
+   "id": "sr-529#1",
+   "article": "sr-529",
+   "jo": "제529조",
+   "file": "sr-529_1.webp",
+   "w": 380,
+   "h": 446,
+   "page": 245,
+   "how": "box"
+  },
+  {
+   "id": "sr-530#1",
+   "article": "sr-530",
+   "jo": "제530조",
+   "file": "sr-530_1.webp",
+   "w": 380,
+   "h": 276,
+   "page": 245,
+   "how": "box"
+  },
+  {
+   "id": "sr-531#1",
+   "article": "sr-531",
+   "jo": "제531조",
+   "file": "sr-531_1.webp",
+   "w": 380,
+   "h": 249,
+   "page": 246,
+   "how": "box"
+  },
+  {
+   "id": "sr-534#1",
+   "article": "sr-534",
+   "jo": "제534조",
+   "file": "sr-534_1.webp",
+   "w": 380,
+   "h": 263,
+   "page": 246,
+   "how": "box"
+  },
+  {
+   "id": "sr-535#1",
+   "article": "sr-535",
+   "jo": "제535조",
+   "file": "sr-535_1.webp",
+   "w": 380,
+   "h": 273,
+   "page": 247,
+   "how": "box"
+  },
+  {
+   "id": "sr-537#1",
+   "article": "sr-537",
+   "jo": "제537조",
+   "file": "sr-537_1.webp",
+   "w": 380,
+   "h": 296,
+   "page": 248,
+   "how": "box"
+  },
+  {
+   "id": "sr-538#1",
+   "article": "sr-538",
+   "jo": "제538조",
+   "file": "sr-538_1.webp",
+   "w": 380,
+   "h": 331,
+   "page": 248,
+   "how": "box"
+  },
+  {
+   "id": "sr-539#1",
+   "article": "sr-539",
+   "jo": "제539조",
+   "file": "sr-539_1.webp",
+   "w": 380,
+   "h": 341,
+   "page": 248,
+   "how": "box"
+  },
+  {
+   "id": "sr-540#1",
+   "article": "sr-540",
+   "jo": "제540조",
+   "file": "sr-540_1.webp",
+   "w": 380,
+   "h": 298,
+   "page": 249,
+   "how": "box"
+  },
+  {
+   "id": "sr-541#1",
+   "article": "sr-541",
+   "jo": "제541조",
+   "file": "sr-541_1.webp",
+   "w": 380,
+   "h": 323,
+   "page": 249,
+   "how": "box"
+  },
+  {
+   "id": "sr-542#1",
+   "article": "sr-542",
+   "jo": "제542조",
+   "file": "sr-542_1.webp",
+   "w": 380,
+   "h": 326,
+   "page": 249,
+   "how": "box"
+  },
+  {
+   "id": "sr-542#2",
+   "article": "sr-542",
+   "jo": "제542조",
+   "file": "sr-542_2.webp",
+   "w": 380,
+   "h": 473,
+   "page": 249,
+   "how": "box"
+  },
+  {
+   "id": "sr-543#1",
+   "article": "sr-543",
+   "jo": "제543조",
+   "file": "sr-543_1.webp",
+   "w": 380,
+   "h": 341,
+   "page": 250,
+   "how": "box"
+  },
+  {
+   "id": "sr-544#1",
+   "article": "sr-544",
+   "jo": "제544조",
+   "file": "sr-544_1.webp",
+   "w": 380,
+   "h": 272,
+   "page": 250,
+   "how": "box"
+  },
+  {
+   "id": "sr-545#1",
+   "article": "sr-545",
+   "jo": "제545조",
+   "file": "sr-545_1.webp",
+   "w": 380,
+   "h": 274,
+   "page": 250,
+   "how": "box"
+  },
+  {
+   "id": "sr-546#1",
+   "article": "sr-546",
+   "jo": "제546조",
+   "file": "sr-546_1.webp",
+   "w": 380,
+   "h": 262,
+   "page": 251,
+   "how": "box"
+  },
+  {
+   "id": "sr-547#1",
+   "article": "sr-547",
+   "jo": "제547조",
+   "file": "sr-547_1.webp",
+   "w": 380,
+   "h": 248,
+   "page": 251,
+   "how": "box"
+  },
+  {
+   "id": "sr-547#2",
+   "article": "sr-547",
+   "jo": "제547조",
+   "file": "sr-547_2.webp",
+   "w": 380,
+   "h": 271,
+   "page": 251,
+   "how": "box"
+  },
+  {
+   "id": "sr-548#1",
+   "article": "sr-548",
+   "jo": "제548조",
+   "file": "sr-548_1.webp",
+   "w": 380,
+   "h": 257,
+   "page": 252,
+   "how": "box"
+  },
+  {
+   "id": "sr-549#1",
+   "article": "sr-549",
+   "jo": "제549조",
+   "file": "sr-549_1.webp",
+   "w": 380,
+   "h": 282,
+   "page": 252,
+   "how": "box"
+  },
+  {
+   "id": "sr-550#1",
+   "article": "sr-550",
+   "jo": "제550조",
+   "file": "sr-550_1.webp",
+   "w": 380,
+   "h": 247,
+   "page": 252,
+   "how": "box"
+  },
+  {
+   "id": "sr-551#1",
+   "article": "sr-551",
+   "jo": "제551조",
+   "file": "sr-551_1.webp",
+   "w": 372,
+   "h": 439,
+   "page": 252,
+   "how": "box"
+  },
+  {
+   "id": "sr-552#1",
+   "article": "sr-552",
+   "jo": "제552조",
+   "file": "sr-552_1.webp",
+   "w": 380,
+   "h": 421,
+   "page": 253,
+   "how": "box"
+  },
+  {
+   "id": "sr-553#1",
+   "article": "sr-553",
+   "jo": "제553조",
+   "file": "sr-553_1.webp",
+   "w": 380,
+   "h": 279,
+   "page": 253,
+   "how": "box"
+  },
+  {
+   "id": "sr-554#1",
+   "article": "sr-554",
+   "jo": "제554조",
+   "file": "sr-554_1.webp",
+   "w": 380,
+   "h": 296,
+   "page": 253,
+   "how": "box"
+  },
+  {
+   "id": "sr-555#1",
+   "article": "sr-555",
+   "jo": "제555조",
+   "file": "sr-555_1.webp",
+   "w": 380,
+   "h": 292,
+   "page": 254,
+   "how": "box"
+  },
+  {
+   "id": "sr-556#1",
+   "article": "sr-556",
+   "jo": "제556조",
+   "file": "sr-556_1.webp",
+   "w": 380,
+   "h": 242,
+   "page": 254,
+   "how": "box"
+  },
+  {
+   "id": "sr-557#1",
+   "article": "sr-557",
+   "jo": "제557조",
+   "file": "sr-557_1.webp",
+   "w": 380,
+   "h": 272,
+   "page": 254,
+   "how": "box"
+  },
+  {
+   "id": "sr-558#1",
+   "article": "sr-558",
+   "jo": "제558조",
+   "file": "sr-558_1.webp",
+   "w": 380,
+   "h": 298,
+   "page": 256,
+   "how": "box"
+  },
+  {
+   "id": "sr-558#2",
+   "article": "sr-558",
+   "jo": "제558조",
+   "file": "sr-558_2.webp",
+   "w": 380,
+   "h": 314,
+   "page": 256,
+   "how": "box"
+  },
+  {
+   "id": "sr-558#3",
+   "article": "sr-558",
+   "jo": "제558조",
+   "file": "sr-558_3.webp",
+   "w": 380,
+   "h": 276,
+   "page": 256,
+   "how": "box"
+  },
+  {
+   "id": "sr-559#1",
+   "article": "sr-559",
+   "jo": "제559조",
+   "file": "sr-559_1.webp",
+   "w": 380,
+   "h": 396,
+   "page": 256,
+   "how": "box"
+  },
+  {
+   "id": "sr-561#1",
+   "article": "sr-561",
+   "jo": "제561조",
+   "file": "sr-561_1.webp",
+   "w": 380,
+   "h": 200,
+   "page": 258,
+   "how": "box"
+  },
+  {
+   "id": "sr-562#1",
+   "article": "sr-562",
+   "jo": "제562조",
+   "file": "sr-562_1.webp",
+   "w": 380,
+   "h": 325,
+   "page": 258,
+   "how": "box"
+  },
+  {
+   "id": "sr-562#2",
+   "article": "sr-562",
+   "jo": "제562조",
+   "file": "sr-562_2.webp",
+   "w": 380,
+   "h": 276,
+   "page": 258,
+   "how": "box"
+  },
+  {
+   "id": "sr-563#1",
+   "article": "sr-563",
+   "jo": "제563조",
+   "file": "sr-563_1.webp",
+   "w": 380,
+   "h": 325,
+   "page": 259,
+   "how": "box"
+  },
+  {
+   "id": "sr-564#1",
+   "article": "sr-564",
+   "jo": "제564조",
+   "file": "sr-564_1.webp",
+   "w": 380,
+   "h": 260,
+   "page": 260,
+   "how": "box"
+  },
+  {
+   "id": "sr-565#1",
+   "article": "sr-565",
+   "jo": "제565조",
+   "file": "sr-565_1.webp",
+   "w": 380,
+   "h": 345,
+   "page": 260,
+   "how": "box"
+  },
+  {
+   "id": "sr-566#1",
+   "article": "sr-566",
+   "jo": "제566조",
+   "file": "sr-566_1.webp",
+   "w": 380,
+   "h": 297,
+   "page": 260,
+   "how": "box"
+  },
+  {
+   "id": "sr-568#1",
+   "article": "sr-568",
+   "jo": "제568조",
+   "file": "sr-568_1.webp",
+   "w": 380,
+   "h": 269,
+   "page": 261,
+   "how": "box"
+  },
+  {
+   "id": "sr-569#1",
+   "article": "sr-569",
+   "jo": "제569조",
+   "file": "sr-569_1.webp",
+   "w": 380,
+   "h": 199,
+   "page": 261,
+   "how": "box"
+  },
+  {
+   "id": "sr-569#2",
+   "article": "sr-569",
+   "jo": "제569조",
+   "file": "sr-569_2.webp",
+   "w": 380,
+   "h": 181,
+   "page": 261,
+   "how": "box"
+  },
+  {
+   "id": "sr-570#1",
+   "article": "sr-570",
+   "jo": "제570조",
+   "file": "sr-570_1.webp",
+   "w": 380,
+   "h": 208,
+   "page": 262,
+   "how": "box"
+  },
+  {
+   "id": "sr-571#1",
+   "article": "sr-571",
+   "jo": "제571조",
+   "file": "sr-571_1.webp",
+   "w": 380,
+   "h": 252,
+   "page": 262,
+   "how": "box"
+  },
+  {
+   "id": "sr-572#1",
+   "article": "sr-572",
+   "jo": "제572조",
+   "file": "sr-572_1.webp",
+   "w": 380,
+   "h": 306,
+   "page": 262,
+   "how": "box"
+  },
+  {
+   "id": "sr-572#2",
+   "article": "sr-572",
+   "jo": "제572조",
+   "file": "sr-572_2.webp",
+   "w": 380,
+   "h": 307,
+   "page": 262,
+   "how": "box"
+  },
+  {
+   "id": "sr-573#1",
+   "article": "sr-573",
+   "jo": "제573조",
+   "file": "sr-573_1.webp",
+   "w": 380,
+   "h": 293,
+   "page": 264,
+   "how": "box"
+  },
+  {
+   "id": "sr-574#1",
+   "article": "sr-574",
+   "jo": "제574조",
+   "file": "sr-574_1.webp",
+   "w": 380,
+   "h": 304,
+   "page": 264,
+   "how": "box"
+  },
+  {
+   "id": "sr-575#1",
+   "article": "sr-575",
+   "jo": "제575조",
+   "file": "sr-575_1.webp",
+   "w": 380,
+   "h": 347,
+   "page": 265,
+   "how": "box"
+  },
+  {
+   "id": "sr-576#1",
+   "article": "sr-576",
+   "jo": "제576조",
+   "file": "sr-576_1.webp",
+   "w": 380,
+   "h": 283,
+   "page": 265,
+   "how": "box"
+  },
+  {
+   "id": "sr-578#1",
+   "article": "sr-578",
+   "jo": "제578조",
+   "file": "sr-578_1.webp",
+   "w": 380,
+   "h": 272,
+   "page": 266,
+   "how": "box"
+  },
+  {
+   "id": "sr-579#1",
+   "article": "sr-579",
+   "jo": "제579조",
+   "file": "sr-579_1.webp",
+   "w": 380,
+   "h": 248,
+   "page": 266,
+   "how": "box"
+  },
+  {
+   "id": "sr-580#1",
+   "article": "sr-580",
+   "jo": "제580조",
+   "file": "sr-580_1.webp",
+   "w": 380,
+   "h": 263,
+   "page": 266,
+   "how": "box"
+  },
+  {
+   "id": "sr-581#1",
+   "article": "sr-581",
+   "jo": "제581조",
+   "file": "sr-581_1.webp",
+   "w": 380,
+   "h": 222,
+   "page": 266,
+   "how": "box"
+  },
+  {
+   "id": "sr-583#1",
+   "article": "sr-583",
+   "jo": "제583조",
+   "file": "sr-583_1.webp",
+   "w": 380,
+   "h": 205,
+   "page": 267,
+   "how": "box"
+  },
+  {
+   "id": "sr-583#2",
+   "article": "sr-583",
+   "jo": "제583조",
+   "file": "sr-583_2.webp",
+   "w": 380,
+   "h": 352,
+   "page": 267,
+   "how": "box"
+  },
+  {
+   "id": "sr-584#1",
+   "article": "sr-584",
+   "jo": "제584조",
+   "file": "sr-584_1.webp",
+   "w": 380,
+   "h": 302,
+   "page": 267,
+   "how": "box"
+  },
+  {
+   "id": "sr-585#1",
+   "article": "sr-585",
+   "jo": "제585조",
+   "file": "sr-585_1.webp",
+   "w": 380,
+   "h": 294,
+   "page": 267,
+   "how": "box"
+  },
+  {
+   "id": "sr-586#1",
+   "article": "sr-586",
+   "jo": "제586조",
+   "file": "sr-586_1.webp",
+   "w": 380,
+   "h": 168,
+   "page": 268,
+   "how": "box"
+  },
+  {
+   "id": "sr-588#1",
+   "article": "sr-588",
+   "jo": "제588조",
+   "file": "sr-588_1.webp",
+   "w": 380,
+   "h": 336,
+   "page": 268,
+   "how": "box"
+  },
+  {
+   "id": "sr-589#1",
+   "article": "sr-589",
+   "jo": "제589조",
+   "file": "sr-589_1.webp",
+   "w": 380,
+   "h": 373,
+   "page": 268,
+   "how": "box"
+  },
+  {
+   "id": "sr-590#1",
+   "article": "sr-590",
+   "jo": "제590조",
+   "file": "sr-590_1.webp",
+   "w": 380,
+   "h": 328,
+   "page": 269,
+   "how": "box"
+  },
+  {
+   "id": "sr-591#1",
+   "article": "sr-591",
+   "jo": "제591조",
+   "file": "sr-591_1.webp",
+   "w": 380,
+   "h": 413,
+   "page": 269,
+   "how": "box"
+  },
+  {
+   "id": "sr-592#1",
+   "article": "sr-592",
+   "jo": "제592조",
+   "file": "sr-592_1.webp",
+   "w": 380,
+   "h": 291,
+   "page": 271,
+   "how": "box"
+  },
+  {
+   "id": "sr-592#2",
+   "article": "sr-592",
+   "jo": "제592조",
+   "file": "sr-592_2.webp",
+   "w": 375,
+   "h": 377,
+   "page": 271,
+   "how": "box"
+  },
+  {
+   "id": "sr-592#3",
+   "article": "sr-592",
+   "jo": "제592조",
+   "file": "sr-592_3.webp",
+   "w": 380,
+   "h": 348,
+   "page": 271,
+   "how": "box"
+  },
+  {
+   "id": "sr-593#1",
+   "article": "sr-593",
+   "jo": "제593조",
+   "file": "sr-593_1.webp",
+   "w": 380,
+   "h": 292,
+   "page": 271,
+   "how": "box"
+  },
+  {
+   "id": "sr-594#1",
+   "article": "sr-594",
+   "jo": "제594조",
+   "file": "sr-594_1.webp",
+   "w": 380,
+   "h": 190,
+   "page": 272,
+   "how": "box"
+  },
+  {
+   "id": "sr-594#2",
+   "article": "sr-594",
+   "jo": "제594조",
+   "file": "sr-594_2.webp",
+   "w": 380,
+   "h": 328,
+   "page": 272,
+   "how": "box"
+  },
+  {
+   "id": "sr-594#3",
+   "article": "sr-594",
+   "jo": "제594조",
+   "file": "sr-594_3.webp",
+   "w": 380,
+   "h": 281,
+   "page": 272,
+   "how": "box"
+  },
+  {
+   "id": "sr-595#1",
+   "article": "sr-595",
+   "jo": "제595조",
+   "file": "sr-595_1.webp",
+   "w": 380,
+   "h": 208,
+   "page": 272,
+   "how": "box"
+  },
+  {
+   "id": "sr-596#1",
+   "article": "sr-596",
+   "jo": "제596조",
+   "file": "sr-596_1.webp",
+   "w": 380,
+   "h": 299,
+   "page": 272,
+   "how": "box"
+  },
+  {
+   "id": "sr-597#1",
+   "article": "sr-597",
+   "jo": "제597조",
+   "file": "sr-597_1.webp",
+   "w": 380,
+   "h": 274,
+   "page": 273,
+   "how": "box"
+  },
+  {
+   "id": "sr-597#2",
+   "article": "sr-597",
+   "jo": "제597조",
+   "file": "sr-597_2.webp",
+   "w": 380,
+   "h": 294,
+   "page": 273,
+   "how": "box"
+  },
+  {
+   "id": "sr-597#3",
+   "article": "sr-597",
+   "jo": "제597조",
+   "file": "sr-597_3.webp",
+   "w": 380,
+   "h": 274,
+   "page": 273,
+   "how": "box"
+  },
+  {
+   "id": "sr-597#4",
+   "article": "sr-597",
+   "jo": "제597조",
+   "file": "sr-597_4.webp",
+   "w": 380,
+   "h": 218,
+   "page": 273,
+   "how": "box"
+  },
+  {
+   "id": "sr-597#5",
+   "article": "sr-597",
+   "jo": "제597조",
+   "file": "sr-597_5.webp",
+   "w": 380,
+   "h": 353,
+   "page": 273,
+   "how": "box"
+  },
+  {
+   "id": "sr-597#6",
+   "article": "sr-597",
+   "jo": "제597조",
+   "file": "sr-597_6.webp",
+   "w": 380,
+   "h": 407,
+   "page": 273,
+   "how": "box"
+  },
+  {
+   "id": "sr-597#7",
+   "article": "sr-597",
+   "jo": "제597조",
+   "file": "sr-597_7.webp",
+   "w": 380,
+   "h": 338,
+   "page": 273,
+   "how": "box"
+  },
+  {
+   "id": "sr-597#8",
+   "article": "sr-597",
+   "jo": "제597조",
+   "file": "sr-597_8.webp",
+   "w": 354,
+   "h": 376,
+   "page": 273,
+   "how": "box"
+  },
+  {
+   "id": "sr-597#9",
+   "article": "sr-597",
+   "jo": "제597조",
+   "file": "sr-597_9.webp",
+   "w": 380,
+   "h": 210,
+   "page": 273,
+   "how": "box"
+  },
+  {
+   "id": "sr-598#1",
+   "article": "sr-598",
+   "jo": "제598조",
+   "file": "sr-598_1.webp",
+   "w": 380,
+   "h": 320,
+   "page": 274,
+   "how": "box"
+  },
+  {
+   "id": "sr-598#2",
+   "article": "sr-598",
+   "jo": "제598조",
+   "file": "sr-598_2.webp",
+   "w": 380,
+   "h": 342,
+   "page": 274,
+   "how": "box"
+  },
+  {
+   "id": "sr-598#3",
+   "article": "sr-598",
+   "jo": "제598조",
+   "file": "sr-598_3.webp",
+   "w": 380,
+   "h": 298,
+   "page": 274,
+   "how": "box"
+  },
+  {
+   "id": "sr-598#4",
+   "article": "sr-598",
+   "jo": "제598조",
+   "file": "sr-598_4.webp",
+   "w": 380,
+   "h": 324,
+   "page": 274,
+   "how": "box"
+  },
+  {
+   "id": "sr-599#1",
+   "article": "sr-599",
+   "jo": "제599조",
+   "file": "sr-599_1.webp",
+   "w": 380,
+   "h": 358,
+   "page": 274,
+   "how": "above"
+  },
+  {
+   "id": "sr-600#1",
+   "article": "sr-600",
+   "jo": "제600조",
+   "file": "sr-600_1.webp",
+   "w": 380,
+   "h": 246,
+   "page": 274,
+   "how": "box"
+  },
+  {
+   "id": "sr-601#1",
+   "article": "sr-601",
+   "jo": "제601조",
+   "file": "sr-601_1.webp",
+   "w": 380,
+   "h": 334,
+   "page": 275,
+   "how": "box"
+  },
+  {
+   "id": "sr-601#2",
+   "article": "sr-601",
+   "jo": "제601조",
+   "file": "sr-601_2.webp",
+   "w": 380,
+   "h": 284,
+   "page": 275,
+   "how": "box"
+  },
+  {
+   "id": "sr-601#3",
+   "article": "sr-601",
+   "jo": "제601조",
+   "file": "sr-601_3.webp",
+   "w": 380,
+   "h": 360,
+   "page": 275,
+   "how": "box"
+  },
+  {
+   "id": "sr-601#4",
+   "article": "sr-601",
+   "jo": "제601조",
+   "file": "sr-601_4.webp",
+   "w": 380,
+   "h": 306,
+   "page": 275,
+   "how": "box"
+  },
+  {
+   "id": "sr-601#5",
+   "article": "sr-601",
+   "jo": "제601조",
+   "file": "sr-601_5.webp",
+   "w": 380,
+   "h": 485,
+   "page": 275,
+   "how": "box"
+  },
+  {
+   "id": "sr-602#1",
+   "article": "sr-602",
+   "jo": "제602조",
+   "file": "sr-602_1.webp",
+   "w": 380,
+   "h": 285,
+   "page": 276,
+   "how": "box"
+  },
+  {
+   "id": "sr-602#2",
+   "article": "sr-602",
+   "jo": "제602조",
+   "file": "sr-602_2.webp",
+   "w": 380,
+   "h": 229,
+   "page": 276,
+   "how": "box"
+  },
+  {
+   "id": "sr-602#3",
+   "article": "sr-602",
+   "jo": "제602조",
+   "file": "sr-602_3.webp",
+   "w": 380,
+   "h": 418,
+   "page": 276,
+   "how": "box"
+  },
+  {
+   "id": "sr-603#1",
+   "article": "sr-603",
+   "jo": "제603조",
+   "file": "sr-603_1.webp",
+   "w": 380,
+   "h": 211,
+   "page": 276,
+   "how": "box"
+  },
+  {
+   "id": "sr-603#2",
+   "article": "sr-603",
+   "jo": "제603조",
+   "file": "sr-603_2.webp",
+   "w": 380,
+   "h": 265,
+   "page": 276,
+   "how": "box"
+  },
+  {
+   "id": "sr-604#1",
+   "article": "sr-604",
+   "jo": "제604조",
+   "file": "sr-604_1.webp",
+   "w": 380,
+   "h": 191,
+   "page": 277,
+   "how": "box"
+  },
+  {
+   "id": "sr-604#2",
+   "article": "sr-604",
+   "jo": "제604조",
+   "file": "sr-604_2.webp",
+   "w": 380,
+   "h": 396,
+   "page": 277,
+   "how": "box"
+  },
+  {
+   "id": "sr-605#1",
+   "article": "sr-605",
+   "jo": "제605조",
+   "file": "sr-605_1.webp",
+   "w": 380,
+   "h": 301,
+   "page": 279,
+   "how": "box"
+  },
+  {
+   "id": "sr-608#1",
+   "article": "sr-608",
+   "jo": "제608조",
+   "file": "sr-608_1.webp",
+   "w": 380,
+   "h": 286,
+   "page": 280,
+   "how": "box"
+  },
+  {
+   "id": "sr-609#1",
+   "article": "sr-609",
+   "jo": "제609조",
+   "file": "sr-609_1.webp",
+   "w": 380,
+   "h": 319,
+   "page": 280,
+   "how": "box"
+  },
+  {
+   "id": "sr-611#1",
+   "article": "sr-611",
+   "jo": "제611조",
+   "file": "sr-611_1.webp",
+   "w": 380,
+   "h": 265,
+   "page": 281,
+   "how": "box"
+  },
+  {
+   "id": "sr-612#1",
+   "article": "sr-612",
+   "jo": "제612조",
+   "file": "sr-612_1.webp",
+   "w": 380,
+   "h": 266,
+   "page": 281,
+   "how": "box"
+  },
+  {
+   "id": "sr-613#1",
+   "article": "sr-613",
+   "jo": "제613조",
+   "file": "sr-613_1.webp",
+   "w": 380,
+   "h": 265,
+   "page": 281,
+   "how": "box"
+  },
+  {
+   "id": "sr-614#1",
+   "article": "sr-614",
+   "jo": "제614조",
+   "file": "sr-614_1.webp",
+   "w": 380,
+   "h": 283,
+   "page": 282,
+   "how": "box"
+  },
+  {
+   "id": "sr-615#1",
+   "article": "sr-615",
+   "jo": "제615조",
+   "file": "sr-615_1.webp",
+   "w": 380,
+   "h": 357,
+   "page": 282,
+   "how": "above"
+  },
+  {
+   "id": "sr-617#1",
+   "article": "sr-617",
+   "jo": "제617조",
+   "file": "sr-617_1.webp",
+   "w": 380,
+   "h": 314,
+   "page": 282,
+   "how": "box"
+  },
+  {
+   "id": "sr-618#1",
+   "article": "sr-618",
+   "jo": "제618조",
+   "file": "sr-618_1.webp",
+   "w": 380,
+   "h": 309,
+   "page": 284,
+   "how": "box"
+  },
+  {
+   "id": "sr-618#2",
+   "article": "sr-618",
+   "jo": "제618조",
+   "file": "sr-618_2.webp",
+   "w": 380,
+   "h": 300,
+   "page": 284,
+   "how": "box"
+  },
+  {
+   "id": "sr-618#3",
+   "article": "sr-618",
+   "jo": "제618조",
+   "file": "sr-618_3.webp",
+   "w": 380,
+   "h": 317,
+   "page": 284,
+   "how": "box"
+  },
+  {
+   "id": "sr-618#4",
+   "article": "sr-618",
+   "jo": "제618조",
+   "file": "sr-618_4.webp",
+   "w": 380,
+   "h": 324,
+   "page": 284,
+   "how": "box"
+  },
+  {
+   "id": "sr-618#5",
+   "article": "sr-618",
+   "jo": "제618조",
+   "file": "sr-618_5.webp",
+   "w": 380,
+   "h": 317,
+   "page": 284,
+   "how": "box"
+  },
+  {
+   "id": "sr-619#1",
+   "article": "sr-619",
+   "jo": "제619조",
+   "file": "sr-619_1.webp",
+   "w": 380,
+   "h": 299,
+   "page": 284,
+   "how": "box"
+  },
+  {
+   "id": "sr-619#2",
+   "article": "sr-619",
+   "jo": "제619조",
+   "file": "sr-619_2.webp",
+   "w": 339,
+   "h": 333,
+   "page": 284,
+   "how": "box"
+  },
+  {
+   "id": "sr-619-2#1",
+   "article": "sr-619-2",
+   "jo": "제619조의2",
+   "file": "sr-619-2_1.webp",
+   "w": 380,
+   "h": 322,
+   "page": 285,
+   "how": "box"
+  },
+  {
+   "id": "sr-619-2#2",
+   "article": "sr-619-2",
+   "jo": "제619조의2",
+   "file": "sr-619-2_2.webp",
+   "w": 380,
+   "h": 276,
+   "page": 285,
+   "how": "box"
+  },
+  {
+   "id": "sr-619-2#3",
+   "article": "sr-619-2",
+   "jo": "제619조의2",
+   "file": "sr-619-2_3.webp",
+   "w": 380,
+   "h": 404,
+   "page": 285,
+   "how": "box"
+  },
+  {
+   "id": "sr-620#1",
+   "article": "sr-620",
+   "jo": "제620조",
+   "file": "sr-620_1.webp",
+   "w": 380,
+   "h": 264,
+   "page": 285,
+   "how": "box"
+  },
+  {
+   "id": "sr-621#1",
+   "article": "sr-621",
+   "jo": "제621조",
+   "file": "sr-621_1.webp",
+   "w": 380,
+   "h": 237,
+   "page": 286,
+   "how": "above"
+  },
+  {
+   "id": "sr-622#1",
+   "article": "sr-622",
+   "jo": "제622조",
+   "file": "sr-622_1.webp",
+   "w": 380,
+   "h": 198,
+   "page": 286,
+   "how": "box"
+  },
+  {
+   "id": "sr-623#1",
+   "article": "sr-623",
+   "jo": "제623조",
+   "file": "sr-623_1.webp",
+   "w": 380,
+   "h": 312,
+   "page": 286,
+   "how": "box"
+  },
+  {
+   "id": "sr-624#1",
+   "article": "sr-624",
+   "jo": "제624조",
+   "file": "sr-624_1.webp",
+   "w": 295,
+   "h": 418,
+   "page": 286,
+   "how": "box"
+  },
+  {
+   "id": "sr-625#1",
+   "article": "sr-625",
+   "jo": "제625조",
+   "file": "sr-625_1.webp",
+   "w": 380,
+   "h": 237,
+   "page": 287,
+   "how": "box"
+  },
+  {
+   "id": "sr-626#1",
+   "article": "sr-626",
+   "jo": "제626조",
+   "file": "sr-626_1.webp",
+   "w": 380,
+   "h": 401,
+   "page": 287,
+   "how": "box"
+  },
+  {
+   "id": "sr-626#2",
+   "article": "sr-626",
+   "jo": "제626조",
+   "file": "sr-626_2.webp",
+   "w": 270,
+   "h": 179,
+   "page": 287,
+   "how": "box"
+  },
+  {
+   "id": "sr-626#3",
+   "article": "sr-626",
+   "jo": "제626조",
+   "file": "sr-626_3.webp",
+   "w": 380,
+   "h": 406,
+   "page": 287,
+   "how": "box"
+  },
+  {
+   "id": "sr-627#1",
+   "article": "sr-627",
+   "jo": "제627조",
+   "file": "sr-627_1.webp",
+   "w": 380,
+   "h": 277,
+   "page": 287,
+   "how": "box"
+  },
+  {
+   "id": "sr-628#1",
+   "article": "sr-628",
+   "jo": "제628조",
+   "file": "sr-628_1.webp",
+   "w": 380,
+   "h": 270,
+   "page": 288,
+   "how": "box"
+  },
+  {
+   "id": "sr-628-2#1",
+   "article": "sr-628-2",
+   "jo": "제628조의2",
+   "file": "sr-628-2_1.webp",
+   "w": 380,
+   "h": 399,
+   "page": 288,
+   "how": "box"
+  },
+  {
+   "id": "sr-629#1",
+   "article": "sr-629",
+   "jo": "제629조",
+   "file": "sr-629_1.webp",
+   "w": 380,
+   "h": 260,
+   "page": 289,
+   "how": "box"
+  },
+  {
+   "id": "sr-630#1",
+   "article": "sr-630",
+   "jo": "제630조",
+   "file": "sr-630_1.webp",
+   "w": 380,
+   "h": 274,
+   "page": 290,
+   "how": "box"
+  },
+  {
+   "id": "sr-631#1",
+   "article": "sr-631",
+   "jo": "제631조",
+   "file": "sr-631_1.webp",
+   "w": 380,
+   "h": 227,
+   "page": 290,
+   "how": "box"
+  },
+  {
+   "id": "sr-632#1",
+   "article": "sr-632",
+   "jo": "제632조",
+   "file": "sr-632_1.webp",
+   "w": 380,
+   "h": 222,
+   "page": 291,
+   "how": "box"
+  },
+  {
+   "id": "sr-632#2",
+   "article": "sr-632",
+   "jo": "제632조",
+   "file": "sr-632_2.webp",
+   "w": 380,
+   "h": 198,
+   "page": 291,
+   "how": "box"
+  },
+  {
+   "id": "sr-633#1",
+   "article": "sr-633",
+   "jo": "제633조",
+   "file": "sr-633_1.webp",
+   "w": 380,
+   "h": 330,
+   "page": 291,
+   "how": "box"
+  },
+  {
+   "id": "sr-634#1",
+   "article": "sr-634",
+   "jo": "제634조",
+   "file": "sr-634_1.webp",
+   "w": 380,
+   "h": 337,
+   "page": 291,
+   "how": "box"
+  },
+  {
+   "id": "sr-634#2",
+   "article": "sr-634",
+   "jo": "제634조",
+   "file": "sr-634_2.webp",
+   "w": 380,
+   "h": 238,
+   "page": 291,
+   "how": "box"
+  },
+  {
+   "id": "sr-635#1",
+   "article": "sr-635",
+   "jo": "제635조",
+   "file": "sr-635_1.webp",
+   "w": 380,
+   "h": 354,
+   "page": 292,
+   "how": "box"
+  },
+  {
+   "id": "sr-635#2",
+   "article": "sr-635",
+   "jo": "제635조",
+   "file": "sr-635_2.webp",
+   "w": 380,
+   "h": 211,
+   "page": 292,
+   "how": "box"
+  },
+  {
+   "id": "sr-636#1",
+   "article": "sr-636",
+   "jo": "제636조",
+   "file": "sr-636_1.webp",
+   "w": 380,
+   "h": 265,
+   "page": 292,
+   "how": "box"
+  },
+  {
+   "id": "sr-636#2",
+   "article": "sr-636",
+   "jo": "제636조",
+   "file": "sr-636_2.webp",
+   "w": 380,
+   "h": 256,
+   "page": 292,
+   "how": "box"
+  },
+  {
+   "id": "sr-637#1",
+   "article": "sr-637",
+   "jo": "제637조",
+   "file": "sr-637_1.webp",
+   "w": 380,
+   "h": 241,
+   "page": 293,
+   "how": "box"
+  },
+  {
+   "id": "sr-637#2",
+   "article": "sr-637",
+   "jo": "제637조",
+   "file": "sr-637_2.webp",
+   "w": 380,
+   "h": 187,
+   "page": 293,
+   "how": "box"
+  },
+  {
+   "id": "sr-638#1",
+   "article": "sr-638",
+   "jo": "제638조",
+   "file": "sr-638_1.webp",
+   "w": 380,
+   "h": 224,
+   "page": 293,
+   "how": "box"
+  },
+  {
+   "id": "sr-638#2",
+   "article": "sr-638",
+   "jo": "제638조",
+   "file": "sr-638_2.webp",
+   "w": 380,
+   "h": 185,
+   "page": 293,
+   "how": "box"
+  },
+  {
+   "id": "sr-639#1",
+   "article": "sr-639",
+   "jo": "제639조",
+   "file": "sr-639_1.webp",
+   "w": 380,
+   "h": 179,
+   "page": 293,
+   "how": "box"
+  },
+  {
+   "id": "sr-640#1",
+   "article": "sr-640",
+   "jo": "제640조",
+   "file": "sr-640_1.webp",
+   "w": 380,
+   "h": 325,
+   "page": 294,
+   "how": "box"
+  },
+  {
+   "id": "sr-641#1",
+   "article": "sr-641",
+   "jo": "제641조",
+   "file": "sr-641_1.webp",
+   "w": 380,
+   "h": 242,
+   "page": 294,
+   "how": "box"
+  },
+  {
+   "id": "sr-642#1",
+   "article": "sr-642",
+   "jo": "제642조",
+   "file": "sr-642_1.webp",
+   "w": 380,
+   "h": 263,
+   "page": 295,
+   "how": "box"
+  },
+  {
+   "id": "sr-643#1",
+   "article": "sr-643",
+   "jo": "제643조",
+   "file": "sr-643_1.webp",
+   "w": 380,
+   "h": 298,
+   "page": 295,
+   "how": "box"
+  },
+  {
+   "id": "sr-643#2",
+   "article": "sr-643",
+   "jo": "제643조",
+   "file": "sr-643_2.webp",
+   "w": 380,
+   "h": 235,
+   "page": 295,
+   "how": "box"
+  },
+  {
+   "id": "sr-644#1",
+   "article": "sr-644",
+   "jo": "제644조",
+   "file": "sr-644_1.webp",
+   "w": 380,
+   "h": 239,
+   "page": 295,
+   "how": "box"
+  },
+  {
+   "id": "sr-646#1",
+   "article": "sr-646",
+   "jo": "제646조",
+   "file": "sr-646_1.webp",
+   "w": 380,
+   "h": 242,
+   "page": 297,
+   "how": "box"
+  },
+  {
+   "id": "sr-646#2",
+   "article": "sr-646",
+   "jo": "제646조",
+   "file": "sr-646_2.webp",
+   "w": 380,
+   "h": 264,
+   "page": 297,
+   "how": "box"
+  },
+  {
+   "id": "sr-646#3",
+   "article": "sr-646",
+   "jo": "제646조",
+   "file": "sr-646_3.webp",
+   "w": 380,
+   "h": 316,
+   "page": 297,
+   "how": "box"
+  },
+  {
+   "id": "sr-647#1",
+   "article": "sr-647",
+   "jo": "제647조",
+   "file": "sr-647_1.webp",
+   "w": 380,
+   "h": 243,
+   "page": 297,
+   "how": "box"
+  },
+  {
+   "id": "sr-648#1",
+   "article": "sr-648",
+   "jo": "제648조",
+   "file": "sr-648_1.webp",
+   "w": 380,
+   "h": 229,
+   "page": 298,
+   "how": "box"
+  },
+  {
+   "id": "sr-649#1",
+   "article": "sr-649",
+   "jo": "제649조",
+   "file": "sr-649_1.webp",
+   "w": 380,
+   "h": 298,
+   "page": 298,
+   "how": "box"
+  },
+  {
+   "id": "sr-650#1",
+   "article": "sr-650",
+   "jo": "제650조",
+   "file": "sr-650_1.webp",
+   "w": 380,
+   "h": 270,
+   "page": 298,
+   "how": "box"
+  },
+  {
+   "id": "sr-651#1",
+   "article": "sr-651",
+   "jo": "제651조",
+   "file": "sr-651_1.webp",
+   "w": 380,
+   "h": 441,
+   "page": 298,
+   "how": "box"
+  },
+  {
+   "id": "sr-652#1",
+   "article": "sr-652",
+   "jo": "제652조",
+   "file": "sr-652_1.webp",
+   "w": 380,
+   "h": 261,
+   "page": 299,
+   "how": "box"
+  },
+  {
+   "id": "sr-653#1",
+   "article": "sr-653",
+   "jo": "제653조",
+   "file": "sr-653_1.webp",
+   "w": 380,
+   "h": 327,
+   "page": 299,
+   "how": "box"
+  },
+  {
+   "id": "sr-653#2",
+   "article": "sr-653",
+   "jo": "제653조",
+   "file": "sr-653_2.webp",
+   "w": 380,
+   "h": 268,
+   "page": 299,
+   "how": "box"
+  },
+  {
+   "id": "sr-654#1",
+   "article": "sr-654",
+   "jo": "제654조",
+   "file": "sr-654_1.webp",
+   "w": 380,
+   "h": 276,
+   "page": 300,
+   "how": "box"
+  },
+  {
+   "id": "sr-655#1",
+   "article": "sr-655",
+   "jo": "제655조",
+   "file": "sr-655_1.webp",
+   "w": 380,
+   "h": 274,
+   "page": 300,
+   "how": "box"
+  },
+  {
+   "id": "sr-656#1",
+   "article": "sr-656",
+   "jo": "제656조",
+   "file": "sr-656_1.webp",
+   "w": 380,
+   "h": 431,
+   "page": 302,
+   "how": "box"
+  },
+  {
+   "id": "sr-657#1",
+   "article": "sr-657",
+   "jo": "제657조",
+   "file": "sr-657_1.webp",
+   "w": 380,
+   "h": 261,
+   "page": 302,
+   "how": "box"
+  },
+  {
+   "id": "sr-658#1",
+   "article": "sr-658",
+   "jo": "제658조",
+   "file": "sr-658_1.webp",
+   "w": 380,
+   "h": 288,
+   "page": 303,
+   "how": "box"
+  },
+  {
+   "id": "sr-660#1",
+   "article": "sr-660",
+   "jo": "제660조",
+   "file": "sr-660_1.webp",
+   "w": 380,
+   "h": 220,
+   "page": 303,
+   "how": "box"
+  },
+  {
+   "id": "sr-661#1",
+   "article": "sr-661",
+   "jo": "제661조",
+   "file": "sr-661_1.webp",
+   "w": 380,
+   "h": 433,
+   "page": 304,
+   "how": "box"
+  },
+  {
+   "id": "sr-661#2",
+   "article": "sr-661",
+   "jo": "제661조",
+   "file": "sr-661_2.webp",
+   "w": 380,
+   "h": 274,
+   "page": 304,
+   "how": "box"
+  },
+  {
+   "id": "sr-662#1",
+   "article": "sr-662",
+   "jo": "제662조",
+   "file": "sr-662_1.webp",
+   "w": 380,
+   "h": 223,
+   "page": 304,
+   "how": "box"
+  },
+  {
+   "id": "sr-662#2",
+   "article": "sr-662",
+   "jo": "제662조",
+   "file": "sr-662_2.webp",
+   "w": 380,
+   "h": 194,
+   "page": 304,
+   "how": "box"
+  },
+  {
+   "id": "sr-662#3",
+   "article": "sr-662",
+   "jo": "제662조",
+   "file": "sr-662_3.webp",
+   "w": 380,
+   "h": 327,
+   "page": 304,
+   "how": "box"
+  },
+  {
+   "id": "sr-662#4",
+   "article": "sr-662",
+   "jo": "제662조",
+   "file": "sr-662_4.webp",
+   "w": 380,
+   "h": 223,
+   "page": 304,
+   "how": "box"
+  },
+  {
+   "id": "sr-663#1",
+   "article": "sr-663",
+   "jo": "제663조",
+   "file": "sr-663_1.webp",
+   "w": 380,
+   "h": 299,
+   "page": 305,
+   "how": "box"
+  },
+  {
+   "id": "sr-664#1",
+   "article": "sr-664",
+   "jo": "제664조",
+   "file": "sr-664_1.webp",
+   "w": 380,
+   "h": 302,
+   "page": 305,
+   "how": "box"
+  },
+  {
+   "id": "sr-665#1",
+   "article": "sr-665",
+   "jo": "제665조",
+   "file": "sr-665_1.webp",
+   "w": 380,
+   "h": 284,
+   "page": 305,
+   "how": "box"
+  },
+  {
+   "id": "sr-665#2",
+   "article": "sr-665",
+   "jo": "제665조",
+   "file": "sr-665_2.webp",
+   "w": 380,
+   "h": 255,
+   "page": 305,
+   "how": "box"
+  },
+  {
+   "id": "sr-666#1",
+   "article": "sr-666",
+   "jo": "제666조",
+   "file": "sr-666_1.webp",
+   "w": 380,
+   "h": 323,
+   "page": 305,
+   "how": "box"
+  },
+  {
+   "id": "sr-667#1",
+   "article": "sr-667",
+   "jo": "제667조",
+   "file": "sr-667_1.webp",
+   "w": 380,
+   "h": 262,
+   "page": 307,
+   "how": "box"
+  },
+  {
+   "id": "sr-667#2",
+   "article": "sr-667",
+   "jo": "제667조",
+   "file": "sr-667_2.webp",
+   "w": 380,
+   "h": 315,
+   "page": 307,
+   "how": "box"
+  },
+  {
+   "id": "sr-667#3",
+   "article": "sr-667",
+   "jo": "제667조",
+   "file": "sr-667_3.webp",
+   "w": 380,
+   "h": 325,
+   "page": 307,
+   "how": "box"
+  },
+  {
+   "id": "sr-667#4",
+   "article": "sr-667",
+   "jo": "제667조",
+   "file": "sr-667_4.webp",
+   "w": 380,
+   "h": 349,
+   "page": 307,
+   "how": "box"
+  },
+  {
+   "id": "sr-669#1",
+   "article": "sr-669",
+   "jo": "제669조",
+   "file": "sr-669_1.webp",
+   "w": 380,
+   "h": 349,
+   "page": 308,
+   "how": "box"
+  },
+  {
+   "id": "sr-669#2",
+   "article": "sr-669",
+   "jo": "제669조",
+   "file": "sr-669_2.webp",
+   "w": 380,
+   "h": 325,
+   "page": 308,
+   "how": "box"
+  },
+  {
+   "id": "sr-669#3",
+   "article": "sr-669",
+   "jo": "제669조",
+   "file": "sr-669_3.webp",
+   "w": 380,
+   "h": 323,
+   "page": 308,
+   "how": "box"
+  },
+  {
+   "id": "sr-669#4",
+   "article": "sr-669",
+   "jo": "제669조",
+   "file": "sr-669_4.webp",
+   "w": 380,
+   "h": 292,
+   "page": 308,
+   "how": "box"
+  },
+  {
+   "id": "sr-669#5",
+   "article": "sr-669",
+   "jo": "제669조",
+   "file": "sr-669_5.webp",
+   "w": 380,
+   "h": 332,
+   "page": 308,
+   "how": "box"
+  },
+  {
+   "id": "sr-669#6",
+   "article": "sr-669",
+   "jo": "제669조",
+   "file": "sr-669_6.webp",
+   "w": 380,
+   "h": 337,
+   "page": 308,
+   "how": "box"
+  },
+  {
+   "id": "sr-670#1",
+   "article": "sr-670",
+   "jo": "제670조",
+   "file": "sr-670_1.webp",
+   "w": 380,
+   "h": 298,
+   "page": 309,
+   "how": "box"
+  },
+  {
+   "id": "sr-670#2",
+   "article": "sr-670",
+   "jo": "제670조",
+   "file": "sr-670_2.webp",
+   "w": 380,
+   "h": 366,
+   "page": 309,
+   "how": "box"
+  },
+  {
+   "id": "sr-670#3",
+   "article": "sr-670",
+   "jo": "제670조",
+   "file": "sr-670_3.webp",
+   "w": 380,
+   "h": 286,
+   "page": 309,
+   "how": "box"
+  },
+  {
+   "id": "sr-670#4",
+   "article": "sr-670",
+   "jo": "제670조",
+   "file": "sr-670_4.webp",
+   "w": 380,
+   "h": 268,
+   "page": 309,
+   "how": "box"
+  },
+  {
+   "id": "sr-670#5",
+   "article": "sr-670",
+   "jo": "제670조",
+   "file": "sr-670_5.webp",
+   "w": 380,
+   "h": 254,
+   "page": 309,
+   "how": "box"
+  },
+  {
+   "id": "sr-670#6",
+   "article": "sr-670",
+   "jo": "제670조",
+   "file": "sr-670_6.webp",
+   "w": 380,
+   "h": 250,
+   "page": 309,
+   "how": "box"
+  },
+  {
+   "id": "sr-670#7",
+   "article": "sr-670",
+   "jo": "제670조",
+   "file": "sr-670_7.webp",
+   "w": 380,
+   "h": 273,
+   "page": 309,
+   "how": "box"
+  },
+  {
+   "id": "sr-670#8",
+   "article": "sr-670",
+   "jo": "제670조",
+   "file": "sr-670_8.webp",
+   "w": 380,
+   "h": 311,
+   "page": 309,
+   "how": "box"
+  },
+  {
+   "id": "sr-673#1",
+   "article": "sr-673",
+   "jo": "제673조",
+   "file": "sr-673_1.webp",
+   "w": 380,
+   "h": 296,
+   "page": 312,
+   "how": "box"
+  }
+ ]
+}

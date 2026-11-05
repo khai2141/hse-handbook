@@ -1,5 +1,5 @@
 import { clampCount } from "./core.js";
-import { esc, icon } from "./html.js";
+import { esc, icon, bookUrl } from "./html.js";
 import { renderMatrix } from "./matrix.js";
 import { renderArticles, articleDetail } from "./articles.js";
 import { cellDetail, infoDetail } from "./cells.js";
@@ -33,6 +33,19 @@ async function load() {
   data.meta = meta;
   data.versions = await fetch("data/versions.json").then((r) => (r.ok ? r.json() : null)).catch(() => null);
   data.articles = await fetch("data/articles.json").then((r) => (r.ok ? r.json() : null)).then((j) => j?.records ?? []).catch(() => []);
+  const im = await fetch("data/images.json").then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  data.images = im?.records ?? [];
+  data.imagesMeta = im?.meta;
+  if (data.images.length) {
+    // book illustrations ship only in the offline build; on a public site they are absent, so drop them quietly
+    const ok = await new Promise((res) => {
+      const t = new Image();
+      t.onload = () => res(true);
+      t.onerror = () => res(false);
+      t.src = bookUrl(data.images[0].file);
+    });
+    if (!ok) data.images = [];
+  }
   return data;
 }
 

@@ -95,6 +95,15 @@ export function articleDetail(id, data) {
   const src = { label: "출처", text: `${r.law} ${r.jo} · 시행 ${s.effective} · 공포 ${s.published} · 확인 ${s.verified_at}`, link: { href: s.url, text: "law.go.kr에서 보기" } };
   if (future) src.hint = `시행 예정: ${s.effective}부터 적용됩니다. 지금 현장에 적용되는 본이 아닐 수 있습니다.`;
   const sections = [{ label: "요건", items: r.must ?? [] }];
+  const figs = (data.images ?? []).filter((m) => m.article === r.id);
+  if (figs.length) {
+    sections.push({
+      label: "삽화 (책 그림)",
+      collapse: "open",
+      images: figs.map((m) => ({ file: m.file, w: m.w, h: m.h, alt: `${r.jo} ${r.title} 삽화`, cap: `${data.imagesMeta?.book ?? "책"} ${m.page}쪽` })),
+      hint: data.imagesMeta?.note,
+    });
+  }
   if (r.who) sections.push({ label: "누가", text: r.who });
   sections.push({ label: "점검 포인트", items: r.check ?? [] });
   sections.push(

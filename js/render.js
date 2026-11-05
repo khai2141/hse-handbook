@@ -1,5 +1,5 @@
 import { clampCount, fineTotal } from "./core.js";
-import { esc, icon } from "./html.js";
+import { esc, icon, bookImg } from "./html.js";
 
 const LABELS = {
   pending: "시행 예정",
@@ -75,6 +75,9 @@ function sectionHtml(s) {
   if (Array.isArray(s.pills) && s.pills.length) inner += pills(s.pills);
   if (s.table) inner += table(s.table);
   if (Array.isArray(s.lines) && s.lines.length) inner += `<div class="orig">${s.lines.map((x) => `<p>${esc(x)}</p>`).join("")}</div>`;
+  if (Array.isArray(s.images) && s.images.length) {
+    inner += `<div class="figs">${s.images.map((m) => `<figure>${bookImg(m.file, m.w, m.h, m.alt)}<figcaption>${esc(m.cap ?? "")}</figcaption></figure>`).join("")}</div>`;
+  }
   if (s.link && LAW_URL.test(String(s.link.href ?? ""))) {
     inner += `<a class="ext" href="${esc(s.link.href)}" target="_blank" rel="noopener noreferrer">${esc(s.link.text ?? "원문 보기")}</a>`;
   }
