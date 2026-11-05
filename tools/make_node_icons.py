@@ -13,7 +13,7 @@ FONT = "C:/Windows/Fonts/malgunbd.ttf"
 
 LABEL = {
     "home": "홈", "p": "계획", "p.rule": "방침", "p.org": "조직", "p.risk": "위험", "p.doc": "서류",
-    "d": "실행", "d.edu": "교육", "d.edu.w": "근로", "d.edu.w.f": "외국", "d.edu.w.t": "특별", "d.edu.m": "관리",
+    "d": "실행", "d.edu": "교육", "d.edu.w": "근로", "d.edu.w.f": "외국", "d.edu.w.t": "특별", "d.edu.w.law": "조문", "d.edu.m": "관리", "d.edu.m.law": "직무",
     "d.hea": "보건", "d.hea.w": "검진", "d.hea.env": "환경", "d.hea.std": "기준", "d.hea.std.chem": "화학", "d.hea.std.phys": "물리", "d.hea.std.air": "분진", "d.hea.std.erg": "근골", "d.hea.msds": "자료", "d.daily": "일상", "d.sub": "도급",
     "d.tech": "공종", "d.tech.com": "공통", "d.tech.mach": "기계", "d.tech.fire": "화재", "d.tech.elec": "전기",
     "d.tech.work": "작업", "d.tech.sp": "특수", "d.tech.tbl": "별표", "d.emg": "비상",

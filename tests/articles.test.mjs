@@ -222,6 +222,23 @@ test("management branches (wave 3a) are kind A with their groups and law-prefixe
   }
   assert.equal(articleDetail("l-54", data).sub, "산업안전보건법");
 });
+test("education article nodes (audit D) are kind A children of the matrix nodes", () => {
+  const exp = {
+    "d.edu.w.law": [["근로자 교육 의무", "면제·단축", "건설업 기초교육", "특수형태근로종사자"], [2, 2, 2, 1], "d.edu.w"],
+    "d.edu.m.law": [["직무교육", "안전보건교육기관"], [2, 1], "d.edu.m"],
+  };
+  for (const [node, [groups, counts, parent]] of Object.entries(exp)) {
+    assert.equal(data.nodes[node].kind, "A", node);
+    assert.ok(data.nodes[node].plan.length, node);
+    assert.ok(data.nodes[parent].kids.includes(node), node);
+    const g = groupArticles(articlesFor(data, node));
+    assert.deepEqual(g.map((x) => x.group), groups, node);
+    assert.deepEqual(g.map((x) => x.items.length), counts, node);
+    for (const x of g) for (const r of x.items) assert.match(r.id, /^(l|r)-\d+$/, r.id);
+  }
+  assert.deepEqual(articlesFor(data, "d.edu.w.law").map((r) => r.id), ["l-29", "r-26", "l-30", "r-27", "l-31", "r-28", "r-95"]);
+  assert.deepEqual(articlesFor(data, "d.edu.m.law").map((r) => r.id), ["l-32", "r-29", "l-33"]);
+});
 test("plan/check/fix/base branches (wave 3b) are kind A with their groups and law-prefixed ids", () => {
   const exp = {
     "p.rule": [["안전보건관리규정", "이사회 보고"], 5],
