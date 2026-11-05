@@ -76,7 +76,7 @@ class ArticleDataTests(unittest.TestCase):
             self.assertEqual(s["url"], m.group(1))
             self.assertEqual(s["effective"], "%s-%02d-%02d" % (m.group(2), int(m.group(3)), int(m.group(4))))
             self.assertEqual(s["published"], "%s-%02d-%02d" % (m.group(5), int(m.group(6)), int(m.group(7))), r["id"])
-            self.assertEqual(s["verified_at"], "2026-11-04")
+            self.assertIn(s["verified_at"], ("2026-11-04", "2026-11-05"))
 
     def test_source_note_and_in_force_241(self):
         for r in self.recs:

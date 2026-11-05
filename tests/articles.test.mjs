@@ -8,8 +8,8 @@ import { loadData } from "./load.mjs";
 const data = loadData();
 const list = () => articlesFor(data, "d.tech.com");
 
-test("data loads 55 cards for d.tech.com and none elsewhere", () => {
-  assert.equal(list().length, 55);
+test("data loads 87 cards for d.tech.com and none elsewhere", () => {
+  assert.equal(list().length, 87);
   assert.equal(articlesFor(data, "d.tech.mach").length, 91);
   assert.equal(articlesFor(data, "d.tech.work").length, 60);
   assert.equal(articlesFor({}, "d.tech.com").length, 0);
@@ -23,8 +23,8 @@ test("node d.tech.com is kind A and keeps its plan", () => {
 
 test("groupArticles keeps first-appearance order of groups", () => {
   const g = groupArticles(list());
-  assert.deepEqual(g.map((x) => x.group), ["작업장", "통로", "보호구", "관리감독자·작업계획서", "추락·붕괴 방지", "비계", "휴게·잔재물"]);
-  assert.equal(g.reduce((n, x) => n + x.items.length, 0), 55);
+  assert.deepEqual(g.map((x) => x.group), ["총칙", "작업장", "통로", "보호구", "관리감독자·작업계획서", "추락·붕괴 방지", "비계", "휴게·잔재물", "환기"]);
+  assert.equal(g.reduce((n, x) => n + x.items.length, 0), 87);
 });
 
 test("node d.tech.work is kind A with 7 groups in order", () => {
@@ -49,14 +49,14 @@ test("filter matches jo, title, must and choseong", () => {
   assert.ok(f("안전난간").includes("제13조"));
   assert.ok(f("ㅇㅈㄴㄱ").includes("제13조"));
   assert.ok(f("타워크레인").includes("제37조"));
-  assert.equal(f("").length, 55);
+  assert.equal(f("").length, 87);
   assert.equal(f("zzzz없음").length, 0);
 });
 
 test("renderArticles: group headings, one button per card, first must bullet, escaped", () => {
   const h = renderArticles("d.tech.com", data, "", "cards");
-  assert.equal((h.match(/class="card"/g) ?? []).length, 55);
-  assert.equal((h.match(/<h3/g) ?? []).length, 7);
+  assert.equal((h.match(/class="card"/g) ?? []).length, 87);
+  assert.equal((h.match(/<h3/g) ?? []).length, 9);
   assert.ok(h.includes('data-art="sr-13"'));
   assert.ok(h.includes(list().find((r) => r.id === "sr-13").must[0].slice(0, 12)));
   assert.ok(h.includes("제13조") && h.includes("안전난간의 구조 및 설치요건"));
@@ -67,8 +67,8 @@ test("renderArticles: group headings, one button per card, first must bullet, es
 
 test("renderArticles: default is a summary table, one row per article, escaped", () => {
   const h = renderArticles("d.tech.com", data, "");
-  assert.equal((h.match(/class="srow"/g) ?? []).length, 55);
-  assert.equal((h.match(/class="shead"/g) ?? []).length, 7);
+  assert.equal((h.match(/class="srow"/g) ?? []).length, 87);
+  assert.equal((h.match(/class="shead"/g) ?? []).length, 9);
   assert.ok(h.includes('data-art="sr-13"') && !h.includes('class="card"'));
   const evil = { articles: [{ ...list()[0], id: "x", jo: "<b>", title: "<img src=x onerror=1>", must: ["<script>"], who: "<u>", group: "<i>" }], nodes: data.nodes };
   const e = renderArticles("d.tech.com", evil, "");
