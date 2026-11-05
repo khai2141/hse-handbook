@@ -34,6 +34,16 @@ test("node d.tech.work is kind A with 11 groups in order", () => {
   assert.ok(articlesFor(data, "d.tech.work").some((r) => r.id === "sr-331-2" && r.jo === "제331조의2"));
 });
 
+test("node d.hea.std.chem is kind A with 5 groups in order and 85 cards", () => {
+  assert.equal(data.nodes["d.hea.std.chem"].kind, "A");
+  const list = articlesFor(data, "d.hea.std.chem");
+  assert.equal(list.length, 85);
+  const g = groupArticles(list);
+  assert.deepEqual(g.map((x) => x.group), ["유기용제 (관리대상 유해물질)", "허가대상물질", "베릴륨", "석면", "금지유해물질"]);
+  assert.deepEqual(g.map((x) => x.items.length), [32, 19, 6, 14, 14]);
+  assert.ok(list.some((r) => r.id === "sr-511" && r.jo === "제511조"));
+});
+
 test("node d.tech.mach is kind A with 15 groups in order", () => {
   assert.equal(data.nodes["d.tech.mach"].kind, "A");
   assert.ok(data.nodes["d.tech.mach"].plan.length);
