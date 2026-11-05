@@ -55,6 +55,32 @@ test("node d.hea.std.phys is kind A with 5 groups in order and 93 cards", () => 
   assert.ok(list.some((r) => r.id === "sr-604" && r.jo === "제604조"));
 });
 
+test("node d.hea.std.air is kind A with 3 groups in order and 51 cards", () => {
+  assert.equal(data.nodes["d.hea.std.air"].kind, "A");
+  const list = articlesFor(data, "d.hea.std.air");
+  assert.equal(list.length, 51);
+  const g = groupArticles(list);
+  assert.deepEqual(g.map((x) => x.group), ["밀폐공간", "분진", "사무실 공기"]);
+  assert.deepEqual(g.map((x) => x.items.length), [29, 12, 10]);
+  assert.ok(list.some((r) => r.id === "sr-655" && r.jo === "제655조"));
+});
+
+test("node d.hea.std.erg is kind A with 4 groups in order and 17 cards", () => {
+  assert.equal(data.nodes["d.hea.std.erg"].kind, "A");
+  const list = articlesFor(data, "d.hea.std.erg");
+  assert.equal(list.length, 17);
+  const g = groupArticles(list);
+  assert.deepEqual(g.map((x) => x.group), ["근골격계·중량물", "그 밖의 건강장해 예방", "배달종사자", "규제의 재검토"]);
+  assert.deepEqual(g.map((x) => x.items.length), [11, 4, 1, 1]);
+  assert.ok(list.some((r) => r.id === "sr-674" && r.jo === "제674조"));
+});
+
+test("d.tech.fire has 77 cards including sr-227", () => {
+  const list = articlesFor(data, "d.tech.fire");
+  assert.equal(list.length, 77);
+  assert.ok(list.some((r) => r.id === "sr-227" && r.jo === "제227조"));
+});
+
 test("node d.tech.mach is kind A with 15 groups in order", () => {
   assert.equal(data.nodes["d.tech.mach"].kind, "A");
   assert.ok(data.nodes["d.tech.mach"].plan.length);
