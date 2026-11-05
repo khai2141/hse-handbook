@@ -11,7 +11,7 @@ const list = () => articlesFor(data, "d.tech.com");
 test("data loads 87 cards for d.tech.com and none elsewhere", () => {
   assert.equal(list().length, 87);
   assert.equal(articlesFor(data, "d.tech.mach").length, 139);
-  assert.equal(articlesFor(data, "d.tech.work").length, 60);
+  assert.equal(articlesFor(data, "d.tech.work").length, 92);
   assert.equal(articlesFor({}, "d.tech.com").length, 0);
 });
 
@@ -27,10 +27,10 @@ test("groupArticles keeps first-appearance order of groups", () => {
   assert.equal(g.reduce((n, x) => n + x.items.length, 0), 87);
 });
 
-test("node d.tech.work is kind A with 7 groups in order", () => {
+test("node d.tech.work is kind A with 11 groups in order", () => {
   assert.equal(data.nodes["d.tech.work"].kind, "A");
   const g = groupArticles(articlesFor(data, "d.tech.work"));
-  assert.deepEqual(g.map((x) => x.group), ["거푸집·동바리", "굴착", "터널", "잠함·가설도로", "철골", "해체", "중량물·자재"]);
+  assert.deepEqual(g.map((x) => x.group), ["거푸집·동바리", "굴착", "터널", "채석", "잠함·가설도로", "철골", "해체", "중량물·자재", "항만 하역", "벌목", "궤도·입환"]);
   assert.ok(articlesFor(data, "d.tech.work").some((r) => r.id === "sr-331-2" && r.jo === "제331조의2"));
 });
 
