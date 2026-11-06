@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { articlesFor, filterArticles, groupArticles, renderArticles, articleDetail, splitClauses } from "../js/articles.js";
+import { articlesFor, filterArticles, groupArticles, renderArticles, articleDetail, splitClauses, penBrief, penFull } from "../js/articles.js";
 import { detailToHtml } from "../js/render.js";
 import { loadData } from "./load.mjs";
 
@@ -166,15 +166,15 @@ test("원문 lines rejoin to the verbatim text for every card", () => {
   for (const r of list()) assert.equal(splitClauses(r.text).join(" "), r.text, r.id);
 });
 
-test("penalty section: no data means plain note; with data shows name and first fine; always a go link", () => {
-  const d = articleDetail("sr-38", data);
+test("penalty section: unlinked card gets a plain note; linked card lists tag, name, fine and basis; always a go link", () => {
+  const d = articleDetail("sr-1", data);
   const p = d.sections.find((s) => s.label === "위반 시");
   assert.equal(p.go.id, "g.pen");
   assert.equal(p.go.text, "벌칙·과태료 가지에서 전체 보기");
-  assert.ok(p.text);
-  const linked = { ...data, articles: data.articles.map((r) => (r.id === "sr-38" ? { ...r, penalty_ids: ["p3"] } : r)) };
-  const p2 = articleDetail("sr-38", linked).sections.find((s) => s.label === "위반 시");
-  assert.ok(p2.items[0].includes("안전·보건조치 위반") && p2.items[0].includes("5년 이하 징역 또는 5천만원 이하 벌금"));
+  assert.ok(p.text && !p.items);
+  const p2 = articleDetail("sr-38", data).sections.find((s) => s.label === "위반 시");
+  assert.ok(p2.items[0].includes("안전·보건조치 위반") && p2.items[0].includes("5년 이하 징역 또는 5천만원 이하 벌금") && p2.items[0].includes("(법 제168조)"));
+  assert.ok(p2.items[1].startsWith("사망 시") && p2.items[1].includes("7년 이하 징역"));
 });
 
 test("source section links only to https://www.law.go.kr and shows effective date", () => {
@@ -201,7 +201,7 @@ test("unknown id gives a neutral detail", () => {
 test("app wires articles and the hint text", () => {
   const app = fs.readFileSync(new URL("../js/app.js", import.meta.url), "utf8");
   assert.ok(app.includes("data/articles.json"));
-  assert.ok(app.includes("조문 원문은 law.go.kr에서 가져온 현행 시행본입니다. 카드를 누르면 요건·점검·원문이 열립니다."));
+  assert.ok(app.includes("조문 원문은 law.go.kr에서 가져온 현행 시행본입니다. 행을 누르면 요건·점검·원문이 열립니다."));
   assert.ok(app.includes("data-art"));
 });
 
@@ -258,4 +258,29 @@ test("plan/check/fix/base branches (wave 3b) are kind A with their groups and la
     for (const r of list) assert.match(r.id, /^(sr|l|d|r|j)-\d+(-\d+)?$/, r.id);
   }
   assert.equal(articleDetail("j-4", data).sub, "중대재해 처벌 등에 관한 법률");
+});
+
+test("summary table has a 위반 시 column; rows show linked 벌칙 or a dash; the 누가 cell is not the .sw swatch", () => {
+  const html = renderArticles("d.tech.com", data);
+  assert.ok(html.includes("<span>위반 시</span>"));
+  assert.ok(html.includes('class="swho"') && !html.includes('class="sw"'));
+  const sr38 = html.match(/data-art="sr-38"[\s\S]*?<\/button>/)[0];
+  assert.ok(sr38.includes("5년 이하 징역 또는 5천만원 이하 벌금") && sr38.includes("사망 시"));
+  const sr1 = html.match(/data-art="sr-1"[\s\S]*?<\/button>/)[0];
+  assert.ok(sr1.includes('class="none"'));
+});
+
+test("penBrief/penFull: 형사 text, 과태료 range and 1·2·3차", () => {
+  const p = (id) => data.penalties.find((x) => x.id === id);
+  assert.equal(penBrief(p("p3")), "5년 이하 징역 또는 5천만원 이하 벌금");
+  assert.equal(penBrief(p("p11")), "50~500만원");
+  assert.equal(penBrief(p("p31")), "500만원");
+  assert.equal(penFull(p("p11")), "1차 50 · 2차 250 · 3차 500만원");
+  assert.ok(penFull(p("p2")).includes(" / 법인 50억원 이하"));
+});
+
+test("every linked penalty id resolves and unverified penalties are not shown", () => {
+  for (const r of data.articles) for (const id of r.penalty_ids) assert.ok(data.penalties.some((x) => x.id === id), r.id);
+  const d = { ...data, penalties: data.penalties.map((x) => (x.id === "p3" ? { ...x, status: "미확인" } : x)) };
+  assert.ok(!renderArticles("d.tech.com", d).match(/data-art="sr-38"[\s\S]*?<\/button>/)[0].includes("5년 이하"));
 });

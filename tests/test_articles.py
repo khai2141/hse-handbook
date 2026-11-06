@@ -108,3 +108,13 @@ class ArticleDataTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PenaltyLinkTest(unittest.TestCase):
+    def test_penalty_ids_match_link_tool(self):
+        from tools.link_penalties import compute, ART, PEN
+        arts = load("data", "articles.json")["records"]
+        pens = load("data", "penalties.json")["records"]
+        want = compute(arts, pens)
+        for r in arts:
+            self.assertEqual(r["penalty_ids"], want[r["id"]], r["id"])

@@ -38,14 +38,55 @@ function cardHtml(r) {
   return `<button type="button" class="card" data-art="${esc(r.id)}" aria-label="${esc(label)} 상세 열기"><b>${esc(r.jo)}</b><span class="ct">${esc(r.title)}</span>${body}</button>`;
 }
 
-function rowHtml(r) {
+const fmtMan = (n) => `${n.toLocaleString("ko-KR")}만원`;
+const penNums = (p) => (p.a ?? []).filter((x) => typeof x === "number");
+
+// One-line fine for the summary column: 형사 = first sentence of the record, 과태료 = range over 1~3차.
+export function penBrief(p) {
+  if (p.k === "과태료") {
+    const n = penNums(p);
+    if (!n.length) return "";
+    const lo = Math.min(...n);
+    const hi = Math.max(...n);
+    return lo === hi ? fmtMan(hi) : `${lo.toLocaleString("ko-KR")}~${fmtMan(hi)}`;
+  }
+  return String(p.fines?.[0] ?? p.a?.[0] ?? "");
+}
+
+// Full fine for the detail sheet: 형사 = every sentence, 과태료 = 1차·2차·3차.
+export function penFull(p) {
+  if (p.k === "과태료") {
+    const n = penNums(p);
+    if (!n.length) return "";
+    return new Set(n).size === 1 ? fmtMan(n[0]) : `1차 ${n[0]} · 2차 ${n[1]} · 3차 ${n[2]}만원`;
+  }
+  return (p.fines ?? []).filter(Boolean).join(" / ");
+}
+
+const penTag = (p) => (/^사망/.test(p.t ?? "") ? "사망 시" : p.k === "과태료" ? "과태료" : "형사");
+
+// Verified penalty records linked to a card (unverified or missing ones are left out).
+export function penaltiesOf(r, data) {
+  const out = [];
+  for (const id of r.penalty_ids ?? []) {
+    const p = (data.penalties ?? []).find((x) => x.id === id);
+    if (p && p.status !== "미확인") out.push(p);
+  }
+  return out;
+}
+
+function rowHtml(r, data) {
   const label = `${r.jo} ${r.title}`;
   const gist = unverified(r) ? '<span class="warn">원문 미확인</span>' : esc(r.must?.[0] ?? "");
   const who = unverified(r) || !r.who ? "—" : esc(r.who);
-  return `<button type="button" class="srow" role="row" data-art="${esc(r.id)}" aria-label="${esc(label)} 상세 열기"><b class="sj">${esc(r.jo)}</b><span class="st">${esc(r.title)}</span><span class="sg">${gist}</span><span class="sw">${who}</span></button>`;
+  const pens = unverified(r) ? [] : penaltiesOf(r, data);
+  const pen = pens.length
+    ? pens.map((p) => `<span class="pl"><i class="pk pk-${p.k === "과태료" ? "c" : "x"}">${penTag(p)}</i>${esc(penBrief(p))}</span>`).join("")
+    : '<span class="none" title="이 조문과 직접 연결된 벌칙은 수집한 원문에서 확인되지 않았습니다">—</span>';
+  return `<button type="button" class="srow" role="row" data-art="${esc(r.id)}" aria-label="${esc(label)} 상세 열기"><b class="sj">${esc(r.jo)}</b><span class="st">${esc(r.title)}</span><span class="sg">${gist}</span><span class="swho">${who}</span><span class="sp">${pen}</span></button>`;
 }
 
-const TABLE_HEAD = '<div class="shead" role="row"><span>조문</span><span>제목</span><span>핵심</span><span>누가</span></div>';
+const TABLE_HEAD = '<div class="shead" role="row"><span>조문</span><span>제목</span><span>핵심</span><span>누가</span><span>위반 시</span></div>';
 
 // mode "table" (default): summary table, a row opens the detail sheet; mode "cards": the older card grid.
 export function renderArticles(branch, data, query = "", mode = "table") {
@@ -59,24 +100,15 @@ export function renderArticles(branch, data, query = "", mode = "table") {
       .join("");
   }
   return groupArticles(rows)
-    .map((g) => `<section class="agrp"><h3>${esc(g.group)} <small>${g.items.length}</small></h3><div class="stable" role="table" aria-label="${esc(g.group)}">${TABLE_HEAD}${g.items.map(rowHtml).join("")}</div></section>`)
+    .map((g) => `<section class="agrp"><h3>${esc(g.group)} <small>${g.items.length}</small></h3><div class="stable" role="table" aria-label="${esc(g.group)}">${TABLE_HEAD}${g.items.map((x) => rowHtml(x, data)).join("")}</div></section>`)
     .join("");
 }
 
-function fineText(p) {
-  const f = p?.fines?.[0];
-  if (typeof f === "number") return `${f.toLocaleString("ko-KR")}만원`;
-  return f ? String(f) : "";
-}
-
 function penaltySection(r, data) {
-  const items = [];
-  for (const id of r.penalty_ids ?? []) {
-    const p = (data.penalties ?? []).find((x) => x.id === id);
-    if (!p || p.status === "미확인") continue;
-    const fine = fineText(p);
-    items.push(fine ? `${p.name ?? p.t} — ${fine}` : `${p.name ?? p.t}`);
-  }
+  const items = penaltiesOf(r, data).map((p) => {
+    const fine = penFull(p);
+    return `${penTag(p)} · ${p.name ?? p.t} — ${fine}${p.art ? ` (${p.art})` : ""}`;
+  });
   const s = { label: "위반 시", go: { id: "g.pen", text: "벌칙·과태료 가지에서 전체 보기" } };
   if (items.length) s.items = items;
   else s.text = "이 조문과 직접 연결된 벌칙은 원문 자료에서 확인되지 않아 표시하지 않습니다.";

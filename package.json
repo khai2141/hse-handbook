@@ -1,5 +1,10 @@
 {
   "name": "hse-handbook",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "esbuild": "^0.28.2",
+    "lucide-static": "^1.70.0"
+  }
 }
