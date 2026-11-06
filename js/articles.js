@@ -1,5 +1,5 @@
 import { hit } from "./core.js";
-import { esc } from "./html.js";
+import { esc, bookImg } from "./html.js";
 
 const WARN = "원문을 아직 확인하지 못했습니다. 숫자와 기준은 표시하지 않습니다. law.go.kr에서 직접 확인하세요.";
 const LAW_URL = /^https:\/\/www\.law\.go\.kr\//;
@@ -75,7 +75,7 @@ export function penaltiesOf(r, data) {
   return out;
 }
 
-function rowHtml(r, data) {
+function rowHtml(r, data, figs) {
   const label = `${r.jo} ${r.title}`;
   const gist = unverified(r) ? '<span class="warn">원문 미확인</span>' : esc(r.must?.[0] ?? "");
   const who = unverified(r) || !r.who ? "—" : esc(r.who);
@@ -83,7 +83,9 @@ function rowHtml(r, data) {
   const pen = pens.length
     ? pens.map((p) => `<span class="pl"><i class="pk pk-${p.k === "과태료" ? "c" : "x"}">${penTag(p)}</i>${esc(penBrief(p))}</span>`).join("")
     : '<span class="none" title="이 조문과 직접 연결된 벌칙은 수집한 원문에서 확인되지 않았습니다">—</span>';
-  return `<button type="button" class="srow" role="row" data-art="${esc(r.id)}" aria-label="${esc(label)} 상세 열기"><b class="sj">${esc(r.jo)}</b><span class="st">${esc(r.title)}</span><span class="sg">${gist}</span><span class="swho">${who}</span><span class="sp">${pen}</span></button>`;
+  const fig = figs?.get(r.id);
+  const thumb = fig ? bookImg(fig.file, fig.w, fig.h, "").replace("<img ", '<img class="sth" ') : "";
+  return `<button type="button" class="srow" role="row" data-art="${esc(r.id)}" aria-label="${esc(label)} 상세 열기"><b class="sj">${esc(r.jo)}</b><span class="stt">${thumb}<span>${esc(r.title)}</span></span><span class="sg">${gist}</span><span class="swho">${who}</span><span class="sp">${pen}</span></button>`;
 }
 
 const TABLE_HEAD = '<div class="shead" role="row"><span>조문</span><span>제목</span><span>핵심</span><span>누가</span><span>위반 시</span></div>';
@@ -99,8 +101,10 @@ export function renderArticles(branch, data, query = "", mode = "table") {
       .map((g) => `<section class="agrp"><h3>${esc(g.group)}</h3><div class="cards">${g.items.map(cardHtml).join("")}</div></section>`)
       .join("");
   }
+  const figs = new Map();
+  for (const m of data?.images ?? []) if (!figs.has(m.article)) figs.set(m.article, m);
   return groupArticles(rows)
-    .map((g) => `<section class="agrp"><h3>${esc(g.group)} <small>${g.items.length}</small></h3><div class="stable" role="table" aria-label="${esc(g.group)}">${TABLE_HEAD}${g.items.map((x) => rowHtml(x, data)).join("")}</div></section>`)
+    .map((g) => `<section class="agrp"><h3>${esc(g.group)} <small>${g.items.length}</small></h3><div class="stable" role="table" aria-label="${esc(g.group)}">${TABLE_HEAD}${g.items.map((x) => rowHtml(x, data, figs)).join("")}</div></section>`)
     .join("");
 }
 
