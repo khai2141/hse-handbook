@@ -118,3 +118,13 @@ class PenaltyLinkTest(unittest.TestCase):
         want = compute(arts, pens)
         for r in arts:
             self.assertEqual(r["penalty_ids"], want[r["id"]], r["id"])
+
+
+class GistTest(unittest.TestCase):
+    def test_every_verified_card_has_a_checked_one_line_gist(self):
+        from tools.merge_gist import problems
+        for r in load("data", "articles.json")["records"]:
+            if r["status"] == "미확인":
+                continue
+            self.assertIn("gist", r, r["id"])
+            self.assertEqual(problems(r, r["gist"]), [], r["id"])

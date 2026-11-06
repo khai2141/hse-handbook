@@ -117,7 +117,7 @@ test("renderArticles: group headings, one button per card, first must bullet, es
   assert.equal((h.match(/class="card"/g) ?? []).length, 87);
   assert.equal((h.match(/<h3/g) ?? []).length, 9);
   assert.ok(h.includes('data-art="sr-13"'));
-  assert.ok(h.includes(list().find((r) => r.id === "sr-13").must[0].slice(0, 12)));
+  assert.ok(h.includes(list().find((r) => r.id === "sr-13").gist.slice(0, 12)));
   assert.ok(h.includes("제13조") && h.includes("안전난간의 구조 및 설치요건"));
   const evil = { articles: [{ ...list()[0], id: "x", jo: "<b>", title: "<img src=x onerror=1>", must: ["<script>"], group: "<i>" }], nodes: data.nodes };
   const e = renderArticles("d.tech.com", evil, "");
@@ -283,4 +283,11 @@ test("every linked penalty id resolves and unverified penalties are not shown", 
   for (const r of data.articles) for (const id of r.penalty_ids) assert.ok(data.penalties.some((x) => x.id === id), r.id);
   const d = { ...data, penalties: data.penalties.map((x) => (x.id === "p3" ? { ...x, status: "미확인" } : x)) };
   assert.ok(!renderArticles("d.tech.com", d).match(/data-art="sr-38"[\s\S]*?<\/button>/)[0].includes("5년 이하"));
+});
+
+test("summary rows and search show the one-line gist, not the long first requirement", () => {
+  const r = data.articles.find((x) => x.id === "sr-56");
+  assert.ok(r.gist && r.gist.length <= 45);
+  const row = renderArticles(r.branch, data).match(/data-art="sr-56"[\s\S]*?<\/button>/)[0];
+  assert.ok(row.includes(r.gist.replace(/&/g, "&amp;")));
 });

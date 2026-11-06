@@ -34,7 +34,7 @@ function cardHtml(r) {
   const label = `${r.jo} ${r.title}`;
   const body = unverified(r)
     ? '<span class="cm warn">원문 미확인</span>'
-    : `<span class="cm">${esc(r.must?.[0] ?? "")}</span>`;
+    : `<span class="cm">${esc(r.gist ?? r.must?.[0] ?? "")}</span>`;
   return `<button type="button" class="card" data-art="${esc(r.id)}" aria-label="${esc(label)} 상세 열기"><b>${esc(r.jo)}</b><span class="ct">${esc(r.title)}</span>${body}</button>`;
 }
 
@@ -77,7 +77,7 @@ export function penaltiesOf(r, data) {
 
 function rowHtml(r, data, figs) {
   const label = `${r.jo} ${r.title}`;
-  const gist = unverified(r) ? '<span class="warn">원문 미확인</span>' : esc(r.must?.[0] ?? "");
+  const gist = unverified(r) ? '<span class="warn">원문 미확인</span>' : esc(r.gist ?? r.must?.[0] ?? "");
   const who = unverified(r) || !r.who ? "—" : esc(r.who);
   const pens = unverified(r) ? [] : penaltiesOf(r, data);
   const pen = pens.length

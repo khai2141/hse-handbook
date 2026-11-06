@@ -30,7 +30,7 @@ export function searchAll(data, query, limit = 40) {
     if (hit(head, q)) rank = 0;
     else if (!unverified(r) && hit((r.must ?? []).join(" "), q)) rank = 1;
     else if (!unverified(r) && hit(r.text, q)) rank = 2;
-    if (rank >= 0) found.push({ rank, kind: "art", id: r.id, jo: r.jo, title: r.title, gist: unverified(r) ? "" : (r.must?.[0] ?? ""), branch: r.branch });
+    if (rank >= 0) found.push({ rank, kind: "art", id: r.id, jo: r.jo, title: r.title, gist: unverified(r) ? "" : (r.gist ?? r.must?.[0] ?? ""), branch: r.branch });
   }
   for (const [id, n] of Object.entries(nodes)) {
     if (id !== "home" && hit(`${n.t} ${n.s ?? ""}`, q)) found.push({ rank: 0, kind: "node", id, title: n.t, gist: n.s ?? "", branch: id });
