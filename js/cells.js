@@ -273,6 +273,14 @@ function baseCellDetail(kind, rowId, col, data) {
       const w = find(d.workers, rowId);
       if (!w) break;
       const eduByCol = EDU_BY_COL.map((id) => find(d.education, id));
+      // 관리감독자 지위 근로자: 별표 5 제1호의2 has its own 교육내용 (record e8) for 채용 시/정기/변경 시/특별교육
+      const sup = rowId === "sup" ? find(d.education, "e8") : null;
+      if (sup) {
+        const by = [sup.contents_hire, sup.contents, sup.contents_hire, sup.contents_special];
+        by.forEach((c, i) => {
+          if (Array.isArray(c) && c.length && eduByCol[i]) eduByCol[i] = { ...eduByCol[i], contents: c };
+        });
+      }
       const rule = Array.isArray(w.rule_by_col) ? w.rule_by_col[col] : undefined;
       out = workerCell({ ...w, rule }, eduByCol, col);
       out.icon = w.i;

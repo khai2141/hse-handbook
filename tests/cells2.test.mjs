@@ -236,3 +236,14 @@ test("foreign records with a future effective date mark every cell 시행", () =
   assert.ok(future.length >= 1);
   for (const r of future) for (const k of ["c", "pr", "ed"]) assert.ok(r[k].t.includes("시행"), `${r.id}.${k}`);
 });
+
+test("관리감독자 row uses its own 별표 5 제1호의2 contents, other rows keep worker contents", () => {
+  const e8 = data.education.find((x) => x.id === "e8");
+  const items = (d) => d.sections.find((s) => s.key === "contents").items;
+  assert.deepEqual(items(cellDetail("W", "sup", 1, data)), e8.contents);
+  assert.deepEqual(items(cellDetail("W", "sup", 0, data)), e8.contents_hire);
+  assert.deepEqual(items(cellDetail("W", "sup", 2, data)), e8.contents_hire);
+  assert.deepEqual(items(cellDetail("W", "sup", 3, data)), e8.contents_special);
+  const e1 = data.education.find((x) => x.id === "e1");
+  assert.deepEqual(items(cellDetail("W", "reg", 1, data)), e1.contents);
+});
