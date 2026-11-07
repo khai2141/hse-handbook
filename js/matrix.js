@@ -121,7 +121,7 @@ export function buildMatrix(kind, data) {
           n: `${v.clause} ${v.name}`,
           s: "",
           i: "measure_env",
-          cells: [c("보기", "p"), c("보기", "x")],
+          cells: unk(v) ? UNK(2) : [c(v.content, "p long"), c(v.penalty, "x long")],
         })),
       };
     default:

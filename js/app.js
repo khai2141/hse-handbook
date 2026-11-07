@@ -4,6 +4,8 @@ import { renderMatrix } from "./matrix.js";
 import { renderArticles, articleDetail } from "./articles.js";
 import { homeTopHtml, resultsHtml } from "./home.js";
 import { cellDetail, infoDetail } from "./cells.js";
+import { renderAnnex, annexDetail } from "./annex.js";
+import { renderRevs } from "./revs.js";
 import { detailToHtml, totalText } from "./render.js";
 import { routeFromHash, hashFor, breadcrumbs, kidsOf } from "./tree.js";
 
@@ -13,6 +15,8 @@ const HINTS = {
   P: "과태료는 시행령 별표 35 (단위 만원). 같은 위반으로 최근 5년 내 처분받은 횟수에 따라 1·2·3차 적용. 통계가 없어 ★는 붙이지 않았습니다.",
   F: "E-9·H-2 내용은 검색 결과(2차 출처) 기반입니다. 최신은 고용24, 법무부에서 확인하세요.",
   A: "조문 원문은 law.go.kr에서 가져온 현행 시행본입니다. 행을 누르면 요건·점검·원문이 열립니다. '위반 시' 칸: 안전보건규칙 제3조~제670조는 법 제38조·제39조가 위임한 기준이므로 위반 시 법 제168조 제1호(사망 시 제167조)가 적용되고, 법 조문은 제167·168·170·171조와 시행령 별표 35에 나온 조문만 연결했습니다. '—'는 벌칙이 없다는 뜻이 아니라 연결된 항목을 찾지 못했다는 뜻입니다.",
+  B: "별표의 표를 행(작업·구분)별로 나눠 옮겼습니다. 행을 누르면 항목 전체가 열립니다. 문구는 law.go.kr 원문 그대로입니다.",
+  Z: "법령 개정 감시 결과입니다. 시행 예정 개정이 있는 조문만 바뀌는 문구를 보여 주며, 나머지는 현행 원문과 같습니다.",
   H: "특수건강진단 검사항목은 고용노동부 고시에 있으며 아직 읽지 못했습니다.",
 };
 
@@ -35,6 +39,7 @@ async function load() {
   data.versions = await fetch("data/versions.json").then((r) => (r.ok ? r.json() : null)).catch(() => null);
   data.articles = await fetch("data/articles.json").then((r) => (r.ok ? r.json() : null)).then((j) => j?.records ?? []).catch(() => []);
   const im = await fetch("data/images.json").then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  data.annexes = await fetch("data/annexes.json").then((r) => (r.ok ? r.json() : null)).then((j) => j?.records ?? []).catch(() => []);
   data.images = im?.records ?? [];
   data.imagesMeta = im?.meta;
   if (data.images.length) {
@@ -50,7 +55,12 @@ async function load() {
   return data;
 }
 
-const kindHtml = (n) => (n.kind === "A" ? renderArticles(state.id, state.data, state.q) : renderMatrix(n.kind, state.data, state.q));
+const kindHtml = (n) => {
+  if (n.kind === "A") return renderArticles(state.id, state.data, state.q);
+  if (n.kind === "B") return renderAnnex(state.data, state.q);
+  if (n.kind === "Z") return renderRevs(state.data);
+  return renderMatrix(n.kind, state.data, state.q);
+};
 
 /* ---------- screens ---------- */
 function outlineHtml() {
@@ -191,7 +201,7 @@ function trapTab(e) {
 /* ---------- events ---------- */
 function onClick(e) {
   if (e.target.id === "bg") return closeSheet();
-  const t = e.target.closest("[data-go],[data-cell],[data-info],[data-art],[data-close],[data-chip],#menu");
+  const t = e.target.closest("[data-go],[data-cell],[data-info],[data-art],[data-annex],[data-jump],[data-close],[data-chip],#menu");
   if (!t) return;
   if (t.id === "menu") {
     const on = $("outline").classList.toggle("on");
@@ -200,8 +210,10 @@ function onClick(e) {
   }
   if (t.dataset.close) return closeSheet();
   if (t.dataset.chip) return setHomeQuery(t.dataset.chip);
+  if (t.dataset.jump) return document.getElementById(t.dataset.jump)?.scrollIntoView({ behavior: "smooth", block: "start" });
   if (t.dataset.go) return go(t.dataset.go);
   if (t.dataset.art) return openSheet(articleDetail(t.dataset.art, state.data), t);
+  if (t.dataset.annex) return openSheet(annexDetail(t.dataset.annex, state.data), t);
   if (t.dataset.info) {
     const [kind, id] = t.dataset.info.split("|");
     return openSheet(infoDetail(kind, id, state.data), t);

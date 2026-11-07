@@ -34,7 +34,7 @@ test("T 39, M 8, R 8 with 9 cells, V 8", () => {
   assert.ok(bodyRows(r).every((x) => x.cells.length === 9));
   const v = buildMatrix("V", data);
   assert.equal(bodyRows(v).length, 8);
-  assert.deepEqual(bodyRows(v)[0].cells.map((c) => c.t), ["보기", "보기"]);
+  assert.equal(bodyRows(v)[0].cells.length, 2);
 });
 test("P has one row per penalty record, sorted by max desc with 만원 formatting", () => {
   const m = buildMatrix("P", data);

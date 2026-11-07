@@ -291,3 +291,25 @@ test("summary rows and search show the one-line gist, not the long first require
   const row = renderArticles(r.branch, data).match(/data-art="sr-56"[\s\S]*?<\/button>/)[0];
   assert.ok(row.includes(r.gist.replace(/&/g, "&amp;")));
 });
+
+import { renderAnnex, annexDetail } from "../js/annex.js";
+import { renderRevs } from "../js/revs.js";
+
+test("annex branch: rows by 별표, verbatim items in the sheet, escaped", () => {
+  const d = { ...data, annexes: JSON.parse(fs.readFileSync(new URL("../data/annexes.json", import.meta.url), "utf8")).records };
+  const h = renderAnnex(d);
+  assert.ok(h.includes("별표 3") && h.includes('data-annex="b3-1"') && h.includes("프레스등을 사용하여 작업을 할 때"));
+  const det = annexDetail("b3-1", d);
+  assert.ok(det.sections[0].items[0].startsWith("가. 클러치 및 브레이크의 기능"));
+  assert.ok(renderAnnex(d, "굴착면").includes("별표 11") && !renderAnnex(d, "굴착면").includes('data-annex="b3-1"'));
+  const evil = { annexes: [{ id: "x", annex: "<b>", annex_title: "<i>", basis: "x", no: "1", name: "<img src=x onerror=1>", parts: [{ label: "l", items: ["<script>"] }] }] };
+  const e = renderAnnex(evil);
+  assert.ok(!e.includes("<img src=x") && !e.includes("<script>") && !e.includes("<b>"));
+});
+
+test("revs branch lists changed articles with the 예정 lines and the unchanged ones", () => {
+  const v = JSON.parse(fs.readFileSync(new URL("../data/versions.json", import.meta.url), "utf8"));
+  const h = renderRevs({ versions: v });
+  assert.ok(h.includes("법 제175조") && h.includes("시행 2027-04-28") && h.includes("예정:"));
+  assert.ok(renderRevs({}).includes("자료가 없습니다"));
+});

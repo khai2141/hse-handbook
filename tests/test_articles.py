@@ -128,3 +128,16 @@ class GistTest(unittest.TestCase):
                 continue
             self.assertIn("gist", r, r["id"])
             self.assertEqual(problems(r, r["gist"]), [], r["id"])
+
+
+class AnnexTest(unittest.TestCase):
+    def test_annex_items_are_in_raw_capture(self):
+        from tools.build_annexes import check, col
+        recs = load("data", "annexes.json")["records"]
+        self.assertGreater(len(recs), 70)
+        ids = [r["id"] for r in recs]
+        self.assertEqual(len(ids), len(set(ids)))
+        for r in recs:
+            num = re.match(r"b(\d+)-", r["id"]).group(1)
+            raw = col(open(os.path.join(ROOT, "sources", f"sr_byeolpyo{num}_raw.txt"), encoding="utf-8").read())
+            self.assertEqual(check(r, raw), [], r["id"])

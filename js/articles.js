@@ -103,8 +103,13 @@ export function renderArticles(branch, data, query = "", mode = "table") {
   }
   const figs = new Map();
   for (const m of data?.images ?? []) if (!figs.has(m.article)) figs.set(m.article, m);
-  return groupArticles(rows)
-    .map((g) => `<section class="agrp"><h3>${esc(g.group)} <small>${g.items.length}</small></h3><div class="stable" role="table" aria-label="${esc(g.group)}">${TABLE_HEAD}${g.items.map((x) => rowHtml(x, data, figs)).join("")}</div></section>`)
+  const groups = groupArticles(rows);
+  const nav =
+    groups.length >= 3
+      ? `<nav class="gjump" aria-label="그룹 바로가기">${groups.map((g, i) => `<button type="button" class="chip" data-jump="grp-${i}">${esc(g.group)} <small>${g.items.length}</small></button>`).join("")}</nav>`
+      : "";
+  return nav + groups
+    .map((g, i) => `<section class="agrp" id="grp-${i}"><h3>${esc(g.group)} <small>${g.items.length}</small></h3><div class="stable" role="table" aria-label="${esc(g.group)}">${TABLE_HEAD}${g.items.map((x) => rowHtml(x, data, figs)).join("")}</div></section>`)
     .join("");
 }
 
