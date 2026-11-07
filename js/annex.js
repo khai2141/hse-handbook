@@ -20,15 +20,16 @@ export function renderAnnex(data, query = "") {
     if (!g) groups.push((g = { key: r.annex, title: r.annex_title, basis: r.basis, items: [] }));
     g.items.push(r);
   }
-  return groups
+  const nav = `<nav class="gjump" aria-label="별표 바로가기">${groups.map((g, i) => `<button type="button" class="chip" data-jump="ax-${i}">${esc(g.key)} <small>${g.items.length}</small></button>`).join("")}</nav>`;
+  return nav + groups
     .map(
-      (g) =>
-        `<section class="agrp"><h3>${esc(g.key)} ${esc(g.title)} <small>${esc(g.basis)} 관련 · ${g.items.length}</small></h3>` +
+      (g, i) =>
+        `<section class="agrp" id="ax-${i}"><h3>${esc(g.key)} ${esc(g.title)} <small>${esc(g.basis)} 관련 · ${g.items.length}</small></h3>` +
         `<div class="stable" role="table" aria-label="${esc(g.key)}"><div class="shead a3" role="row"><span>번호</span><span>작업·구분</span><span>내용 (원문 항목)</span></div>` +
         g.items
           .map(
             (r) =>
-              `<button type="button" class="srow a3" role="row" data-annex="${esc(r.id)}" aria-label="${esc(r.annex)} ${esc(head(r))} 상세 열기"><b class="sj">${esc(r.no)}</b><span class="stt"><span>${esc(r.name)}</span></span><span class="sg">${esc(brief(r))}</span></button>`,
+              `<button type="button" class="srow a3" role="row" data-annex="${esc(r.id)}" aria-label="${esc(r.annex)} ${esc(head(r))} 상세 열기"><b class="sj">${esc(r.no)}</b><span class="stt"><span>${esc(r.name)}</span>${r.group || r.section ? `<small class="mut">${esc(r.group ?? r.section)}</small>` : ""}</span><span class="sg">${esc(brief(r))}</span></button>`,
           )
           .join("") +
         "</div></section>",

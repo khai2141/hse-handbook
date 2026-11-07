@@ -28,8 +28,8 @@ def check(rec, raw):
 def main():
     d = sys.argv[1]
     recs, problems = [], 0
-    for f in sorted(glob.glob(os.path.join(d, "annex_*.json")), key=lambda x: int(re.search(r"annex_(\d+)", x).group(1))):
-        num = re.search(r"annex_(\d+)\.json", f).group(1)
+    for f in sorted(glob.glob(os.path.join(d, "annex_*.json")), key=lambda x: tuple(int(v) for v in re.search(r"annex_(\d+)(?:-(\d+))?", x).groups(0))):
+        num = re.search(r"annex_(\d+(?:-\d+)?)\.json", f).group(1)
         raw = col(open(os.path.join(ROOT, "sources", f"sr_byeolpyo{num}_raw.txt"), encoding="utf-8").read())
         for r in json.load(open(f, encoding="utf-8")):
             bad = check(r, raw)

@@ -138,6 +138,6 @@ class AnnexTest(unittest.TestCase):
         ids = [r["id"] for r in recs]
         self.assertEqual(len(ids), len(set(ids)))
         for r in recs:
-            num = re.match(r"b(\d+)-", r["id"]).group(1)
+            num = re.match(r"b(\d+(?:_\d+)?)-", r["id"]).group(1).replace("_", "-")
             raw = col(open(os.path.join(ROOT, "sources", f"sr_byeolpyo{num}_raw.txt"), encoding="utf-8").read())
             self.assertEqual(check(r, raw), [], r["id"])

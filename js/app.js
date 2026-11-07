@@ -262,6 +262,13 @@ async function start() {
     $("main").innerHTML = `<p class="empty">자료를 불러오지 못했습니다 (${esc(err.message)}). 폴더에서 <code>py -m http.server 8080</code> 으로 연 뒤 http://localhost:8080 에서 열어 주세요.</p>`;
     return;
   }
+  const ZS = [1, 1.15, 1.3];
+  let zi = 0;
+  try { zi = Math.min(2, Math.max(0, parseInt(localStorage.getItem("hb-zoom") ?? "0", 10) || 0)); } catch { /* storage may be blocked */ }
+  const applyZoom = () => { document.body.style.zoom = String(ZS[zi]); const b = $("fs"); if (b) b.textContent = zi === 2 ? "가-" : "가+"; };
+  applyZoom();
+  $("fs")?.addEventListener("click", () => { zi = zi === 2 ? 0 : zi + 1; applyZoom(); try { localStorage.setItem("hb-zoom", String(zi)); } catch { /* ignore */ } });
+  $("pr")?.addEventListener("click", () => window.print());
   document.addEventListener("click", onClick);
   document.addEventListener("keydown", onKey);
   document.addEventListener("input", onInput);
