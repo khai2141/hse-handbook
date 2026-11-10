@@ -6,6 +6,9 @@ on:
   schedule:
     - cron: "0 22 * * 0"
   workflow_dispatch:
+  push:
+    branches: [master]
+    paths: [".github/workflows/law-watch.yml", "tools/law_watch.py"]
 
 permissions:
   contents: write
