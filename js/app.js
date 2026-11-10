@@ -320,7 +320,16 @@ async function start() {
   document.addEventListener("input", onInput);
   window.addEventListener("hashchange", route);
   route();
-  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register("sw.js").catch(() => {});
+  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
+    // after the worker takes control, re-request what this first visit already loaded so it is all in the offline cache
+    navigator.serviceWorker.register("sw.js").catch(() => {});
+    navigator.serviceWorker.ready
+      .then(() => new Promise((r) => setTimeout(r, 1500)))
+      .then(() => {
+        for (const e of performance.getEntriesByType("resource")) if (e.name.startsWith(location.origin)) fetch(e.name).catch(() => {});
+      })
+      .catch(() => {});
+  }
 }
 
 start();
