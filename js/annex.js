@@ -48,6 +48,7 @@ export function annexDetail(id, data) {
     link: { href: s.url ?? SRC_URL, text: "law.go.kr에서 보기" },
   });
   return {
+    share: true,
     title: `${r.annex} ${head(r)}`,
     sub: `${r.annex_title} (${r.basis} 관련)${r.ref ? ` · ${r.ref}` : ""}`,
     law: [`산업안전보건기준에 관한 규칙 ${r.annex}`],

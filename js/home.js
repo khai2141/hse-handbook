@@ -63,6 +63,15 @@ export function resultsHtml(data, query) {
   return `<div class="hlist" role="list">${rows}</div>${more}`;
 }
 
+function watchLine(data) {
+  const w = data?.lawwatch;
+  if (!w?.entries) return "";
+  const v = Object.values(w.entries);
+  const stale = v.filter((e) => e.state === "stale").length;
+  const pend = v.filter((e) => e.state === "pending").length;
+  return `<button type="button" class="${stale ? "wl bad" : "wl"}" data-go="a.rev"><b>법령 점검 ${esc(w.checked_at)}</b><span>조문 ${Number(w.checked) || 0}개 대조 · 시행 중 변경 ${stale}건 · 시행 예정 ${pend}건</span></button>`;
+}
+
 export function homeTopHtml(data, query = "") {
   const nodes = data.nodes;
   const cards = (data.articles ?? []).length;
@@ -76,6 +85,7 @@ export function homeTopHtml(data, query = "") {
     `<label class="hsearch"><span class="sr-only">전체 검색</span><input id="hq" type="search" placeholder="예: 추락, 비계, 밀폐공간, ㅊㄹ" autocomplete="off" value="${esc(query)}"></label>` +
     `<div class="chips" role="group" aria-label="자주 찾는 낱말">${chips}</div>` +
     `<div id="hres" aria-live="polite">${resultsHtml(data, query)}</div></section>` +
+    watchLine(data) +
     `<section class="hsec"><h3>바로 가기</h3><div class="tiles">${intents}</div></section>` +
     `<section class="hsec"><h3>전체 구조 (계획→실행→점검→개선)</h3></section>`
   );

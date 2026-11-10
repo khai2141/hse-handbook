@@ -182,7 +182,7 @@ export function renderMatrix(kind, data, query = "") {
     h += r.cells
       .map(
         (cl, ci) =>
-          `<td><button type="button" class="c ${esc(cl.k)}" data-cell="${esc(kind)}|${esc(r.id)}|${ci}">${esc(cl.t)}</button></td>`,
+          `<td data-l="${esc(m.cols[ci] ?? "")}"><button type="button" class="c ${esc(cl.k)}" data-cell="${esc(kind)}|${esc(r.id)}|${ci}">${esc(cl.t)}</button></td>`,
       )
       .join("");
     h += "</tr>";

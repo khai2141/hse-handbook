@@ -124,7 +124,7 @@ export function detailToHtml(detail, opts = {}) {
   const d = detail ?? {};
   const laws = lawList(d.law);
   let h = `<div class="sh"><div class="t">${d.icon ? icon(d.icon, 52) : ""}<div><h2 id="sheet-title">${esc(d.title)}</h2>${d.sub ? `<span class="law">${esc(d.sub)}</span>` : ""}</div></div>`;
-  h += '<button type="button" class="x" data-close="1">닫기</button></div><div class="g">';
+  h += `<span class="shb">${d.share ? '<button type="button" class="x" data-copy="1">링크 복사</button>' : ""}<button type="button" class="x" data-close="1">닫기</button></span></div><div class="g">`;
   if (d.big !== undefined && d.big !== "") {
     h += `<div class="box"><b class="k">${esc(d.bigLabel ?? "이 칸")}</b><div class="big">${esc(d.big)}</div></div>`;
   }

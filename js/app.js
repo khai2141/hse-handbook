@@ -7,7 +7,7 @@ import { cellDetail, infoDetail } from "./cells.js";
 import { renderAnnex, annexDetail } from "./annex.js";
 import { renderRevs } from "./revs.js";
 import { detailToHtml, totalText } from "./render.js";
-import { routeFromHash, hashFor, breadcrumbs, kidsOf } from "./tree.js";
+import { routeFromHash, hashFor, breadcrumbs, kidsOf, itemFromHash } from "./tree.js";
 
 const NAMES = ["workers", "education", "health", "foreign", "tasks", "roles", "penalties", "env"];
 const HINTS = {
@@ -36,10 +36,13 @@ async function load() {
   NAMES.forEach((n, i) => (data[n] = recs[i].records ?? []));
   data.nodes = nodes.nodes ?? {};
   data.meta = meta;
-  data.versions = await fetch("data/versions.json").then((r) => (r.ok ? r.json() : null)).catch(() => null);
-  data.articles = await fetch("data/articles.json").then((r) => (r.ok ? r.json() : null)).then((j) => j?.records ?? []).catch(() => []);
-  const im = await fetch("data/images.json").then((r) => (r.ok ? r.json() : null)).catch(() => null);
-  data.annexes = await fetch("data/annexes.json").then((r) => (r.ok ? r.json() : null)).then((j) => j?.records ?? []).catch(() => []);
+  // optional files load in parallel; a missing one must not block the page
+  const opt = (n) => fetch(`data/${n}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  const [versions, articles, im, annexes, lawwatch] = await Promise.all(["versions", "articles", "images", "annexes", "lawwatch"].map(opt));
+  data.versions = versions;
+  data.articles = articles?.records ?? [];
+  data.annexes = annexes?.records ?? [];
+  data.lawwatch = lawwatch;
   data.images = im?.records ?? [];
   data.imagesMeta = im?.meta;
   if (data.images.length) {
@@ -140,7 +143,23 @@ function route() {
   $("outline").classList.remove("on");
   $("menu").setAttribute("aria-expanded", "false");
   window.scrollTo(0, 0);
+  const item = itemFromHash(location.hash);
+  if (item) openItem(item, null);
 }
+
+function openItem(id, trigger) {
+  const d = state.data;
+  if (d.articles.some((r) => r.id === id)) return openSheet(articleDetail(id, d), trigger, id);
+  if (d.annexes.some((r) => r.id === id)) return openSheet(annexDetail(id, d), trigger, id);
+}
+
+const setHash = (h) => {
+  try {
+    history.replaceState(null, "", h);
+  } catch {
+    /* file:// or sandbox: links simply stay unshareable */
+  }
+};
 
 function go(id) {
   const target = hashFor(id);
@@ -157,12 +176,13 @@ function hideSheet() {
   current = null;
 }
 
-function openSheet(detail, trigger) {
+function openSheet(detail, trigger, linkId) {
   if (!sheetOpen()) {
     opener = trigger ?? null;
     savedY = window.scrollY;
   }
   current = detail;
+  if (linkId) setHash(`${hashFor(state.id)}@${linkId}`);
   const s = $("sheet");
   s.innerHTML = detailToHtml(detail, { count: state.count });
   s.classList.add("on");
@@ -174,6 +194,7 @@ function openSheet(detail, trigger) {
 function closeSheet() {
   if (!sheetOpen()) return;
   hideSheet();
+  if (itemFromHash(location.hash)) setHash(hashFor(state.id));
   const o = opener;
   opener = null;
   if (o && o.isConnected) o.focus({ preventScroll: true });
@@ -201,7 +222,7 @@ function trapTab(e) {
 /* ---------- events ---------- */
 function onClick(e) {
   if (e.target.id === "bg") return closeSheet();
-  const t = e.target.closest("[data-go],[data-cell],[data-info],[data-art],[data-annex],[data-jump],[data-close],[data-chip],#menu");
+  const t = e.target.closest("[data-go],[data-cell],[data-info],[data-art],[data-annex],[data-jump],[data-copy],[data-nav],[data-close],[data-chip],#menu");
   if (!t) return;
   if (t.id === "menu") {
     const on = $("outline").classList.toggle("on");
@@ -209,11 +230,26 @@ function onClick(e) {
     return;
   }
   if (t.dataset.close) return closeSheet();
+  if (t.dataset.nav === "tree") {
+    const on = $("outline").classList.toggle("on");
+    $("menu").setAttribute("aria-expanded", String(on));
+    if (on) $("outline").scrollIntoView({ block: "start" });
+    return;
+  }
+  if (t.dataset.nav === "search") {
+    if (state.id !== "home") {
+      go("home");
+      return setTimeout(() => $("hq")?.focus(), 60);
+    }
+    window.scrollTo(0, 0);
+    return $("hq")?.focus();
+  }
   if (t.dataset.chip) return setHomeQuery(t.dataset.chip);
   if (t.dataset.jump) return document.getElementById(t.dataset.jump)?.scrollIntoView({ behavior: "smooth", block: "start" });
   if (t.dataset.go) return go(t.dataset.go);
-  if (t.dataset.art) return openSheet(articleDetail(t.dataset.art, state.data), t);
-  if (t.dataset.annex) return openSheet(annexDetail(t.dataset.annex, state.data), t);
+  if (t.dataset.art) return openItem(t.dataset.art, t);
+  if (t.dataset.annex) return openItem(t.dataset.annex, t);
+  if (t.dataset.copy) return copyLink(t);
   if (t.dataset.info) {
     const [kind, id] = t.dataset.info.split("|");
     return openSheet(infoDetail(kind, id, state.data), t);
@@ -221,6 +257,16 @@ function onClick(e) {
   if (t.dataset.cell) {
     const [kind, id, col] = t.dataset.cell.split("|");
     openSheet(cellDetail(kind, id, parseInt(col, 10), state.data), t);
+  }
+}
+
+async function copyLink(btn) {
+  const url = location.href;
+  try {
+    await navigator.clipboard.writeText(url);
+    btn.textContent = "복사됨";
+  } catch {
+    btn.textContent = url; // clipboard blocked: show the link so it can be selected
   }
 }
 
@@ -274,6 +320,7 @@ async function start() {
   document.addEventListener("input", onInput);
   window.addEventListener("hashchange", route);
   route();
+  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register("sw.js").catch(() => {});
 }
 
 start();

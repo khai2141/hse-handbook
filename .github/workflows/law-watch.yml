@@ -1,0 +1,60 @@
+name: Weekly law watch
+
+# Every Monday 07:00 KST (Sunday 22:00 UTC): re-read every article from law.go.kr, write data/lawwatch.json,
+# publish it, and open an issue when something changed. Summaries are never rewritten automatically.
+on:
+  schedule:
+    - cron: "0 22 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: law-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Compare every article with law.go.kr
+        id: watch
+        run: python3 tools/law_watch.py --workers 4
+      - name: Tests still pass with the new watch file
+        run: |
+          python3 -m unittest discover -s tests
+          node --test tests/*.test.mjs
+      - name: Commit the result
+        id: commit
+        run: |
+          git config user.name "law-watch"
+          git config user.email "law-watch@users.noreply.github.com"
+          git add data/lawwatch.json
+          if git diff --cached --quiet; then
+            echo "pushed=0" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "chore: weekly law watch $(date -u +%F)"
+            git push
+            echo "pushed=1" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Publish (a push made by this workflow does not start the deploy by itself)
+        if: steps.commit.outputs.pushed == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref "${{ github.ref_name }}"
+      - name: Open an issue when the law changed
+        if: steps.watch.outputs.alert == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "법령 변경 감지 $(date -u +%F)" --body-file reports/lawwatch.md

@@ -36,7 +36,7 @@ class WorkflowTest(unittest.TestCase):
         m = re.search(r"cp -r (.+?) _site/", self.text)
         self.assertIsNotNone(m)
         self.assertEqual(m.group(1).split(),
-                         ["index.html", "css", "js", "data", "assets"])
+                         ["index.html", "sw.js", "manifest.webmanifest", "css", "js", "data", "assets"])
 
 
 if __name__ == "__main__":

@@ -75,17 +75,35 @@ export function penaltiesOf(r, data) {
   return out;
 }
 
-function rowHtml(r, data, figs) {
+// Weekly law-watch result for one card: {state: "pending" | "stale", header, lines} or undefined.
+export const watchOf = (r, data) => data?.lawwatch?.entries?.[r.id];
+const WATCH_TAG = { pending: "개정 예정", stale: "개정됨 · 검토 중" };
+
+const penKey = (r) => (r.penalty_ids ?? []).join(",");
+
+// The penalty set shared by most cards of a branch (>= 60% of at least 5 cards), shown once above the table
+// instead of on every row. Returns "" when there is no such set.
+export function commonPenalty(list) {
+  const n = new Map();
+  for (const r of list) if (!unverified(r) && penKey(r)) n.set(penKey(r), (n.get(penKey(r)) ?? 0) + 1);
+  let best = "";
+  for (const [k, v] of n) if (v > (n.get(best) ?? 0)) best = k;
+  return list.length >= 5 && (n.get(best) ?? 0) >= list.length * 0.6 ? best : "";
+}
+
+function rowHtml(r, data, figs, common = "") {
   const label = `${r.jo} ${r.title}`;
   const gist = unverified(r) ? '<span class="warn">원문 미확인</span>' : esc(r.gist ?? r.must?.[0] ?? "");
   const who = unverified(r) || !r.who ? "—" : esc(r.who);
   const pens = unverified(r) ? [] : penaltiesOf(r, data);
-  const pen = pens.length
+  const pen = common && penKey(r) === common
+    ? '<span class="none same">공통 벌칙 (표 위)</span>'
+    : pens.length
     ? pens.map((p) => `<span class="pl"><i class="pk pk-${p.k === "과태료" ? "c" : "x"}">${penTag(p)}</i>${esc(penBrief(p))}</span>`).join("")
     : '<span class="none" title="이 조문과 직접 연결된 벌칙은 수집한 원문에서 확인되지 않았습니다">—</span>';
   const fig = figs?.get(r.id);
   const thumb = fig ? bookImg(fig.file, fig.w, fig.h, "").replace("<img ", '<img class="sth" ') : "";
-  return `<button type="button" class="srow" role="row" data-art="${esc(r.id)}" aria-label="${esc(label)} 상세 열기"><b class="sj">${esc(r.jo)}</b><span class="stt">${thumb}<span>${esc(r.title)}</span></span><span class="sg">${gist}</span><span class="swho">${who}</span><span class="sp">${pen}</span></button>`;
+  return `<button type="button" class="srow" role="row" data-art="${esc(r.id)}" aria-label="${esc(label)} 상세 열기"><b class="sj">${esc(r.jo)}</b><span class="stt">${thumb}<span>${esc(r.title)}${watchOf(r, data) ? ` <i class="pk pk-w">${WATCH_TAG[watchOf(r, data).state] ?? "개정"}</i>` : ""}</span></span><span class="sg">${gist}</span><span class="swho">${who}</span><span class="sp">${pen}</span></button>`;
 }
 
 const TABLE_HEAD = '<div class="shead" role="row"><span>조문</span><span>제목</span><span>핵심</span><span>누가</span><span>위반 시</span></div>';
@@ -104,12 +122,17 @@ export function renderArticles(branch, data, query = "", mode = "table") {
   const figs = new Map();
   for (const m of data?.images ?? []) if (!figs.has(m.article)) figs.set(m.article, m);
   const groups = groupArticles(rows);
+  const common = commonPenalty(all);
+  const cp = common ? penaltiesOf({ penalty_ids: common.split(",") }, data) : [];
+  const banner = cp.length
+    ? `<div class="cpen" role="note"><b>이 가지 공통 벌칙</b>${cp.map((p) => `<span><i class="pk pk-${p.k === "과태료" ? "c" : "x"}">${penTag(p)}</i>${esc(penBrief(p))} <small>(${esc(p.art ?? "")})</small></span>`).join("")}<small>다른 벌칙이 있는 조문만 줄에 따로 적었습니다.</small></div>`
+    : "";
   const nav =
     groups.length >= 3
       ? `<nav class="gjump" aria-label="그룹 바로가기">${groups.map((g, i) => `<button type="button" class="chip" data-jump="grp-${i}">${esc(g.group)} <small>${g.items.length}</small></button>`).join("")}</nav>`
       : "";
-  return nav + groups
-    .map((g, i) => `<section class="agrp" id="grp-${i}"><h3>${esc(g.group)} <small>${g.items.length}</small></h3><div class="stable" role="table" aria-label="${esc(g.group)}">${TABLE_HEAD}${g.items.map((x) => rowHtml(x, data, figs)).join("")}</div></section>`)
+  return banner + nav + groups
+    .map((g, i) => `<section class="agrp" id="grp-${i}"><h3>${esc(g.group)} <small>${g.items.length}</small></h3><div class="stable" role="table" aria-label="${esc(g.group)}">${TABLE_HEAD}${g.items.map((x) => rowHtml(x, data, figs, cp.length ? common : "")).join("")}</div></section>`)
     .join("");
 }
 
@@ -135,7 +158,21 @@ export function articleDetail(id, data) {
   const future = s.future_ack || (s.effective && s.effective > today());
   const src = { label: "출처", text: `${r.law} ${r.jo} · 시행 ${s.effective} · 공포 ${s.published} · 확인 ${s.verified_at}`, link: { href: s.url, text: "law.go.kr에서 보기" } };
   if (future) src.hint = `시행 예정: ${s.effective}부터 적용됩니다. 지금 현장에 적용되는 본이 아닐 수 있습니다.`;
-  const sections = [{ label: "요건", items: r.must ?? [] }];
+  const sections = [];
+  const w = watchOf(r, data);
+  if (w) {
+    sections.push({
+      label: w.state === "stale" ? "개정됨 — 요약 검토 중" : "시행 예정 개정",
+      text:
+        w.state === "stale"
+          ? "시행 중인 원문이 바뀌었습니다. 아래 요약은 개정 전 기준일 수 있으니 달라진 부분과 law.go.kr 원문을 먼저 확인하세요."
+          : "공포된 개정이 아직 시행 전입니다. 지금은 아래 요약이 맞고, 시행일부터 다음 부분이 달라집니다.",
+      items: w.lines ?? [],
+      hint: `${w.header} · 조문별 시행일은 부칙에 따라 다를 수 있습니다 · 점검일 ${data.lawwatch.checked_at}`,
+      link: { href: s.url, text: "law.go.kr에서 보기" },
+    });
+  }
+  sections.push({ label: "요건", items: r.must ?? [] });
   const figs = (data.images ?? []).filter((m) => m.article === r.id);
   if (figs.length) {
     sections.push({
@@ -155,5 +192,5 @@ export function articleDetail(id, data) {
   sections.push(penaltySection(r, data));
   sections.push({ label: "원문", collapse: "open", lines: splitClauses(r.text) });
   sections.push(src);
-  return { ...base, sections };
+  return { ...base, share: true, warn: w?.state === "stale" ? "이 조문은 최근 개정되었습니다. 요약보다 원문을 우선하세요." : undefined, sections };
 }

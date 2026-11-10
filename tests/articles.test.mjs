@@ -200,7 +200,7 @@ test("unknown id gives a neutral detail", () => {
 
 test("app wires articles and the hint text", () => {
   const app = fs.readFileSync(new URL("../js/app.js", import.meta.url), "utf8");
-  assert.ok(app.includes("data/articles.json"));
+  assert.ok(app.includes('"articles"') && app.includes("data/${n}.json"));
   assert.ok(app.includes("조문 원문은 law.go.kr에서 가져온 현행 시행본입니다. 행을 누르면 요건·점검·원문이 열립니다."));
   assert.ok(app.includes("data-art"));
 });
@@ -265,7 +265,10 @@ test("summary table has a 위반 시 column; rows show linked 벌칙 or a dash; 
   assert.ok(html.includes("<span>위반 시</span>"));
   assert.ok(html.includes('class="swho"') && !html.includes('class="sw"'));
   const sr38 = html.match(/data-art="sr-38"[\s\S]*?<\/button>/)[0];
-  assert.ok(sr38.includes("5년 이하 징역 또는 5천만원 이하 벌금") && sr38.includes("사망 시"));
+  assert.ok(sr38.includes("공통 벌칙") && !sr38.includes("5년 이하 징역"));
+  assert.ok(html.includes('class="cpen"') && html.split('class="cpen"')[1].includes("5년 이하 징역 또는 5천만원 이하 벌금"));
+  const sub = renderArticles("d.sub", data);
+  assert.ok(!sub.includes('class="cpen"') && sub.match(/data-art="l-62"[\s\S]*?<\/button>/)[0].includes("500만원"));
   const sr1 = html.match(/data-art="sr-1"[\s\S]*?<\/button>/)[0];
   assert.ok(sr1.includes('class="none"'));
 });
@@ -282,7 +285,7 @@ test("penBrief/penFull: 형사 text, 과태료 range and 1·2·3차", () => {
 test("every linked penalty id resolves and unverified penalties are not shown", () => {
   for (const r of data.articles) for (const id of r.penalty_ids) assert.ok(data.penalties.some((x) => x.id === id), r.id);
   const d = { ...data, penalties: data.penalties.map((x) => (x.id === "p3" ? { ...x, status: "미확인" } : x)) };
-  assert.ok(!renderArticles("d.tech.com", d).match(/data-art="sr-38"[\s\S]*?<\/button>/)[0].includes("5년 이하"));
+  assert.ok(!renderArticles("d.tech.com", d).includes("5년 이하 징역 또는 5천만원"));
 });
 
 test("summary rows and search show the one-line gist, not the long first requirement", () => {
@@ -307,9 +310,41 @@ test("annex branch: rows by 별표, verbatim items in the sheet, escaped", () =>
   assert.ok(!e.includes("<img src=x") && !e.includes("<script>") && !e.includes("<b>"));
 });
 
-test("revs branch lists changed articles with the 예정 lines and the unchanged ones", () => {
-  const v = JSON.parse(fs.readFileSync(new URL("../data/versions.json", import.meta.url), "utf8"));
-  const h = renderRevs({ versions: v });
-  assert.ok(h.includes("법 제175조") && h.includes("시행 2027-04-28") && h.includes("예정:"));
+test("revs branch shows the weekly law-watch result: stale and pending entries, law versions, escaped", () => {
+  const w = {
+    checked_at: "2026-11-10",
+    checked: 816,
+    errors: [],
+    laws: [{ law: "산업안전보건법", header: "[시행 2027. 4. 28.] [법률 제22122호, 2026. 10. 27., 일부개정]", new: true }],
+    entries: {
+      "법175": { state: "pending", jo: "제175조", title: "과태료", law: "산업안전보건법", branch: null, header: "[h]", lines: ["신설: 1의2. <b>"] },
+      "sr-13": { state: "stale", jo: "제13조", title: "안전난간", law: "규칙", branch: "d.tech.com", header: "[h2]", lines: ["변경 전: a", "변경 후: b"] },
+    },
+  };
+  const h = renderRevs({ lawwatch: w });
+  assert.ok(h.includes("점검일 2026-11-10") && h.includes("816") && h.includes("시행 중 변경 1건") && h.includes("시행 예정 1건"));
+  assert.ok(h.includes('data-art="sr-13"') && !h.includes('data-art="법175"'));
+  assert.ok(h.includes("새 공포본") && h.includes("&lt;b&gt;") && !h.includes("<b>"));
   assert.ok(renderRevs({}).includes("자료가 없습니다"));
+});
+
+test("a card with a law-watch entry shows a badge in the row and the change list first in the sheet", () => {
+  const d = { ...data, lawwatch: { checked_at: "2026-11-10", entries: { "sr-13": { state: "stale", header: "[h]", lines: ["변경 후: x"] } } } };
+  const row = renderArticles("d.tech.com", d).match(/data-art="sr-13"[\s\S]*?<\/button>/)[0];
+  assert.ok(row.includes("개정됨"));
+  const det = articleDetail("sr-13", d);
+  assert.equal(det.sections[0].label, "개정됨 — 요약 검토 중");
+  assert.ok(det.warn && det.share);
+  assert.ok(!articleDetail("sr-14", d).warn && articleDetail("sr-14", d).sections[0].label === "요건");
+});
+
+
+import { routeFromHash, itemFromHash } from "../js/tree.js";
+
+test("deep link: '#/d/tech/com@sr-13' routes to the branch and names the item; junk is ignored", () => {
+  assert.equal(routeFromHash("#/d/tech/com@sr-13", data.nodes), "d.tech.com");
+  assert.equal(itemFromHash("#/d/tech/com@sr-13"), "sr-13");
+  assert.equal(itemFromHash("#/d/tech/tbl@b13_2-1"), "b13_2-1");
+  assert.equal(itemFromHash("#/d/tech/com"), null);
+  assert.equal(itemFromHash("#/x@<script>"), null);
 });
