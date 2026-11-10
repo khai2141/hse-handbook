@@ -1,5 +1,6 @@
 import { hit } from "./core.js";
 import { esc, bookImg } from "./html.js";
+import { whenText } from "./revs.js";
 
 const WARN = "원문을 아직 확인하지 못했습니다. 숫자와 기준은 표시하지 않습니다. law.go.kr에서 직접 확인하세요.";
 const LAW_URL = /^https:\/\/www\.law\.go\.kr\//;
@@ -168,7 +169,7 @@ export function articleDetail(id, data) {
           ? "시행 중인 원문이 바뀌었습니다. 아래 요약은 개정 전 기준일 수 있으니 달라진 부분과 law.go.kr 원문을 먼저 확인하세요."
           : "공포된 개정이 아직 시행 전입니다. 지금은 아래 요약이 맞고, 시행일부터 다음 부분이 달라집니다.",
       items: w.lines ?? [],
-      hint: `${w.header} · 조문별 시행일은 부칙에 따라 다를 수 있습니다 · 점검일 ${data.lawwatch.checked_at}`,
+      hint: [w.header, ...whenText(w), `점검일 ${data.lawwatch.checked_at}`].join(" · "),
       link: { href: s.url, text: "law.go.kr에서 보기" },
     });
   }

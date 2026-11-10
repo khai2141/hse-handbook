@@ -260,3 +260,4 @@ small.mut{display:block;font-weight:400;color:var(--mut);font-size:11.5px}
 /* role sheets: article lists inside a sheet */
 .box .hlist,.ex .hlist{display:grid;gap:6px;margin-top:6px}
 .hres.full .hg{display:block;overflow:visible;color:var(--fg)}
+.rev ul.rvw{list-style:none;padding-left:0;font-weight:700}

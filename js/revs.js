@@ -7,7 +7,21 @@ function entryHtml(id, e) {
   const open = e.branch
     ? `<button type="button" class="lnk" data-art="${esc(id)}">이 조문 카드 열기</button>`
     : '<p class="hint">이 조문은 카드가 아니라 표(벌칙·교육·건강진단 등)의 근거입니다.</p>';
-  return `<article class="rev"><h4>${esc(e.law)} ${esc(e.jo)} ${esc(e.title ?? "")} <span class="pk ${e.state === "stale" ? "pk-x" : "pk-w"}">${TAG[e.state] ?? ""}</span></h4><p class="hint">${esc(e.header)}</p><ul>${lines}</ul>${open}</article>`;
+  return `<article class="rev"><h4>${esc(e.law)} ${esc(e.jo)} ${esc(e.title ?? "")} <span class="pk ${e.state === "stale" ? "pk-x" : "pk-w"}">${TAG[e.state] ?? ""}</span></h4><p class="hint">${esc(e.header)}</p>${whenHtml(e)}<ul>${lines}</ul>${open}</article>`;
+}
+
+// When each change takes effect. Only dates a person read from the 부칙 are shown as dates; the date in the
+// header belongs to the whole 공포본, not to this article.
+export function whenText(e) {
+  if (e?.state !== "pending") return [];
+  const out = Array.isArray(e.dates) && e.dates.length ? e.dates.map((d) => `시행일 ${d}`) : ["시행일: 부칙 확인 전 (머리말의 날짜는 이 조문의 시행일이 아닐 수 있습니다)"];
+  if (e.stages) out.push(`부칙의 시행일 구분: ${e.stages}`);
+  return out;
+}
+
+function whenHtml(e) {
+  const w = whenText(e);
+  return w.length ? `<ul class="li rvw">${w.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : "";
 }
 
 // 법 개정 반영: result of the weekly law watch (data/lawwatch.json, written by tools/law_watch.py).

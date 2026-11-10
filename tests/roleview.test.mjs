@@ -45,3 +45,13 @@ test("the supervisor sheet lists the 별표 2 work types as openable rows", () =
   assert.ok(html.includes('data-art="'));
   assert.ok(html.includes("링크 복사"));
 });
+
+import { whenText } from "../js/revs.js";
+
+test("a pending change shows a date only when someone read it from the supplementary provisions", () => {
+  assert.deepEqual(whenText({ state: "stale" }), []);
+  assert.ok(whenText({ state: "pending" })[0].includes("확인 전"));
+  const w = whenText({ state: "pending", dates: ["2027-04-28: all"], stages: "1. a: 2027" });
+  assert.equal(w.length, 2);
+  assert.ok(w[0].includes("2027-04-28") && w[1].includes("1. a: 2027"));
+});
