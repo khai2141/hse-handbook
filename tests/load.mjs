@@ -4,7 +4,8 @@ export function loadData() {
   const d = {};
   for (const n of ["workers", "education", "health", "foreign", "tasks", "roles", "penalties", "env"]) d[n] = rd(n).records;
   d.articles = rd("articles").records;
-  d.nodes = rd("nodes").nodes;
+  d.annexes = rd("annexes").records;
+  d.nodes =rd("nodes").nodes;
   d.meta = rd("meta");
   return d;
 }

@@ -1,6 +1,7 @@
 import { hit } from "./core.js";
 import { esc, icon } from "./html.js";
 import { breadcrumbs } from "./tree.js";
+import { roleTiles } from "./roleview.js";
 
 // "I want to ..." shortcuts: node ids that exist in data/nodes.json.
 export const INTENTS = [
@@ -86,6 +87,7 @@ export function homeTopHtml(data, query = "") {
     `<div class="chips" role="group" aria-label="자주 찾는 낱말">${chips}</div>` +
     `<div id="hres" aria-live="polite">${resultsHtml(data, query)}</div></section>` +
     watchLine(data) +
+    `<section class="hsec"><h3>내 역할로 찾기</h3><div class="tiles">${roleTiles(data).map((x) => `<button type="button" class="tile" data-role="${esc(x.id)}">${icon(x.i, 40)}<span>${esc(x.n)}</span></button>`).join("")}</div></section>` +
     `<section class="hsec"><h3>바로 가기</h3><div class="tiles">${intents}</div></section>` +
     `<section class="hsec"><h3>전체 구조 (계획→실행→점검→개선)</h3></section>`
   );

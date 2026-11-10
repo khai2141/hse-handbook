@@ -6,6 +6,7 @@ import { homeTopHtml, resultsHtml } from "./home.js";
 import { cellDetail, infoDetail } from "./cells.js";
 import { renderAnnex, annexDetail } from "./annex.js";
 import { renderRevs } from "./revs.js";
+import { roleDetail } from "./roleview.js";
 import { detailToHtml, totalText } from "./render.js";
 import { routeFromHash, hashFor, breadcrumbs, kidsOf, itemFromHash } from "./tree.js";
 
@@ -149,6 +150,10 @@ function route() {
 
 function openItem(id, trigger) {
   const d = state.data;
+  if (id.startsWith("ro-")) {
+    const role = roleDetail(id.slice(3), d);
+    return role ? openSheet(role, trigger, id) : undefined;
+  }
   if (d.articles.some((r) => r.id === id)) return openSheet(articleDetail(id, d), trigger, id);
   if (d.annexes.some((r) => r.id === id)) return openSheet(annexDetail(id, d), trigger, id);
 }
@@ -222,7 +227,7 @@ function trapTab(e) {
 /* ---------- events ---------- */
 function onClick(e) {
   if (e.target.id === "bg") return closeSheet();
-  const t = e.target.closest("[data-go],[data-cell],[data-info],[data-art],[data-annex],[data-jump],[data-copy],[data-nav],[data-close],[data-chip],#menu");
+  const t = e.target.closest("[data-go],[data-cell],[data-info],[data-art],[data-annex],[data-role],[data-jump],[data-copy],[data-nav],[data-close],[data-chip],#menu");
   if (!t) return;
   if (t.id === "menu") {
     const on = $("outline").classList.toggle("on");
@@ -249,9 +254,11 @@ function onClick(e) {
   if (t.dataset.go) return go(t.dataset.go);
   if (t.dataset.art) return openItem(t.dataset.art, t);
   if (t.dataset.annex) return openItem(t.dataset.annex, t);
+  if (t.dataset.role) return openItem(`ro-${t.dataset.role}`, t);
   if (t.dataset.copy) return copyLink(t);
   if (t.dataset.info) {
     const [kind, id] = t.dataset.info.split("|");
+    if (kind === "R" || kind === "M") return openItem(`ro-${id}`, t);
     return openSheet(infoDetail(kind, id, state.data), t);
   }
   if (t.dataset.cell) {

@@ -78,6 +78,9 @@ function sectionHtml(s) {
   if (Array.isArray(s.images) && s.images.length) {
     inner += `<div class="figs">${s.images.map((m) => `<figure>${bookImg(m.file, m.w, m.h, m.alt)}<figcaption>${esc(m.cap ?? "")}</figcaption></figure>`).join("")}</div>`;
   }
+  if (Array.isArray(s.arts) && s.arts.length) {
+    inner += `<div class="hlist">${s.arts.map((a) => `<button type="button" class="hres${a.full ? " full" : ""}" data-${a.annex ? "annex" : "art"}="${esc(a.id)}"><span class="hj">${esc(a.jo)}</span><span class="ht">${esc(a.title)}</span><span class="hg">${esc(a.gist)}</span></button>`).join("")}</div>`;
+  }
   if (s.link && LAW_URL.test(String(s.link.href ?? ""))) {
     inner += `<a class="ext" href="${esc(s.link.href)}" target="_blank" rel="noopener noreferrer">${esc(s.link.text ?? "원문 보기")}</a>`;
   }
