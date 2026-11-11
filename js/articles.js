@@ -46,6 +46,7 @@ const penNums = (p) => (p.a ?? []).filter((x) => typeof x === "number");
 export function penBrief(p) {
   if (p.k === "과태료") {
     const n = penNums(p);
+    if (p.brief) return p.brief; // amount given as a rule, not a number (계상하지 않은 금액 …)
     if (!n.length) return "";
     const lo = Math.min(...n);
     const hi = Math.max(...n);
@@ -58,6 +59,8 @@ export function penBrief(p) {
 export function penFull(p) {
   if (p.k === "과태료") {
     const n = penNums(p);
+    const a = p.a ?? [];
+    if (n.length < a.length) return new Set(a).size === 1 ? String(a[0]) : `1차 ${a[0]} · 2차 ${a[1]} · 3차 ${a[2]}`;
     if (!n.length) return "";
     return new Set(n).size === 1 ? fmtMan(n[0]) : `1차 ${n[0]} · 2차 ${n[1]} · 3차 ${n[2]}만원`;
   }

@@ -24045,7 +24045,15 @@
       "see": [
         "d-53"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p40",
+        "p41",
+        "p42",
+        "p43",
+        "p44",
+        "p45",
+        "p46"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=007200&efYd=20261104",
@@ -24887,7 +24895,8 @@
       ],
       "see": [],
       "penalty_ids": [
-        "p3"
+        "p3",
+        "p39"
       ],
       "status": "확인",
       "source": {

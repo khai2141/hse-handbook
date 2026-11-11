@@ -365,6 +365,16 @@ test("a fine that is not in force yet says from when: in the row, in the sheet a
   const p16 = articleDetail("l-29", data).sections.find((s) => s.label === "위반 시");
   assert.ok(p16.items.length && !p16.items.some((x) => x.includes("시행 예정")));
 });
+test("a fine set as a rule in words (관리비 미계상) shows the words, not an empty cell", () => {
+  const p = data.penalties.find((x) => x.id === "p40");
+  assert.ok(penBrief(p).includes("계상하지 않은 금액") && penBrief(p).includes("1,000만원"));
+  assert.equal(penFull(p), p.a[0]);
+  const p41 = data.penalties.find((x) => x.id === "p41");
+  assert.ok(penFull(p41).startsWith("1차 계상하지 않은 금액") && penFull(p41).includes("3차") && penFull(p41).includes("600만원"));
+  const pen = articleDetail("l-72", data).sections.find((s) => s.label === "위반 시");
+  assert.equal(pen.items.length, 7);
+  assert.ok(articleDetail("l-53", data).sections.find((s) => s.label === "위반 시").items.some((x) => x.includes("게시")));
+});
 
 import { routeFromHash, itemFromHash } from "../js/tree.js";
 

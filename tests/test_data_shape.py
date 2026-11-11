@@ -210,6 +210,21 @@ class DataShapeTests(unittest.TestCase):
             n = re.search(r"제(\d+)항제(\d+)호(의\d+)?", row[1])  # 법 제175조제4항제2호의2 -> ④2의2
             self.assertEqual(r["law"], "법 제175조%s%s%s" % ("①②③④⑤⑥"[int(n.group(1)) - 1], n.group(2), n.group(3) or ""))
 
+    def test_fines_for_articles_53_and_72_match_the_captured_rows(self):
+        here = os.path.dirname(__file__)
+        with open(os.path.join(here, "..", "sources", "byeolpyo35_cost_raw.txt"), encoding="utf-8") as f:
+            rows = [l.split(" ¦ ") for l in f.read().splitlines() if l[:1] in "오우주추" and l[1:2] == "."]
+        num = lambda x: int(x.replace(",", "")) if x.replace(",", "").isdigit() else x
+        pens = [r for r in recs("penalties.json") if "제53조" in r["art"] or "제72조" in r["art"]]
+        self.assertEqual([r["id"] for r in pens], ["p%d" % i for i in range(39, 47)])
+        self.assertEqual([r["a"] for r in pens], [[num(x) for x in row[3:6]] for row in rows])
+        for r in pens:
+            self.assertEqual(r["fines"], r["a"])
+            if all(isinstance(x, int) for x in r["a"]):
+                self.assertEqual(r["max"], max(r["a"]))
+            else:
+                self.assertTrue(r["brief"])  # the amount is a rule in words: the row needs a short form
+
     def test_byeolpyo4_hours_verbatim(self):
         import re
         here = os.path.dirname(__file__)
