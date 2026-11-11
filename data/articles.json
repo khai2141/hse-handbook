@@ -22485,7 +22485,9 @@
         "l-63",
         "l-75"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p83"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=006400&efYd=20261104",
@@ -22552,7 +22554,10 @@
       "see": [
         "l-65"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p84",
+        "p85"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=006600&efYd=20261104",
@@ -22838,7 +22843,10 @@
       "see": [
         "d-55"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p86",
+        "p87"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=006700&efYd=20261104",
@@ -22938,7 +22946,10 @@
         "d-60",
         "l-74"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p92",
+        "p93"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=007300&efYd=20261104",
@@ -23078,7 +23089,10 @@
         "l-24",
         "l-64"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p94",
+        "p95"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=007500&efYd=20261104",
@@ -23219,7 +23233,12 @@
         "d-37",
         "l-75"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p49",
+        "p50",
+        "p51",
+        "p52"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=002400&efYd=20261104",
@@ -23600,7 +23619,9 @@
         "r-73"
       ],
       "penalty_ids": [
-        "p4"
+        "p4",
+        "p81",
+        "p82"
       ],
       "status": "확인",
       "source": {
@@ -23746,7 +23767,9 @@
       ],
       "records": [],
       "see": [],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p57"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=003700&efYd=20261104",
@@ -23932,7 +23955,13 @@
         "d-55"
       ],
       "penalty_ids": [
-        "p3"
+        "p3",
+        "p60",
+        "p61",
+        "p62",
+        "p63",
+        "p64",
+        "p65"
       ],
       "status": "확인",
       "source": {
@@ -24139,7 +24168,9 @@
         "l-75",
         "l-57"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p173"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=016400&efYd=20261104",
@@ -24176,7 +24207,9 @@
         "r-25",
         "l-26"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p53"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=002500&efYd=20261104",
@@ -24209,7 +24242,9 @@
         "l-25",
         "r-25"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p54"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=002600&efYd=20261104",
@@ -24538,7 +24573,11 @@
         "d-46",
         "l-49"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p73",
+        "p74",
+        "p75"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=004700&efYd=20261104",
@@ -24608,7 +24647,9 @@
         "r-124",
         "r-126"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p105"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=009300&efYd=20261104",
@@ -24755,7 +24796,11 @@
         "d-50",
         "l-47"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p76",
+        "p77",
+        "p78"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=004900&efYd=20261104",
@@ -24791,7 +24836,10 @@
       "see": [
         "l-49"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p79",
+        "p80"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=005000&efYd=20261104",
@@ -24934,7 +24982,9 @@
         "d-11",
         "d-12"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p47"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=001000&efYd=20261104",
@@ -25437,7 +25487,11 @@
         "d-68",
         "sr-672"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p96",
+        "p97",
+        "p98"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=007700&efYd=20261104",
@@ -26598,7 +26652,12 @@
         "r-159",
         "l-111"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p114",
+        "p115",
+        "p116",
+        "p117"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=011000&efYd=20261105",
@@ -26634,7 +26693,10 @@
         "r-166",
         "l-110"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p129",
+        "p130"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=011300&efYd=20261105",
@@ -26872,7 +26934,14 @@
         "l-110",
         "r-160"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p118",
+        "p119",
+        "p120",
+        "p121",
+        "p122",
+        "p123"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=011100&efYd=20261105",
@@ -26908,7 +26977,12 @@
         "r-168",
         "r-169"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p131",
+        "p132",
+        "p133",
+        "p134"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=011400&efYd=20261105",
@@ -27106,7 +27180,13 @@
       "see": [
         "r-170"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p135",
+        "p136",
+        "p137",
+        "p138",
+        "p139"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=011500&efYd=20261105",
@@ -27183,7 +27263,13 @@
         "l-112-2",
         "l-110"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p124",
+        "p125",
+        "p126",
+        "p127",
+        "p128"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=011200&efYd=20261105",
@@ -27726,7 +27812,8 @@
       ],
       "penalty_ids": [
         "p10",
-        "p19"
+        "p19",
+        "p55"
       ],
       "status": "확인",
       "source": {

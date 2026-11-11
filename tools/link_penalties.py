@@ -2,7 +2,7 @@
 
 Sources (all already captured in sources/ or data/penalties.json):
   * 법 제167조 / 제168조 / 제170조 / 제171조 (sources/criminal_raw.txt): the article numbers they cite decide which 법 cards link to p1 / p3 / p4 / p5.
-  * 시행령 별표 35 records p6..p32 (data/penalties.json): the "법 제N조" in each record's `art` decides the 법 cards.
+  * 시행령 별표 35 records p6.. (data/penalties.json, built by tools/byeolpyo35.py): the "법 제N조" in each record's `art` decides the 법 cards.
   * 안전보건기준에 관한 규칙 제3조~제670조 are the 고용노동부령 that 법 제38조④ and 제39조② delegate to
     (제2편 안전기준, 제3편 보건기준), so violating them is violating 제38조/제39조 -> 제168조 제1호 (p3), 사망 시 제167조 (p1).
     제1조·제2조 (총칙), 제672조~ (특수형태근로종사자·배달종사자, 법 제77조·제78조 위임) and 제674조 (규제의 재검토) get none.
@@ -39,9 +39,14 @@ def refs(body):
 
 def art_numbers(art):
     nums = set()
-    for grp in re.findall(r"제(\d+(?:·\d+)*)조", art):
+    for grp in re.findall(r"제(\d+(?:·\d+)*)조(?!의)", art):  # 제10조의2 is not 제10조
         nums.update(int(x) for x in grp.split("·"))
     return nums
+
+
+def art_branches(art):
+    """Articles of the 제N조의M kind named in a record's art: {"10의2", "128의2"}."""
+    return {"%s의%s" % m for m in re.findall(r"제(\d+)조의(\d+)", art)}
 
 
 def compute(arts, pens):
@@ -66,6 +71,8 @@ def compute(arts, pens):
         if p["k"] == "과태료":
             for n in sorted(art_numbers(p["art"])):
                 add(n, p["id"])
+            for n in sorted(art_branches(p["art"])):
+                add(n, p["id"])
     # p3 before p1 for the same article (처벌 일반 -> 사망 가중)
     for lst in law_map.values():
         lst.sort(key=lambda x: (x not in ("p3",), int(x[1:])))
@@ -74,7 +81,10 @@ def compute(arts, pens):
         m = re.fullmatch(r"제(\d+)조", r["jo"])
         n = int(m.group(1)) if m else None
         ids = []
-        if r["law"] == LAW and n in law_map:
+        b = re.fullmatch(r"제(\d+)조의(\d+)", r["jo"])
+        if r["law"] == LAW and b and "%s의%s" % b.groups() in law_map:
+            ids = list(law_map["%s의%s" % b.groups()])
+        elif r["law"] == LAW and n in law_map:
             ids = list(law_map[n])
         elif r["law"] == RULE and n is not None and SR_RANGE[0] <= n <= SR_RANGE[1]:
             ids = ["p3", "p1"]

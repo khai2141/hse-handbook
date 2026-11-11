@@ -225,6 +225,29 @@ class DataShapeTests(unittest.TestCase):
             else:
                 self.assertTrue(r["brief"])  # the amount is a rule in words: the row needs a short form
 
+    def test_every_row_of_byeolpyo35_has_a_record_with_the_same_amounts(self):
+        import sys
+        here = os.path.dirname(__file__)
+        sys.path.insert(0, os.path.join(here, ".."))
+        from tools.byeolpyo35 import parse, name_of
+        with open(os.path.join(here, "..", "sources", "byeolpyo35_full_raw.txt"), encoding="utf-8") as f:
+            rows = {r["key"]: r for r in parse(f.read())}
+        self.assertEqual(len(rows), 174)
+        self.assertEqual(rows["마-6"]["a"], [300, 400, 500])  # rowspans carried down
+        self.assertEqual(rows["더-3"]["basis"], "법 제175조제6항제1호")  # a 근거 cell that changes inside one 목
+        self.assertEqual(rows["리-1나"]["group"][:6], "물질안전보건")  # 가) 나) lines keep their 1) heading
+        seen = []
+        for p in recs("penalties.json"):
+            if p["k"] != "과태료":
+                continue
+            self.assertTrue(p.get("rows"), p["id"])
+            for k in p["rows"]:
+                self.assertEqual(rows[k]["a"], p["a"], p["id"])
+            seen += p["rows"]
+            if int(p["id"][1:]) >= 47:  # generated records carry the row's own wording
+                self.assertEqual(p["name"], name_of(rows[p["rows"][0]]))
+        self.assertEqual(sorted(seen), sorted(rows))  # every row once, none twice
+
     def test_byeolpyo4_hours_verbatim(self):
         import re
         here = os.path.dirname(__file__)
