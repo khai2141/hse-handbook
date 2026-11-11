@@ -49,7 +49,7 @@ export function penBrief(p) {
     if (!n.length) return "";
     const lo = Math.min(...n);
     const hi = Math.max(...n);
-    return lo === hi ? fmtMan(hi) : `${lo.toLocaleString("ko-KR")}~${fmtMan(hi)}`;
+    return (lo === hi ? fmtMan(hi) : `${lo.toLocaleString("ko-KR")}~${fmtMan(hi)}`) + (p.from_short ? ` · ${p.from_short}` : "");
   }
   return String(p.fines?.[0] ?? p.a?.[0] ?? "");
 }
@@ -140,7 +140,7 @@ export function renderArticles(branch, data, query = "", mode = "table") {
 function penaltySection(r, data) {
   const items = penaltiesOf(r, data).map((p) => {
     const fine = penFull(p);
-    return `${penTag(p)} · ${p.name ?? p.t} — ${fine}${p.art ? ` (${p.art})` : ""}`;
+    return `${penTag(p)} · ${p.name ?? p.t} — ${fine}${p.art ? ` (${p.art})` : ""}${p.from ? ` · ${p.from}` : ""}`;
   });
   const s = { label: "위반 시", go: { id: "g.pen", text: "벌칙·과태료 가지에서 전체 보기" } };
   if (items.length) s.items = items;

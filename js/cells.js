@@ -220,7 +220,7 @@ export function penaltyCell(pen, col) {
           : col === 2
             ? "최근 5년 안에 같은 위반으로 과태료 처분을 받은 적이 1회 있을 때의 금액입니다."
             : "같은 위반으로 2회 이상 처분을 받은 뒤의 금액입니다.";
-    sections.push({ key: "mean", text: `${ex} 단위는 ${pen.unit}입니다.` });
+    sections.push({ key: "mean", text: `${ex} 단위는 ${pen.unit}입니다.${pen.from ? ` ${pen.from}` : ""}` });
   } else {
     sections.push({ key: "mean", text: "형사처벌입니다. 법원이 형량을 정합니다." });
   }

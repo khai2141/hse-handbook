@@ -192,6 +192,24 @@ class DataShapeTests(unittest.TestCase):
             window = raw[m.start(): m.start() + 450]
             self.assertRegex(window, r"(?<![\d,])" + tri + r"(?![\d,])", f"{pid} triple {amts}")
 
+    def test_risk_assessment_fines_match_the_captured_rows_and_say_when_they_start(self):
+        import re
+        here = os.path.dirname(__file__)
+        with open(os.path.join(here, "..", "sources", "byeolpyo35_risk_raw.txt"), encoding="utf-8") as f:
+            rows = [l.split(" ¦ ") for l in f.read().splitlines() if l.startswith("머의")]
+        got = [[int(x.replace(",", "")) for x in r[3:6]] for r in rows]
+        pens = [r for r in recs("penalties.json") if "제36조" in r["art"]]
+        self.assertEqual([r["id"] for r in pens], ["p33", "p34", "p35", "p36", "p37", "p38"])
+        self.assertEqual([r["a"] for r in pens], got)
+        for r, row in zip(pens, rows):
+            self.assertEqual(r["fines"], r["a"])
+            self.assertEqual(r["max"], max(r["a"]))
+            self.assertIn("2027-01-01", r["from"])
+            self.assertIn("2028-01-01", r["from"])
+            self.assertIn("2027-01-01", r["from_short"])
+            n = re.search(r"제(\d+)항제(\d+)호(의\d+)?", row[1])  # 법 제175조제4항제2호의2 -> ④2의2
+            self.assertEqual(r["law"], "법 제175조%s%s%s" % ("①②③④⑤⑥"[int(n.group(1)) - 1], n.group(2), n.group(3) or ""))
+
     def test_byeolpyo4_hours_verbatim(self):
         import re
         here = os.path.dirname(__file__)

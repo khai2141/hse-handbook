@@ -355,6 +355,16 @@ test("a pending card with a hand-written 'after' shows the amended requirements 
   const none = { ...d, lawwatch: { ...d.lawwatch, entries: { "sr-13": { ...e, after: undefined } } } };
   assert.ok(articleDetail("sr-13", none).sections.some((x) => x.label === "요건"));
 });
+test("a fine that is not in force yet says from when: in the row, in the sheet and in the penalty table", () => {
+  const row = renderArticles("p.risk", data).match(/data-art="l-36"[\s\S]*?<\/button>/)[0];
+  assert.ok(row.includes("2027-01-01부터") && row.includes("2028-01-01"));
+  const pen = articleDetail("l-36", data).sections.find((s) => s.label === "위반 시");
+  assert.equal(pen.items.length, 6);
+  assert.ok(pen.items.every((x) => x.includes("시행 예정") && x.includes("2028-01-01")));
+  assert.ok(pen.items[0].includes("1차 500 · 2차 700 · 3차 1000만원"));
+  const p16 = articleDetail("l-29", data).sections.find((s) => s.label === "위반 시");
+  assert.ok(p16.items.length && !p16.items.some((x) => x.includes("시행 예정")));
+});
 
 import { routeFromHash, itemFromHash } from "../js/tree.js";
 

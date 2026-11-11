@@ -106,7 +106,7 @@ export function buildMatrix(kind, data) {
           return {
             id: p.id,
             n: p.t,
-            s: p.art ?? "",
+            s: (p.art ?? "") + (p.from_short ? ` · ${p.from_short}` : ""),
             i: crim ? "doc_alarm" : "doc_fine",
             cells: unk(p) ? UNK(4) : [c(p.k, crim ? "x" : "p"), cell(a[0], crim ? "x" : "y"), cell(a[1], "y"), cell(a[2], "y")],
           };

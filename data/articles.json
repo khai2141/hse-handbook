@@ -24349,7 +24349,14 @@
         "r-37-3",
         "r-37-4"
       ],
-      "penalty_ids": [],
+      "penalty_ids": [
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38"
+      ],
       "status": "확인",
       "source": {
         "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsClsCd=L&mode=11&lsNm=%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95&joNo=003600&efYd=20261104",
