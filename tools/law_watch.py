@@ -142,6 +142,8 @@ def apply_dates(entries, dates):
             e["effective"] = d.get("effective", "")
             e["dates"] = list(d.get("dates", []))
             e["dates_checked_at"] = d.get("checked_at", "")
+            if d.get("after"):  # summary + text of the amended article, written by a person for this 공포본
+                e["after"] = d["after"]
     return entries
 
 

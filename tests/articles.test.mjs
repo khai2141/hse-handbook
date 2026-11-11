@@ -338,6 +338,23 @@ test("a card with a law-watch entry shows a badge in the row and the change list
   assert.ok(!articleDetail("sr-14", d).warn && articleDetail("sr-14", d).sections[0].label === "요건");
 });
 
+test("a pending card with a hand-written 'after' shows the amended requirements above the current ones", () => {
+  const after = { title: "새 제목", must: ["개정 후 요건 <1>"], note: "미확인 메모", text: "제13조(새 제목) ① 첫째 항. ② 둘째 항." };
+  const e = { state: "pending", header: "[h]", lines: ["변경 후: x"], dates: ["2027-04-28: 전부"], after };
+  const d = { ...data, lawwatch: { checked_at: "2026-11-11", entries: { "sr-13": e } } };
+  const L = articleDetail("sr-13", d).sections.map((s) => s.label);
+  assert.deepEqual(L.slice(0, 3), ["시행 예정 개정", "시행일 이후 요건 (개정 후) — 제목: 새 제목", "요건 (현행)"]);
+  const s = articleDetail("sr-13", d).sections;
+  assert.deepEqual(s[1].items, after.must);
+  assert.ok(s[1].hint.includes("시행일 2027-04-28") && s[1].hint.includes("미확인 메모"));
+  assert.ok(L.indexOf("개정 후 원문 (시행 예정)") === L.indexOf("원문 (현행)") + 1);
+  assert.equal(s[L.indexOf("개정 후 원문 (시행 예정)")].lines.length, 3);
+  // not shown once the amendment is in force (stale) or when nothing was written
+  const stale = { ...d, lawwatch: { ...d.lawwatch, entries: { "sr-13": { ...e, state: "stale" } } } };
+  assert.ok(!articleDetail("sr-13", stale).sections.some((x) => x.label.includes("개정 후")));
+  const none = { ...d, lawwatch: { ...d.lawwatch, entries: { "sr-13": { ...e, after: undefined } } } };
+  assert.ok(articleDetail("sr-13", none).sections.some((x) => x.label === "요건"));
+});
 
 import { routeFromHash, itemFromHash } from "../js/tree.js";
 

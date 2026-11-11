@@ -59,6 +59,11 @@ class LawWatchTest(unittest.TestCase):
         apply_dates(e, d)
         self.assertEqual((e["a"]["effective"], e["a"]["dates"]), ("2027-04-28", ["2027-04-28: 전부"]))
         self.assertNotIn("dates", e["b"])
+        self.assertNotIn("after", e["a"])
+        d["a"]["after"] = d["b"]["after"] = {"must": ["m"], "text": "t"}
+        apply_dates(e, d)
+        self.assertEqual(e["a"]["after"]["must"], ["m"])
+        self.assertNotIn("after", e["b"])  # written for another 공포본: not shown
 
     def test_a_shorter_horizon_text_without_a_newer_amendment_date_is_not_a_change(self):
         # 안전보건규칙 제241조 (2026-11-11): every efYd page lacks a sentence that is in force

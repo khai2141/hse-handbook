@@ -173,7 +173,15 @@ export function articleDetail(id, data) {
       link: { href: s.url, text: "law.go.kr에서 보기" },
     });
   }
-  sections.push({ label: "요건", items: r.must ?? [] });
+  const af = w?.state === "pending" ? w.after : null;
+  if (af?.must?.length) {
+    sections.push({
+      label: `시행일 이후 요건 (개정 후)${af.title && af.title !== r.title ? ` — 제목: ${af.title}` : ""}`,
+      items: af.must,
+      hint: [...whenText(w), af.note, "지금 적용되는 요건은 바로 아래 '요건'입니다."].filter(Boolean).join(" · "),
+    });
+  }
+  sections.push({ label: af?.must?.length ? "요건 (현행)" : "요건", items: r.must ?? [] });
   const figs = (data.images ?? []).filter((m) => m.article === r.id);
   if (figs.length) {
     sections.push({
@@ -191,7 +199,8 @@ export function articleDetail(id, data) {
       : { label: "필요한 기록", text: "이 조문 자체에는 따로 요구하는 기록이 없습니다." },
   );
   sections.push(penaltySection(r, data));
-  sections.push({ label: "원문", collapse: "open", lines: splitClauses(r.text) });
+  sections.push({ label: af?.text ? "원문 (현행)" : "원문", collapse: "open", lines: splitClauses(r.text) });
+  if (af?.text) sections.push({ label: "개정 후 원문 (시행 예정)", collapse: "closed", lines: splitClauses(af.text), hint: [w.header, ...whenText(w)].join(" · ") });
   sections.push(src);
   return { ...base, share: true, warn: w?.state === "stale" ? "이 조문은 최근 개정되었습니다. 요약보다 원문을 우선하세요." : undefined, sections };
 }
